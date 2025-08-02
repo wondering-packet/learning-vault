@@ -18,7 +18,7 @@ Think of `main` as the "trunk" of a tree where all the major growth happens, and
 - `git branch`: See all your local branches (e.g., `* main`, `feature-a`).
 - `git merge feature-b main`: Merge `feature-b` into `main`.
 
-#### Connection b/w Main & Origin [[KB-002 (Origin)]]
+#### Connection b/w Main & Origin [[KB-002 (Origin)]]:
 The connection between `main` and `origin` is that `main` is a **branch**, and `origin` is the **remote server** where a copy of that `main` branch usually resides.
 
 - When you `git clone https://github.com/user/repo.git`, you get a local `main` branch, and Git automatically sets up `origin` pointing to `https://github.com/user/repo.git`. It also creates a remote-tracking branch named `origin/main` that keeps track of the state of the `main` branch on the `origin` server.

@@ -21,9 +21,9 @@ git commit -m "Initial commit using git"
 
 ## 2. Create remote repository in GitHub
 
-1. Create a new repo by going to GitHub page, name it same as your local repo "iac-git".
+1. Create a new repo by going to [GitHub](https://github.com/) , name it same as your local repo "iac-git".
 
-	**Note**: *DO NOT* initialize it with a README, license, or `.gitignore` file. You want an _empty_ repository so your local history can be pushed cleanly without merge conflicts initially.
+	> **Note**: *DO NOT* initialize it with a README, license, or `.gitignore` file. You want an _empty_ repository so your local history can be pushed cleanly without merge conflicts initially.
 
 2. Copy the HTTPS URL e.g. `https://github.com/wondering-packet/iac-git.git`.
 
@@ -47,7 +47,6 @@ origin  https://github.com/wondering-packet/learning-vault.git (fetch)
 origin  https://github.com/wondering-packet/learning-vault.git (push)
 # push our commit.
 git push -u origin main
-# you will be asked to
 # you will see something like this.
 Enumerating objects: 7, done.  
 Counting objects: 100% (7/7), done.  
