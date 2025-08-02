@@ -1,5 +1,5 @@
 
-## 1. Create a local directory, Initialize & make first commit
+## 1. Create a local directory, Initialize it & make our first commit
 
 ```bash
 cd /path/to/your/working/directory
@@ -7,7 +7,7 @@ mkdir iac-git
 cd iac-git
 # initialize git inside this directory.
 git init
-# set the default branch name. we are using main which is common.
+# set the default branch name. we are using main which is commonly used.
 git branch -m main
 # let's make a test file which will be included in our first commit.
 echo "hello, i am learning Git!" >> hello.txt
