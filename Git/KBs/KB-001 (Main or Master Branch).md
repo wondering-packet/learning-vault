@@ -26,3 +26,10 @@ The connection between `main` and `origin` is that `main` is a **branch**, and `
 - Your **local `main` branch** is typically configured to **track** the **remote `origin/main` branch**. This "tracking" relationship means:
     - When you `git pull`, it knows to pull from `origin/main`.
     - When you `git push`, it knows to push to `origin/main`.
+
+- **In short:**
+
+> `main` is **what** you're working on (the branch).
+> `origin` is **where** the primary remote copy of your work resides (the remote server alias).
+
+You work on `main` locally, and you use `origin` to synchronize that `main` branch with the central repository.
