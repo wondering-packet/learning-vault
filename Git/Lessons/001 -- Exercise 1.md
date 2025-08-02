@@ -1,6 +1,6 @@
-# Let's create a  new repo!
+# Let's create a  new repository!
 
-# 1. Create a local directory & Initialize
+## 1. Create a local directory & Initialize
 
 ```bash
 cd /path/to/your/working/directory
@@ -20,5 +20,8 @@ git add .
 git commit -m "Initial commit using git"
 ``` 
 
-# 2. Create remote repo in Github
+## 2. Create remote repository in GitHub
 
+### 1. Create a new repo, ideally name it same as your local repo "iac-git".
+	#### **Note**: *DO NOT* initialize it with a README, license, or `.gitignore` file. You want an _empty_ repository so your local history can be pushed cleanly without merge conflicts initially.
+### 2. Copy the HTTPS url.	
