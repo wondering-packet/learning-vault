@@ -18,7 +18,7 @@ Think of `main` as the "trunk" of a tree where all the major growth happens, and
 - `git branch`: See all your local branches (e.g., `* main`, `feature-a`).
 - `git merge feature-b main`: Merge `feature-b` into `main`.
 
-> [!tip]
+> [!NOTE]
 > #### Connection b/w Main & Origin:
 > The connection between `main` and `origin` is that `main` is a **branch**, and `origin` is the **remote server** where a copy of that `main` branch usually resides.
 > 
