@@ -26,14 +26,23 @@ git commit -m "Initial commit using git"
 
 	**Note**: *DO NOT* initialize it with a README, license, or `.gitignore` file. You want an _empty_ repository so your local history can be pushed cleanly without merge conflicts initially.
 
-2. Copy the HTTPS url `'https://github.com/your-username/your-repo-name.git`.
+2. Copy the HTTPS URL e.g. `https://github.com/wondering-packet/iac-git.git`.
 ## 3. Configure credentials
 
 ```bash
-git config user.name "Your Name"
+git config user.name wondering-packet # "Your Name"
 git config --global user.name # validate
-git config user.email "your.email@example.com"
+	wondering-packet
+git config user.email "packetwondering@gmail.com" # "your.email@example.com"
 git config user.email # validate
+	packetwondering@gmail.com
 ```
 
-## 4. 
+## 4. Connect to remote repo
+
+```bash
+git remote add origin `https://github.com/wondering-packet/iac-git.git`
+git remote -v # validate
+
+
+```
