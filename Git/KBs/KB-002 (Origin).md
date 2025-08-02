@@ -17,7 +17,7 @@ Think of `origin` as the "home base" or "central server" for your project. Your 
 - `git push origin main`: Send your local `main` branch to the `origin` remote.
 - `git pull origin main`: Get changes from the `main` branch on the `origin` remote.
 
-> [!info]
+> [!NOTE]
 > #### Connection b/w Main & Origin:
 > The connection between `main` and `origin` is that `main` is a **branch**, and `origin` is the **remote server** where a copy of that `main` branch usually resides.
 > 
