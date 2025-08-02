@@ -1,6 +1,6 @@
 ### Branches
 - A branch is just a **pointer** to a commit.
-- `main` (or `master`) is the default branch.
+- `[^1]main` (or `master`) is the default branch.
 - Feature branches allow isolated development.
 
 ### Merging
@@ -28,3 +28,5 @@
     # or
     git merge --continue
     ```
+
+[^1]: [[]]
