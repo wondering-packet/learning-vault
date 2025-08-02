@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Lessons/002 - Branching & Conflict Resolution.md",
+                "file": "Git/KBs/KB-001 (Main or Master Branch).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "002 - Branching & Conflict Resolution"
+              "title": "KB-001 (Main or Master Branch)"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Lessons/002 - Branching & Conflict Resolution.md",
+                "file": "Git/KBs/KB-001 (Main or Master Branch).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 002 - Branching & Conflict Resolution"
+              "title": "Outline of KB-001 (Main or Master Branch)"
             }
           },
           {
@@ -162,12 +162,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,13 +179,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8aac1c45dda22459",
+  "active": "376cc142841ebfcd",
   "lastOpenFiles": [
     "Git/Exercises/001 - Create a new repository & connect it to a remote branch.md",
+    "Git/Lessons/002 - Branching & Conflict Resolution.md",
     "Git/Lessons/001 - Git Foundation.md",
     "Git/KBs/KB-002 (Origin).md",
     "Git/KBs/KB-001 (Main or Master Branch).md",
-    "Git/Lessons/002 - Branching & Conflict Resolution.md",
     "Git/KBs",
     "Git/KB/Git - Origin.md",
     "Git/Exercises",
