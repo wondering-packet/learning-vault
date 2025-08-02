@@ -1,7 +1,7 @@
 ### What Git Is
-- Git is a **distributed version control system** — every developer has the full history locally.
-- Tracks changes to files over time.
-- Allows collaboration and rollback.
+1. Git is a **distributed version control system** — every developer has the full history locally.
+2. Tracks changes to files over time.
+3. Allows collaboration and rollback.
 
 ### Local vs Remote
 - **Local repo** → your machine
@@ -18,4 +18,3 @@
 3. `git commit` → Local Repository  
 4. `git push` → Remote Repository  
 
----

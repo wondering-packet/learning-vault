@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/001 -- Let's create a new repository & connect it to a remote branch.md",
+                "file": "Git/Lessons/001 - Git Foundation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "001 -- Let's create a new repository & connect it to a remote branch"
+              "title": "001 - Git Foundation"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Exercises/001 -- Let's create a new repository & connect it to a remote branch.md",
+                "file": "Git/Lessons/001 - Git Foundation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 001 -- Let's create a new repository & connect it to a remote branch"
+              "title": "Outline of 001 - Git Foundation"
             }
           },
           {
@@ -182,11 +182,11 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/KB/Git - Origin.md",
-    "Git/Exercises/001 -- Let's create a new repository & connect it to a remote branch.md",
-    "Git/Lessons/001 - Git Foundation.md",
-    "Git/Exercises",
     "Git/Lessons/002 - Branching & Conflict Resolution.md",
+    "Git/Exercises/001 - Create a new repository & connect it to a remote branch.md",
+    "Git/Lessons/001 - Git Foundation.md",
+    "Git/KB/Git - Origin.md",
+    "Git/Exercises",
     "Untitled.md",
     "Test/Temp.md",
     "Git/Lessons",
