@@ -27,7 +27,7 @@ git commit -m "Initial commit using git"
 
 2. Copy the HTTPS URL e.g. `https://github.com/wondering-packet/iac-git.git`.
 
-## 3. Configure credentials
+## 3. Configure User
 
 ```bash
 git config user.name wondering-packet # "Your Name"
@@ -47,6 +47,7 @@ origin  https://github.com/wondering-packet/learning-vault.git (fetch)
 origin  https://github.com/wondering-packet/learning-vault.git (push)
 # push our commit.
 git push -u origin main
+# you will be asked to
 # you will see something like this.
 Enumerating objects: 7, done.  
 Counting objects: 100% (7/7), done.  
