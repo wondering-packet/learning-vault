@@ -17,18 +17,18 @@ Think of `origin` as the "home base" or "central server" for your project. Your 
 - `git push origin main`: Send your local `main` branch to the `origin` remote.
 - `git pull origin main`: Get changes from the `main` branch on the `origin` remote.
 
-#### Connection b/w Main  [[KB-001 (Main or Master Branch)]] & Origin:
-The connection between `main` and `origin` is that `main` is a **branch**, and `origin` is the **remote server** where a copy of that `main` branch usually resides.
-
-- When you `git clone https://github.com/user/repo.git`, you get a local `main` branch, and Git automatically sets up `origin` pointing to `https://github.com/user/repo.git`. It also creates a remote-tracking branch named `origin/main` that keeps track of the state of the `main` branch on the `origin` server.
-
-- Your **local `main` branch** is typically configured to **track** the **remote `origin/main` branch**. This "tracking" relationship means:
-    - When you `git pull`, it knows to pull from `origin/main`.
-    - When you `git push`, it knows to push to `origin/main`.
-
-- **In short:**
-
-> `main` is **what** you're working on (the branch).
-> `origin` is **where** the primary remote copy of your work resides (the remote server alias).
-
-You work on `main` locally, and you use `origin` to synchronize that `main` branch with the central repository.
+> [!info]
+> #### Connection b/w Main & Origin:
+> The connection between `main` and `origin` is that `main` is a **branch**, and `origin` is the **remote server** where a copy of that `main` branch usually resides.
+> 
+> - When you `git clone https://github.com/user/repo.git`, you get a local `main` branch, and Git automatically sets up `origin` pointing to `https://github.com/user/repo.git`. It also creates a remote-tracking branch named `origin/main` that keeps track of the state of the `main` branch on the `origin` server.
+> 
+> - Your **local `main` branch** is typically configured to **track** the **remote `origin/main` branch**. This "tracking" relationship means:
+>     - When you `git pull`, it knows to pull from `origin/main`.
+>     - When you `git push`, it knows to push to `origin/main`.
+> 
+> 
+> > `main` is **what** you're working on (the branch).
+> > `origin` is **where** the primary remote copy of your work resides (the remote server alias).
+> > 
+> You work on `main` locally, and you use `origin` to synchronize that `main` branch with the central repository.

@@ -18,17 +18,18 @@ Think of `main` as the "trunk" of a tree where all the major growth happens, and
 - `git branch`: See all your local branches (e.g., `* main`, `feature-a`).
 - `git merge feature-b main`: Merge `feature-b` into `main`.
 
-#### Connection b/w Main & Origin [[KB-002 (Origin)]]:
-The connection between `main` and `origin` is that `main` is a **branch**, and `origin` is the **remote server** where a copy of that `main` branch usually resides.
-
-- When you `git clone https://github.com/user/repo.git`, you get a local `main` branch, and Git automatically sets up `origin` pointing to `https://github.com/user/repo.git`. It also creates a remote-tracking branch named `origin/main` that keeps track of the state of the `main` branch on the `origin` server.
-
-- Your **local `main` branch** is typically configured to **track** the **remote `origin/main` branch**. This "tracking" relationship means:
-    - When you `git pull`, it knows to pull from `origin/main`.
-    - When you `git push`, it knows to push to `origin/main`.
-
+> [!info]
+> #### Connection b/w Main & Origin:
+> The connection between `main` and `origin` is that `main` is a **branch**, and `origin` is the **remote server** where a copy of that `main` branch usually resides.
 > 
->> `main` is **what** you're working on (the branch).
->> `origin` is **where** the primary remote copy of your work resides (the remote server alias).
+> - When you `git clone https://github.com/user/repo.git`, you get a local `main` branch, and Git automatically sets up `origin` pointing to `https://github.com/user/repo.git`. It also creates a remote-tracking branch named `origin/main` that keeps track of the state of the `main` branch on the `origin` server.
 > 
-You work on `main` locally, and you use `origin` to synchronize that `main` branch with the central repository.
+> - Your **local `main` branch** is typically configured to **track** the **remote `origin/main` branch**. This "tracking" relationship means:
+>     - When you `git pull`, it knows to pull from `origin/main`.
+>     - When you `git push`, it knows to push to `origin/main`.
+> 
+> 
+> > `main` is **what** you're working on (the branch).
+> > `origin` is **where** the primary remote copy of your work resides (the remote server alias).
+> > 
+> You work on `main` locally, and you use `origin` to synchronize that `main` branch with the central repository.
