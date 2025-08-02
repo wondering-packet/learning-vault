@@ -1,7 +1,3 @@
----
-
-## **Lesson 1 – Git Foundations**
-
 ### What Git Is
 - Git is a **distributed version control system** — every developer has the full history locally.
 - Tracks changes to files over time.
