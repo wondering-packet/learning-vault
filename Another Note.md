@@ -1,3 +1,0 @@
-Installed git plugin!
-
--WP
