@@ -26,6 +26,7 @@ git commit -m "Initial commit using git"
 	**Note**: *DO NOT* initialize it with a README, license, or `.gitignore` file. You want an _empty_ repository so your local history can be pushed cleanly without merge conflicts initially.
 
 2. Copy the HTTPS URL e.g. `https://github.com/wondering-packet/iac-git.git`.
+
 ## 3. Configure credentials
 
 ```bash
