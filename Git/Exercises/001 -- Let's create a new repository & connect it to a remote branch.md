@@ -1,4 +1,3 @@
-# Goal: Let's create a new repository & connect it to a remote branch
 
 ## 1. Create a local directory, Initialize & make first commit
 
@@ -13,7 +12,7 @@ git branch -m main
 # let's make a test file which will be included in our first commit.
 echo "hello, i am learning Git!" >> hello.txt
 ls
-	hello.txt
+hello.txt
 # let's stage the change. "." means all files in the directory.
 git add .
 # add a commit message.
@@ -32,17 +31,30 @@ git commit -m "Initial commit using git"
 ```bash
 git config user.name wondering-packet # "Your Name"
 git config --global user.name # validate
-	wondering-packet
+wondering-packet
 git config user.email "packetwondering@gmail.com" # "your.email@example.com"
 git config user.email # validate
-	packetwondering@gmail.com
+packetwondering@gmail.com
 ```
 
-## 4. Connect to remote repo
+## 4. Connect to remote repo & Push
 
 ```bash
 git remote add origin `https://github.com/wondering-packet/iac-git.git`
 git remote -v # validate
-
-
+origin  https://github.com/wondering-packet/learning-vault.git (fetch)  
+origin  https://github.com/wondering-packet/learning-vault.git (push)
+# push our commit.
+git push -u origin main
+# you will see something like this.
+Enumerating objects: 7, done.  
+Counting objects: 100% (7/7), done.  
+Delta compression using up to 4 threads  
+Compressing objects: 100% (5/5), done.  
+Writing objects: 100% (7/7), 1.61 KiB | 824.00 KiB/s, done.  
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0  
+To https://github.com/wondering-packet/learning-vault.git  
+* [new branch]      main -> main  
+branch 'main' set up to track 'origin/main'
 ```
+
