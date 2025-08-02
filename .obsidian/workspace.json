@@ -179,13 +179,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "376cc142841ebfcd",
+  "active": "8aac1c45dda22459",
   "lastOpenFiles": [
     "Git/Exercises/001 - Create a new repository & connect it to a remote branch.md",
+    "Git/KBs/KB-001 (Main or Master Branch).md",
     "Git/Lessons/002 - Branching & Conflict Resolution.md",
     "Git/Lessons/001 - Git Foundation.md",
     "Git/KBs/KB-002 (Origin).md",
-    "Git/KBs/KB-001 (Main or Master Branch).md",
     "Git/KBs",
     "Git/KB/Git - Origin.md",
     "Git/Exercises",
