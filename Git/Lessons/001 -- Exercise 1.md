@@ -1,4 +1,4 @@
-# Let's create a  new repository!
+# Goal: Let's create a new repository & connect it to a remote branch
 
 ## 1. Create a local directory & Initialize
 
@@ -22,6 +22,9 @@ git commit -m "Initial commit using git"
 
 ## 2. Create remote repository in GitHub
 
-### 1. Create a new repo, ideally name it same as your local repo "iac-git".
-	#### **Note**: *DO NOT* initialize it with a README, license, or `.gitignore` file. You want an _empty_ repository so your local history can be pushed cleanly without merge conflicts initially.
-### 2. Copy the HTTPS url.	
+#### a. Create a new repo by going to GitHub page, name it same as your local repo "iac-git".
+
+**Note**: *DO NOT* initialize it with a README, license, or `.gitignore` file. You want an _empty_ repository so your local history can be pushed cleanly without merge conflicts initially.
+#### b. Copy the HTTPS url `'https://github.com/your-username/your-repo-name.git`.
+
+
