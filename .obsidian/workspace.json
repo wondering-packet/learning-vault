@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Lessons/001 -- Exercise.md",
+                "file": "Git/Lessons/001 -- Exercise 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "001 -- Exercise"
+              "title": "001 -- Exercise 1"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Lessons/001 -- Exercise.md",
+                "file": "Git/Lessons/001 -- Exercise 1.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 001 -- Exercise"
+              "title": "Outline of 001 -- Exercise 1"
             }
           },
           {
@@ -182,10 +182,10 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Lessons/001 - Git Foundation.md",
-    "Git/Lessons/001 -- Exercise.md",
-    "Untitled.md",
     "Git/Lessons/002 - Branching & Conflict Resolution.md",
+    "Git/Lessons/001 -- Exercise 1.md",
+    "Git/Lessons/001 - Git Foundation.md",
+    "Untitled.md",
     "Test/Temp.md",
     "Git/Lessons",
     "Test/Untitled.md",
