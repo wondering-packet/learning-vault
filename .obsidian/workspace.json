@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Lessons/003 - Stashing, Pushing, Cherry-picking, Tagging.md",
-                "mode": "source",
+                "file": "Git/Lessons/002 - Branching & Conflict Resolution.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "003 - Stashing, Pushing, Cherry-picking, Tagging"
+              "title": "002 - Branching & Conflict Resolution"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Lessons/003 - Stashing, Pushing, Cherry-picking, Tagging.md",
+                "file": "Git/Lessons/002 - Branching & Conflict Resolution.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 003 - Stashing, Pushing, Cherry-picking, Tagging"
+              "title": "Outline of 002 - Branching & Conflict Resolution"
             }
           },
           {
@@ -179,10 +179,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fff1c450c59da762",
+  "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Lessons/004 - Rebasing & Squashing.md",
     "Git/Lessons/003 - Stashing, Pushing, Cherry-picking, Tagging.md",
+    "Git/Lessons/004 - Rebasing & Squashing.md",
     "Git/Exercises/001 - Create a new repository & connect it to a remote branch.md",
     "Git/Lessons/002 - Branching & Conflict Resolution.md",
     "Git/Lessons/001 - Git Foundation.md",
