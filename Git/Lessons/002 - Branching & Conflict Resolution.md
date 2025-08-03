@@ -47,7 +47,7 @@ git checkout <feature_branch>
 git rebase main                   # Replay commits from feature branch on top of main
 ```
 4. **Resolve Merge Conflicts**
-- If a conflict occurs the file will have below conflict markers inside:
+	- If a conflict occurs the file will have below conflict markers inside:
 ```
 <<<<<<< HEAD
 changes from current branch
@@ -55,7 +55,7 @@ changes from current branch
 changes from merging branch
 >>>>>>> branch_name_or_commit_id
 ```
-- Steps to resolve:
+	- Steps to resolve:
 ```bash
 # Step1, edit file, remove markers, keep correct code
 git add <file>                    # Step2, stage the file

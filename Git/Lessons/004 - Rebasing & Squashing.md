@@ -11,20 +11,14 @@
 - You must **force push** (`git push --force`) because commit IDs have changed.
 #### Commands
 1. Interactive Rebase
-```bash
-git rebase -i HEAD~<n>      # Edit last n commits
-```
-   Inside the rebase editor:
+	```bash
+	git rebase -i HEAD~<n>      # Edit last n commits
+    ```
+    Inside the rebase editor:
+
 	- `pick` → keep commit
 	- `squash` (or `s`) → merge into previous commit
 	- `reword` → change commit message
-
-```bash
-git rebase -i HEAD~<n> # Edit last n ncommits
-```
-Inside the rebase editor: - `pick` → keep commit - `squash` (or `s`) → merge into previous commit - `reword` → change commit message
-
-
 2. Continue / Abort
 ```bash
 git rebase --continue              # Continue after fixing conflicts
