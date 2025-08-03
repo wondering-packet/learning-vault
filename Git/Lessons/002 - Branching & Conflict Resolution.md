@@ -5,7 +5,7 @@
 
 #### Merging
 - Combines histories of two branches.
-- **Fast-forward merge** → when main hasn’t moved since branch creation.
+- **Fast-forward merge** → when main hasn’t moved since branch creation.[[KB-003 (Merge fast-forward)]]
 - **Merge commit** → when histories diverge.
 
 #### Rebasing
