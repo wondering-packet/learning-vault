@@ -8,12 +8,12 @@
 - **Fast-forward merge** → when main hasn’t moved since branch creation.
 - **Merge commit** → when histories diverge.
 
-### Rebasing
+#### Rebasing
 - Moves your branch commits **on top of** another branch.
 - Keeps history linear → no merge commits.
 - Good for keeping a clean main history.
 
-### Conflicts
+#### Conflicts
 - Occur when Git can’t decide which changes to keep.
 - **Conflict markers**:
 ```plaintext
@@ -29,7 +29,7 @@ git rebase --continue
 git merge --continue
 ```
 
-### Commands
+#### Commands
 1. Create & Switch Branch
 ```bash
 git branch <branch_name>          # Create branch

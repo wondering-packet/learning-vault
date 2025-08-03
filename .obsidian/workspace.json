@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Lessons/002 - Branching & Conflict Resolution.md",
-                "mode": "source",
+                "file": "Git/Lessons/004 - Rebasing & Squashing.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "002 - Branching & Conflict Resolution"
+              "title": "004 - Rebasing & Squashing"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Lessons/002 - Branching & Conflict Resolution.md",
+                "file": "Git/Lessons/004 - Rebasing & Squashing.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 002 - Branching & Conflict Resolution"
+              "title": "Outline of 004 - Rebasing & Squashing"
             }
           },
           {
@@ -181,12 +181,12 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Lessons/003 - Stashing, Pushing, Cherry-picking, Tagging.md",
+    "Git/Lessons/002 - Branching & Conflict Resolution.md",
     "Git/Lessons/001 - Git Foundation.md",
     "Git/Exercises/001 - Create a new repository & connect it to a remote branch.md",
     "Git/KBs/KB-002 (Origin).md",
     "Git/KBs/KB-001 (Main or Master Branch).md",
-    "Git/Lessons/002 - Branching & Conflict Resolution.md",
-    "Git/Lessons/003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/Lessons/004 - Rebasing & Squashing.md",
     "Test/Temp.md",
     "Git/KBs",
