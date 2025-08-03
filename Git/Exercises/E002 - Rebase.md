@@ -70,7 +70,9 @@ git checkout main
 Switched to branch 'main'  
 Your branch is ahead of 'origin/main' by 1 commit.  
 (use "git push" to publish your local commits) 
-# adding a new commit so our pointer moves ahead of 4f88169 (last commit by feature/rebase)
+# Adding a new commit to 'main' so that 'feature/rebase' will have a new base to rebase onto.
+# The current 'main' is at 4421ab9. We are adding a commit on top of that.
+# Our 'feature/rebase' is currently based on 4421ab9.
 echo "main: adding some features v2" >> hello.txt  
 git add .  
 git commit -m "main: new features v2"  
