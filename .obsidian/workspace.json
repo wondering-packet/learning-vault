@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/002 - Merging branch.md",
+                "file": "Git/Lessons/002 - Branching & Conflict Resolution.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "002 - Merging branch"
+              "title": "002 - Branching & Conflict Resolution"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Exercises/002 - Merging branch.md",
+                "file": "Git/Lessons/002 - Branching & Conflict Resolution.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 002 - Merging branch"
+              "title": "Outline of 002 - Branching & Conflict Resolution"
             }
           },
           {
@@ -182,9 +182,9 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Exercises/002 - Merging branch.md",
     "Git/Lessons/001 - Git Foundation.md",
     "Git/Lessons/002 - Branching & Conflict Resolution.md",
-    "Git/Exercises/002 - Merging branch.md",
     "Git/Exercises/002 - Create branch.md",
     "Git/Exercises/001 - Create a new repository & connect it to a remote branch.md",
     "Git/Lessons/004 - Rebasing & Squashing.md",
