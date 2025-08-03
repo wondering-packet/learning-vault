@@ -1,4 +1,4 @@
-#### 1. Create a new branch
+#### **1. Create a new branch**
 ```bash
 # list all branches; * indicates where you currently are.
 git branch
@@ -23,7 +23,7 @@ feature/login
 * feature/logout  
 main
 ```
-#### 2. Commit & Push
+#### **2. Commit & Push**
 1. Commit:
 ```bash
 # creating a test file in the feature/logout branch.

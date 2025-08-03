@@ -1,6 +1,4 @@
-#### 1. Merging fast-forward. [[KB-003 (Merge fast-forward)]]
-<ol>
-<li>
+#### **1. Merging fast-forward. [[KB-003 (Merge fast-forward)]]**
 1. Working on the feature/logout branch
 ```bash
 # feature/logout branch
@@ -85,7 +83,7 @@ git log --oneline --graph --all
 * 4097e98 (feature/login) new repo for IaC
 ```
 
-#### 2. Merging (true merge)
+#### **2. Merging (true merge)**
 1. Working on feature/login branch
 ```bash
 # working on the feature/login branch

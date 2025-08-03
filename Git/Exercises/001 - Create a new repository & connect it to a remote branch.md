@@ -1,4 +1,4 @@
-#### 1. Create a local directory, Initialize it & make our first commit
+#### **1. Create a local directory, Initialize it & make our first commit**
 
 ```bash
 cd /path/to/your/working/directory
@@ -18,7 +18,7 @@ git add .
 git commit -m "Initial commit using git"
 ``` 
 
-#### 2. Create remote repository in GitHub
+#### **2. Create remote repository in GitHub**
 
 1. Create a new repo by going to [GitHub](https://github.com/) , name it same as your local repo "iac-git".
 
@@ -27,7 +27,7 @@ git commit -m "Initial commit using git"
 
 2. Copy the HTTPS URL e.g. `https://github.com/wondering-packet/iac-git.git`.
 
-#### 3. Configure Git
+#### **3. Configure Git**
 
 ```bash
 git config user.name wondering-packet # "Your Name"
@@ -38,7 +38,7 @@ git config user.email # validate
 packetwondering@gmail.com
 ```
 
-#### 4. Connect to remote repo & Push
+#### **4. Connect to remote repo & Push**
 
 ```bash
 git remote add origin `https://github.com/wondering-packet/iac-git.git`
