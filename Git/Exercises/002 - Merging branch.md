@@ -60,7 +60,7 @@ Your branch is ahead of 'origin/main' by 5 commits.
   
 nothing to commit, working tree clean  
 ```
-4. 
+4. Pushing
 ```bash
 # let's push
 git push  
@@ -81,3 +81,5 @@ git log --oneline --graph --all
 |/  
 * 4097e98 (feature/login) new repo for IaC
 ```
+
+#### 2. Merging (true merge)
