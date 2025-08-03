@@ -22,11 +22,11 @@
 	- `reword` → change commit message
 
 2. Continue / Abort
-```bash
-git rebase --continue              # Continue after fixing conflicts
-git rebase --abort                 # Abort rebase
-```
+	```bash
+	git rebase --continue              # Continue after fixing conflicts
+	git rebase --abort                 # Abort rebase
+	```
 3. Force Push After Rebase
-```bash
-git push origin <branch> --force   # Required if branch history changed
-```
+	```bash
+	git push origin <branch> --force   # Required if branch history changed
+	```
