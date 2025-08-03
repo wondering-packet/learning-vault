@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Lessons/002 - Branching & Conflict Resolution.md",
+                "file": "Git/KBs/KB-003 (Merge fast-forward).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "002 - Branching & Conflict Resolution"
+              "title": "KB-003 (Merge fast-forward)"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Lessons/002 - Branching & Conflict Resolution.md",
+                "file": "Git/KBs/KB-003 (Merge fast-forward).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 002 - Branching & Conflict Resolution"
+              "title": "Outline of KB-003 (Merge fast-forward)"
             }
           },
           {
@@ -182,15 +182,16 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/KBs/KB-002 (Origin).md",
+    "Git/KBs/KB-003 (Merge fast-forward).md",
     "Git/Exercises/002 - Merging branch.md",
-    "Git/Lessons/001 - Git Foundation.md",
     "Git/Lessons/002 - Branching & Conflict Resolution.md",
+    "Git/Lessons/001 - Git Foundation.md",
     "Git/Exercises/002 - Create branch.md",
     "Git/Exercises/001 - Create a new repository & connect it to a remote branch.md",
     "Git/Lessons/004 - Rebasing & Squashing.md",
     "Git/Lessons/003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/KBs/KB-001 (Main or Master Branch).md",
-    "Git/KBs/KB-002 (Origin).md",
     "Test/Temp.md",
     "Git/KBs",
     "Git/KB/Git - Origin.md",
