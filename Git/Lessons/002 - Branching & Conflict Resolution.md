@@ -22,7 +22,6 @@
 =======           # separator
 >>>>>>> branch    # other branch’s code
 ```
-- 
 - You must **manually edit**, then:
 ```bash
 git add <filename>
