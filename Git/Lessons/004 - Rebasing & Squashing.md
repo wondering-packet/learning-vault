@@ -12,11 +12,11 @@
 #### Commands
 1. Interactive Rebase
 
-  ```bash
-  git rebase -i HEAD~<n>      # Edit last n commits
-  ```
+    ```bash
+    git rebase -i HEAD~<n>      # Edit last n commits
+    ```
 
-   Inside the rebase editor:
+    Inside the rebase editor:
 	- `pick` → keep commit
 	- `squash` (or `s`) → merge into previous commit
 	- `reword` → change commit message
@@ -30,19 +30,3 @@ git rebase --abort                 # Abort rebase
 ```bash
 git push origin <branch> --force   # Required if branch history changed
 ```
-
-
-
-#### Commands
-
-1. Interactive Rebase
-
-    ```bash
-    git rebase -i HEAD~<n>      # Edit last n commits
-    ```
-
-    Inside the rebase editor:
-
-    - `pick` → keep commit  
-    - `squash` (or `s`) → merge into previous commit  
-    - `reword` → change commit message
