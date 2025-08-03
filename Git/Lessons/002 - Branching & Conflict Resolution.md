@@ -56,17 +56,17 @@
 		changes from merging branch
         >>>>>>> 		branch_name_or_commit_id
 		```
-- Steps to resolve:
-```bash
-# Step1, edit file, remove markers, keep correct code
-git add <file>                    # Step2, stage the file
-git rebase --continue             # Step3, continue rebase after resolving
-```
+	- Steps to resolve:
+		```bash
+		# Step1, edit file, remove markers, keep correct code
+		git add <file>                    # Step2, stage the file
+		git rebase --continue             # Step3, continue rebase after                                                   # resolving
+		```
 5. Delete Branch
-```bash
-git branch -d <branch_name>       # Delete local branch (safe)
-git branch -D <branch_name>       # Force delete local branch
-git push origin --delete <branch> # Delete remote branch
-```
+	```bash
+	git branch -d <branch_name>       # Delete local branch (safe)
+	git branch -D <branch_name>       # Force delete local branch
+	git push origin --delete <branch> # Delete remote branch
+	```
 
 [^1]: [[KB-001 (Main or Master Branch)]]
