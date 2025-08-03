@@ -7,10 +7,11 @@
 #### Pushing
 - Sends commits from local to remote.
 - First push of a new branch:
+
 	```bash
 	git push -u origin branch_name
 	```
-> 	`-u` sets upstream so `git push` works without specifying branch.
+    >`-u` sets upstream so `git push` works without specifying branch.
 #### Cherry-picking
 
 - Apply a **single commit** from another branch to your current branch.
