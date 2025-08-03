@@ -28,7 +28,7 @@ git commit -m "Initial commit using git"
 
 2. Copy the HTTPS URL e.g. `https://github.com/wondering-packet/iac-git.git`.
 
-## 3. Configure User
+## 3. Configure Git
 
 ```bash
 git config user.name wondering-packet # "Your Name"
