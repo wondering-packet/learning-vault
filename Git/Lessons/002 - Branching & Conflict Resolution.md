@@ -19,7 +19,7 @@
 	```plaintext
 	<<<<<<< HEAD      # current branch’s code
 	=======           # separator
-    >>>>>>> 	      # other branch’s code
+  >>>>>>> 	      # other branch’s code
 	```
 
 - You must **manually edit**, then:
@@ -54,7 +54,7 @@
 		changes from current branch
 		=======
 		changes from merging branch
-        >>>>>>> 
+      >>>>>>> 
 		```
 	- Steps to resolve:
 		```bash
