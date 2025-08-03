@@ -1,4 +1,6 @@
 #### 1. Merging fast-forward. [[KB-003 (Merge fast-forward)]]
+<ol>
+<li>
 1. Working on the feature/logout branch
 ```bash
 # feature/logout branch
@@ -62,7 +64,6 @@ nothing to commit, working tree clean
 ```
 4. Pushing
 ```bash
-# let's push
 git push  
 Total 0 (delta 0), reused 0 (delta 0), pack-reused 0  
 To https://github.com/wondering-packet/iac-git.git  
