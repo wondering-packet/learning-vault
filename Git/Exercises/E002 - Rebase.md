@@ -7,6 +7,11 @@ Your branch is ahead of 'origin/main' by 1 commit.
 # pointer for main is at 5cfa15d
 git log --oneline --graph --all  
 * 5cfa15d (feature/logout) logout: new feature v1  
+| * 1b364ef (feature/login) login: new feature v3  
+| * 0de1146 login: new feature v2  
+| * 1da19b5 login: new feature v1  
+|/  
+* 4421ab9 (HEAD -> main) main: v2  
 ..truncating output..
 |/  
 * 4097e98 new repo for IaC
@@ -44,13 +49,18 @@ git log --oneline --graph --all
 * d70242d rebase: v1  
 | * 5cfa15d (feature/logout) logout: new feature v1  
 |/  
-....
+| * 1b364ef (feature/login) login: new feature v3  
+| * 0de1146 login: new feature v2  
+| * 1da19b5 login: new feature v1  
+|/  
+* 4421ab9 (main) main: v2  
+..truncating output..
 |/  
 * 4097e98 new repo for IaC
 ```
 
 > [!important]
-> DO NOT push the new commits for the branch you are going to rebase.
+> **DO NOT** push the new commits of the branch you are going to rebase.
 > - **The Golden Rule of Rebase:** **Never rebase commits that you have already pushed to a public/shared remote repository and that other people might have pulled down.**
 > - **Why?** Rebasing re-writes history by creating _new_ commits. If you push `feature/rebase` (containing commits A, B, C) and then rebase it locally (which creates new commits A', B', C'), your local branch now has a completely different history than the remote branch. When you then try to push again, Git will be confused, as the histories have diverged. You'd be forced to `git push --force`, which is dangerous because it overwrites the remote history and can cause major problems for anyone who has already pulled your original (A, B, C) commits.
 #### **3. Switch back to Main & make a new commit so the current tip of Main changes (explained below)**
