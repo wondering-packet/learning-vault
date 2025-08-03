@@ -46,19 +46,23 @@ git add .
 git commit -m "logout: v2"
 [feature/logout 2f11877] logout: v2
 1 file changed, 1 insertion(+), 1 deletion(-)
+
 # notice git push failed because we did not specify the remote branch.
 git push
 # output
-	fatal: The current branch feature/logout has no upstream branch.
-	To push the current branch and set the remote as upstream, use
-	
-	git push --set-upstream origin feature/logout
-	
-	To have this happen automatically for branches without a tracking
-	upstream, see 'push.autoSetupRemote' in 'git help config'.
+fatal: The current branch feature/logout has no upstream branch.
+To push the current branch and set the remote as upstream, use
 
-# see it didn't work.
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$
+git push --set-upstream origin feature/logout
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+# let's try again, this time specifying the remote branch,
+# also note that "-u" tells the git to now start tracking
+# our local feature/logout with the remote origin/feature/logout
+# we only have to do this once, all future commits will now
+# point to the correct remote brach for
 git push origin -u feature/logout
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
@@ -71,9 +75,9 @@ ee1a39f..2f11877  feature/logout -> feature/logout
 branch 'feature/logout' set up to track 'origin/feature/logout'.
 # now our local feature/logout is tracking the feature/logout at origin
 # we no longer have to specify the remote branch.
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$
+
 nano logout.txt
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$
+
 git add .
 git commit -m "logout: v3"
 [feature/logout 821ce60] logout: v3
