@@ -4,7 +4,7 @@ git checkout main
 Switched to branch 'main'  
 Your branch is ahead of 'origin/main' by 1 commit.  
 (use "git push" to publish your local commits)  
-# pointer for main is at 5cfa15d
+# pointer for main is at 4421ab9
 git log --oneline --graph --all  
 * 5cfa15d (feature/logout) logout: new feature v1  
 | * 1b364ef (feature/login) login: new feature v3  
@@ -42,7 +42,7 @@ git commit -m "rebase: v3"
 1 file changed, 1 insertion(+)
 # commit history after 3 commits
 # new commits are: d70242d -> a751c39 -> 4f88169 (latest)
-# notice 5cfa15d is the last commit for main
+# notice 4421ab9 is the last commit for main
 git log --oneline --graph --all  
 * 4f88169 (HEAD -> feature/rebase) rebase: v3  
 * a751c39 rebase: v2  
@@ -106,7 +106,7 @@ Successfully rebased and updated refs/heads/feature/rebase.
 # few things to note:
 # 1. see now there are 3 new commits on top of our last commit 6a01500
 # 2. commits 040432a -> 72be6f5 -> 10659aa have been replayed from the original d70242d -> a751c39 -> 4f88169 commits (in feature/rebase)
-# 3. d70242d -> a751c39 -> 4f88169 these commits have been detached & are no longer seen. This is why it is extremely important that you DO NOT push your commits; imagine you pushed your commit 4f88169 then someone pulled it & s/he started working on the branch, now if decide to rebase - the entire history will be rewritten for the branch, 4f88169 commit will get detatched & be recreated with a new commit hash. Now when that other user tries to push his/her changes they will get divergent history.
+# 3. d70242d -> a751c39 -> 4f88169 these commits have been detached & are no longer seen. This is why it is extremely important that you DO NOT push your commits; imagine you pushed your commit 4f88169 then someone pulled it & s/he started working on the branch, now if you rebase - the entire history will be rewritten for the branch, 4f88169 commit will get detatched & be recreated with a new commit hash. Now when that other user tries to push his/her changes they will get divergent history.
 git log --oneline --graph --all  
 * 10659aa (HEAD -> feature/rebase, origin/feature/rebase) rebase: v3  
 * 72be6f5 rebase: v2  
