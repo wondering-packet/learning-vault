@@ -85,6 +85,7 @@ git log --oneline --graph --all
 ```
 
 #### 2. Merging (true merge)
+1. Working on feature/login branch
 ```bash
 # working on the feature/login branch
 git checkout feature/login  
@@ -113,7 +114,9 @@ remote:
 To https://github.com/wondering-packet/iac-git.git  
 * [new branch]      feature/login -> feature/login  
 branch 'feature/login' set up to track 'origin/feature/login'.  
-
+``````
+2. Merging
+```bash
 # going back to main so we can perform a merge
 git checkout main  
 Switched to branch 'main'  
@@ -147,8 +150,7 @@ create mode 100644 login.md
 ls  
 hello.txt  login.md  logout.txt  
 ```
-
-```
+3. Pushing
 ```bash
 # pushing to update our remote origin/main
 git push  
