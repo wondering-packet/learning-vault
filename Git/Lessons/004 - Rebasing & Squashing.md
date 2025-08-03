@@ -11,9 +11,9 @@
 - You must **force push** (`git push --force`) because commit IDs have changed.
 #### Commands
 1. Interactive Rebase
-```bash
-git rebase -i HEAD~<n>      # Edit last n commits
-```
+  ```bash
+  git rebase -i HEAD~<n>      # Edit last n commits
+  ```
 
 Inside the rebase editor:
 	- `pick` → keep commit
