@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Lessons/001 - Git Foundation.md",
+                "file": "Git/Lessons/002 - Branching & Conflict Resolution.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "001 - Git Foundation"
+              "title": "002 - Branching & Conflict Resolution"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Lessons/001 - Git Foundation.md",
+                "file": "Git/Lessons/002 - Branching & Conflict Resolution.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 001 - Git Foundation"
+              "title": "Outline of 002 - Branching & Conflict Resolution"
             }
           },
           {
@@ -181,8 +181,8 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Test/Temp.md",
     "Git/Lessons/001 - Git Foundation.md",
+    "Test/Temp.md",
     "Git/KBs/KB-001 (Main or Master Branch).md",
     "Git/Exercises/001 - Create a new repository & connect it to a remote branch.md",
     "Git/Lessons/002 - Branching & Conflict Resolution.md",

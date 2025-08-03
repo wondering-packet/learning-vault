@@ -23,9 +23,21 @@
 ```bash
 git init                          # Initialize new local repo
 git clone <repo_url>              # Clone an existing remote repo
-
 ```
 2. Configure Git
 ```bash
-
+git config user.name "Your Name"
+git config user.email "you@example.com"
+```
+3. Stage & Commit
+```bash
+git add <file>                    # Stage specific file
+git add .                         # Stage all changes
+git commit -m "Commit message"    # Commit staged changes
+```
+4. View History
+```bash
+git log                           # Detailed commit history
+git log --oneline                 # Compact commit history
+git log --oneline --graph --all   # Visual graph of all branches
 ```

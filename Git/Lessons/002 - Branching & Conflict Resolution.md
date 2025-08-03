@@ -29,4 +29,37 @@ git rebase --continue
 git merge --continue
 ```
 
+### Commands
+1. Create & Switch Branch
+```bash
+git branch <branch_name>          # Create branch
+git checkout <branch_name>        # Switch to branch
+git checkout -b <branch_name>     # Create + switch in one step
+```
+2. Merge
+```bash
+git checkout main
+git merge <branch_name>           # Merge into current branch
+```
+3. Rebase
+```bash
+git checkout <feature_branch>
+git rebase main                   # Replay commits from feature branch on top of main
+```
+4. **Resolve Merge Conflicts**
+- Conflict markers inside files:
+```
+<<<<<<< HEAD
+changes from current branch
+=======
+changes from merging branch
+>>>>>>> branch_name_or_commit_id
+```
+- Steps to resolve:
+```bash
+# Edit file, remove markers, keep correct code
+git add <file>
+git rebase --continue             # Continue rebase after resolving
+```
+
 [^1]: [[KB-001 (Main or Master Branch)]]
