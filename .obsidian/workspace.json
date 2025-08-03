@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Git/Lessons/002 - Branching & Conflict Resolution.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -181,11 +181,11 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Lessons/001 - Git Foundation.md",
+    "Git/Lessons/002 - Branching & Conflict Resolution.md",
     "Git/Lessons/003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/Lessons/004 - Rebasing & Squashing.md",
     "Git/Exercises/001 - Create a new repository & connect it to a remote branch.md",
-    "Git/Lessons/002 - Branching & Conflict Resolution.md",
-    "Git/Lessons/001 - Git Foundation.md",
     "Git/KBs/KB-002 (Origin).md",
     "Git/KBs/KB-001 (Main or Master Branch).md",
     "Test/Temp.md",
