@@ -1,4 +1,4 @@
-#### 1. Check current commit history
+#### **1. Check current commit history**
 ```bash
 git checkout main  
 Switched to branch 'main'  
@@ -11,7 +11,7 @@ git log --oneline --graph --all
 |/  
 * 4097e98 new repo for IaC
 ```
-#### 2. Create a new branch & make some commits
+#### **2. Create a new branch & make some commits**
 ```bash
 # new branch
 git checkout -b feature/rebase  
@@ -53,7 +53,7 @@ git log --oneline --graph --all
 > DO NOT push the new commits for the branch you are going to rebase.
 > - **The Golden Rule of Rebase:** **Never rebase commits that you have already pushed to a public/shared remote repository and that other people might have pulled down.**
 > - **Why?** Rebasing re-writes history by creating _new_ commits. If you push `feature/rebase` (containing commits A, B, C) and then rebase it locally (which creates new commits A', B', C'), your local branch now has a completely different history than the remote branch. When you then try to push again, Git will be confused, as the histories have diverged. You'd be forced to `git push --force`, which is dangerous because it overwrites the remote history and can cause major problems for anyone who has already pulled your original (A, B, C) commits.
-#### 3. Switch back to Main & make a new commit so the current tip of Main changes (explained below)
+#### **3. Switch back to Main & make a new commit so the current tip of Main changes (explained below)**
 ```bash
 git pull origin main   
 git checkout main
@@ -71,7 +71,7 @@ git commit -m "main: new features v2"
 > [!important]
 > Always pull your main before trying to rebase. This ensures your main is up-to-date i.e. any other commits by other people are pulled in.
 
-#### 4. Rebase
+#### **4. Rebase**
 ```bash
 # see the new commit 6a01500 is now ahead of 4f88169 (last commit by feature/rebase)
 git log --oneline --graph --all  
