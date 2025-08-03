@@ -21,14 +21,14 @@ A -- B -- C -- D -- E -- F (main, feature/logout)
 ```
 (`main`'s pointer simply moved to F, incorporating D, E, F directly.)
 
-## Purpose:
+#### **Purpose:**
 
 The primary purpose of a fast-forward merge is to:
 
 1.  **Keep History Clean and Linear:** It avoids creating unnecessary merge commits when the history naturally allows for a simple pointer advancement. This results in a cleaner, easier-to-read commit history.
 2.  **Efficiency:** It's the simplest and fastest type of merge Git can perform, as it involves just moving a pointer.
 
-## Analogy:
+#### **Analogy:**
 
 Imagine you have a **video tape recorder** and you're watching a movie.
 
@@ -36,7 +36,7 @@ Imagine you have a **video tape recorder** and you're watching a movie.
 * Someone else (your `feature/logout` branch) watched the movie from **00:30** up to **01:00** and made some notes.
 * If you then want to "merge" their progress into your `main` tape, and you haven't watched anything *past* 00:30 yourself, you don't need to cut and splice the tape. You just need to **"fast-forward"** your tape to **01:00**. Your pointer (the current playback position) simply moves forward.
 
-## Example Commands:
+#### **Example Commands:**
 
 Let's illustrate the process:
 
@@ -90,4 +90,3 @@ Let's illustrate the process:
     * C123456 Add initial.txt to main
     ```
     You can see that `main` and `feature/fast-forward-example` are now both pointing to the `F123456` commit, and there's no separate merge commit.
-```

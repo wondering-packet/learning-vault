@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/KBs/KB-003 (Merge fast-forward).md",
+                "file": "Git/Exercises/002 - Merging branch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "KB-003 (Merge fast-forward)"
+              "title": "002 - Merging branch"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/KBs/KB-003 (Merge fast-forward).md",
+                "file": "Git/Exercises/002 - Merging branch.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of KB-003 (Merge fast-forward)"
+              "title": "Outline of 002 - Merging branch"
             }
           },
           {
@@ -182,8 +182,8 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/KBs/KB-002 (Origin).md",
     "Git/KBs/KB-003 (Merge fast-forward).md",
+    "Git/KBs/KB-002 (Origin).md",
     "Git/Exercises/002 - Merging branch.md",
     "Git/Lessons/002 - Branching & Conflict Resolution.md",
     "Git/Lessons/001 - Git Foundation.md",
