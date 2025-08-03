@@ -1,4 +1,5 @@
 #### 1. Merging fast-forward. [[KB-003 (Merge fast-forward)]]
+1. Working on the feature/logout branch
 ```bash
 # feature/logout branch
 git checkout feature/logout  
@@ -15,7 +16,9 @@ Your branch is up to date with 'origin/main'.
 ls  
 # logout file not merged yet
 hello.txt  
-
+```
+2. Merging
+```bash
 # merging; notice fast forward in output
 git merge feature/logout  
 Updating 826dd10..f1e6f88  
@@ -26,7 +29,9 @@ create mode 100644 logout.txt
 # validate; logout file now added
 ls  
 hello.txt  logout.txt
-
+```
+3. Validating commit history & status
+```bash
 # checking commit history
 
 # few things to learn here:
@@ -54,7 +59,9 @@ Your branch is ahead of 'origin/main' by 5 commits.
 (use "git push" to publish your local commits)  
   
 nothing to commit, working tree clean  
-
+```
+4. 
+```bash
 # let's push
 git push  
 Total 0 (delta 0), reused 0 (delta 0), pack-reused 0  
