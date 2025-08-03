@@ -1,9 +1,9 @@
-### Branches
+#### Branches
 - A branch is just a **pointer** to a commit.
 - [^1]`main` (or `master`) is the default branch.
 - Feature branches allow isolated development.
 
-### Merging
+#### Merging
 - Combines histories of two branches.
 - **Fast-forward merge** → when main hasn’t moved since branch creation.
 - **Merge commit** → when histories diverge.

@@ -1,4 +1,3 @@
-
 #### **What it is:** 
 `origin` is the **default name (or alias) that Git gives to the primary remote repository** that your local repository is connected to.
     

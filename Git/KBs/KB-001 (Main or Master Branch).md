@@ -1,4 +1,3 @@
-
 #### **What it is:** 
 `main` (or historically, `master`) is the conventional name for the **primary, default, or main development branch** in your Git repository.
 
