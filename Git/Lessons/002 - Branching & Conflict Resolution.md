@@ -31,11 +31,12 @@ git merge --continue
 ```
 
 #### Commands
-1. Create & Switch Branch
+1. Create, Switch &  Branch
 ```bash
 git branch <branch_name>          # Create branch
 git checkout <branch_name>        # Switch to branch
 git checkout -b <branch_name>     # Create + switch in one step
+git branch                        # lists all branches; * remarks where you are
 ```
 2. Merge
 ```bash
