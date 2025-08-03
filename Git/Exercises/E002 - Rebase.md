@@ -57,6 +57,22 @@ git log --oneline --graph --all
 ..truncating output..
 |/  
 * 4097e98 new repo for IaC
+# DO NOT DO WHAT I AM DOING BELOW; SEE IMPORTANT NOTE.
+git push origin -u feature/rebase  
+Enumerating objects: 14, done.  
+Counting objects: 100% (14/14), done.  
+Delta compression using up to 4 threads  
+Compressing objects: 100% (9/9), done.  
+Writing objects: 100% (12/12), 1.02 KiB | 348.00 KiB/s, done.  
+Total 12 (delta 3), reused 0 (delta 0), pack-reused 0  
+remote: Resolving deltas: 100% (3/3), done.  
+remote:  
+remote: Create a pull request for 'feature/rebase' on GitHub by visiting:  
+remote:      https://github.com/wondering-packet/iac-git/pull/new/feature/rebase  
+remote:  
+To https://github.com/wondering-packet/iac-git.git  
+* [new branch]      feature/rebase -> feature/rebase  
+branch 'feature/rebase' set up to track 'origin/feature/rebase'.
 ```
 
 > [!important]
@@ -68,7 +84,7 @@ git log --oneline --graph --all
 git pull origin main   
 git checkout main
 Switched to branch 'main'  
-Your branch is ahead of 'origin/main' by 1 commit.  
+Your branch is ahead of 'origin/main' by 1 commit.  # i forgot to push this pending commit. ideally push all your commits for main before you do any rebase
 (use "git push" to publish your local commits) 
 # Adding a new commit to 'main' so that 'feature/rebase' will have a new base to rebase onto.
 # The current 'main' is at 4421ab9. We are adding a commit on top of that.
@@ -101,7 +117,7 @@ git log --oneline --graph --all
 # rebasing
 git checkout feature/rebase  
 Switched to branch 'feature/rebase'  
-Your branch is up to date with 'origin/feature/rebase'.  # This means I pushed 'feature/rebase' earlier. This is key for the push failure below! YES, I AM STUPID !!
+Your branch is up to date with 'origin/feature/rebase'.  # This means I pushed 'feature/rebase' earlier. This is key for the push failure below! (YES, I actually accidentally pushed it earlier) !!
 git rebase main  
 Successfully rebased and updated refs/heads/feature/rebase.  
 
