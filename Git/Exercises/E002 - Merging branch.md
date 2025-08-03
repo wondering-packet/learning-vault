@@ -1,4 +1,4 @@
-#### **1. Merging fast-forward. [[KB003 (Merge fast-forward)]]**
+#### **1. Merging fast-forward. [[KB003 - Merge fast-forward]]**
 1. Working on the feature/logout branch
 ```bash
 # feature/logout branch

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/002 - Rebase.md",
+                "file": "Git/KBs/KB004 - Rebase.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "002 - Rebase"
+              "title": "KB004 - Rebase"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Exercises/002 - Rebase.md",
+                "file": "Git/KBs/KB004 - Rebase.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 002 - Rebase"
+              "title": "Outline of KB004 - Rebase"
             }
           },
           {
@@ -180,19 +180,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "376cc142841ebfcd",
+  "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Lessons/002 - Branching & Conflict Resolution.md",
-    "Git/Exercises/002 - Rebase.md",
-    "Git/Lessons/003 - Stashing, Pushing, Cherry-picking, Tagging.md",
+    "Git/KBs/KB003 - Merge fast-forward.md",
+    "Git/KBs/KB004 - Rebase.md",
+    "Git/KBs/KB002 - Origin.md",
+    "Git/Exercises/E002 - Rebase.md",
+    "Git/Exercises/E002 - Merging branch.md",
+    "Git/KBs/KB001 - Main or Master Branch.md",
+    "Git/Lessons/L002 - Branching & Conflict Resolution.md",
+    "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/Lessons/L001 - Git Foundation.md",
-    "Git/Lessons/004 - Rebasing & Squashing.md",
-    "Git/KBs/KB003 (Merge fast-forward).md",
-    "Git/Exercises/002 - Merging branch.md",
-    "Git/Exercises/002 - Create branch.md",
-    "Git/Exercises/001 - Create a new repository & connect it to a remote branch.md",
-    "Git/KBs/KB001 (Main or Master Branch).md",
-    "Git/KBs/KB002 (Origin).md",
+    "Git/Lessons/L004 - Rebasing & Squashing.md",
+    "Git/Exercises/E002 - Create branch.md",
+    "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
     "Test/Temp.md",
     "Git/KBs",
     "Git/KB/Git - Origin.md",
