@@ -5,7 +5,7 @@
 
 #### **Merging**
 - Combines histories of two branches.
-- **Fast-forward merge** → when main hasn’t moved since branch creation.[[KB-003 (Merge fast-forward)]]
+- **Fast-forward merge** → when main hasn’t moved since branch creation.[[KB003 (Merge fast-forward)]]
 - **Merge commit** → when histories diverge.
 
 #### **Rebasing**
@@ -75,4 +75,4 @@ git branch -D <branch_name>       # Force delete local branch
 git push origin --delete <branch> # Delete remote branch
 ```
 
-[^1]: [[KB-001 (Main or Master Branch)]]
+[^1]: [[KB001 (Main or Master Branch)]]
