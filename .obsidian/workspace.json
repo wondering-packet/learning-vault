@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/Untitled.md",
+                "file": "Git/Exercises/002 - Create new branches.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "002 - Create new branches"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Exercises/Untitled.md",
+                "file": "Git/Exercises/002 - Create new branches.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled"
+              "title": "Outline of 002 - Create new branches"
             }
           },
           {
@@ -166,7 +166,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,12 +182,12 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Exercises/001 - Create a new repository & connect it to a remote branch.md",
+    "Git/Exercises/002 - Create new branches.md",
     "Git/Lessons/002 - Branching & Conflict Resolution.md",
-    "Git/Exercises/Untitled.md",
     "Git/Lessons/004 - Rebasing & Squashing.md",
     "Git/Lessons/003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/Lessons/001 - Git Foundation.md",
-    "Git/Exercises/001 - Create a new repository & connect it to a remote branch.md",
     "Git/KBs/KB-001 (Main or Master Branch).md",
     "Git/KBs/KB-002 (Origin).md",
     "Test/Temp.md",
