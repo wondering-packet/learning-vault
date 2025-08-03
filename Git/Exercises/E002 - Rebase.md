@@ -72,4 +72,12 @@ akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git log --oneline --graph --all
 |/  
 * 4097e98 new repo for IaC
 ```
-DO NOT push the branch you are going to rebase. This is because other people might 
+
+> [!important]
+> DO NOT push the new commits for the branch you are going to rebase.
+> - **The Golden Rule of Rebase:** **Never rebase commits that you have already pushed to a public/shared remote repository and that other people might have pulled down.**
+> - **Why?** Rebasing re-writes history by creating _new_ commits. If you push `feature/rebase` (containing commits A, B, C) and then rebase it locally (which creates new commits A', B', C'), your local branch now has a completely different history than the remote branch. When you then try to push again, Git will be confused, as the histories have diverged. You'd be forced to `git push --force`, which is dangerous because it overwrites the remote history and can cause major problems for anyone who has already pulled your original (A, B, C) commits.
+#### 3. Switch back to Main & make a new commit so the current tip of Main changes (explained below)
+```bash
+
+```
