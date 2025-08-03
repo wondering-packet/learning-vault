@@ -14,10 +14,22 @@
 git push -u origin branch_name
 ```
 > `-u` sets upstream so `git push` works without specifying branch.
+
+### Cherry-picking
+
+- Apply a **single commit** from another branch to your current branch.
+- Keeps the commit message (can be edited).
+- Used for hotfixes, selective feature backports.
+
+### Tagging
+
+- **Lightweight tag** → just a pointer to a commit.
+- **Annotated tag** → includes message, tagger name, date.
+- Useful for releases.
 ### Commands
 1. Stash Changes
 ```bash
-git stash                         # Save changes temporarily
+git stash                          # Save changes temporarily
 git stash list                     # View saved stashes
 git stash pop                      # Reapply last stash & remove it
 git stash apply                    # Reapply last stash & keep it in list

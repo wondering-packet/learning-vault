@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Lessons/003 - Stashing, Pushing, Cherry-picking, Tagging.md",
-                "mode": "preview",
+                "file": "Git/Lessons/004 - Rebasing & Squashing.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "003 - Stashing, Pushing, Cherry-picking, Tagging"
+              "title": "004 - Rebasing & Squashing"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Lessons/003 - Stashing, Pushing, Cherry-picking, Tagging.md",
+                "file": "Git/Lessons/004 - Rebasing & Squashing.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 003 - Stashing, Pushing, Cherry-picking, Tagging"
+              "title": "Outline of 004 - Rebasing & Squashing"
             }
           },
           {
@@ -181,8 +181,8 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Lessons/002 - Branching & Conflict Resolution.md",
     "Git/Lessons/003 - Stashing, Pushing, Cherry-picking, Tagging.md",
+    "Git/Lessons/002 - Branching & Conflict Resolution.md",
     "Git/Lessons/004 - Rebasing & Squashing.md",
     "Git/Lessons/001 - Git Foundation.md",
     "Test/Temp.md",
