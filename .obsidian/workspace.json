@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Git/Lessons/003 - Stashing, Pushing, Cherry-picking, Tagging.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -179,7 +179,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8aac1c45dda22459",
+  "active": "fff1c450c59da762",
   "lastOpenFiles": [
     "Git/Lessons/004 - Rebasing & Squashing.md",
     "Git/Lessons/003 - Stashing, Pushing, Cherry-picking, Tagging.md",
