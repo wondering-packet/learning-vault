@@ -26,3 +26,50 @@ akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git log --oneline --graph --all
 * 4097e98 new repo for IaC
 ```
 #### 2. Create a new branch & make some commits
+```bash
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git checkout -b feature/rebase  
+Switched to a new branch 'feature/rebase'  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ ls  
+hello.txt  login.md  logout.txt  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ echo "rebase: v1" > rebase  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git add .  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -m "rebase: v1"  
+[feature/rebase d70242d] rebase: v1  
+1 file changed, 1 insertion(+)  
+create mode 100644 rebase  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ echo "rebase: v2" >> rebase  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git add .  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -m "rebase: v2"  
+[feature/rebase a751c39] rebase: v2  
+1 file changed, 1 insertion(+)  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ echo "rebase: v3" >> rebase  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git add .  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -m "rebase: v3"  
+[feature/rebase 4f88169] rebase: v3  
+1 file changed, 1 insertion(+)
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git log --oneline --graph --all  
+* 4f88169 (HEAD -> feature/rebase) rebase: v3  
+* a751c39 rebase: v2  
+* d70242d rebase: v1  
+| * 5cfa15d (feature/logout) logout: new feature v1  
+|/  
+| * 1b364ef (feature/login) login: new feature v3  
+| * 0de1146 login: new feature v2  
+| * 1da19b5 login: new feature v1  
+|/  
+* 4421ab9 (main) main: v2  
+*   c3be76d (origin/main) Merge branch 'feature/login'  
+|\  
+| * 3c86970 (origin/feature/login) login: v1  
+* |   f1e6f88 (origin/feature/logout) Merge branch 'main' into feature/logout  
+|\ \  
+| * | 826dd10 main: added signature  
+| |/  
+* | 821ce60 logout: v3  
+* | 2f11877 logout: v2  
+* | ee1a39f logout: added v1  
+* | 458eafb main: readme.md  
+|/  
+* 4097e98 new repo for IaC
+```
+DO NOT push the branch you are going to rebase. This is because other people might 
