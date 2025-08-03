@@ -18,3 +18,14 @@
 - `git commit` → Local Repository  
 - `git push` → Remote Repository  
 
+### Commands
+1. Create / Initialize a Repository
+```bash
+git init                          # Initialize new local repo
+git clone <repo_url>              # Clone an existing remote repo
+
+```
+2. Configure Git
+```bash
+
+```
