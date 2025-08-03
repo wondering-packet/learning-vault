@@ -26,13 +26,20 @@ create mode 100644 logout.txt
 # validate; logout file now added
 ls  
 hello.txt  logout.txt
+
 # checking commit history
+
 # few things to learn here:
-# 1. 
+# 1. main, origin/feature/logout, feature/logout are at f1e6f88 commit.
+# 2. origin/main (which is the remote main) is still at 826dd10 commit.
+# 3. notice the text clearly stating merge source & target.
+# 4. HEAD -> main ; this tells you you are currently in main branch.
+# 5. notice main hasn't had any new commits since the creation of feature/logout.
+# 6. 
 git log --oneline --graph --all  
-*   f1e6f88 (HEAD -> main, origin/feature/logout, feature/logout) Merge branch 'main' into feature/logout  
+*   f1e6f88 (HEAD -> **main, origin/feature/logout, feature/logout**) Merge branch 'main' into feature/logout  
 |\  
-| * 826dd10 (origin/main) main: added signature  
+| * 826dd10 (**origin/main**) main: added signature  
 * | 821ce60 logout: v3  
 * | 2f11877 logout: v2  
 * | ee1a39f logout: added v1  
