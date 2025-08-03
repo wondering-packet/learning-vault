@@ -19,7 +19,7 @@
 	```plaintext
 	<<<<<<< HEAD      # current branch’s code
 	=======           # separator
-    >>>>>>> 	branch    # other branch’s code
+    >>>>>>> 	      # other branch’s code
 	```
 
 - You must **manually edit**, then:
@@ -45,22 +45,22 @@
 3. Rebase
 	```bash
 	git checkout <feature_branch>
-	git rebase main                   # Replay commits from feature branch on                                          # top of main
+	git rebase main                   # Replay commits from feature branch on top of main
 	```
 4. **Resolve Merge Conflicts**
 	- If a conflict occurs the file will have below conflict markers inside:
-		```
+		```plaintext
 		<<<<<<< HEAD
 		changes from current branch
 		=======
 		changes from merging branch
-        >>>>>>> 		branch_name_or_commit_id
+        >>>>>>> 
 		```
 	- Steps to resolve:
 		```bash
 		# Step1, edit file, remove markers, keep correct code
 		git add <file>                    # Step2, stage the file
-		git rebase --continue             # Step3, continue rebase after                                                   # resolving
+		git rebase --continue             # Step3, continue rebase after resolving
 		```
 5. Delete Branch
 	```bash
