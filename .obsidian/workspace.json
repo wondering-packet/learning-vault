@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Git/Lessons/003 - Stashing, Pushing, Cherry-picking, Tagging.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -183,6 +183,7 @@
   "lastOpenFiles": [
     "Git/Lessons/002 - Branching & Conflict Resolution.md",
     "Git/Lessons/003 - Stashing, Pushing, Cherry-picking, Tagging.md",
+    "Git/Lessons/004 - Rebasing & Squashing.md",
     "Git/Lessons/001 - Git Foundation.md",
     "Test/Temp.md",
     "Git/KBs/KB-001 (Main or Master Branch).md",
