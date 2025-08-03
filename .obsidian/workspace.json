@@ -182,9 +182,9 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Exercises/E002 - Merging branch.md",
-    "Git/Exercises/E002 - Rebase.md",
     "Git/KBs/KB004 - Rebase.md",
+    "Git/Exercises/E002 - Rebase.md",
+    "Git/Exercises/E002 - Merging branch.md",
     "Git/KBs/KB003 - Merge fast-forward.md",
     "Git/KBs/KB002 - Origin.md",
     "Git/KBs/KB001 - Main or Master Branch.md",
