@@ -7,22 +7,7 @@ Your branch is ahead of 'origin/main' by 1 commit.
 # pointer for main is at 5cfa15d
 git log --oneline --graph --all  
 * 5cfa15d (feature/logout) logout: new feature v1  
-| * 1b364ef (feature/login) login: new feature v3  
-| * 0de1146 login: new feature v2  
-| * 1da19b5 login: new feature v1  
-|/  
-* 4421ab9 (HEAD -> main) main: v2  
-*   c3be76d (origin/main) Merge branch 'feature/login'  
-|\  
-| * 3c86970 (origin/feature/login) login: v1  
-* |   f1e6f88 (origin/feature/logout) Merge branch 'main' into feature/logout  
-|\ \  
-| * | 826dd10 main: added signature  
-| |/  
-* | 821ce60 logout: v3  
-* | 2f11877 logout: v2  
-* | ee1a39f logout: added v1  
-* | 458eafb main: readme.md  
+..truncating output..
 |/  
 * 4097e98 new repo for IaC
 ```
@@ -97,7 +82,7 @@ git log --oneline --graph --all
 |/  
 | * 5cfa15d (feature/logout) logout: new feature v1  
 |/  
-....
+..truncating output..
 |/  
 * 4097e98 new repo for IaC  
 
@@ -111,7 +96,7 @@ Successfully rebased and updated refs/heads/feature/rebase.
 # few things to note:
 # 1. see now there are 3 new commits on top of our last commit 6a01500
 # 2. commits 040432a -> 72be6f5 -> 10659aa have been replayed from the original d70242d -> a751c39 -> 4f88169 commits (in feature/rebase)
-# 3. d70242d -> a751c39 -> 4f88169 these commits have been detached & are no longer seen
+# 3. d70242d -> a751c39 -> 4f88169 these commits have been detached & are no longer seen. This is why it is extremely important that you DO NOT push your commits; imagine you pushed your commit 4f88169 then 
 git log --oneline --graph --all  
 * 10659aa (HEAD -> feature/rebase) rebase: v3  
 * 72be6f5 rebase: v2  
@@ -122,7 +107,7 @@ git log --oneline --graph --all
 | * d70242d rebase: v1  
 |/  
 | * 5cfa15d (feature/logout) logout: new feature v1  
-....
+..truncating output..
 |/  
 * 4097e98 new repo for IaC
 # push all the commits
