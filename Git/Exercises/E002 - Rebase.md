@@ -84,7 +84,7 @@ branch 'feature/rebase' set up to track 'origin/feature/rebase'.
 git pull origin main   
 git checkout main
 Switched to branch 'main'  
-Your branch is ahead of 'origin/main' by 1 commit.  # i forgot to push this pending commit. ideally push all your commits for main before you do any rebase
+Your branch is ahead of 'origin/main' by 1 commit.  # i forgot to push this pending commit. ideally push all your commits for main before you do any rebase.
 (use "git push" to publish your local commits) 
 # Adding a new commit to 'main' so that 'feature/rebase' will have a new base to rebase onto.
 # The current 'main' is at 4421ab9. We are adding a commit on top of that.
