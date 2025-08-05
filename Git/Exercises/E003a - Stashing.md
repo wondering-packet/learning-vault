@@ -144,7 +144,7 @@ feature/rebase
 * feature/x  # <-- branch we are going to work on.
 main  
 test/conflict  
-# 
+# i have already worked on 2 files which you can see are currently untracked.
 git status  
 On branch feature/x  
 Your branch is ahead of 'origin/feature/x' by 1 commit.  
@@ -152,25 +152,24 @@ Your branch is ahead of 'origin/feature/x' by 1 commit.
   
 Untracked files:  
 (use "git add <file>..." to include in what will be committed)  
-beta2.md  
-beta3.md  
+beta2.md  # untracked file
+beta3.md  # utnracked file
   
 nothing added to commit but untracked files present (use "git add" to track)  
- 
-git stash  
-No local changes to save  
+# i have to stage my files first. IMPORTANT: you can't stash unstaged files.
 git add .  
- 
+# notice no longer showing up as untracked files.
 git status  
 On branch feature/x  
 Your branch is ahead of 'origin/feature/x' by 1 commit.  
 (use "git push" to publish your local commits)  
-  
+	# however you can still see that commit hasn't been initiated yet!
 Changes to be committed:  
 (use "git restore --staged <file>..." to unstage)  
 new file:   beta2.md  
 new file:   beta3.md  
-  
+# stashing the staged files so my work is saved.
+# you can also use "git stash push -m "work on feature A"" to leave a message to this stash.
 git stash  
 Saved working directory and index state WIP on feature/x: d290506 x: beta v2  
 git status  
@@ -179,6 +178,7 @@ Your branch is ahead of 'origin/feature/x' by 1 commit.
 (use "git push" to publish your local commits)  
   
 nothing to commit, working tree clean  
+# switching to another branch to do some work.
 git checkout feature/login  
 Switched to branch 'feature/login'  
 Your branch is up to date with 'origin/feature/login'.  
