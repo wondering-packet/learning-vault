@@ -11,7 +11,7 @@ git log --oneline --graph --all
 # creating & switching - feature/x branch
 git checkout -b feature/x
 Switched to a new branch 'feature/x'
-# creating some new files & commits
+# creating a new file & commit
 echo "x: beta feature" > beta.md  
 git add .  
 git commit -m "x: beta v1"  
@@ -34,103 +34,34 @@ remote:
 To https://github.com/wondering-packet/iac-git.git  
 * [new branch]      feature/x -> feature/x  
 branch 'feature/x' set up to track 'origin/feature/x'.  
- 
-git log --oneline --graph --all  
-* 30d04bb (HEAD -> feature/x, origin/feature/x) x: beta v1  
-*   4720f32 (main) Another - Merge branch 'feature/logout'  
-|\  
-| * e384331 (feature/logout) logout: modified feature v5  
-| * e83ac39 logout: modified feature v4  
-* | 9f9d69d main: added v3  
-* | ac404d9 New feature in branch 'feature/logout'  
-|\|  
-| * e6423bc logout: modified feature v3  
-| * a5efa78 logout: modified feature v2  
-| * 4832fcc logout: modified feature v1  
-| * 5cfa15d (origin/feature/logout) logout: new feature v1  
-| | * 10659aa (origin/feature/rebase, feature/rebase) rebase: v3  
-| | * 72be6f5 rebase: v2  
-| | * 040432a rebase: v1  
-| |/  
-|/|  
-* | 6a01500 (origin/main) main: new features v2  
-|/  
-| * 1b364ef (feature/login) login: new feature v3  
-| * 0de1146 login: new feature v2  
-| * 1da19b5 login: new feature v1  
-|/  
-* 4421ab9 main: v2  
-*   c3be76d Merge branch 'feature/login'  
-|\  
-| * 3c86970 (origin/feature/login) login: v1  
-* |   f1e6f88 Merge branch 'main' into feature/logout  
-|\ \  
-| * | 826dd10 main: added signature  
-| |/  
-* | 821ce60 logout: v3  
-* | 2f11877 logout: v2  
-* | ee1a39f logout: added v1  
-* | 458eafb main: readme.md  
-|/  
-* 4097e98 new repo for IaC  
+# making a change & a commit
 echo "x: beta feature v2" >> beta.md  
 git add .  
 git commit -m "x: beta v2"  
 [feature/x d290506] x: beta v2  
 1 file changed, 1 insertion(+)  
- 
+# note:
+	# 30d04bb & d290506 are our latest 2 commits for above 2 changes.
+	# 4720f32 is where the main is at. notice main hasn't had any other commits.
 git log --oneline --graph --all  
 * d290506 (HEAD -> feature/x) x: beta v2  
 * 30d04bb (origin/feature/x) x: beta v1  
 *   4720f32 (main) Another - Merge branch 'feature/logout'  
-|\  
-| * e384331 (feature/logout) logout: modified feature v5  
-| * e83ac39 logout: modified feature v4  
-* | 9f9d69d main: added v3  
-* | ac404d9 New feature in branch 'feature/logout'  
-|\|  
-| * e6423bc logout: modified feature v3  
-| * a5efa78 logout: modified feature v2  
-| * 4832fcc logout: modified feature v1  
-| * 5cfa15d (origin/feature/logout) logout: new feature v1  
-| | * 10659aa (origin/feature/rebase, feature/rebase) rebase: v3  
-| | * 72be6f5 rebase: v2  
-| | * 040432a rebase: v1  
-| |/  
-|/|  
+...truncated output...
 * | 6a01500 (origin/main) main: new features v2  
-|/  
-| * 1b364ef (feature/login) login: new feature v3  
-| * 0de1146 login: new feature v2  
-| * 1da19b5 login: new feature v1  
-|/  
-* 4421ab9 main: v2  
-*   c3be76d Merge branch 'feature/login'  
-|\  
-| * 3c86970 (origin/feature/login) login: v1  
-* |   f1e6f88 Merge branch 'main' into feature/logout  
-|\ \  
-| * | 826dd10 main: added signature  
-| |/  
-* | 821ce60 logout: v3  
-* | 2f11877 logout: v2  
-* | ee1a39f logout: added v1  
-* | 458eafb main: readme.md  
-|/  
+...truncated output...
 * 4097e98 new repo for IaC
 ```
 2. Merging
 ```bash
 # merging; notice fast forward in output
+# notice 4720f32 has now been updated with d290506 (last commit from feature/x)
 git merge feature/x  
-Updating 826dd10..f1e6f88  
-Fast-forward 
-x.txt | 1 +  
-1 file changed, 1 insertion(+)  
-create mode 100644 x.txt  
-# validate; x file now added
-ls  
-hello.txt  x.txt
+Updating 4720f32..d290506  
+Fast-forward  
+beta.md | 2 ++  
+1 file changed, 2 insertions(+)  
+create mode 100644 beta.md
 ```
 3. Validating commit history & status
 ```bash
@@ -145,22 +76,28 @@ hello.txt  x.txt
 # 6. 4097e98 is the commit when feature/x branch was created.
 # 7. read the graph: all other commits are from branches.
 git log --oneline --graph --all  
-*   f1e6f88 (HEAD -> main, origin/feature/x, feature/x) Merge branch 'main' into feature/x  
+* d290506 (HEAD -> main, feature/x) x: beta v2  
+* 30d04bb (origin/feature/x) x: beta v1  
+*   4720f32 Another - Merge branch 'feature/logout'  
 |\  
-| * 826dd10 (origin/main) main: added signature  
-* | 821ce60 x: v3  
-* | 2f11877 x: v2  
-* | ee1a39f x: added v1  
-* | 458eafb main: readme.md  
+| * e384331 (feature/logout) logout: modified feature v5  
+| * e83ac39 logout: modified feature v4  
+* | 9f9d69d main: added v3  
+* | ac404d9 New feature in branch 'feature/logout'  
+|\|  
+| * e6423bc logout: modified feature v3  
+| * a5efa78 logout: modified feature v2  
+| * 4832fcc logout: modified feature v1  
+| * 5cfa15d (origin/feature/logout) logout: new feature v1  
+| | * 10659aa (origin/feature/rebase, feature/rebase) rebase: v3  
+| | * 72be6f5 rebase: v2  
+| | * 040432a rebase: v1  
+| |/  
+|/|  
+* | 6a01500 (origin/main) main: new features v2  
+
 |/  
-* 4097e98 (feature/login) new repo for IaC  
-# you can also confirm this in status
-git status  
-On branch main  
-Your branch is ahead of 'origin/main' by 5 commits.  
-(use "git push" to publish your local commits)  
-  
-nothing to commit, working tree clean  
+* 4097e98 new repo for IaC
 ```
 4. Pushing
 ```bash
