@@ -37,23 +37,22 @@ git commit -m "logout: added v1"
 2 files changed, 1 insertion(+), 1 deletion(-)  
 create mode 100644 logout.txt  
 delete mode 100644 readme.md
-git push origin feature/logout  
-
-# preparing for push.
-
-# editing a file so we can make a new commit.
-nano logout.txt
-# staging.
-git add .
-git commit -m "logout: v2"
-[feature/logout 2f11877] logout: v2
-1 file changed, 1 insertion(+), 1 deletion(-)
+# pushing while specifying the remote branch. IMPORTANT if upstream is not set already!
+git push origin feature/logout 
+# you will see a normal push output with no errors.
 ```
 
 2. Push & "origin -u" explained:
 
 ```bash
-# notice git push failed because we did not specify the remote branch.
+# editing a file so we can make a new commit.
+nano logout.txt    # edited the file.
+# staging.
+git add .
+git commit -m "logout: v2"
+[feature/logout 2f11877] logout: v2
+1 file changed, 1 insertion(+), 1 deletion(-)
+# notice git push failed because we did not specify the remote branch like we did earlier.
 git push
 fatal: The current branch feature/logout has no upstream branch.
 To push the current branch and set the remote as upstream, use
@@ -87,6 +86,7 @@ git add .
 git commit -m "logout: v3"
 [feature/logout 821ce60] logout: v3
 1 file changed, 1 insertion(+), 1 deletion(-)
+# notice, we no longer need to specify the remote branch now; git is tracking this local with its remote already.
 git push
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
