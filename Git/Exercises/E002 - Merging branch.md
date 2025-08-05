@@ -125,8 +125,8 @@ ls
 hello.txt  logout.txt  
 
 # HEAD is currenlty at main since we are on main
-# 3c86970 is the commit from our login branch <-- keep a note of this.
-# f1e6f88 is the commit from our main branch 
+# 3c86970 is the commit from our login branch <-- keep a note of this
+# f1e6f88 is the commit from our main branch <-- keep a note of this
 git log --oneline --graph --all  
 * 3c86970 (origin/feature/login, feature/login) login: v1  
 | *   f1e6f88 (HEAD -> main, origin/main, origin/feature/logout, feature/logout) Merge branch 'main' into feature/logout  
@@ -164,8 +164,12 @@ To https://github.com/wondering-packet/iac-git.git
 f1e6f88..c3be76d  main -> main  
 
 # notice:
-# a new commit has been created unlike fast-forward; c3be76d is the commit hash
-# you can still see the commit 3c86970 from our login branch
+# a new commit c3be76d has been created unlike fast-forward
+# you can still see the commits 3c86970 & f1e6f88
+# reading the graph:
+	# graph always shows parent-child relationship
+	# c3be76d is the parent for 3c86970 & f1e6f88 children
+	# from parent, you can easily trace the child commits
 git log --oneline --graph --all  
 *   c3be76d (HEAD -> main, origin/main) Merge branch 'feature/login'  
 |\  
