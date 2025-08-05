@@ -1,54 +1,54 @@
 #### **1. Merging fast-forward. [[KB003 - Merge fast-forward]]**
-1. Working on the feature/logout branch
+1. Checking current commit history & working on the feature/x branch
 ```bash
-# feature/logout branch
-git checkout feature/logout  
-Switched to branch 'feature/logout'  
-Your branch is up to date with 'origin/feature/logout'.  
+# feature/x branch
+git checkout feature/x  
+Switched to branch 'feature/x'  
+Your branch is up to date with 'origin/feature/x'.  
 ls  
-# we have added this logout.txt file
-hello.txt  logout.txt
+# we have added this x.txt file
+hello.txt  x.txt
 
 # main branch
 git checkout main  
 Switched to branch 'main'  
 Your branch is up to date with 'origin/main'.  
 ls  
-# logout file not merged yet
+# x file not merged yet
 hello.txt  
 ```
 2. Merging
 ```bash
 # merging; notice fast forward in output
-git merge feature/logout  
+git merge feature/x  
 Updating 826dd10..f1e6f88  
 Fast-forward 
-logout.txt | 1 +  
+x.txt | 1 +  
 1 file changed, 1 insertion(+)  
-create mode 100644 logout.txt  
-# validate; logout file now added
+create mode 100644 x.txt  
+# validate; x file now added
 ls  
-hello.txt  logout.txt
+hello.txt  x.txt
 ```
 3. Validating commit history & status
 ```bash
 # checking commit history
 
 # few things to learn here:
-# 1. main, origin/feature/logout, feature/logout are at f1e6f88 commit.
+# 1. main, origin/feature/x, feature/x are at f1e6f88 commit.
 # 2. origin/main (which is the remote main) is still at 826dd10 commit.
 # 3. notice the text clearly stating merge source & target.
 # 4. HEAD -> main ; this tells you that you are currently in main branch.
-# 5. notice main hasn't had any new commits since the creation of feature/logout.
-# 6. 4097e98 is the commit when feature/logout branch was created.
+# 5. notice main hasn't had any new commits since the creation of feature/x.
+# 6. 4097e98 is the commit when feature/x branch was created.
 # 7. read the graph: all other commits are from branches.
 git log --oneline --graph --all  
-*   f1e6f88 (HEAD -> main, origin/feature/logout, feature/logout) Merge branch 'main' into feature/logout  
+*   f1e6f88 (HEAD -> main, origin/feature/x, feature/x) Merge branch 'main' into feature/x  
 |\  
 | * 826dd10 (origin/main) main: added signature  
-* | 821ce60 logout: v3  
-* | 2f11877 logout: v2  
-* | ee1a39f logout: added v1  
+* | 821ce60 x: v3  
+* | 2f11877 x: v2  
+* | ee1a39f x: added v1  
 * | 458eafb main: readme.md  
 |/  
 * 4097e98 (feature/login) new repo for IaC  
@@ -72,12 +72,12 @@ To https://github.com/wondering-packet/iac-git.git
 # 2. no new commit hash; we are doing a fast forward to the f1e6f88 commit.
 # this is the key difference b/w a normal merge & ff merge.
 git log --oneline --graph --all  
-*   f1e6f88 (HEAD -> main, origin/main, origin/feature/logout, feature/logout) Merge branch 'main' into feature/logout  
+*   f1e6f88 (HEAD -> main, origin/main, origin/feature/x, feature/x) Merge branch 'main' into feature/x  
 |\  
 | * 826dd10 main: added signature  
-* | 821ce60 logout: v3  
-* | 2f11877 logout: v2  
-* | ee1a39f logout: added v1  
+* | 821ce60 x: v3  
+* | 2f11877 x: v2  
+* | ee1a39f x: added v1  
 * | 458eafb main: readme.md  
 |/  
 * 4097e98 (feature/login) new repo for IaC
@@ -122,21 +122,21 @@ Switched to branch 'main'
 Your branch is up to date with 'origin/main'.  
 # notice login file isn't here yet
 ls  
-hello.txt  logout.txt  
+hello.txt  x.txt  
 
 # HEAD is currenlty at main since we are on main
 # 3c86970 is the commit from our login branch <-- keep a note of this
 # f1e6f88 is the commit from our main branch <-- keep a note of this
 git log --oneline --graph --all  
 * 3c86970 (origin/feature/login, feature/login) login: v1  
-| *   f1e6f88 (HEAD -> main, origin/main, origin/feature/logout, feature/logout) Merge branch 'main' into feature/logout  
+| *   f1e6f88 (HEAD -> main, origin/main, origin/feature/x, feature/x) Merge branch 'main' into feature/x  
 | |\  
 | | * 826dd10 main: added signature  
 | |/  
 |/|  
-| * 821ce60 logout: v3  
-| * 2f11877 logout: v2  
-| * ee1a39f logout: added v1  
+| * 821ce60 x: v3  
+| * 2f11877 x: v2  
+| * ee1a39f x: added v1  
 | * 458eafb main: readme.md  
 |/  
 * 4097e98 new repo for IaC  
@@ -148,7 +148,7 @@ login.md | 1 +
 1 file changed, 1 insertion(+)  
 create mode 100644 login.md  
 ls  
-hello.txt  login.md  logout.txt  
+hello.txt  login.md  x.txt  
 ```
 3. Pushing
 ```bash
@@ -174,13 +174,13 @@ git log --oneline --graph --all
 *   c3be76d (HEAD -> main, origin/main) Merge branch 'feature/login'  
 |\  
 | * 3c86970 (origin/feature/login, feature/login) login: v1  
-* |   f1e6f88 (origin/feature/logout, feature/logout) Merge branch 'main' into feature/logout  
+* |   f1e6f88 (origin/feature/x, feature/x) Merge branch 'main' into feature/x  
 |\ \  
 | * | 826dd10 main: added signature  
 | |/  
-* | 821ce60 logout: v3  
-* | 2f11877 logout: v2  
-* | ee1a39f logout: added v1  
+* | 821ce60 x: v3  
+* | 2f11877 x: v2  
+* | ee1a39f x: added v1  
 * | 458eafb main: readme.md  
 |/  
 * 4097e98 new repo for IaC  
