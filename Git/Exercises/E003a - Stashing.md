@@ -186,7 +186,7 @@ Your branch is ahead of 'origin/feature/x' by 1 commit.
   
 nothing to commit, working tree clean  
 ```
-2. **Working on another branch**
+2. **Work on another branch**
 ```bash
 # switching to another branch to do some work.
 git checkout feature/login  
@@ -213,7 +213,7 @@ nothing to commit, working tree clean
 # this is why i should have added a message with my stash
 # makes it easier to recoginze my stash
 ```
-3. **Stash list/pop/apply**
+3. **Result when Stashing**
 ```bash
 git stash list  
 stash@{0}: WIP on feature/x: d290506 x: beta v2  
