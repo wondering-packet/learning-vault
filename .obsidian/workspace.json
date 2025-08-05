@@ -181,6 +181,8 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/KBs/KB003 - Merge fast-forward.md",
+    "Git/Lessons/L002 - Branching & Conflict Resolution.md",
     "Git/Exercises/E002 - Rebase.md",
     "Git/Exercises/E002 - Merging branch.md",
     "Git/Exercises/E002 - Create branch.md",
@@ -188,8 +190,6 @@
     "Git/KBs/KB004 - Rebase.md",
     "Git/KBs/KB002 - Origin.md",
     "Git/KBs/KB001 - Main or Master Branch.md",
-    "Git/Lessons/L002 - Branching & Conflict Resolution.md",
-    "Git/KBs/KB003 - Merge fast-forward.md",
     "Git/Lessons/L004 - Interactive Rebasing & Squashing.md",
     "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/Lessons/L001 - Git Foundation.md",
