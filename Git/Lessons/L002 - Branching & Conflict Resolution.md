@@ -2,17 +2,19 @@
 - A branch is just a **pointer** to a commit.
 - [^1]`main` (or `master`) is the default branch.
 - Feature branches allow isolated development.
-
 #### **Merging**
 - Combines histories of two branches.
-- **Fast-forward merge** → when main hasn’t moved since branch creation.[[KB003 - Merge fast-forward]]
+- **Fast-forward merge** → when main hasn’t moved since branch creation.
+	- Exercise: [[E002b - Merging branch]] Section 1.
+	- KB: [[KB003 - Merge fast-forward]].
 - **Merge commit** → when histories diverge.
-
+	- Exercise: [[E002b - Merging branch]] Section 2.
 #### **Rebasing**
 - Moves your branch commits **on top of** another branch.
 - Keeps history linear → no merge commits.
 - Good for keeping a clean main history.
-
+- KB: [[KB004 - Rebase]]
+- Exercise: [[E002c - Rebase]]
 #### **Conflicts**
 - Occur when Git can’t decide which changes to keep.
 - **Conflict markers**:
@@ -29,7 +31,6 @@ git rebase --continue
 # or
 git merge --continue
 ```
-
 #### **Commands**
 1. Create & Switch Branch
 ```bash
