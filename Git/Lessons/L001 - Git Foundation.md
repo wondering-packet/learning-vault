@@ -18,6 +18,7 @@
 1. Create / Initialize a Repository
 ```bash
 git init                          # Initialize new local repo
+# OR
 git clone <repo_url>              # Clone an existing remote repo
 ```
 2. Configure Git
@@ -37,3 +38,11 @@ git log                           # Detailed commit history
 git log --oneline                 # Compact commit history
 git log --oneline --graph --all   # Visual graph of all branches
 ```
+5.  Pushing the new branch
+```bash
+# pushes the local branch to a new branch.
+# if the branch doesn't exist then create one.
+git push origin -u <branch_name> 
+```
+
+>    `-u` sets upstream so `git push` works without specifying branch.

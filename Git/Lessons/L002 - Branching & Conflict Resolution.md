@@ -40,15 +40,6 @@ git checkout <branch_name>        # Switch to branch
 git checkout -b <branch_name>     # Create + switch in one step
 git branch                        # lists all branches; * remarks where you are
 ```
-2. Pushing the new branch
-```bash
-# pushes the local branch to a new branch.
-# if the branch doesn't exist then create one.
-git push origin -u <branch_name> 
-```
-
->    `-u` sets upstream so `git push` works without specifying branch.
-
 2. Merge
 ```bash
 git checkout main
