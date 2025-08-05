@@ -1,3 +1,4 @@
+##### Exercise at: [[E002b - Merging branch]] Section 1.
 #### **What it is**:
 
 A "fast-forward" merge is a type of merge operation that Git performs when the branch you are merging **into** (the target branch, e.g., `main`) has **not diverged** from the branch you are merging **from** (the source branch, e.g., `feature/logout`). In other words, all commits on the target branch are direct ancestors of the commits on the source branch.

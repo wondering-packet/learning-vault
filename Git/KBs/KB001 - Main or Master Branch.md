@@ -1,3 +1,5 @@
+> [!tip]
+> Exercise at: [[E002a - Create branch]].
 #### **What it is:** 
 `main` (or historically, `master`) is the conventional name for the **primary, default, or main development branch** in your Git repository.
 
