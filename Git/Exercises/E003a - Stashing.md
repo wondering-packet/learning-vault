@@ -179,6 +179,9 @@ Your branch is ahead of 'origin/feature/x' by 1 commit.
 (use "git push" to publish your local commits)  
   
 nothing to commit, working tree clean  
+```
+2. **Working on another branch**
+```bash
 # switching to another branch to do some work.
 git checkout feature/login  
 Switched to branch 'feature/login'  
@@ -203,11 +206,14 @@ nothing to commit, working tree clean
 # listing saves stashes.
 # this is why i should have added a message with my stash
 # makes it easier to recoginze my stash
+```
+3. **Stash list/pop/apply**
+```bash
 git stash list  
 stash@{0}: WIP on feature/x: d290506 x: beta v2  
 # popping a saved stash; by default loads the latest stash.
 # NOTE pop means apply the latest stash & drop it.
-# if you wanna keep the stash then do "git stash ap"
+# if you wanna keep the stash then do "git stash apply" instead.
 git stash pop  
 On branch feature/x  
 Your branch is ahead of 'origin/feature/x' by 1 commit.  
@@ -218,7 +224,8 @@ Changes to be committed:
 new file:   beta2.md  
 new file:   beta3.md  
   
-Dropped refs/stash@{0} (255e231c67c47153c9b42d65017e0f350391a635)  
+Dropped refs/stash@{0} (255e231c67c47153c9b42d65017e0f350391a635)  # dropped
+# now look at the status, we have our staged chages showing up.
 git status  
 On branch feature/x  
 Your branch is ahead of 'origin/feature/x' by 1 commit.  
@@ -228,7 +235,10 @@ Changes to be committed:
 (use "git restore --staged <file>..." to unstage)  
 new file:   beta2.md  
 new file:   beta3.md  
-  
+```
+4. **Commit & Push**
+```bash
+# commit & push.
 git commit -m "x: added beta 2 & beta 3"  
 [feature/x bd6398e] x: added beta 2 & beta 3  
 2 files changed, 2 insertions(+)  
