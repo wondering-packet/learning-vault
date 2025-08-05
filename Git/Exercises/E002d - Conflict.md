@@ -1,4 +1,5 @@
 #### **1. Create a new branch, modify files from Main &  commit**
+
 ```bash
 # creating a new branch
 git checkout -b test/conflict-2  
@@ -28,6 +29,7 @@ git commit -m "conflict-2: v1"
 2 files changed, 2 insertions(+)
 ```
 #### **2. Modify the files & commit in Main**
+
 ```bash
 # back to main
 git checkout main  
@@ -69,6 +71,7 @@ git log --oneline --graph --all
 akashi@Seijuro-PC:.../Git/local-repos/iac-git$
 ```
 #### **3. Merging**
+
 ```bash
 # merging; note conflict errors - conflicting files are listed.
 git merge test/conflict-2  

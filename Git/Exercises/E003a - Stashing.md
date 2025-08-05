@@ -1,4 +1,5 @@
 #### **1. Without stashing**
+
 1. **Work on a branch**
 ```bash
 # switch to working branch
@@ -136,7 +137,8 @@ Your branch is ahead of 'origin/feature/x' by 1 commit.
 ls  
 beta.md  hello.txt  login.md  logout.md  newlogout
 ```
-#### 2. With Stashing
+#### **2. With Stashing**
+
 1. **Work on a branch**
 ```bash
 git branch  

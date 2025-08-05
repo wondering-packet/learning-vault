@@ -1,4 +1,5 @@
 #### **1. Merging fast-forward. [[KB003 - Merge fast-forward]]**
+
 1. Checking current commit history & working on the feature/x branch
 ```bash
 # current commit history
@@ -109,6 +110,7 @@ git log --oneline --graph --all
 ```
 
 #### **2. Merging (true merge)**
+
 1. Working on feature/login branch
 ```bash
 # working on the feature/login branch
