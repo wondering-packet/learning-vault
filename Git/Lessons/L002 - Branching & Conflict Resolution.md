@@ -42,9 +42,13 @@ git branch                        # lists all branches; * remarks where you are
 ```
 2. Pushing the new branch
 ```bash
-git push origin -u <branch_name>  # pushes the local branch to a new branch.
-# if the branch doesn't exist then create one; "-u" sets the tracking.
+# pushes the local branch to a new branch.
+# if the branch doesn't exist then create one.
+git push origin -u <branch_name> 
 ```
+
+>    `-u` sets upstream so `git push` works without specifying branch.
+
 2. Merge
 ```bash
 git checkout main
@@ -76,5 +80,3 @@ git branch -d <branch_name>       # Delete local branch (safe)
 git branch -D <branch_name>       # Force delete local branch
 git push origin --delete <branch> # Delete remote branch
 ```
-
-[^1]: [[KB001 - Main or Master Branch]]

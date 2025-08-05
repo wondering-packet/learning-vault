@@ -4,14 +4,6 @@
 - `git stash` → save changes
 - `git stash pop` → apply + remove from stash
 - `git stash apply` → apply + keep in stash list
-#### **Pushing**
-- Sends commits from local to remote.
-- First push of a new branch:
-
-	```bash
-	git push -u origin branch_name
-	```
-    >`-u` sets upstream so `git push` works without specifying branch.
 #### **Cherry-picking**
 
 - Apply a **single commit** from another branch to your current branch.
