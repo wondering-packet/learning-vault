@@ -35,7 +35,8 @@ Switched to branch 'main'
 Your branch is ahead of 'origin/main' by 4 commits.  
 (use "git push" to publish your local commits)  
 git log --oneline --graph --all 
-# note that main's pointer is at commit 1f6b3a6 right now. 7be3c6 is the last commit we have from previous step, it is ahead of main.
+# note that main's pointer is at commit 1f6b3a6 right now.
+# 7be3c6 is the last commit we have from previous step, it is ahead of main.
 * 77be3c6 (test/conflict-2) conflict-2: v1  
 *   1f6b3a6 (HEAD -> main) testing commit after fixing conflicts  
 |\  
@@ -48,7 +49,8 @@ conflict: new conflict v2
 conflict/main in login.md  
 cat logout.md  
 conflict: new conflict v2  
-# modifying the content of files to cause conflict; we need to modify the same files to cause conflict.
+# modifying the content of files to cause conflict
+# we need to modify the same files to cause conflict.
 echo "main: new lines to login" >> login.md  
 echo "main: new lines to logout" >> logout.md  
 # staging & commiting. checkout the IMPORTANT note at the end.
@@ -101,9 +103,11 @@ Fixed conflict from conflict-2
 cat logout.md  
 conflict: new conflict v2  
 Fixed conflict from conflict-2  
-# we now have follow the usual process of staging.
+# we now have to follow the usual process of staging.
 git add . 
-# up until this point the merge is at "in-prgress" stage; to fully complete the merge, we need to do a special commit (called Merge commit since it is done after resolving conflicts from a merge) 
+# up until this point the merge is at "in-prgress" stage
+# to fully complete the merge, we need to do a special commit
+# (called Merge commit since it is done after resolving conflicts from a merge) 
 git commit -m "main: fixed conflict"  
 [main b246101] main: fixed conflict  
 git log --oneline --graph --all 
