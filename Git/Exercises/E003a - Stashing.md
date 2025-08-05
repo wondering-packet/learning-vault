@@ -16,24 +16,15 @@ git checkout main
 Switched to branch 'main'  
 Your branch is up to date with 'origin/main'.  
 ls  
+# note that main can see beta2 because it exists in our local system now.
+# it is however not part of main so if you goto github e.g. you won't see this.
 beta2.md  beta.md  hello.txt  login.md  logout.md  newlogout  
-cat beta2.md  
-x: a new beta feature v1  
-git status  
-On branch main  
-Your branch is up to date with 'origin/main'.  
-  
-Untracked files:  
-(use "git add <file>..." to include in what will be committed)  
-beta2.md  
-  
-nothing added to commit but untracked files present (use "git add" to track)  
-git checkout feature/s  
-error: pathspec 'feature/s' did not match any file(s) known to git  
+# back to the working branch
 git checkout feature/x  
 Switched to branch 'feature/x'  
 Your branch is ahead of 'origin/feature/x' by 1 commit.  
 (use "git push" to publish your local commits)  
+# ignore the pending commit; notice git is saying we have untracked files.
 git status  
 On branch feature/x  
 Your branch is ahead of 'origin/feature/x' by 1 commit.  
@@ -41,17 +32,11 @@ Your branch is ahead of 'origin/feature/x' by 1 commit.
   
 Untracked files:  
 (use "git add <file>..." to include in what will be committed)  
-beta2.md  
+beta2.md  # untracked file name
   
 nothing added to commit but untracked files present (use "git add" to track)  
  
-git branch  
-feature/login  
-feature/logout  
-feature/rebase  
-* feature/x  
-main  
-test/conflict  
+# let's do some more work. optional.
 echo "x: feature 3" > beta3.md  
 git status  
 On branch feature/x  
@@ -61,14 +46,10 @@ Your branch is ahead of 'origin/feature/x' by 1 commit.
 Untracked files:  
 (use "git add <file>..." to include in what will be committed)  
 beta2.md  
-beta3.md  
+beta3.md  # another untracked file now
   
 nothing added to commit but untracked files present (use "git add" to track)  
- 
-rm beta  
-beta2.md  beta3.md  beta.md  
-rm beta  
-beta2.md  beta3.md  beta.md  
+# some more work. optional.
 rm beta.md  
 git status  
 On branch feature/x  
@@ -78,7 +59,7 @@ Your branch is ahead of 'origin/feature/x' by 1 commit.
 Changes not staged for commit:  
 (use "git add/rm <file>..." to update what will be committed)  
 (use "git restore <file>..." to discard changes in working directory)  
-deleted:    beta.md  
+deleted:    beta.md  # added for deletion; note that beta.md was already commited before we s
   
 Untracked files:  
 (use "git add <file>..." to include in what will be committed)  
@@ -154,4 +135,9 @@ Your branch is ahead of 'origin/feature/x' by 1 commit.
 (use "git push" to publish your local commits)  
 ls  
 beta.md  hello.txt  login.md  logout.md  newlogout
+```
+#### 2. With Stashing
+1. Work on a branch
+```bash
+
 ```
