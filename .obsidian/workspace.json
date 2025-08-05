@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/E002 - Create branch.md",
+                "file": "Git/Exercises/E002 - Merging branch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E002 - Create branch"
+              "title": "E002 - Merging branch"
             }
           }
         ]
@@ -181,6 +181,7 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Exercises/E002 - Create branch.md",
     "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
     "Git/Exercises/E002 - Merging branch.md",
     "Git/KBs/KB004 - Rebase.md",
@@ -192,7 +193,6 @@
     "Git/Lessons/L004 - Interactive Rebasing & Squashing.md",
     "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/Lessons/L001 - Git Foundation.md",
-    "Git/Exercises/E002 - Create branch.md",
     "Test/Temp.md",
     "Git/KBs",
     "Git/KB/Git - Origin.md",
