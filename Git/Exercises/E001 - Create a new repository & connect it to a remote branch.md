@@ -17,7 +17,6 @@ git add .
 # add a commit message.
 git commit -m "Initial commit using git"
 ``` 
-
 #### **2. Create remote repository in GitHub**
 
 1. Create a new repo by going to [GitHub](https://github.com/) , name it same as your local repo "iac-git".
@@ -26,7 +25,6 @@ git commit -m "Initial commit using git"
 > **DO NOT** initialize it with a README, license, or `.gitignore` file. You want an _empty_ repository so your local history can be pushed cleanly without merge conflicts initially.
 
 2. Copy the HTTPS URL e.g. `https://github.com/wondering-packet/iac-git.git`.
-
 #### **3. Configure Git**
 
 ```bash
@@ -37,7 +35,6 @@ git config user.email "packetwondering@gmail.com" # "your.email@example.com"
 git config user.email # validate
 packetwondering@gmail.com
 ```
-
 #### **4. Connect to remote repo & Push**
 
 ```bash

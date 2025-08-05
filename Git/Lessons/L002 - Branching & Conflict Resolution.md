@@ -51,7 +51,9 @@ git checkout <feature_branch>
 git rebase main                   # Replay commits from feature branch on top of main
 ```
 4. **Resolve Merge Conflicts**
-- If a conflict occurs the file will have below conflict markers inside:
+   
+   - If a conflict occurs the file will have below conflict markers inside:
+
 ```
 <<<<<<< HEAD
 changes from current branch
@@ -59,13 +61,24 @@ changes from current branch
 changes from merging branch
 >>>>>>> branch_name_or_commit_id
 ```
+  
 - Steps to resolve:
+
 ```bash
 # Step1, edit file, remove markers, keep correct code
 git add <file>                    # Step2, stage the file
 git rebase --continue             # Step3, continue rebase after resolving
 ```
-5. Delete Branch
+5.  Pushing the new branch
+```bash
+# pushes the local branch to a new branch.
+# if the branch doesn't exist then create one.
+git push origin -u <branch_name> 
+```
+
+>    `-u` sets upstream so `git push` works without specifying branch.
+
+6. Delete Branch
 ```bash
 git branch -d <branch_name>       # Delete local branch (safe)
 git branch -D <branch_name>       # Force delete local branch
