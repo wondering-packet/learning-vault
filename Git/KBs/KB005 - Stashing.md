@@ -15,75 +15,57 @@ The primary purpose of `git stash` is to handle work-in-progress that you are no
 Think of your working directory as a workbench. You're in the middle of a project and have tools and parts scattered all over it. Suddenly, someone needs the workbench for a moment.
 
 - **`git stash`** is like sweeping all your tools and parts into a box and placing the box on a nearby shelf. Your workbench is now clean and ready for the other person to use.
-    
 - **`git stash list`** is checking the shelf to see all the boxes you've put there.
-    
 - **`git stash pop`** is taking the most recent box from the shelf, emptying its contents back onto your workbench exactly where they were, and then throwing the box away.
-    
 - **`git stash apply`** is taking a box from the shelf and putting its contents back on your workbench, but leaving the box on the shelf in case you need to re-use it elsewhere.
-    
 
 #### **Example Commands:**
 
 - **Save your changes with a message:**
-    
-    Bash
-    
-    ```
+
+    ```bash
     git stash push -m "work on feature-xyz"
     ```
-    
+
     _(`git stash` without a message will also work, but a message is recommended)_
-    
+
 - **View your list of stashes:**
-    
-    Bash
-    
-    ```
+  
+    ```bash
     git stash list
     # Example output:
     # stash@{0}: On main: work on feature-xyz
     # stash@{1}: On main: another bug fix
     ```
-    
+
 - **Apply the most recent stash and remove it from the list:**
-    
-    Bash
-    
-    ```
+
+    ```bash
     git stash pop
     ```
-    
+
     _(This is the most common command to restore your work)_
-    
+
 - **Apply a specific stash (without removing it from the list):**
-    
-    Bash
-    
-    ```
+ 
+    ```bash
     git stash apply stash@{1}
     ```
-    
+
 - **Remove the most recent stash:**
-    
-    Bash
-    
-    ```
+
+    ```bash
     git stash drop
     ```
-    
+
 - **Remove a specific stash:**
-    
-    Bash
-    
-    ```
+
+    ```bash
     git stash drop stash@{1}
     ```
-    
+
 - **Delete all stashes:**
-    
-    Bash
-    
-    ```
+
+    ```bash
     git stash clear
     ```

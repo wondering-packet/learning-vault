@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/KBs/KB005 - Stashing.md",
+                "file": "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "KB005 - Stashing"
+              "title": "L003 - Stashing, Pushing, Cherry-picking, Tagging"
             }
           }
         ]
@@ -181,8 +181,8 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/KBs/KB004 - Rebase.md",
     "Git/KBs/KB005 - Stashing.md",
+    "Git/KBs/KB004 - Rebase.md",
     "Git/KBs/KB002 - Origin.md",
     "Git/Exercises/E003a - Stashing.md",
     "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
