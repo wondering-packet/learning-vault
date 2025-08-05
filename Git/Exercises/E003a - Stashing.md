@@ -9,12 +9,9 @@ Your branch is ahead of 'origin/feature/x' by 1 commit.
 # checking what we currently have
 ls  
 beta.md  hello.txt  login.md  logout.md  newlogout  
-# addi
+# new work: adding a file
 echo "x: a new beta feature v1" > beta2.md  
- 
-cat beta2.md  
-x: a new beta feature v1  
- 
+# switching back to main; optional 
 git checkout main  
 Switched to branch 'main'  
 Your branch is up to date with 'origin/main'.  
