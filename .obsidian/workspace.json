@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/E003a - Stashing.md",
+                "file": "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E003a - Stashing"
+              "title": "L003 - Stashing, Pushing, Cherry-picking, Tagging"
             }
           }
         ]
@@ -181,8 +181,8 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/Exercises/E003a - Stashing.md",
+    "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/Lessons/L002 - Branching & Conflict Resolution.md",
     "Git/Exercises/E002b - Merging branch.md",
     "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
