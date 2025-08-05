@@ -74,6 +74,8 @@ no changes added to commit (use "git add" and/or "git commit -a")
 # back to main (see below message); optional.
 # NOTE that so far we haven't made another commit in another branch.
 # we will lose our changes as soon as a commit happens.
+	# fyi: i forgot to stage my changes above (in branch x)
+	# but either way, i will lose my changes if another commit happens.
 git checkout main  
 D       beta.md  # update to a tracked file; marked for deletion.
 Switched to branch 'main'  
@@ -156,7 +158,11 @@ beta2.md  # untracked file
 beta3.md  # utnracked file
   
 nothing added to commit but untracked files present (use "git add" to track)  
-# i have to stage my files first. IMPORTANT: you can't stash unstaged files.
+# By default, `git stash` only saves changes to files that Git is already tracking.
+# Since `beta2.md` and `beta3.md` are new, they are untracked.
+# To include them in the stash, you can either stage them
+# first with `git add .` (as I am doing below),
+# or use the command `git stash -u` to include untracked files.
 git add .  
 # notice no longer showing up as untracked files.
 git status  
