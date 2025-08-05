@@ -80,10 +80,10 @@ akashi@Seijuro-PC:.../Git/local-repos/iac-git$ cat login.md
 conflict: new conflict v2  
 conflict/main in login.md  
 <<<<<<< HEAD  
-main: new lines to login  
+main: new lines to login  # content in current branch (main)
 =======  
-conflict-2 v1  
->>>>>>> test/conflict-2  # name of the branch that is conflicting with current bra
+conflict-2 v1  # content in branch being merged (test/conflict-2)
+>>>>>>> test/conflict-2  # name of the branch that is conflicting with current branch (main)
 akashi@Seijuro-PC:.../Git/local-repos/iac-git$ cat logout.md  
 conflict: new conflict v2  
 <<<<<<< HEAD  
@@ -91,6 +91,7 @@ main: new lines to logout
 =======  
 conflict-2 v1  
 >>>>>>> test/conflict-2  
+# fixing the conflicts; you have to remove the markers after resolving the conflicts.
 akashi@Seijuro-PC:.../Git/local-repos/iac-git$ nano login.md  
 akashi@Seijuro-PC:.../Git/local-repos/iac-git$ nano logout.md  
 akashi@Seijuro-PC:.../Git/local-repos/iac-git$ cat login.md  
@@ -100,7 +101,9 @@ Fixed conflict from conflict-2
 akashi@Seijuro-PC:.../Git/local-repos/iac-git$ cat logout.md  
 conflict: new conflict v2  
 Fixed conflict from conflict-2  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git add .  
+# we now have follow the usual pto stage the files
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git add . 
+# at this point the merge is at "in-prgress" stage; to fully complete the merge, we need to do a special commit (called Merge commit since it is done after resolving conflicts from a merge) 
 akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -m "main: fixed conflict"  
 [main b246101] main: fixed conflict  
 akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git log --oneline --graph --all  
