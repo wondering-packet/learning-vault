@@ -36,7 +36,7 @@ beta2.md  # untracked file name
   
 nothing added to commit but untracked files present (use "git add" to track)  
  
-# let's do some more work. optional.
+# let's do some more work; optional.
 echo "x: feature 3" > beta3.md  
 git status  
 On branch feature/x  
@@ -49,7 +49,7 @@ beta2.md
 beta3.md  # another untracked file now
   
 nothing added to commit but untracked files present (use "git add" to track)  
-# some more work. optional.
+# some more work; optional.
 rm beta.md  
 git status  
 On branch feature/x  
@@ -59,7 +59,9 @@ Your branch is ahead of 'origin/feature/x' by 1 commit.
 Changes not staged for commit:  
 (use "git add/rm <file>..." to update what will be committed)  
 (use "git restore <file>..." to discard changes in working directory)  
-deleted:    beta.md  # added for deletion; note that beta.md was already commited before we s
+deleted:    beta.md  # added for deletion
+# note that beta.md was already commited before we started this exercise
+# so it's already tracked by git.
   
 Untracked files:  
 (use "git add <file>..." to include in what will be committed)  
@@ -67,26 +69,16 @@ beta2.md
 beta3.md  
   
 no changes added to commit (use "git add" and/or "git commit -a")  
+# back to main (see below message); optional.
+# NOTE that so far we haven't made another commit in another branch.
+# we will lose our changes as soon as a commit happens.
 git checkout main  
-D       beta.md  
+D       beta.md  # update to a tracked file; marked for deletion.
 Switched to branch 'main'  
 Your branch is up to date with 'origin/main'.  
-git status  
-On branch main  
-Your branch is up to date with 'origin/main'.  
-  
-Changes not staged for commit:  
-(use "git add/rm <file>..." to update what will be committed)  
-(use "git restore <file>..." to discard changes in working directory)  
-deleted:    beta.md  
-  
-Untracked files:  
-(use "git add <file>..." to include in what will be committed)  
-beta2.md  
-beta3.md  
-  
-no changes added to commit (use "git add" and/or "git commit -a")  
- 
+# switching to another branch where we need to do some work.
+# we will be creating a commit here which will make us
+# lose our work done on branch x earlier.
 git checkout feature/login  
 Switched to branch 'feature/login'  
 Your branch is ahead of 'origin/feature/login' by 11 commits.  
