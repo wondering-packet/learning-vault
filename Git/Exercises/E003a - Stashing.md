@@ -169,7 +169,8 @@ Changes to be committed:
 new file:   beta2.md  
 new file:   beta3.md  
 # stashing the staged files so my work is saved.
-# you can also use "git stash push -m "work on feature A"" to leave a message to this stash.
+# you should use "git stash push -m "work on feature A"" to leave a message to this stash.
+# i forgot to do that :)
 git stash  
 Saved working directory and index state WIP on feature/x: d290506 x: beta v2  
 git status  
@@ -182,41 +183,31 @@ nothing to commit, working tree clean
 git checkout feature/login  
 Switched to branch 'feature/login'  
 Your branch is up to date with 'origin/feature/login'.  
-cat login.md  
-login: this is a login feature v1  
-login: this a login feature v2  
-git status  
-On branch feature/login  
-Your branch is up to date with 'origin/feature/login'.  
-  
-nothing to commit, working tree clean  
 echo "login: this a login feature v3" >> login.md  
 git add .  
 git commit -m "login: added v3"  
 [feature/login f13cc3e] login: added v3  
 1 file changed, 1 insertion(+)  
-git checkout main  
-Switched to branch 'main'  
-Your branch is up to date with 'origin/main'.  
-git status  
-On branch main  
-Your branch is up to date with 'origin/main'.  
-  
-nothing to commit, working tree clean  
-ls  
-beta.md  hello.txt  login.md  logout.md  newlogout  
+# back to our branch x.
 git checkout feature/x  
 Switched to branch 'feature/x'  
 Your branch is ahead of 'origin/feature/x' by 1 commit.  
 (use "git push" to publish your local commits)  
 git status  
+# notice how staged changes are not showing up!
 On branch feature/x  
 Your branch is ahead of 'origin/feature/x' by 1 commit.  
 (use "git push" to publish your local commits)  
   
 nothing to commit, working tree clean  
+# listing saves stashes.
+# this is why i should have added a message with my stash
+# makes it easier to recoginze my stash
 git stash list  
 stash@{0}: WIP on feature/x: d290506 x: beta v2  
+# popping a saved stash; by default loads the latest stash.
+# NOTE pop means apply the latest stash & drop it.
+# if you wanna keep the stash then do "git stash ap"
 git stash pop  
 On branch feature/x  
 Your branch is ahead of 'origin/feature/x' by 1 commit.  
