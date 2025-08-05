@@ -9,7 +9,7 @@ git init
 # set the default branch name. we are using main which is commonly used.
 git branch -m main
 # let's make a test file which will be included in our first commit.
-echo "hello, i am learning Git!" >> hello.txt
+echo "hello, i am learning Git!" > hello.txt
 ls
 hello.txt
 # let's stage the change. "." means all files in the directory.
@@ -31,7 +31,7 @@ git commit -m "Initial commit using git"
 
 ```bash
 git config user.name wondering-packet # "Your Name"
-git config --global user.name # validate
+git config user.name # validate
 wondering-packet
 git config user.email "packetwondering@gmail.com" # "your.email@example.com"
 git config user.email # validate
@@ -41,7 +41,7 @@ packetwondering@gmail.com
 #### **4. Connect to remote repo & Push**
 
 ```bash
-git remote add origin `https://github.com/wondering-packet/iac-git.git`
+git remote add origin https://github.com/wondering-packet/iac-git.git
 git remote -v # validate
 origin  https://github.com/wondering-packet/learning-vault.git (fetch)  
 origin  https://github.com/wondering-packet/learning-vault.git (push)
