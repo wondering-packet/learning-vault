@@ -125,7 +125,8 @@ ls
 hello.txt  logout.txt  
 
 # HEAD is currenlty at main since we are on main
-# 3c86970 is the commit from our login branch
+# 3c86970 is the commit from our login branch <-- keep a note of this.
+# f1e6f88 is the commit from our main branch 
 git log --oneline --graph --all  
 * 3c86970 (origin/feature/login, feature/login) login: v1  
 | *   f1e6f88 (HEAD -> main, origin/main, origin/feature/logout, feature/logout) Merge branch 'main' into feature/logout  
