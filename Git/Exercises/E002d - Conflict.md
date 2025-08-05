@@ -35,7 +35,7 @@ Switched to branch 'main'
 Your branch is ahead of 'origin/main' by 4 commits.  
 (use "git push" to publish your local commits)  
 git log --oneline --graph --all 
-# ignore 1f6b3a6 - that's from previous testing. 77be3c6 is the last commit we have from previous step. just note that main's pointer is at commit 1f6b3a6 right now. test/conflict-2 (77be3c6) is ahead of main.
+# note that main's pointer is at commit 1f6b3a6 right now. 7be3c6 is the last commit we have from previous step, it is ahead of main.
 * 77be3c6 (test/conflict-2) conflict-2: v1  
 *   1f6b3a6 (HEAD -> main) testing commit after fixing conflicts  
 |\  

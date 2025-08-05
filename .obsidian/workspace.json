@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/E002d - Conflict.md",
+                "file": "Git/Lessons/L002 - Branching & Conflict Resolution.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E002d - Conflict"
+              "title": "L002 - Branching & Conflict Resolution"
             }
           }
         ]
@@ -181,8 +181,8 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Exercises/E002c - Rebase.md",
     "Git/Exercises/E002d - Conflict.md",
+    "Git/Exercises/E002c - Rebase.md",
     "Git/Exercises/E002b - Merging branch.md",
     "Git/Lessons/L002 - Branching & Conflict Resolution.md",
     "Git/KBs/KB003 - Merge fast-forward.md",
