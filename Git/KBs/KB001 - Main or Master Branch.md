@@ -1,5 +1,3 @@
-> [!tip]
-> Exercise at: [[E002a - Create branch]].
 #### **What it is:** 
 `main` (or historically, `master`) is the conventional name for the **primary, default, or main development branch** in your Git repository.
 
@@ -34,3 +32,6 @@ Think of `main` as the "trunk" of a tree where all the major growth happens, and
 > > `origin` is **where** the primary remote copy of your work resides (the remote server alias).
 > > 
 > You work on `main` locally, and you use `origin` to synchronize that `main` branch with the central repository.
+
+> [!example]
+> Exercise at: [[E002a - Create branch]].
