@@ -33,5 +33,5 @@ Think of `main` as the "trunk" of a tree where all the major growth happens, and
 > > 
 > You work on `main` locally, and you use `origin` to synchronize that `main` branch with the central repository.
 
-> [!todo]
+> [!tip]
 > Exercise at: [[E002a - Create branch]].
