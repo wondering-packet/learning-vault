@@ -104,3 +104,6 @@ Let's illustrate a common rebase scenario: you have a feature branch, `main` has
 * **Never rebase commits that you have already pushed to a public/shared remote repository and that other people might have pulled down.**
 * Rebasing re-writes history by creating new commits. If others have based their work on your *old* commits, then when you push your *new* commits after a rebase, their history will diverge from yours, causing significant headaches and requiring complex `git pull --rebase` or `git pull --force` commands for them, which can be disastrous.
 * **Rebase only your local, unpushed, private branches.** Once commits are shared, prefer `git merge` for integration.
+
+> [!tip]
+> Exercise at: [[e]] .
