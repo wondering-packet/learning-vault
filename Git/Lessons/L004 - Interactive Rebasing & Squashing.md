@@ -1,15 +1,19 @@
-#### Interactive Rebase
+#### **Interactive Rebase**
+
 - Lets you rewrite commit history.
 - Common uses:
     - Squash multiple commits into one.
     - Reorder commits.
     - Edit commit messages.
-#### Why Squash?
+#### **Why Squash?**
+
 - Keeps history **clean & meaningful**.
 - Avoids clutter from “WIP” (Work In Progress) commits.
-#### After Rewriting History
+#### **After Rewriting History**
+
 - You must **force push** (`git push --force`) because commit IDs have changed.
-#### Commands
+#### **Commands**
+
 1. Interactive Rebase
 
     ```bash

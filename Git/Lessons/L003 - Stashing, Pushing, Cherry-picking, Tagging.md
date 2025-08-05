@@ -1,4 +1,5 @@
 #### **Stashing**
+
 - Temporarily saves changes **without committing**.
 - Use when you need to switch branches but have uncommitted work.
 - `git stash` → save changes
@@ -10,10 +11,12 @@
 - Keeps the commit message (can be edited).
 - Used for hotfixes, selective feature backports.
 #### **Tagging**
+
 - **Lightweight tag** → just a pointer to a commit.
 - **Annotated tag** → includes message, tagger name, date.
 - Useful for releases.
 #### **Commands**
+
 1. Stash Changes
 	```bash
 	git stash                          # Save changes temporarily
