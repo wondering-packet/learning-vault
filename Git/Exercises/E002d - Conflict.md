@@ -35,7 +35,7 @@ Switched to branch 'main'
 Your branch is ahead of 'origin/main' by 4 commits.  
 (use "git push" to publish your local commits)  
 git log --oneline --graph --all 
-# ignore 1f6b3a6 - that's from previous testing. 77be3c6 is the last commit we have from previous step. just note that main's pointer is at this commit right now. test/conflict-2 (77be3c6) is ahead of main.
+# ignore 1f6b3a6 - that's from previous testing. 77be3c6 is the last commit we have from previous step. just note that main's pointer is at commit 1f6b3a6 right now. test/conflict-2 (77be3c6) is ahead of main.
 * 77be3c6 (test/conflict-2) conflict-2: v1  
 *   1f6b3a6 (HEAD -> main) testing commit after fixing conflicts  
 |\  
@@ -130,3 +130,7 @@ To https://github.com/wondering-packet/iac-git.git
 729b1e5..b246101  main -> main
 ```
 
+> [!important]
+> - A merge conflict can only happen when the histories of two branches have **diverged**, meaning both branches have new commits since their last common ancestor. This is the reason we created a new commit in both main (9f873cc) & test/conflict-2 (77be3c6) branches.
+> 
+> - Also conflict only occurs when the two branches have modified the content of same file. This is why we are modifying the same files in this exercise.
