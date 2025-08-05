@@ -1,21 +1,123 @@
 #### **1. Merging fast-forward. [[KB003 - Merge fast-forward]]**
 1. Checking current commit history & working on the feature/x branch
 ```bash
-# feature/x branch
-git checkout feature/x  
-Switched to branch 'feature/x'  
-Your branch is up to date with 'origin/feature/x'.  
-ls  
-# we have added this x.txt file
-hello.txt  x.txt
-
-# main branch
-git checkout main  
-Switched to branch 'main'  
-Your branch is up to date with 'origin/main'.  
-ls  
-# x file not merged yet
-hello.txt  
+# current commit history
+git log --oneline --graph --all  
+*   4720f32 (HEAD -> main) Another - Merge branch 'feature/logout'  
+...truncated output...
+* | 6a01500 (origin/main) main: new features v2  
+...truncated output...
+* 4097e98 new repo for IaC
+# creating & switching - feature/x branch
+git checkout -b feature/x
+Switched to a new branch 'feature/x'
+# creating some new files & commits
+echo "x: beta feature" > beta.md  
+git add .  
+git commit -m "x: beta v1"  
+[feature/x 30d04bb] x: beta v1  
+1 file changed, 1 insertion(+)  
+create mode 100644 beta.md  
+# push is optional for this excercise 
+git push -u origin feature/x  
+Enumerating objects: 28, done.  
+Counting objects: 100% (28/28), done.  
+Delta compression using up to 4 threads  
+Compressing objects: 100% (21/21), done.  
+Writing objects: 100% (24/24), 2.35 KiB | 343.00 KiB/s, done.  
+Total 24 (delta 10), reused 0 (delta 0), pack-reused 0  
+remote: Resolving deltas: 100% (10/10), completed with 2 local objects.  
+remote:  
+remote: Create a pull request for 'feature/x' on GitHub by visiting:  
+remote:      https://github.com/wondering-packet/iac-git/pull/new/feature/x  
+remote:  
+To https://github.com/wondering-packet/iac-git.git  
+* [new branch]      feature/x -> feature/x  
+branch 'feature/x' set up to track 'origin/feature/x'.  
+ 
+git log --oneline --graph --all  
+* 30d04bb (HEAD -> feature/x, origin/feature/x) x: beta v1  
+*   4720f32 (main) Another - Merge branch 'feature/logout'  
+|\  
+| * e384331 (feature/logout) logout: modified feature v5  
+| * e83ac39 logout: modified feature v4  
+* | 9f9d69d main: added v3  
+* | ac404d9 New feature in branch 'feature/logout'  
+|\|  
+| * e6423bc logout: modified feature v3  
+| * a5efa78 logout: modified feature v2  
+| * 4832fcc logout: modified feature v1  
+| * 5cfa15d (origin/feature/logout) logout: new feature v1  
+| | * 10659aa (origin/feature/rebase, feature/rebase) rebase: v3  
+| | * 72be6f5 rebase: v2  
+| | * 040432a rebase: v1  
+| |/  
+|/|  
+* | 6a01500 (origin/main) main: new features v2  
+|/  
+| * 1b364ef (feature/login) login: new feature v3  
+| * 0de1146 login: new feature v2  
+| * 1da19b5 login: new feature v1  
+|/  
+* 4421ab9 main: v2  
+*   c3be76d Merge branch 'feature/login'  
+|\  
+| * 3c86970 (origin/feature/login) login: v1  
+* |   f1e6f88 Merge branch 'main' into feature/logout  
+|\ \  
+| * | 826dd10 main: added signature  
+| |/  
+* | 821ce60 logout: v3  
+* | 2f11877 logout: v2  
+* | ee1a39f logout: added v1  
+* | 458eafb main: readme.md  
+|/  
+* 4097e98 new repo for IaC  
+echo "x: beta feature v2" >> beta.md  
+git add .  
+git commit -m "x: beta v2"  
+[feature/x d290506] x: beta v2  
+1 file changed, 1 insertion(+)  
+ 
+git log --oneline --graph --all  
+* d290506 (HEAD -> feature/x) x: beta v2  
+* 30d04bb (origin/feature/x) x: beta v1  
+*   4720f32 (main) Another - Merge branch 'feature/logout'  
+|\  
+| * e384331 (feature/logout) logout: modified feature v5  
+| * e83ac39 logout: modified feature v4  
+* | 9f9d69d main: added v3  
+* | ac404d9 New feature in branch 'feature/logout'  
+|\|  
+| * e6423bc logout: modified feature v3  
+| * a5efa78 logout: modified feature v2  
+| * 4832fcc logout: modified feature v1  
+| * 5cfa15d (origin/feature/logout) logout: new feature v1  
+| | * 10659aa (origin/feature/rebase, feature/rebase) rebase: v3  
+| | * 72be6f5 rebase: v2  
+| | * 040432a rebase: v1  
+| |/  
+|/|  
+* | 6a01500 (origin/main) main: new features v2  
+|/  
+| * 1b364ef (feature/login) login: new feature v3  
+| * 0de1146 login: new feature v2  
+| * 1da19b5 login: new feature v1  
+|/  
+* 4421ab9 main: v2  
+*   c3be76d Merge branch 'feature/login'  
+|\  
+| * 3c86970 (origin/feature/login) login: v1  
+* |   f1e6f88 Merge branch 'main' into feature/logout  
+|\ \  
+| * | 826dd10 main: added signature  
+| |/  
+* | 821ce60 logout: v3  
+* | 2f11877 logout: v2  
+* | ee1a39f logout: added v1  
+* | 458eafb main: readme.md  
+|/  
+* 4097e98 new repo for IaC
 ```
 2. Merging
 ```bash
