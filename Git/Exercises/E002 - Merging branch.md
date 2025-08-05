@@ -55,7 +55,7 @@ git log --oneline --graph --all
 2. Merging
 ```bash
 # merging; notice fast forward in output
-# notice 4720f32 has now been updated with d290506 (last commit from feature/x)
+# notice the main branch's pointer has moved from commit 4720f32 to d290506 (the last commit from feature/x)
 git merge feature/x  
 Updating 4720f32..d290506  
 Fast-forward  
@@ -86,24 +86,26 @@ git log --oneline --graph --all
 4. Pushing
 ```bash
 git push  
-Total 0 (delta 0), reused 0 (delta 0), pack-reused 0  
+Enumerating objects: 5, done.  
+Counting objects: 100% (5/5), done.  
+Delta compression using up to 4 threads  
+Compressing objects: 100% (2/2), done.  
+Writing objects: 100% (3/3), 295 bytes | 295.00 KiB/s, done.  
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0  
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.  
 To https://github.com/wondering-packet/iac-git.git  
-826dd10..f1e6f88  main -> main  
+6a01500..d290506  main -> main
 
-# notice the major change:
-# 1. now origin/main has also moved to the commit f1e6f88.
-# 2. no new commit hash; we are doing a fast forward to the f1e6f88 commit.
-# this is the key difference b/w a normal merge & ff merge.
+# notice now origin/main has also moved to the commit d290506.
+
 git log --oneline --graph --all  
-*   f1e6f88 (HEAD -> main, origin/main, origin/feature/x, feature/x) Merge branch 'main' into feature/x  
+* d290506 (HEAD -> main, origin/main, feature/x) x: beta v2  
+* 30d04bb (origin/feature/x) x: beta v1  
+*   4720f32 Another - Merge branch 'feature/logout'  
 |\  
-| * 826dd10 main: added signature  
-* | 821ce60 x: v3  
-* | 2f11877 x: v2  
-* | ee1a39f x: added v1  
-* | 458eafb main: readme.md  
+...truncated output...
 |/  
-* 4097e98 (feature/login) new repo for IaC
+* 4097e98 new repo for IaC
 ```
 
 #### **2. Merging (true merge)**
