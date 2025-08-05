@@ -68,34 +68,18 @@ create mode 100644 beta.md
 # checking commit history
 
 # few things to learn here:
-# 1. main, origin/feature/x, feature/x are at f1e6f88 commit.
-# 2. origin/main (which is the remote main) is still at 826dd10 commit.
-# 3. notice the text clearly stating merge source & target.
-# 4. HEAD -> main ; this tells you that you are currently in main branch.
-# 5. notice main hasn't had any new commits since the creation of feature/x.
-# 6. 4097e98 is the commit when feature/x branch was created.
-# 7. read the graph: all other commits are from branches.
+# 1. main, origin/feature/x are at d290506 commit.
+# 2. origin/main (which is the remote main) is still at 6a01500 commit since we haven't pushed yet.
+# 3. HEAD -> main ; this tells you that you are currently in main branch.
+# 4. notice there is no new commit after the FF merge - this is the main distinction from a normal merge. the pointer on main has simply moved forward from 4720f32 to d290506.
+
 git log --oneline --graph --all  
 * d290506 (HEAD -> main, feature/x) x: beta v2  
 * 30d04bb (origin/feature/x) x: beta v1  
 *   4720f32 Another - Merge branch 'feature/logout'  
-|\  
-| * e384331 (feature/logout) logout: modified feature v5  
-| * e83ac39 logout: modified feature v4  
-* | 9f9d69d main: added v3  
-* | ac404d9 New feature in branch 'feature/logout'  
-|\|  
-| * e6423bc logout: modified feature v3  
-| * a5efa78 logout: modified feature v2  
-| * 4832fcc logout: modified feature v1  
-| * 5cfa15d (origin/feature/logout) logout: new feature v1  
-| | * 10659aa (origin/feature/rebase, feature/rebase) rebase: v3  
-| | * 72be6f5 rebase: v2  
-| | * 040432a rebase: v1  
-| |/  
-|/|  
+...truncated output...
 * | 6a01500 (origin/main) main: new features v2  
-
+...truncated output...
 |/  
 * 4097e98 new repo for IaC
 ```
