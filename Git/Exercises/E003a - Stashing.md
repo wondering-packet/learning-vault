@@ -10,6 +10,8 @@ Your branch is ahead of 'origin/feature/x' by 1 commit.
 ls  
 beta.md  hello.txt  login.md  logout.md  newlogout  
 # new work: adding a file
+# fyi, when i say work here i am just doing minimal file/text changes.
+# in real world, work would mean something like fixing bugs, adding new features etc.
 echo "x: a new beta feature v1" > beta2.md  
 # switching back to main; optional 
 git checkout main  
@@ -77,19 +79,19 @@ D       beta.md  # update to a tracked file; marked for deletion.
 Switched to branch 'main'  
 Your branch is up to date with 'origin/main'.  
 # switching to another branch where we need to do some work.
-# we will be creating a commit here which will make us
+# we will be making a commit here which will make us
 # lose our work done on branch x earlier.
 git checkout feature/login  
 Switched to branch 'feature/login'  
 Your branch is ahead of 'origin/feature/login' by 11 commits.  
 (use "git push" to publish your local commits)  
-cat login.md  
-login: this is a login feature v1  
+# work in this branch
 echo "login: this a login feature v2" >> login.md  
 cat login.md  
 login: this is a login feature v1  
 login: this a login feature v2  
 git add .  
+# after the commit we lose our work done in branch x.
 git commit -m "login: added v2"  
 [feature/login cb5a1f4] login: added v2  
 3 files changed, 3 insertions(+)  
@@ -105,22 +107,20 @@ Total 14 (delta 4), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (4/4), done.  
 To https://github.com/wondering-packet/iac-git.git  
 3c86970..cb5a1f4  feature/login -> feature/login  
- 
-git status  
-On branch feature/login  
-Your branch is up to date with 'origin/feature/login'.  
-  
-nothing to commit, working tree clean  
+# notice switching to main isn't saying anything about our untracked files now.
 git checkout main  
 Switched to branch 'main'  
 Your branch is up to date with 'origin/main'.  
+# no untracked files.
 git status  
 On branch main  
 Your branch is up to date with 'origin/main'.  
   
 nothing to commit, working tree clean  
+# beta2/3 gone.
 ls  
 beta.md  hello.txt  login.md  logout.md  newlogout  
+# you will see the same in x branch.
 git checkout feature/x  
 Switched to branch 'feature/x'  
 Your branch is ahead of 'origin/feature/x' by 1 commit.  
