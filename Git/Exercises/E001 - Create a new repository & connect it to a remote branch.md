@@ -43,8 +43,8 @@ packetwondering@gmail.com
 ```bash
 git remote add origin https://github.com/wondering-packet/iac-git.git
 git remote -v # validate
-origin  https://github.com/wondering-packet/learning-vault.git (fetch)  
-origin  https://github.com/wondering-packet/learning-vault.git (push)
+origin  https://github.com/wondering-packet/iac-git.git (fetch)  
+origin  https://github.com/wondering-packet/iac-git.git (push)
 # push our commit.
 git push -u origin main
 # you will see something like this.
@@ -54,7 +54,7 @@ Delta compression using up to 4 threads
 Compressing objects: 100% (5/5), done.  
 Writing objects: 100% (7/7), 1.61 KiB | 824.00 KiB/s, done.  
 Total 7 (delta 0), reused 0 (delta 0), pack-reused 0  
-To https://github.com/wondering-packet/learning-vault.git  
+To https://github.com/wondering-packet/iac-git.git  
 * [new branch]      main -> main  
 branch 'main' set up to track 'origin/main'
 ```

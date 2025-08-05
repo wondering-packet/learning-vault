@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
+                "file": "Git/Exercises/E002 - Create branch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E001 - Create a new repository & connect it to a remote branch"
+              "title": "E002 - Create branch"
             }
           }
         ]
@@ -181,8 +181,8 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Exercises/E002 - Merging branch.md",
     "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
+    "Git/Exercises/E002 - Merging branch.md",
     "Git/KBs/KB004 - Rebase.md",
     "Git/KBs/KB002 - Origin.md",
     "Git/KBs/KB001 - Main or Master Branch.md",

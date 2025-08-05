@@ -26,16 +26,17 @@ main
 #### **2. Commit & Push**
 1. Commit:
 ```bash
+# deleting a test file.
+rm readme.md
 # creating a test file in the feature/logout branch.
-echo "logout: this is logout file" >> logout.txt  
+echo "logout: this is logout file" > logout.txt  
 # staging & commiting.
 git add .  
 git commit -m "logout: added v1"  
-# output:
 [feature/logout ee1a39f] logout: added v1  
 2 files changed, 1 insertion(+), 1 deletion(-)  
 create mode 100644 logout.txt  
-delete mode 100644 readme.md  
+delete mode 100644 readme.md
 git push origin feature/logout  
 
 # preparing for push.
