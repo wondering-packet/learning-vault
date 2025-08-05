@@ -1,5 +1,5 @@
 #### **1. Without stashing**
-1. Work on a branch
+1. **Work on a branch**
 ```bash
 # switch to working branch
 git checkout feature/x  
@@ -78,6 +78,9 @@ git checkout main
 D       beta.md  # update to a tracked file; marked for deletion.
 Switched to branch 'main'  
 Your branch is up to date with 'origin/main'.  
+```
+2. **Work on another branch**
+```bash
 # switching to another branch where we need to do some work.
 # we will be making a commit here which will make us
 # lose our work done on branch x earlier.
@@ -107,6 +110,9 @@ Total 14 (delta 4), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (4/4), done.  
 To https://github.com/wondering-packet/iac-git.git  
 3c86970..cb5a1f4  feature/login -> feature/login  
+```
+3. **Result when not stashing**
+```bash
 # notice switching to main isn't saying anything about our untracked files now.
 git checkout main  
 Switched to branch 'main'  
@@ -129,7 +135,122 @@ ls
 beta.md  hello.txt  login.md  logout.md  newlogout
 ```
 #### 2. With Stashing
-1. Work on a branch
+1. **Work on a branch**
 ```bash
-
+git branch  
+feature/login  
+feature/logout  
+feature/rebase  
+* feature/x  # <-- branch we are going to work on.
+main  
+test/conflict  
+# 
+git status  
+On branch feature/x  
+Your branch is ahead of 'origin/feature/x' by 1 commit.  
+(use "git push" to publish your local commits)  
+  
+Untracked files:  
+(use "git add <file>..." to include in what will be committed)  
+beta2.md  
+beta3.md  
+  
+nothing added to commit but untracked files present (use "git add" to track)  
+ 
+git stash  
+No local changes to save  
+git add .  
+ 
+git status  
+On branch feature/x  
+Your branch is ahead of 'origin/feature/x' by 1 commit.  
+(use "git push" to publish your local commits)  
+  
+Changes to be committed:  
+(use "git restore --staged <file>..." to unstage)  
+new file:   beta2.md  
+new file:   beta3.md  
+  
+git stash  
+Saved working directory and index state WIP on feature/x: d290506 x: beta v2  
+git status  
+On branch feature/x  
+Your branch is ahead of 'origin/feature/x' by 1 commit.  
+(use "git push" to publish your local commits)  
+  
+nothing to commit, working tree clean  
+git checkout feature/login  
+Switched to branch 'feature/login'  
+Your branch is up to date with 'origin/feature/login'.  
+cat login.md  
+login: this is a login feature v1  
+login: this a login feature v2  
+git status  
+On branch feature/login  
+Your branch is up to date with 'origin/feature/login'.  
+  
+nothing to commit, working tree clean  
+echo "login: this a login feature v3" >> login.md  
+git add .  
+git commit -m "login: added v3"  
+[feature/login f13cc3e] login: added v3  
+1 file changed, 1 insertion(+)  
+git checkout main  
+Switched to branch 'main'  
+Your branch is up to date with 'origin/main'.  
+git status  
+On branch main  
+Your branch is up to date with 'origin/main'.  
+  
+nothing to commit, working tree clean  
+ls  
+beta.md  hello.txt  login.md  logout.md  newlogout  
+git checkout feature/x  
+Switched to branch 'feature/x'  
+Your branch is ahead of 'origin/feature/x' by 1 commit.  
+(use "git push" to publish your local commits)  
+git status  
+On branch feature/x  
+Your branch is ahead of 'origin/feature/x' by 1 commit.  
+(use "git push" to publish your local commits)  
+  
+nothing to commit, working tree clean  
+git stash list  
+stash@{0}: WIP on feature/x: d290506 x: beta v2  
+git stash pop  
+On branch feature/x  
+Your branch is ahead of 'origin/feature/x' by 1 commit.  
+(use "git push" to publish your local commits)  
+  
+Changes to be committed:  
+(use "git restore --staged <file>..." to unstage)  
+new file:   beta2.md  
+new file:   beta3.md  
+  
+Dropped refs/stash@{0} (255e231c67c47153c9b42d65017e0f350391a635)  
+git status  
+On branch feature/x  
+Your branch is ahead of 'origin/feature/x' by 1 commit.  
+(use "git push" to publish your local commits)  
+  
+Changes to be committed:  
+(use "git restore --staged <file>..." to unstage)  
+new file:   beta2.md  
+new file:   beta3.md  
+  
+git commit -m "x: added beta 2 & beta 3"  
+[feature/x bd6398e] x: added beta 2 & beta 3  
+2 files changed, 2 insertions(+)  
+create mode 100644 beta2.md  
+create mode 100644 beta3.md  
+git push  
+Enumerating objects: 5, done.  
+Counting objects: 100% (5/5), done.  
+Delta compression using up to 4 threads  
+Compressing objects: 100% (2/2), done.  
+Writing objects: 100% (4/4), 358 bytes | 358.00 KiB/s, done.  
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0  
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.  
+To https://github.com/wondering-packet/iac-git.git  
+30d04bb..bd6398e  feature/x -> feature/x
 ```
