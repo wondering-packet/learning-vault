@@ -12,20 +12,32 @@ The purpose of squashing is to **simplify and streamline your commit history**. 
 - **Cleaning Up a Pull Request:** If a pull request has a messy history with many incremental commits, squashing allows the contributor to present a clean, single commit that represents the entire feature.
 - **Reverting a Change:** If you need to revert a feature that was built across many commits, squashing those commits into one makes the reversion process much simpler, as you only have to revert a single commit instead of many.
 
-#### **Example Commands:**
+### Example Commands
 
-1. To begin an interactive rebase on the last **3** commits, you would run:
+To begin an interactive rebase on the last **3** commits, you would run:
 
-    ```bash
-    git rebase -i HEAD~3
-    ```
+Bash
 
-2. In the editor that opens, you would keep the first commit with `pick` and change the subsequent commits to `squash` (or `s`).
+```bash
+git rebase -i HEAD~3
+```
 
-    ```bash
-    pick 6c303f5 feat: finish feature
-    squash 5a3371f fix: typo in previous commit
-    squash 9128f09 WIP: add some code
-    ```
+When the editor opens, you'll see a list of your commits. **The key thing to notice is that the commits are shown in reverse chronological order**, with the oldest commit at the bottom and the newest at the top. This is the opposite of a `git log` output, so it's a common point of confusion. The editor will look similar to this:
 
-3. After saving and closing the editor, a new prompt will open. This is where you write the final, single commit message for all the squashed commits.
+```
+pick 6c303f5 feat: finish feature  (newest commit)
+pick 5a3371f fix: typo in previous commit
+pick 9128f09 WIP: add some code     (oldest commit)
+```
+
+To squash commits, you must **keep the top-most commit in the list as "pick"**. This commit serves as the "base" or starting point for the new, combined commit. The commits you mark with `squash` will be merged into this base commit. If you were to squash all of them, there would be no base to merge them into, leading to a rebase error.
+
+After marking the second and third commits with `squash`, the file would look like this:
+
+```
+pick 6c303f5 feat: finish feature
+squash 5a3371f fix: typo in previous commit
+squash 9128f09 WIP: add some code
+```
+
+After you save and close the editor, Git will then open a new prompt where you can write the final, single commit message for all the combined changes.
