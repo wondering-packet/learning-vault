@@ -21,6 +21,8 @@
 - Exercise: [[E002c - Rebase]].
 #### **Conflicts**
 
+- KB: [[KB006 - Conflict]].
+- Exercise: [[E002d - Conflict]].
 - Occur when Git can’t decide which changes to keep.
 - **Conflict markers**:
 

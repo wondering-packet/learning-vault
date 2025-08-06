@@ -5,11 +5,15 @@
 - `git stash` → save changes
 - `git stash pop` → apply + remove from stash
 - `git stash apply` → apply + keep in stash list
+- KB: [[KB005 - Stashing]].
+- Exercise: [[E003a - Stashing]]
 #### **Cherry-picking**
 
 - Apply a **single commit** from another branch to your current branch.
 - Keeps the commit message (can be edited).
 - Used for hotfixes, selective feature backports.
+- KB: [[KB007 - Cherry-picking]].
+- Exercise: [[E003b - Cherry-picking]]
 #### **Tagging**
 
 - **Lightweight tag** → just a pointer to a commit.
