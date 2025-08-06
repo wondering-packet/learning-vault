@@ -12,8 +12,8 @@
 - Apply a **single commit** from another branch to your current branch.
 - Keeps the commit message (can be edited).
 - Used for hotfixes, selective feature backports.
-- KB: [[KB007 - Cherry-picking]].
-- Exercise: [Cherry-picking](../Exercises/E003b%20-%20Cherry-picking.md)
+- KB: [KB007](../KBs/KB007%20-%20Cherry-picking.md)
+- Exercise: [E003b](../Exercises/E003b%20-%20Cherry-picking.md)
 #### **Tagging**
 
 - **Lightweight tag** → just a pointer to a commit.
