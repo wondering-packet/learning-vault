@@ -182,8 +182,11 @@
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
     "Git/Lessons/L002 - Branching & Conflict Resolution.md",
-    "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/KBs/KB008 - Tags.md",
+    "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
+    "KB - Tags.md",
+    "\"KB.md",
+    "KB.md",
     "Git/KBs/KB005 - Stashing.md",
     "Git/KBs/KB006 - Conflict.md",
     "Git/KBs/KB007 - Cherry-picking.md",
@@ -208,7 +211,6 @@
     "Git/Lessons",
     "Test/Untitled.md",
     "Test",
-    "Another Note.md",
     "Git"
   ]
 }
