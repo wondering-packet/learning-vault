@@ -140,9 +140,9 @@ To https://github.com/wondering-packet/iac-git.git
 ```bash
 # there are different types of Conflicts
 # this one is a (modify/delete) confict
-# it's saying our file "newlogin" does not exist in HEAD
+# it's saying our file "newlogin" does not exist in HEAD (current branch)
 # but it exists in the commit 0de1146
-# so basically since the file itself doesn't exist in one place
+# so basically since the file itself doesn't exist in one of the places
 # there is no content to compare.
 git cherry-pick 0de1146  
 CONFLICT (modify/delete): newlogin deleted in HEAD and modified in 0de1146 (login: new feature v2).  Version 0de1146 (login: new feature v2) of newlogin left in tree.  
@@ -166,6 +166,7 @@ hint: You can instead skip this commit with "git cherry-pick --skip".
 hint: To abort and get back to the state before "git cherry-pick",  
 hint: run "git cherry-pick --abort".
 ```
+
 > [!important]
 > - A merge conflict can only happen when the histories of two branches have **diverged**, meaning both branches have new commits since their last common ancestor. This is the reason we created a new commit in both main (9f873cc) & test/conflict-2 (77be3c6) branches.
 > 
