@@ -27,15 +27,15 @@
 	```plaintext
 	<<<<<<< HEAD      # current branch’s code
 	=======           # separator
-    >>>>>>> 	branch    # other branch’s code
+    >>>>>>> 		branch    # other branch’s code
 	```
 	- You must **manually edit**, then:
-```bash
-git add <filename>
-git rebase --continue
-# or
-git merge --continue
-```
+	```bash
+	git add <filename>
+	git rebase --continue
+	# or
+	git merge --continue
+	```
 - KB: [[KB006 - Conflict]].
 - Exercise: [[E002d - Conflict]].
 #### **Commands**
