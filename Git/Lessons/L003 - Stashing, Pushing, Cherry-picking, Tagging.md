@@ -19,6 +19,7 @@
 - **Lightweight tag** → just a pointer to a commit.
 - **Annotated tag** → includes message, tagger name, date.
 - Useful for releases.
+- KB: [[KB008 - Tags]].
 #### **Commands**
 
 1. Stash Changes
