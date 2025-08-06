@@ -21,23 +21,23 @@
 - Exercise: [[E002c - Rebase]].
 #### **Conflicts**
 
-- KB: [[KB006 - Conflict]].
-- Exercise: [[E002d - Conflict]].
 - Occur when Git can’t decide which changes to keep.
 - **Conflict markers**:
 
-```plaintext
-<<<<<<< HEAD      # current branch’s code
-=======           # separator
->>>>>>> branch    # other branch’s code
-```
-- You must **manually edit**, then:
+	```plaintext
+	<<<<<<< HEAD      # current branch’s code
+	=======           # separator
+    >>>>>>> 	branch    # other branch’s code
+	```
+	- You must **manually edit**, then:
 ```bash
 git add <filename>
 git rebase --continue
 # or
 git merge --continue
 ```
+- KB: [[KB006 - Conflict]].
+- Exercise: [[E002d - Conflict]].
 #### **Commands**
 1. Create & Switch Branch
 ```bash
