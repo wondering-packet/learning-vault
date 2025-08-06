@@ -19,6 +19,9 @@ Think of your working directory as a workbench. You're in the middle of a projec
 - **`git stash pop`** is taking the most recent box from the shelf, emptying its contents back onto your workbench exactly where they were, and then throwing the box away.
 - **`git stash apply`** is taking a box from the shelf and putting its contents back on your workbench, but leaving the box on the shelf in case you need to re-use it elsewhere.
 
+#### **Real world application** 
+
+You're in the middle of writing a new feature on your branch, but your teammate finds a critical bug in production and needs you to fix it immediately on the main branch. Instead of making a half-finished commit just to switch branches, you can stash your current work. This clears your workspace, allowing you to switch to the main branch, make the hotfix commit, and then switch back to your original branch to pop the stash and resume your work right where you left off.
 #### **Example Commands:**
 
 - **Save your changes with a message:**

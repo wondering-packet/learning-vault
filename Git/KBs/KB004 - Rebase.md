@@ -41,6 +41,9 @@ Think of your branch (`feature/A`) as a stack of new building blocks (commits F,
 * **`git merge main`**: Is like building a new bridge between your feature stack and the main building at its current height. You create a new connection point (merge commit).
 * **`git rebase main`**: Is like taking your stack of new building blocks (F, G, H), carefully *dismantling them*, moving them to the top of the main building's latest floor (E), and then *re-stacking them* (as F', G', H') on top of that new base. Your blocks are the same, but their position in the overall structure has changed, and they are now directly part of the main tower.
 
+#### **Real world application** 
+
+Imagine you've been working on a new feature for a week and the main branch has had 20 new commits from other team members. Before you merge your feature into the main branch, it's good practice to rebase your branch on top of main. This ensures your code is up-to-date with all the latest changes and a final merge will be a simple fast-forward, preventing merge conflicts and keeping the project history clean.
 #### Example Commands:
 
 Let's illustrate a common rebase scenario: you have a feature branch, `main` has new commits, and you want to rebase your feature branch on top of `main`.
