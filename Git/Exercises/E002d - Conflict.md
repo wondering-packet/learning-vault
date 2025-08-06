@@ -136,7 +136,36 @@ remote: Resolving deltas: 100% (8/8), completed with 1 local object.
 To https://github.com/wondering-packet/iac-git.git  
 729b1e5..b246101  main -> main
 ```
-#### 4. Bonus
+#### **4. Bonus**
+```bash
+# there are different types of Conflicts
+# this one is a (modify/delete) confict
+# it's saying our file "newlogin" does not exist in HEAD
+# but it exists in the commit 0de1146
+# so basically since the file itself doesn't exist in one place
+# there is no content to compare.
+git cherry-pick 0de1146  
+CONFLICT (modify/delete): newlogin deleted in HEAD and modified in 0de1146 (login: new feature v2).  Version 0de1146 (login: new feature v2) of newlogin left in tree.  
+error: could not apply 0de1146... login: new feature v2  
+hint: After resolving the conflicts, mark them with  
+hint: "git add/rm <pathspec>", then run  
+hint: "git cherry-pick --continue".  
+hint: You can instead skip this commit with "git cherry-pick --skip".  
+hint: To abort and get back to the state before "git cherry-pick",  
+hint: run "git cherry-pick --abort".
+
+# this one is a typical (content) conflict
+git cherry-pick 61c242b  
+Auto-merging login-hotfix  
+CONFLICT (content): Merge conflict in login-hotfix  
+error: could not apply 61c242b... login-hotfix: added hotfix v3  
+hint: After resolving the conflicts, mark them with  
+hint: "git add/rm <pathspec>", then run  
+hint: "git cherry-pick --continue".  
+hint: You can instead skip this commit with "git cherry-pick --skip".  
+hint: To abort and get back to the state before "git cherry-pick",  
+hint: run "git cherry-pick --abort".
+```
 > [!important]
 > - A merge conflict can only happen when the histories of two branches have **diverged**, meaning both branches have new commits since their last common ancestor. This is the reason we created a new commit in both main (9f873cc) & test/conflict-2 (77be3c6) branches.
 > 
