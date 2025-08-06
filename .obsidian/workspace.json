@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/KBs/KB008 - Tags.md",
+                "file": "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "KB008 - Tags"
+              "title": "L003 - Stashing, Pushing, Cherry-picking, Tagging"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/KBs/KB008 - Tags.md",
+                "file": "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of KB008 - Tags"
+              "title": "Outline of L003 - Stashing, Pushing, Cherry-picking, Tagging"
             }
           },
           {
@@ -181,9 +181,9 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/Lessons/L002 - Branching & Conflict Resolution.md",
     "Git/KBs/KB008 - Tags.md",
+    "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "KB - Tags.md",
     "\"KB.md",
     "KB.md",

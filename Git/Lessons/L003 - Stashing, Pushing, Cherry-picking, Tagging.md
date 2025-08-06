@@ -20,7 +20,7 @@
 - **Annotated tag** → includes message, tagger name, date.
 - Useful for releases.
 - KB: [[KB008 - Tags]].
-- KB: [Tags](../KBs/KB008%20-%20Tags)
+- KB: [Tags](../KBs/KB008%20-%20Tags.md)
 #### **Commands**
 
 1. Stash Changes
