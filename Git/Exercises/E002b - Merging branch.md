@@ -1,4 +1,4 @@
-#### **1. Merging fast-forward. [[KB003 - Merge fast-forward]]**
+#### **1. Merging fast-forward. [KB003 - Merge fast-forward](../KBs/KB003%20-%20Merge%20fast-forward.md)**
 
 1. Checking current commit history & working on the feature/x branch
 ```bash
