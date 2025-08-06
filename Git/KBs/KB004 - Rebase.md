@@ -95,7 +95,7 @@ Let's illustrate a common rebase scenario: you have a feature branch, `main` has
     ```
     Notice how F1 and F2 are now F1' and F2' (new hashes), and they are directly on top of M2, making the history linear.
 
-> [!caution]
+> [!warning]
 > ### **CRITICAL WARNING: DO NOT REBASE SHARED HISTORY**
 > 
 > * **Never rebase commits that you have already pushed to a public/shared remote repository and that other people might have pulled down.**
