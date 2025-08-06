@@ -124,6 +124,9 @@ git cherry-pick --continue
 [feature/login c25cb2a] login: added new hotfixes (v9)  
 Date: Wed Aug 6 23:01:46 2025 +0530  
 1 file changed, 6 insertions(+)  
+```
+
+```bash
 # final resolved file
 cat login-hotfix  
 login: all hotfixes go here!  
