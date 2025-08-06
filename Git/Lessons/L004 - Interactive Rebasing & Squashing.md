@@ -5,10 +5,13 @@
     - Squash multiple commits into one.
     - Reorder commits.
     - Edit commit messages.
+
 #### **Why Squash?**
 
 - Keeps history **clean & meaningful**.
 - Avoids clutter from “WIP” (Work In Progress) commits.
+- KB: [KB010 - Squashing](../KBs/KB010%20-%20Squashing.md).
+- Exercise: [E004 - Squashing with Interactive Rebase](../Exercises/E004%20-%20Squashing%20with%20Interactive%20Rebase.md).
 #### **After Rewriting History**
 
 - You must **force push** (`git push --force`) because commit IDs have changed.
