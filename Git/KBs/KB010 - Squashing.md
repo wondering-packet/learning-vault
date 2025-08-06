@@ -41,3 +41,8 @@ squash 9128f09 WIP: add some code
 ```
 
 After you save and close the editor, Git will then open a new prompt where you can write the final, single commit message for all the combined changes.
+
+> [!CAUTION] Rewriting Shared History
+> Rewriting history with `git rebase -i` should **only** be performed on commits that exist solely on your local branch and have **not been pushed to a remote repository**.
+>
+> If you rewrite commits that other people have already pulled, you will change the commit IDs. This forces others to manually resolve major conflicts, and can lead to lost work. If you must do this, you will need to use `git push --force` to overwrite the remote, which is a dangerous operation and considered a bad practice in collaborative environments.
