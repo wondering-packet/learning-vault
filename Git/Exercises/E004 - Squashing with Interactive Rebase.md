@@ -99,7 +99,8 @@ e089b0f x: beta4 v1  # commit 1
 # you nee to provide the hash of the commit which was created just
 # before the ones we are going to squash/pick. its 1aab5ac in our case.
 git rebase -i 1aab5ac  
-# this will open an editor where you will see all the commits that were made after 1aab5ac.
+# this will open an editor where you will see
+# all the commits that were made after 1aab5ac.
 ----text-editor----
 pick e089b0f x: beta4 v1  # picking/keeping; first commit we are keeping!
 squash 48f3f22 x: beta4 v1.1  # squashing into ^ above
@@ -107,21 +108,26 @@ squash 099e0d6 x: beta4 v1.2  # squashing into ^ above
 pick 7c7c005 x: beta4 v2.0  # picking/keeping; second commit we are keeping!
 squash 1cb585c x: beta4 v2.2  # squashing into ^ above
 ----text-editor----
-# once you select what you want to do with the commit
-# save the file, this will then open text editor again
-# where you will type in the commit message for the 1st picked commit:
+	# once you select what you want to do with the commit
+	# save the file, this will then open text editor again
+	# where you will type in the commit message for the 1st picked commit:
+
 ----text-editor----
-# by default you will see old commit messages - you can delete them 
+# by default you will see previous commit messages from the 3 commits
+	# you can delete them 
 # then type in a meanigful message for commit 1
 # Note: this is for 099e0d6 & 48f3f22 squashed into e089b0f
 ----text-editor----
-# save the above file, this will then open the editon again
-# where you will type the commit message for the 2nd picked commit:
+	# save the above file, this will then open the editon again
+	# where you will type the commit message for the 2nd picked commit:
+
 ----text-editor----
-# by default you will see old commit messages - you can delete them 
+# by default you will see previous commit messages from the 2 commits
+	# you can delete them 
 # then type in a meanigful message for commit 2
 # Note: this is for 1cb585c squashed into 7c7c005
 ----text-editor----
+
 # rebase confirmation message
 [detached HEAD be285b9] x: beta4 final release  
 Date: Thu Aug 7 02:48:20 2025 +0530  
