@@ -17,10 +17,8 @@ Imagine two people are editing the same shared document.
 #### **Example Commands:**
 
 - **Trigger a conflict (in a merge):**
-    
-    Bash
-    
-    ```
+ 
+    ```bash
     # Make a change and commit on main
     git checkout main
     echo "new line on main" >> file.txt
@@ -36,12 +34,10 @@ Imagine two people are editing the same shared document.
     git merge feature/conflict
     # CONFLICT (content): Merge conflict in file.txt
     ```
-    
+
 - **Resolve a conflict:**
-    
-    Bash
-    
-    ```
+
+    ```bash
     # Open the conflicted file and see the markers
     # <<<<<<< HEAD
     # new line on main
@@ -49,7 +45,8 @@ Imagine two people are editing the same shared document.
     # new line on feature
     # >>>>>>> feature/conflict
     
-    # Edit the file to the final, correct version (e.g., delete the markers and combine the lines)
+    # Edit the file to the final, correct version
+    # (e.g., delete the markers and combine the lines)
     # new line on main
     # new line on feature
     
@@ -59,11 +56,9 @@ Imagine two people are editing the same shared document.
     # Commit the merge
     git commit -m "Merged feature/conflict and resolved the conflict"
     ```
-    
+
 - **Abort an in-progress merge with conflicts:**
-    
-    Bash
-    
-    ```
+ 
+    ```bash
     git merge --abort
     ```
