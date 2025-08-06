@@ -136,7 +136,7 @@ remote: Resolving deltas: 100% (8/8), completed with 1 local object.
 To https://github.com/wondering-packet/iac-git.git  
 729b1e5..b246101  main -> main
 ```
-
+#### 4. Bonus
 > [!important]
 > - A merge conflict can only happen when the histories of two branches have **diverged**, meaning both branches have new commits since their last common ancestor. This is the reason we created a new commit in both main (9f873cc) & test/conflict-2 (77be3c6) branches.
 > 
