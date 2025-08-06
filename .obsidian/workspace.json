@@ -181,9 +181,9 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/KBs/KB009 - Interactive Rebase.md",
     "Git/KBs/KB004 - Rebase.md",
     "Git/KBs/KB010 - Squashing.md",
+    "Git/KBs/KB009 - Interactive Rebase.md",
     "Git/KBs/KB006 - Conflict.md",
     "Git/KBs/KB008 - Tags.md",
     "Git/Exercises/E004 - Squashing with Interactive Rebase.md",
