@@ -14,7 +14,7 @@
 - Exercise: [E004 - Squashing with Interactive Rebase](../Exercises/E004%20-%20Squashing%20with%20Interactive%20Rebase.md).
 #### **Rewriting History**
 
-- DO NOT rebase if other have already pulled in your commits. Since we are rewriting history:
+- DO NOT rebase if other have already pulled in your commits. If you do, then that will rewrite history and:
 
 	- **You'll Overwrite Other People's Work:** If another developer has based their work on the old history, your force push will overwrite their commits, leading to a lot of headaches and lost work.
 	- **It's a "Cardinal Sin" in Git:** Rewriting shared history is considered a bad practice in most team environments. It should only be done on a branch that you are the sole contributor to and that no one else has pulled from.
