@@ -1,5 +1,8 @@
 Let's pick some cherries :)
-(check out the KB [[KB006 - Cherry-picking]] for theory)
+
+> [!tip]
+> check out the KB [[KB007 - Cherry-picking]] for theory
+
 #### **1.  Working on new hotfixes in a branch**
 
 ```bash

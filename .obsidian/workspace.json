@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/E003b - Cherry-picking.md",
+                "file": "Git/KBs/KB006 - Conflict.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E003b - Cherry-picking"
+              "title": "KB006 - Conflict"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Exercises/E003b - Cherry-picking.md",
+                "file": "Git/KBs/KB006 - Conflict.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of E003b - Cherry-picking"
+              "title": "Outline of KB006 - Conflict"
             }
           },
           {
@@ -181,12 +181,14 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/KBs/KB007 - Cherry-picking.md",
+    "Git/KBs/KB006 - Conflict.md",
+    "Git/Exercises/E003b - Cherry-picking.md",
+    "Git/KBs/KB005 - Stashing.md",
     "Git/Exercises/E002d - Conflict.md",
     "Git/Exercises/E003a - Stashing.md",
-    "Git/Exercises/E003b - Cherry-picking.md",
     "Git/Lessons/L002 - Branching & Conflict Resolution.md",
     "Git/Exercises/E002a - Create branch.md",
-    "Git/KBs/KB006 - Cherry-picking.md",
     "Git/KBs/KB003 - Merge fast-forward.md",
     "Git/KBs/KB002 - Origin.md",
     "Git/KBs/KB001 - Main or Master Branch.md",
@@ -194,7 +196,6 @@
     "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/Lessons/L004 - Interactive Rebasing & Squashing.md",
     "Git/Lessons/L001 - Git Foundation.md",
-    "Git/KBs/KB005 - Stashing.md",
     "Git/KBs/KB004 - Rebase.md",
     "Git/Exercises/E002c - Rebase.md",
     "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
