@@ -1,3 +1,5 @@
+> [!tip]
+> check out the KB [[KB006 - Conflict]] for theory
 #### **1. Create a new branch, modify files from Main &  commit**
 
 ```bash

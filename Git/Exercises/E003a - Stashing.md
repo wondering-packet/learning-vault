@@ -1,3 +1,5 @@
+> [!tip]
+> check out the KB [[KB005 - Stashing]] for theory
 #### **1. Without stashing**
 
 1. **Work on a branch**

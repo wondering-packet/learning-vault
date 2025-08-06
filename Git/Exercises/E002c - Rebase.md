@@ -1,3 +1,5 @@
+> [!tip]
+> check out the KB [[KB004 - Rebase]] for theory
 #### **1. Check current commit history**
 
 ```bash

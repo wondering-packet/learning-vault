@@ -8,10 +8,6 @@
 #### **Purpose:** 
 
 `origin` is a shorthand for the full URL of the remote repository. It saves you from typing the long URL every time you want to send or receive changes.
-    
-#### **Analogy:** 
-
-Think of `origin` as the "home base" or "central server" for your project. Your local repository is just one of many copies that syncs with this home base.
 
 #### **Real world application** 
 
