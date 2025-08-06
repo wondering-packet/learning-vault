@@ -29,7 +29,9 @@
 	=======           # separator
     >>>>>>> 		branch    # other branch’s code
 	```
-	- You must **manually edit**, then:
+
+	 You must **manually edit**, then:
+
 	```bash
 	git add <filename>
 	git rebase --continue
