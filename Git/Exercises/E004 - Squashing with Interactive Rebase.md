@@ -1,8 +1,8 @@
 #### 1. Squashing latest commits
 
-1. **Create some WIP commits or Select previous WIP commits that you want to squash**
 ```bash
 # i already have a few commits from past exercises that i am going to squash
+# if you are starting fresh then simply make a few commits before starting
 git log --oneline  
 bd6398e (HEAD -> feature/x, origin/feature/x) x: added beta 2 & beta 3  # we will pick/keep this
 d290506 x: beta v2  # we will squash this
@@ -22,9 +22,9 @@ create mode 100644 beta2.md
 create mode 100644 beta3.md  
 Successfully rebased and updated refs/heads/feature/x.  
 # notice how the 3 commits (2 squashed & 1 picked) have disappeared.
-	# old commits: 30d04bb, d290506, bd6398e
+	# old commits: 30d04bb, d290506, bd6398e.
 # instead now we have a new commit which represents our final commit.
-	# new commit: 
+	# new commit: 1aab5ac.
 git log --oneline  
 1aab5ac (HEAD -> feature/x) x: squash-testing: added beta 2 & beta 3  
 4720f32 Another - Merge branch 'feature/logout'  
@@ -32,4 +32,10 @@ git log --oneline
 ..truncating output..
 458eafb main: readme.md  
 4097e98 new repo for IaC
+```
+
+#### 2. Squashing by Commit hash or ID
+
+```bash
+
 ```
