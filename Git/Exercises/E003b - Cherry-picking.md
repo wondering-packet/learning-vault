@@ -115,12 +115,16 @@ login-hotfix: hotfix for login branch v3.1
 >>>>>>> 97ef01e (login-hotfix: v9)  
 # let's resolve conflicts:
 nano login-hotfix  
-# staging - you ne
+# staging - you need to do this if a conflict occured.
 git add .  
+# continuing the cherry-picking process.
+# in case, you want to abort the process: "git cherry-pick --abort".
+# this will make your files go back to the way they were before cherry-picking.
 git cherry-pick --continue  
 [feature/login c25cb2a] login: added new hotfixes (v9)  
 Date: Wed Aug 6 23:01:46 2025 +0530  
 1 file changed, 6 insertions(+)  
+# final resolved file
 cat login-hotfix  
 login: all hotfixes go here!  
   
