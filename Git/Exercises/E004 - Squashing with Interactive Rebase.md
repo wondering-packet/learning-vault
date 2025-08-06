@@ -37,6 +37,7 @@ git log --oneline
 #### 2. Squashing by Commit hash or ID
 
 1. **Making some new commits**
+
 ```bash
 git branch  
 feature/login  
@@ -90,7 +91,7 @@ e089b0f x: beta4 v1  # commit 1
 4097e98 new repo for IaC
 ```
 
-2. 
+2. **Interactive rebase & Squashing**
 
 ```bash
 # we are going to squash using interactive rebase.
@@ -110,13 +111,15 @@ squash 1cb585c x: beta4 v2.2  # squashing into ^ above
 # save the file, this will then open text editor again
 # where you will type in the commit message for the 1st picked commit:
 ----text-editor----
-# type in a meanigful message for commit 1
+# by default you will see old commit messages - you can delete them 
+# then type in a meanigful message for commit 1
 # Note: this is for 099e0d6 & 48f3f22 squashed into e089b0f
 ----text-editor----
 # save the above file, this will then open the editon again
 # where you will type the commit message for the 2nd picked commit:
 ----text-editor----
-# type in a meanigful message for commit 2
+# by default you will see old commit messages - you can delete them 
+# then type in a meanigful message for commit 2
 # Note: this is for 1cb585c squashed into 7c7c005
 ----text-editor----
 # rebase confirmation message
@@ -129,6 +132,8 @@ Date: Thu Aug 7 02:50:06 2025 +0530
 1 file changed, 1 insertion(+), 1 deletion(-)  
 Successfully rebased and updated refs/heads/feature/x.  
 ```
+
+3. **Validating**
 
 ```bash
 # check the commit history now.
@@ -160,3 +165,11 @@ ee1a39f logout: added v1
 458eafb main: readme.md  
 4097e98 new repo for IaC
 ```
+
+> [!warning]
+> 
+> #### **CRITICAL WARNING: Rewriting Shared History**
+> 
+> Rewriting history with `git rebase -i` should **only** be performed on commits that exist solely on your local branch and have **not been pushed to a remote repository**.
+>
+> If you rewrite commits that other people have already pulled, you will change the commit IDs. This forces others to manually resolve major conflicts, and can lead to lost work. If you must do this, you will need to use `git push --force` to overwrite the remote, which is a dangerous operation and considered a bad practice in collaborative environments.
