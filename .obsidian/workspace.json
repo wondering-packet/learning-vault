@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/E003b - Cherry-picking.md",
+                "file": "Git/Lessons/L002 - Branching & Conflict Resolution.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E003b - Cherry-picking"
+              "title": "L002 - Branching & Conflict Resolution"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Exercises/E003b - Cherry-picking.md",
+                "file": "Git/Lessons/L002 - Branching & Conflict Resolution.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of E003b - Cherry-picking"
+              "title": "Outline of L002 - Branching & Conflict Resolution"
             }
           },
           {
@@ -181,10 +181,10 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Exercises/E002a - Create branch.md",
-    "Git/Exercises/E003b - Cherry-picking.md",
-    "Git/KBs/KB006 - Cherry-picking.md",
     "Git/Exercises/E002d - Conflict.md",
+    "Git/Exercises/E003b - Cherry-picking.md",
+    "Git/Exercises/E002a - Create branch.md",
+    "Git/KBs/KB006 - Cherry-picking.md",
     "Git/KBs/KB003 - Merge fast-forward.md",
     "Git/KBs/KB002 - Origin.md",
     "Git/KBs/KB001 - Main or Master Branch.md",
