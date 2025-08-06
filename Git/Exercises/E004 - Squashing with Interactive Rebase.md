@@ -36,6 +36,7 @@ git log --oneline
 
 #### 2. Squashing by Commit hash or ID
 
+1. **Making some new commits**
 ```bash
 git branch  
 feature/login  
@@ -84,15 +85,19 @@ git log --oneline
 099e0d6 x: beta4 v1.2  # commit 3
 48f3f22 x: beta4 v1.1  # commit 2
 e089b0f x: beta4 v1  # commit 1
-1aab5ac (origin/feature/x) x: squash-testing: added beta 2 & beta 3  # 
+1aab5ac (origin/feature/x) x: squash-testing: added beta 2 & beta 3  # using below
 ..truncating output.. 
 4097e98 new repo for IaC
+```
 
+2. 
+
+```bash
 # we are going to squash using interactive rebase.
 # notice this time we are providing a commit hash instead.
-# you nee to provide the commit hash of the commit which was created just before the ones we are going to squash. its 1aab5ac in our case.
+# you nee to provide the hash of the commit which was created just
+# before the ones we are going to squash/pick. its 1aab5ac in our case.
 git rebase -i 1aab5ac  
-
 # this will open an editor where you will see all the commits that were made after 1aab5ac.
 ----text-editor----
 pick e089b0f x: beta4 v1  # picking/keeping; first commit we are keeping!
@@ -123,7 +128,13 @@ create mode 100644 beta4
 Date: Thu Aug 7 02:50:06 2025 +0530  
 1 file changed, 1 insertion(+), 1 deletion(-)  
 Successfully rebased and updated refs/heads/feature/x.  
- 
+```
+
+```bash
+# check the commit history now.
+# note that:
+# 099e0d6, 48f3f22 (squashed) & e089b0f (picked) have been merged into a new commit be285b9.
+# 099e0d6 (squashed) & 48f3f22 (picked) have been merged into a new commit 3b06249.
 git log --oneline  
 3b06249 (HEAD -> feature/x) x: beta4 final release v2  
 be285b9 x: beta4 final release  
@@ -148,13 +159,4 @@ f1e6f88 Merge branch 'main' into feature/logout
 ee1a39f logout: added v1  
 458eafb main: readme.md  
 4097e98 new repo for IaC
-
-
-
-
-pick e089b0f x: beta4 v1  
-squash 48f3f22 x: beta4 v1.1  
-squash 099e0d6 x: beta4 v1.2  
-pick 7c7c005 x: beta4 v2.0  
-squash 1cb585c x: beta4 v2.2
 ```
