@@ -103,7 +103,16 @@ ee1a39f logout: added v1
 4097e98 new repo for IaC
 akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git rebase -i 1aab5ac  
 
-# this will ope
+# this will open an editor where you will see all the commits that were made after 1aab5ac.
+----text-editor----
+pick e089b0f x: beta4 v1  # picking/keeping; first commit we are keeping
+squash 48f3f22 x: beta4 v1.1  # squashing into ^ above
+squash 099e0d6 x: beta4 v1.2  # squashing into ^ above
+pick 7c7c005 x: beta4 v2.0  # picking/keeping; second commit we are keeping
+squash 1cb585c x: beta4 v2.2  # squashing into ^ above
+----text-editor----
+# once you select what you want to do with the commit
+# save the file, this will then open a another text editor where you will type in the commit message for the kept 2 commits (editor will open twice - one for each commit)
 [detached HEAD be285b9] x: beta4 final release  
 Date: Thu Aug 7 02:48:20 2025 +0530  
 1 file changed, 1 insertion(+)  
