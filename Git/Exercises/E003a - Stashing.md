@@ -1,5 +1,5 @@
 > [!tip]
-> check out the KB [KB005 - Stashing](../KBs/KB005%20-%20Stashing.md) for theory
+> check out the KB [KB005 - Stashing](../KBs/KB005%20-%20Stashing.md) for theory.
 #### **1. Without stashing**
 
 1. **Work on a branch**

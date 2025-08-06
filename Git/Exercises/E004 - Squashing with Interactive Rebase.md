@@ -1,3 +1,5 @@
+> [!tip]
+> check out the KB [KB010 - Squashing](../KBs/KB010%20-%20Squashing.md) for theory.
 #### 1. Squashing latest commits
 
 ```bash

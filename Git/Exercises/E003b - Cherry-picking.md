@@ -1,7 +1,7 @@
 Let's pick some cherries :)
 
 > [!tip]
-> check out the KB [KB007 - Cherry-picking](../KBs/KB007%20-%20Cherry-picking.md) for theory
+> check out the KB [KB007 - Cherry-picking](../KBs/KB007%20-%20Cherry-picking.md) for theory.
 
 #### **1.  Working on new hotfixes in a branch**
 
