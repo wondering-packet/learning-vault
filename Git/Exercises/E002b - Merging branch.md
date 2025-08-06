@@ -4,6 +4,7 @@
 ```bash
 # current commit history
 git log --oneline --graph --all  
+# HEAD is at main means you are in main branch right now
 *   4720f32 (HEAD -> main) Another - Merge branch 'feature/logout'  
 ...truncated output...
 * | 6a01500 (origin/main) main: new features v2  
