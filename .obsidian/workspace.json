@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/E004 - Squashing with Interactive Rebase.md",
+                "file": "Git/Lessons/L004 - Interactive Rebasing & Squashing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E004 - Squashing with Interactive Rebase"
+              "title": "L004 - Interactive Rebasing & Squashing"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Exercises/E004 - Squashing with Interactive Rebase.md",
+                "file": "Git/Lessons/L004 - Interactive Rebasing & Squashing.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of E004 - Squashing with Interactive Rebase"
+              "title": "Outline of L004 - Interactive Rebasing & Squashing"
             }
           },
           {
@@ -181,9 +181,9 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Exercises/E004 - Squashing with Interactive Rebase.md",
     "Git/Lessons/L004 - Interactive Rebasing & Squashing.md",
     "Git/KBs/KB010 - Squashing.md",
-    "Git/Exercises/E004 - Squashing with Interactive Rebase.md",
     "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/KBs/KB003 - Merge fast-forward.md",
     "Git/Exercises/E002b - Merging branch.md",
