@@ -37,44 +37,44 @@ git log --oneline
 #### 2. Squashing by Commit hash or ID
 
 ```bash
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git branch  
+git branch  
 feature/login  
 feature/login-hotfix  
 feature/logout  
 feature/rebase  
 * feature/x  
 main  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ ls  
+ls  
 beta2.md  beta3.md  beta.md  hello.txt  login.md  logout.md  newlogout  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ echo "beta4: testing a new feature v1" > beta4  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git add .  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -m "x: beta4 v1"  
+echo "beta4: testing a new feature v1" > beta4  
+git add .  
+git commit -m "x: beta4 v1"  
 [feature/x e089b0f] x: beta4 v1  
 1 file changed, 1 insertion(+)  
 create mode 100644 beta4  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ echo "beta4: bugfix v1.1" > beta4  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git add .  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -m "x: beta4 v1.1"  
+echo "beta4: bugfix v1.1" > beta4  
+git add .  
+git commit -m "x: beta4 v1.1"  
 [feature/x 48f3f22] x: beta4 v1.1  
 1 file changed, 1 insertion(+), 1 deletion(-)  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ echo "beta4: bugfix v1.2" > beta4  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git add .  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -m "x: beta4 v1.2"  
+echo "beta4: bugfix v1.2" > beta4  
+git add .  
+git commit -m "x: beta4 v1.2"  
 [feature/x 099e0d6] x: beta4 v1.2  
 1 file changed, 1 insertion(+), 1 deletion(-)  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ echo "beta4: new release v2.0" > beta4  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git add .  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -m "x: beta4 v2.0"  
+echo "beta4: new release v2.0" > beta4  
+git add .  
+git commit -m "x: beta4 v2.0"  
 [feature/x 7c7c005] x: beta4 v2.0  
 1 file changed, 1 insertion(+), 1 deletion(-)  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ echo "beta4: final release with bugfix v2.2" > beta4  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git add .  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -m "x: beta4 v2.2"  
+echo "beta4: final release with bugfix v2.2" > beta4  
+git add .  
+git commit -m "x: beta4 v2.2"  
 [feature/x 1cb585c] x: beta4 v2.2  
 1 file changed, 1 insertion(+), 1 deletion(-)  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git tag -a v2.2 -m "x: feature beta4 final release"  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git log --oneline  
+git tag -a v2.2 -m "x: feature beta4 final release"  
+ 
+git log --oneline  
 1cb585c (HEAD -> feature/x, tag: v2.2) x: beta4 v2.2  
 7c7c005 x: beta4 v2.0  
 099e0d6 x: beta4 v1.2  
@@ -101,18 +101,30 @@ f1e6f88 Merge branch 'main' into feature/logout
 ee1a39f logout: added v1  
 458eafb main: readme.md  
 4097e98 new repo for IaC
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git rebase -i 1aab5ac  
+git rebase -i 1aab5ac  
 
 # this will open an editor where you will see all the commits that were made after 1aab5ac.
 ----text-editor----
-pick e089b0f x: beta4 v1  # picking/keeping; first commit we are keeping
+pick e089b0f x: beta4 v1  # picking/keeping; first commit we are keeping!
 squash 48f3f22 x: beta4 v1.1  # squashing into ^ above
 squash 099e0d6 x: beta4 v1.2  # squashing into ^ above
-pick 7c7c005 x: beta4 v2.0  # picking/keeping; second commit we are keeping
+pick 7c7c005 x: beta4 v2.0  # picking/keeping; second commit we are keeping!
 squash 1cb585c x: beta4 v2.2  # squashing into ^ above
 ----text-editor----
 # once you select what you want to do with the commit
-# save the file, this will then open a another text editor where you will type in the commit message for the kept 2 commits (editor will open twice - one for each commit)
+# save the file, this will then open text editor again
+# where you will type in the commit message for the 1st picked commit:
+----text-editor----
+# type in a meanigful message for commit 1
+# Note: this is for 099e0d6 & 48f3f22 squashed into e089b0f
+----text-editor----
+# save the above file, this will then open the editon again
+# where you will type the commit message for the 2nd picked commit:
+----text-editor----
+# type in a meanigful message for commit 2
+# Note: this is for 1cb585c squashed into 7c7c005
+----text-editor----
+# rebase confirmation message
 [detached HEAD be285b9] x: beta4 final release  
 Date: Thu Aug 7 02:48:20 2025 +0530  
 1 file changed, 1 insertion(+)  
@@ -121,8 +133,8 @@ create mode 100644 beta4
 Date: Thu Aug 7 02:50:06 2025 +0530  
 1 file changed, 1 insertion(+), 1 deletion(-)  
 Successfully rebased and updated refs/heads/feature/x.  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git log --oneline  
+ 
+git log --oneline  
 3b06249 (HEAD -> feature/x) x: beta4 final release v2  
 be285b9 x: beta4 final release  
 1aab5ac (origin/feature/x) x: squash-testing: added beta 2 & beta 3  
