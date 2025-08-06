@@ -1,5 +1,7 @@
-#### **1. Let's pick some cherries :)**
-(check out the KB [[KB006 - Cherry-picking]] for theory )
+Let's pick some cherries :)
+(check out the KB [[KB006 - Cherry-picking]] for theory)
+#### **1.  Working on new hotfixes in a branch**
+
 ```bash
 # we are using feature/login-hotfix branch to keep our hotfixes for login branch.
 git checkout feature/login-hotfix  
@@ -53,6 +55,11 @@ login-hotfix: hotfix for login branch v8
 ----superseded----  
 login-hotfix: hotfix for login branch v2.3  
 login-hotfix: hotfix for login branch v3.1  
+```
+
+#### **2. Current hotfixes in our login branch**
+
+```bash
 # switching to login branch to cherry-pick the commit ID with above hotfixes.
 git checkout feature/login  
 Switched to branch 'feature/login'  
@@ -70,6 +77,11 @@ login-hotfix: hotfix for login branch v3
 login-hotfix: hotfix for login branch v4.1  
 login-hotfix: hotfix for login branch v5.2  
 login-hotfix: hotfix for login branch v6  
+```
+
+#### **3. Cherry-picking & Resolving conflicts**
+
+```bash
 # finding the commit ID: 97ef01e.
 git log --oneline --graph --all  
 * 97ef01e (feature/login-hotfix) login-hotfix: v9  
@@ -113,7 +125,7 @@ login-hotfix: hotfix for login branch v8
 login-hotfix: hotfix for login branch v2.3  
 login-hotfix: hotfix for login branch v3.1  
 >>>>>>> 97ef01e (login-hotfix: v9)  
-# let's resolve conflicts:
+# let's resolve conflicts in an editor:
 nano login-hotfix  
 # staging - you need to do this if a conflict occured.
 git add .  
@@ -125,6 +137,8 @@ git cherry-pick --continue
 Date: Wed Aug 6 23:01:46 2025 +0530  
 1 file changed, 6 insertions(+)  
 ```
+
+#### **4. After cherry-picking**
 
 ```bash
 # final resolved file
