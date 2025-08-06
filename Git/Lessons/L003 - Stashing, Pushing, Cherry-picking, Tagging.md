@@ -13,13 +13,12 @@
 - Keeps the commit message (can be edited).
 - Used for hotfixes, selective feature backports.
 - KB: [[KB007 - Cherry-picking]].
-- Exercise: [[E003b - Cherry-picking]]
+- Exercise: [Cherry-picking](../Exercises/E003b%20-%20Cherry-picking.md)
 #### **Tagging**
 
 - **Lightweight tag** → just a pointer to a commit.
 - **Annotated tag** → includes message, tagger name, date.
 - Useful for releases.
-- KB: [[KB008 - Tags]].
 - KB: [Tags](../KBs/KB008%20-%20Tags.md)
 #### **Commands**
 
