@@ -69,23 +69,26 @@ b9aea0c test/undo: commit v1
 ee1a39f logout: added v1  
 458eafb main: readme.md  
 4097e98 new repo for IaC  
-# let's do a soft reset which means undo commit, keep the file in staging & workin 
+# let's do a soft reset
+	# which means undo commit, keep the file staged & in working directory. 
 git reset --soft HEAD~1  
 git log --oneline  
-e61ee9e (HEAD -> test/undo) test/undo: demo v1  
+e61ee9e (HEAD -> test/undo) test/undo: demo v1  # notice a2e33f8 is gone!
 16505b8 Revert "test/undo: commit v2"  
 45e73eb test/undo: commit v2  
 b9aea0c test/undo: commit v1  
 ee1a39f logout: added v1  
 458eafb main: readme.md  
 4097e98 new repo for IaC  
+
+# let's add some code we never should've added; garbage code.
 echo "garbage" >> demo.txt  
 git add .  
 git commit -m "test/undo: garbage added"  
 [test/undo 5a01504] test/undo: garbage added  
 1 file changed, 3 insertions(+)  
 git log --oneline  
-5a01504 (HEAD -> test/undo) test/undo: garbage added  
+5a01504 (HEAD -> test/undo) test/undo: garbage added  # commit ID: 5a01504
 e61ee9e test/undo: demo v1  
 16505b8 Revert "test/undo: commit v2"  
 45e73eb test/undo: commit v2  
@@ -93,21 +96,23 @@ b9aea0c test/undo: commit v1
 ee1a39f logout: added v1  
 458eafb main: readme.md  
 4097e98 new repo for IaC  
+# let's do a hard reset
+	# which means undo commit, unstage the file & remove it from working directory
 git reset --hard HEAD~1  
-HEAD is now at e61ee9e test/undo: demo v1  
+HEAD is now at e61ee9e test/undo: demo v1  # head moved back. 5a01504 gone!
 cat demo.txt  
-line1  
-git status  
-On branch test/undo  
-nothing to commit, working tree clean  
+line1  # notice "garbage" line is gone from the file.
+
+# let's add some temp data; note that this is a d
 echo "temp data" > temp.log  
 git status  
 On branch test/undo  
 Untracked files:  
 (use "git add <file>..." to include in what will be committed)  
-temp.log  
+temp.log  # untracked
   
-nothing added to commit but untracked files present (use "git add" to track)  
+nothing added to commit but untracked files present (use "git add" to track) 
+
 git clean -fdn  
 Would remove temp.log  
 git clean -fd  
