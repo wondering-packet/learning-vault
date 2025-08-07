@@ -69,7 +69,7 @@ git log --oneline --graph --all   # Visual graph of all branches
 ### 4. Push
 
 > [!important]
->  Please checkout this exercise for pre-req: [E001 - Create a new repo & connect it to a remote branch](../Exercises/E001%20-%20Create%20a%20new%20repository%20&%20connect%20it%20to%20a%20remote%20branch.md)
+>  Please checkout this exercise for pre-req: [E001 - Create a new repo & connect it to a remote branch](../Exercises/E001%20-%20Create%20a%20new%20repository%20&%20connect%20it%20to%20a%20remote%20branch.md).
  
  ```bash
  git push
