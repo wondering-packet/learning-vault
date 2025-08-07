@@ -1,54 +1,67 @@
 # 📚 Git Learning & Reference Guide
 
-Hi All - I am Vipin Garg, author of this repo which is intended for learning Git.
+Hi there — I’m **Vipin Garg**, the author of this Git learning repository.
 
-This repository serves as a comprehensive, self-authored learning resource for Git, created to build a strong foundation and a troubleshooting mindset.
+This repo is a comprehensive, structured learning resource I’ve built to develop a strong foundation in Git, troubleshoot effectively, and improve my version control workflows.
 
-It is part of my personal portfolio on IaC skillsets - showcasing my commitment to learn new things (I was a classic Network Engineer who didn't have any IaC/Automation/Programming skills), ability to organize & create detailed in-depth documentation.
+It’s also part of my personal **Infrastructure as Code (IaC)** learning portfolio — reflecting my journey as a traditional **Network Engineer** transitioning into the world of **Automation, Git, and DevOps tooling**.
 
-## 📖 What's Inside
+---
 
-This guide is structured to facilitate learning from foundational concepts to advanced topics. The content is divided into three main sections:
+## 📖 What’s Inside
 
-### **Lessons**
+This guide is designed to help you learn Git progressively — from first principles to advanced topics — through structured lessons, hands-on exercises, and reference notes.
 
-High-level overview notes covering key Git concepts. These are designed to be quick reads that introduce a topic and link to deeper resources.
+The repo is divided into four sections:
 
-- **L001 - Git Foundation**: Core concepts like what Git is, the working directory, and the command flow.
-    
-- **L002 - Branching & Conflict Resolution**: The fundamentals of working with branches and resolving merge conflicts.
-    
-- **L003 - Stashing, Pushing, Cherry-picking, Tagging**: Intermediate topics for managing your workflow.
-    
-- **L004 - Interactive Rebasing & Squashing**: Advanced techniques for cleaning up commit history.
-    
+---
 
-> [!important]
-> Note: I have taken AI help to write/format the Lessons but these are all fact checked & tested by me in a lab environment.
+### 🧪 **Lessons**
 
-### **Knowledge Base (KBs)**
+These are high-level topic summaries meant to introduce core concepts and link to deeper resources. 
 
-Detailed articles that explain the "why" behind each Git command and concept. These are meant for in-depth understanding and serve as a robust reference when you need to recall how something works.
+- **L001 - Git Foundation**: What Git is, how it works, the basic command flow.
+- **L002 - Branching & Conflict Resolution**: Core branching operations and merge conflict handling.
+- **L003 - Stashing, Pushing, Cherry-picking, Tagging**: Intermediate topics for improving workflow.
+- **L004 - Interactive Rebasing & Squashing**: Advanced history-cleanup techniques.
 
-> [!important]
-> Note: I have taken AI help to modify/format the KBs but these are all fact checked & tested  by me in a lab environment.
+> **AI Note**: These lessons were written and formatted with the help of ChatGPT, but I’ve personally tested and validated each concept in my lab environment.
 
-### **Exercises**
+---
 
-Hands-on exercises designed to challenge your understanding and build practical skills. Each exercise walks you through real-world scenarios, complete with example commands and expected output.
+### 📘 **Knowledge Base (KBs)**
 
-> [!important]
-> All the exercises you see were performed in my lab environment.
+These articles explain the *why* behind Git commands and behaviors. Think of this as your Git "second brain" — built for reference and deeper understanding.
 
-## 💻 Command References
+> **AI Note**: AI assisted me in structuring and editing some KBs, but every topic has been lab-tested and fact-checked by me.
 
-For quick lookups, this repository also includes a dedicated section with concise reference guides for essential Git commands like `git add`, `git commit`, `git rebase`, and more.
+---
 
-Note: I have taken AI help to modify/format the command references but these are all fact checked & tested by me in a lab environment.
-## 🧑‍💻 Author
+### 🧠 **Exercises**
 
-This repository was authored and maintained by Vipin Garg.
+Practical, real-world Git scenarios to sharpen your skills. These are 100% written and executed by me — no AI assistance. Each one is built to reinforce concepts in an applied context.
 
-You can connect with me on:
+> **Personal Note**: All exercises were crafted and performed in my own lab — they reflect my learning style and debugging habits.
 
-- **LinkedIn**: `https://www.linkedin.com/in/vipin-garg-ccnp/`
+---
+
+### 💻 **Command References**
+
+Quick reference notes for essential Git commands like `git add`, `git commit`, `git rebase`, `git switch`, and more.
+
+> **AI Note**: These were formatted with some help from ChatGPT, but verified entirely through hands-on testing.
+
+---
+
+## 👨‍💻 Author
+
+This repository is maintained by **Vipin Garg**.
+
+I'm a Senior Network Engineer expanding into automation, DevOps, and IaC. If this content helps you — or you'd like to connect — feel free to reach out:
+
+- **🔗 LinkedIn**: [vipin-garg-ccnp](https://www.linkedin.com/in/vipin-garg-ccnp/)
+
+---
+
+Thanks for stopping by.  
+Happy branching, rebasing, and learning!
