@@ -35,12 +35,12 @@ Understanding how Git works under the hood helps build a strong foundation.
 Edit → git add → git commit → git push
 ```
 
-| **Action**      | **State Transition**              |
-|------------------|-----------------------------------|
-| Edit file        | Working Directory                 |
-| `git add`        | Moves to Staging Area             |
-| `git commit`     | Saves to Local Repository         |
-| `git push`       | Sends to Remote Repository        |
+| **Action**   | **State Transition**       |
+| ------------ | -------------------------- |
+| Edit file    | Working Directory          |
+| `git add`    | Moves to Staging Area      |
+| `git commit` | Saves to Local Repository  |
+| `git push`   | Sends to Remote Repository |
 
 ---
 
