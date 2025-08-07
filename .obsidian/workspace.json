@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Command References/git-commit.md",
+                "file": "Git/Command References/git reset.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git-commit"
+              "title": "git reset"
             }
           }
         ]
@@ -181,16 +181,16 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Command References/git-commit.md",
     "Git/Command References/git-commit-amend.md",
     "Git/Command References/git-rebase.md",
     "Git/Command References/git-init.md",
-    "Git/Command References/git-reset-soft.md",
+    "Git/Command References/git reset.md",
     "Git/Command References/git-restore.md",
     "Git/Command References/git-branch.md",
     "Git/Command References/git-add.md",
     "Git/Command References/git-clean.md",
     "Git/Command References/git-checkout-b.md",
-    "Git/Command References/git-commit.md",
     "Git/Command References/git-status.md",
     "Git/Exercises/E003a - Stashing.md",
     "Git/Command References",
