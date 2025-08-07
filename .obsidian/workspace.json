@@ -181,6 +181,7 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
     "Git/Lessons/L002 - Branching & Conflict Resolution.md",
     "Git/Lessons/L001 - Git Foundation.md",
     "Git/readme.md",
@@ -206,7 +207,6 @@
     "Git/Command References/git reset.md",
     "Git/Command References/git clean.md",
     "Git/Command References/git commit.md",
-    "Git/Command References/git commit --amend.md",
     "Git/Command References/sedODK5ue",
     "Git/Command References",
     "Git/KBs",

@@ -52,26 +52,21 @@ git init                          # Initialize new local repo
 git clone <repo_url>              # Clone existing remote repo
 ```
 
-### 2. Configure Git Identity
-```bash
-git config user.name "Your Name"
-git config user.email "you@example.com"
-```
-
-### 3. Stage & Commit Changes
+### 2. Stage & Commit Changes
 ```bash
 git add <file>                    # Stage a specific file
 git add .                         # Stage all changes
 git commit -m "Your message"      # Commit staged changes
 ```
 
-### 4. View Commit History
+### 3. View Commit History
 ```bash
 git log                           # Full commit details
 git log --oneline                 # Compact log
 git log --oneline --graph --all   # Visual graph of all branches
 ```
 
+#### 4. Optio
 ---
 
 This foundation is key to mastering everything else in Git — from branching to rebasing to team workflows.
