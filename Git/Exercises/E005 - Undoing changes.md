@@ -89,7 +89,11 @@ b9aea0c test/undo: commit v1
 ee1a39f logout: added v1  
 458eafb main: readme.md  
 4097e98 new repo for IaC  
+```
 
+### **4. Reset All Changes Harshly**
+
+```bash
 # let's add some code we never should've added; garbage code.
 echo "garbage" >> demo.txt  
 git add .  
@@ -111,7 +115,11 @@ git reset --hard HEAD~1
 HEAD is now at e61ee9e test/undo: demo v1  # head moved back. 5a01504 gone!
 cat demo.txt  
 line1  # notice "garbage" line is gone from the file.
+```
 
+#### **5. Untracked Junk Cleanup**
+
+```bash
 # let's add some temp data.
 # note that this is a different file so it's not tracked yet.
 echo "temp data" > temp.log  
@@ -128,7 +136,11 @@ git clean -fdn  # used to confirm what will be removed!
 Would remove temp.log  # file name
 git clean -fd  # actually removing it
 Removing temp.log  
+```
 
+#### **6. Revert a Commit**
+
+```bash
 # let's assume we accidently added a bad code
 echo "bad code" >> demo.txt  
 cat demo.txt  
@@ -168,7 +180,11 @@ b9aea0c test/undo: commit v1
 ee1a39f logout: added v1  
 458eafb main: readme.md  
 4097e98 new repo for IaC  
+```
 
+#### **7. Accidentally Reset Too Far** (insert screaming emoji LoL)
+
+```bash
 # let's remove last 4 commits; hard means gone from staging & working directory.
 git reset --hard HEAD~4  
 HEAD is now at 45e73eb test/undo: commit v2  
