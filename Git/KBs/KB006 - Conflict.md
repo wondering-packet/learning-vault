@@ -15,17 +15,17 @@ In a team environment, multiple developers are often working on the same files. 
  
     ```bash
     # Make a change and commit on main
-    git checkout main
+    git switch main
     echo "new line on main" >> file.txt
     git commit -am "main: added new line"
     
     # Make a different change on the same line on a feature branch
-    git checkout feature/conflict
+    git switch feature/conflict
     echo "new line on feature" >> file.txt
     git commit -am "feature: added conflicting line"
     
     # Try to merge, which triggers a conflict
-    git checkout main
+    git switch main
     git merge feature/conflict
     # CONFLICT (content): Merge conflict in file.txt
     ```

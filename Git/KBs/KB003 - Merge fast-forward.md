@@ -38,7 +38,7 @@ Let's illustrate the process:
 1.  **Initial Setup:** Start on `main`, create a new file, commit it.
     ```bash
     # (Ensure you are on 'main' or whatever your primary branch is)
-    git checkout main
+    git switch main
 
     echo "Initial content" > initial.txt
     git add initial.txt
@@ -48,7 +48,7 @@ Let's illustrate the process:
 
 2.  **Create and Work on a Feature Branch:** Branch off `main`, add a new file, and commit.
     ```bash
-    git checkout -b feature/fast-forward-example # Create and switch to new branch
+    git switch -b feature/fast-forward-example # Create and switch to new branch
     echo "Logout functionality" > logout.txt
     git add logout.txt
     git commit -m "Implement logout feature"
@@ -60,7 +60,7 @@ Let's illustrate the process:
     * **Crucial Step:** Switch back to `main`.
     * Since `main` hasn't had any new commits *since* `feature/fast-forward-example` branched off, Git will do a fast-forward.
     ```bash
-    git checkout main # Switch back to the target branch
+    git switch main # Switch back to the target branch
     git merge feature/fast-forward-example
     ```
 

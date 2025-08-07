@@ -3,7 +3,7 @@
 #### **1. Check current commit history**
 
 ```bash
-git checkout main  
+git switch main  
 Switched to branch 'main'  
 Your branch is ahead of 'origin/main' by 1 commit.  
 (use "git push" to publish your local commits)  
@@ -23,7 +23,7 @@ git log --oneline --graph --all
 
 ```bash
 # new branch
-git checkout -b feature/rebase  
+git switch -b feature/rebase  
 Switched to a new branch 'feature/rebase'  
 # creating some test files so we can perform a few commits
 ls  
@@ -87,7 +87,7 @@ branch 'feature/rebase' set up to track 'origin/feature/rebase'.
 
 ```bash
 git pull origin main   
-git checkout main
+git switch main
 Switched to branch 'main'  
 Your branch is ahead of 'origin/main' by 1 commit.  # i forgot to push this pending commit. ideally push all your commits for main before you do any rebase.
 (use "git push" to publish your local commits) 
@@ -121,7 +121,7 @@ git log --oneline --graph --all
 * 4097e98 new repo for IaC  
 
 # rebasing
-git checkout feature/rebase  
+git switch feature/rebase  
 Switched to branch 'feature/rebase'  
 Your branch is up to date with 'origin/feature/rebase'.  # This means I pushed 'feature/rebase' earlier. This is key for the push failure below! (YES, I actually accidentally pushed it earlier) !!
 git rebase main  

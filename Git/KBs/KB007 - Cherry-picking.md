@@ -16,7 +16,7 @@ A critical bug is found in the production version of a web application. The fix 
 
     ```bash
     # Switch to the target branch (the branch you want to add the commit to)
-    git checkout main
+    git switch main
     
     # Find the hash of the commit you want to copy (e.g., 0de1146)
     git cherry-pick <commit-hash>

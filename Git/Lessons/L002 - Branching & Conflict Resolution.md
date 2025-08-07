@@ -44,18 +44,18 @@
 1. Create & Switch Branch
 ```bash
 git branch <branch_name>          # Create branch
-git checkout <branch_name>        # Switch to branch
-git checkout -b <branch_name>     # Create + switch in one step
+git switch <branch_name>        # Switch to branch
+git switch -b <branch_name>     # Create + switch in one step
 git branch                        # lists all branches; * remarks where you are
 ```
 2. Merge
 ```bash
-git checkout main
+git switch main
 git merge <branch_name>           # Merge into current branch
 ```
 3. Rebase
 ```bash
-git checkout <feature_branch>
+git switch <feature_branch>
 git rebase main                   # Replay commits from feature branch on top of main
 ```
 4. Resolve Merge Conflicts

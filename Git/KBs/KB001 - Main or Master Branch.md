@@ -15,7 +15,7 @@ A branch exists both **locally** (on your machine, e.g., `main`) and **remotely*
 In a team of developers, the main branch is the single source of truth for the project. It represents the official, stable version of the code that's ready to be deployed to users. Developers work on separate feature branches and then merge their completed, tested code into the main branch to update the project.
 #### **Example Commands:**
 
-- `git checkout main`: Switch to your local `main` branch.
+- `git switch main`: Switch to your local `main` branch.
 - `git branch`: See all your local branches (e.g., `* main`, `feature-a`).
 - `git merge feature-b main`: Merge `feature-b` into `main`.
 

@@ -7,7 +7,7 @@ Let's pick some cherries :)
 
 ```bash
 # we are using feature/login-hotfix branch to keep our hotfixes for login branch.
-git checkout feature/login-hotfix  
+git switch feature/login-hotfix  
 Switched to branch 'feature/login-hotfix'  
 Your branch is ahead of 'origin/feature/login-hotfix' by 4 commits.  
 (use "git push" to publish your local commits)  
@@ -64,7 +64,7 @@ login-hotfix: hotfix for login branch v3.1
 
 ```bash
 # switching to login branch to cherry-pick the commit ID with above hotfixes.
-git checkout feature/login  
+git switch feature/login  
 Switched to branch 'feature/login'  
 Your branch is ahead of 'origin/feature/login' by 35 commits.  
 (use "git push" to publish your local commits)  

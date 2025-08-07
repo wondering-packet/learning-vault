@@ -58,7 +58,7 @@ Let's illustrate a common rebase scenario: you have a feature branch, `main` has
     Before rebasing your feature branch, always make sure your local `main` branch has the latest changes from the remote.
 
     ```bash
-    git checkout main
+    git switch main
     git pull origin main # Pulls M1 and M2 into your local main
     ```
 
@@ -66,7 +66,7 @@ Let's illustrate a common rebase scenario: you have a feature branch, `main` has
     Now, switch back to your feature branch and rebase it onto `main`.
 
     ```bash
-    git checkout feature/rebase-me
+    git switch feature/rebase-me
     git rebase main
     ```
 

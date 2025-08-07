@@ -11,7 +11,7 @@ git log --oneline --graph --all
 ...truncated output...
 * 4097e98 new repo for IaC
 # creating & switching - feature/x branch
-git checkout -b feature/x
+git switch -b feature/x
 Switched to a new branch 'feature/x'
 # creating a new file & commit
 echo "x: beta feature" > beta.md  
@@ -115,7 +115,7 @@ git log --oneline --graph --all
 1. Working on feature/login branch
 ```bash
 # working on the feature/login branch
-git checkout feature/login  
+git switch feature/login  
 Switched to branch 'feature/login'  
 echo "login: this is a login feature v1" > login.md  
 ls  
@@ -145,7 +145,7 @@ branch 'feature/login' set up to track 'origin/feature/login'.
 2. Merging
 ```bash
 # going back to main so we can perform a merge
-git checkout main  
+git switch main  
 Switched to branch 'main'  
 Your branch is up to date with 'origin/main'.  
 # notice login file isn't here yet

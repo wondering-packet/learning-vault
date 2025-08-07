@@ -5,7 +5,7 @@
 1. **Work on a branch**
 ```bash
 # switch to working branch
-git checkout feature/x  
+git switch feature/x  
 Switched to branch 'feature/x'  
 Your branch is ahead of 'origin/feature/x' by 1 commit.  
 (use "git push" to publish your local commits)  
@@ -17,7 +17,7 @@ beta.md  hello.txt  login.md  logout.md  newlogout
 # in real world, work would mean something like fixing bugs, adding new features etc.
 echo "x: a new beta feature v1" > beta2.md  
 # switching back to main; optional 
-git checkout main  
+git switch main  
 Switched to branch 'main'  
 Your branch is up to date with 'origin/main'.  
 ls  
@@ -25,7 +25,7 @@ ls
 # it is however not part of main so if you goto github e.g. you won't see this.
 beta2.md  beta.md  hello.txt  login.md  logout.md  newlogout  
 # back to the working branch
-git checkout feature/x  
+git switch feature/x  
 Switched to branch 'feature/x'  
 Your branch is ahead of 'origin/feature/x' by 1 commit.  
 (use "git push" to publish your local commits)  
@@ -79,7 +79,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 # we will lose our changes as soon as a commit happens.
 	# fyi: i forgot to stage my changes above (in branch x)
 	# but either way, i will lose my changes if another commit happens.
-git checkout main  
+git switch main  
 D       beta.md  # update to a tracked file; marked for deletion.
 Switched to branch 'main'  
 Your branch is up to date with 'origin/main'.  
@@ -89,7 +89,7 @@ Your branch is up to date with 'origin/main'.
 # switching to another branch where we need to do some work.
 # we will be making a commit here which will make us
 # lose our work done on branch x earlier.
-git checkout feature/login  
+git switch feature/login  
 Switched to branch 'feature/login'  
 Your branch is ahead of 'origin/feature/login' by 11 commits.  
 (use "git push" to publish your local commits)  
@@ -119,7 +119,7 @@ To https://github.com/wondering-packet/iac-git.git
 3. **Result when not stashing**
 ```bash
 # notice switching to main isn't saying anything about our untracked files now.
-git checkout main  
+git switch main  
 Switched to branch 'main'  
 Your branch is up to date with 'origin/main'.  
 # no untracked files.
@@ -132,7 +132,7 @@ nothing to commit, working tree clean
 ls  
 beta.md  hello.txt  login.md  logout.md  newlogout  
 # you will see the same in x branch.
-git checkout feature/x  
+git switch feature/x  
 Switched to branch 'feature/x'  
 Your branch is ahead of 'origin/feature/x' by 1 commit.  
 (use "git push" to publish your local commits)  
@@ -193,7 +193,7 @@ nothing to commit, working tree clean
 2. **Work on another branch**
 ```bash
 # switching to another branch to do some work.
-git checkout feature/login  
+git switch feature/login  
 Switched to branch 'feature/login'  
 Your branch is up to date with 'origin/feature/login'.  
 echo "login: this a login feature v3" >> login.md  
@@ -202,7 +202,7 @@ git commit -m "login: added v3"
 [feature/login f13cc3e] login: added v3  
 1 file changed, 1 insertion(+)  
 # back to our branch x.
-git checkout feature/x  
+git switch feature/x  
 Switched to branch 'feature/x'  
 Your branch is ahead of 'origin/feature/x' by 1 commit.  
 (use "git push" to publish your local commits)  

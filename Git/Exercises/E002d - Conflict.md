@@ -4,7 +4,7 @@
 
 ```bash
 # creating a new branch
-git checkout -b test/conflict-2  
+git switch -b test/conflict-2  
 Switched to a new branch 'test/conflict-2'  
 # checking the contents of files we will be using to cause confict
 ls  
@@ -34,7 +34,7 @@ git commit -m "conflict-2: v1"
 
 ```bash
 # back to main
-git checkout main  
+git switch main  
 Switched to branch 'main'  
 Your branch is ahead of 'origin/main' by 4 commits.  
 (use "git push" to publish your local commits)  
