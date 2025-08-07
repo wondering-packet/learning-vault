@@ -139,12 +139,16 @@ ee1a39f logout: added v1
 458eafb main: readme.md  
 4097e98 new repo for IaC  
 # now we want to revert the last commit which had our bad code
+# "revert" creates a new commit with the changes by the latest commit undone.
 git revert a4a8caf  
+# you will be asked to enter a commit message!
 [test/undo 044360d] Revert "test/undo: v3" apologies: i accidentally added bad code in last commit! reverting with this commit.  
 1 file changed, 1 deletion(-)  
 cat demo.txt  
-line1  
+line1  # bad code gone!
 git log --oneline  
+# a4a8caf commit is still there
+# 044360d is the commit created by revert. 
 044360d (HEAD -> test/undo) Revert "test/undo: v3" apologies: i accidentally added bad code in last commit! reverting with this commit.  
 a4a8caf test/undo: v3  
 e61ee9e test/undo: demo v1  
