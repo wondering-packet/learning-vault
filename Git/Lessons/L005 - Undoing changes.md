@@ -18,7 +18,8 @@ git checkout -- <file>
 
 ### Discard ALL uncommitted changes:
 ```bash
-git restore .
+git restore . # this is for the changes that have not been staged.
+git restore --staged . # this for the changes that have been staged.
 ```
 
 ---
