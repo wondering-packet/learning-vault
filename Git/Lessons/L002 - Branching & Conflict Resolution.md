@@ -45,7 +45,7 @@
 ```bash
 git branch <branch_name>          # Create branch
 git switch <branch_name>        # Switch to branch
-git switch -b <branch_name>     # Create + switch in one step
+git switch -c <branch_name>     # Create + switch in one step
 git branch                        # lists all branches; * remarks where you are
 ```
 2. Merge

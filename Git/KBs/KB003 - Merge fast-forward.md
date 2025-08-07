@@ -48,7 +48,7 @@ Let's illustrate the process:
 
 2.  **Create and Work on a Feature Branch:** Branch off `main`, add a new file, and commit.
     ```bash
-    git switch -b feature/fast-forward-example # Create and switch to new branch
+    git switch -c feature/fast-forward-example # Create and switch to new branch
     echo "Logout functionality" > logout.txt
     git add logout.txt
     git commit -m "Implement logout feature"

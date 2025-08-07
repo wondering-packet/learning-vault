@@ -11,7 +11,7 @@ git log --oneline --graph --all
 ...truncated output...
 * 4097e98 new repo for IaC
 # creating & switching - feature/x branch
-git switch -b feature/x
+git switch -c feature/x
 Switched to a new branch 'feature/x'
 # creating a new file & commit
 echo "x: beta feature" > beta.md  

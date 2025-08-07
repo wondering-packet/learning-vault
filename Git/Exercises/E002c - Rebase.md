@@ -23,7 +23,7 @@ git log --oneline --graph --all
 
 ```bash
 # new branch
-git switch -b feature/rebase  
+git switch -c feature/rebase  
 Switched to a new branch 'feature/rebase'  
 # creating some test files so we can perform a few commits
 ls  

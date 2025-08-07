@@ -4,7 +4,7 @@
 
 ```bash
 # creating a new branch
-git switch -b test/conflict-2  
+git switch -c test/conflict-2  
 Switched to a new branch 'test/conflict-2'  
 # checking the contents of files we will be using to cause confict
 ls  

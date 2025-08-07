@@ -17,7 +17,7 @@ git branch
 * feature/login  # * confirms we are not on feature/login branch.
 main
 # here is you can combine creating + switcing in one command.
-git switch -b feature/logout
+git switch -c feature/logout
 Switched to a new branch 'feature/logout'  
 git branch  
 feature/login  

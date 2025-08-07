@@ -21,4 +21,4 @@
 
 - **Related Commands:**  
   - `git branch` – list branches  
-  - `git switch -c` – modern alternative
+  - `git checkout -b` – legacy alternative
