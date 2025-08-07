@@ -183,16 +183,17 @@ git reflog
 45e73eb (HEAD -> test/undo) HEAD@{0}: reset: moving to HEAD~4  
 044360d HEAD@{1}: revert: Revert "test/undo: v3"  
 a4a8caf HEAD@{2}: commit: test/undo: v3  
-e61ee9e HEAD@{3}: reset: moving to HEAD~1  
+e61ee9e HEAD@{3}: reset: moving to HEAD~1  # let's look at this one
 5a01504 HEAD@{4}: commit: test/undo: garbage added  
 e61ee9e HEAD@{5}: reset: moving to HEAD~1  
 a2e33f8 HEAD@{6}: commit: test/undo: bad commit v1  
 e61ee9e HEAD@{7}: commit: test/undo: demo v1  
 ....truncated output....
 bd6398e HEAD@{49}: checkout: moving from feature/login to feature/x  
+# specify our commit
 git checkout e61ee9e  
 Note: switching to 'e61ee9e'.  
-  
+  # git will greet you with a good explanation
 You are in 'detached HEAD' state. You can look around, make experimental  
 changes and commit them, and you can discard any commits you make in this  
 state without impacting any branches by switching back to a branch.  
@@ -208,7 +209,8 @@ git switch -
   
 Turn off this advice by setting config variable advice.detachedHead to false  
   
-HEAD is now at e61ee9e test/undo: demo v1  
+HEAD is now at e61ee9e test/undo: demo v1  # confirms we are now indeed at e61ee9e
+# below you can see HEAD has moved
 git log --oneline  
 e61ee9e (HEAD) test/undo: demo v1  
 16505b8 Revert "test/undo: commit v2"  
@@ -217,4 +219,20 @@ b9aea0c test/undo: commit v1
 ee1a39f logout: added v1  
 458eafb main: readme.md  
 4097e98 new repo for IaC
+# at this point, you have the ability to look at your files from that commit.
+# if you wish to restore - then you first need to create a new branch out of it.
+# then you will merge with your test/undo branch.
+ 
+ls  
+demo.txt  hello.txt  logout.txt  test  
+cat demo.txt  
+line1  
+ 
+git switch -c test/undo-2  
+Switched to a new branch 'test/undo-2'  
+ls  
+demo.txt  hello.txt  logout.txt  test  
+cat demo.txt  
+line1  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$
 ```
