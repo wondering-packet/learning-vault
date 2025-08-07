@@ -1,8 +1,8 @@
 # 📚 Git Learning & Reference Guide
 
-Hi All - I am Vipin Garg, author of this repo intended for Git Learning & Reference Guide.
+Hi All - I am Vipin Garg, author of this repo intended for learning Git.
 
-This repository serves as a comprehensive, self-authored learning resource for Git, created to build a strong foundation and a troubleshooting mindset. It is part of my personal portfolio, showcasing my commitment to learning, organization, and documentation.
+This repository serves as a comprehensive, self-authored learning resource for Git, created to build a strong foundation and a troubleshooting mindset. It is part of my personal portfolio on IaC skillsets - showcasing my commitment to learn new things (I am classic Network Engineer who didn't have any IaC/Automation/Programming skills), ability to organize & create detailed in-depth documentation.
 
 ## 📖 What's Inside
 
