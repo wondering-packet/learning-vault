@@ -1,4 +1,4 @@
-#### **Task 1: Modify Without Staging**
+#### **1. Modify Without Staging**
 ```bash
 git branch  
 feature/login  
@@ -23,7 +23,11 @@ echo "line2" >> demo.txt
 git restore demo.txt  
 cat demo.txt  
 line1  # "line2" gone.
+```
 
+#### **2. Stage a File Then Unstage It**
+
+```bash
 # making another change; staging.
 echo "line3" >> demo.txt  
 git add demo.txt  
@@ -46,13 +50,18 @@ Changes not staged for commit:
 modified:   demo.txt  # notice it's showing up under "not staged".
   
 no changes added to commit (use "git add" and/or "git commit -a")  
+```
 
-# NOTE: you can break down above 2 tasks into:
-	# 1. are changes not staged? YES - do git restore <file_name>
-	# 2. are changes staged? YES - do git restore --staged <file_name>
-	# 3. you want to undo changes that have been staged already?
-		# do 2 then 1.
+> [!info]
+> **you can break down above 2 tasks into:**
+> 1. are changes not staged? YES - do git restore <file_name>
+> 2. are changes staged? YES - do git restore --staged <file_name>
+> 3. you want to undo changes that have been staged already?
+> 	- do 2 then 1.
 
+#### **3. Make a Bad Commit**
+
+```bash
 # let's make a bad commit with bad code
 echo "bad line" >> demo.txt  
 git add demo.txt  # staged
@@ -222,17 +231,16 @@ ee1a39f logout: added v1
 # at this point, you have the ability to look at your files from that commit.
 # if you wish to restore - then you first need to create a new branch out of it.
 # then you will merge with your test/undo branch.
- 
 ls  
-demo.txt  hello.txt  logout.txt  test  
+demo.txt  hello.txt  logout.txt  test  # demo file is available now
 cat demo.txt  
-line1  
- 
+line1  # old content
+# creating a new branch so we our commit in a real branch now
 git switch -c test/undo-2  
 Switched to a new branch 'test/undo-2'  
 ls  
 demo.txt  hello.txt  logout.txt  test  
 cat demo.txt  
 line1  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$
+# you can now do your normal merge.
 ```
