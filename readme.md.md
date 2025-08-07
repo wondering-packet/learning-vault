@@ -1,4 +1,4 @@
-# 📚 Git Learning & Reference Guide
+## 📚 Git Learning & Reference Guide
 
 Hi there — I’m **Vipin Garg**, the author of this Git learning repository.
 
@@ -14,8 +14,6 @@ This guide is designed to help you learn Git progressively — from first princi
 
 The repo is divided into four sections:
 
----
-
 ### 🧪 **Lessons**
 
 These are high-level topic summaries meant to introduce core concepts and link to deeper resources. 
@@ -27,23 +25,17 @@ These are high-level topic summaries meant to introduce core concepts and link t
 
 > **AI Note**: These lessons were written and formatted with the help of ChatGPT, but I’ve personally tested and validated each concept in my lab environment.
 
----
-
 ### 📘 **Knowledge Base (KBs)**
 
 These articles explain the *why* behind Git commands and behaviors. Think of this as your Git "second brain" — built for reference and deeper understanding.
 
 > **AI Note**: AI assisted me in structuring and editing some KBs, but every topic has been lab-tested and fact-checked by me.
 
----
-
 ### 🧠 **Exercises**
 
 Practical, real-world Git scenarios to sharpen your skills. These are 100% written and executed by me — no AI assistance. Each one is built to reinforce concepts in an applied context.
 
-> **Personal Note**: All exercises were crafted and performed in my own lab — they reflect my learning style and debugging habits.
-
----
+> **Personal Note**: All exercises were crafted and performed by me in a lab enviro— they reflect my learning style and debugging habits. No AI.
 
 ### 💻 **Command References**
 
