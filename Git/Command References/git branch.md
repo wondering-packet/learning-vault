@@ -29,7 +29,7 @@ git branch -d <branch-name>
 
 #### **Example**
 
-```
+```bash
 # Lists all local branches, with an asterisk (*) next to the current branch
 git branch
 
