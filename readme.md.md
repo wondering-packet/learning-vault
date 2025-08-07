@@ -1,5 +1,7 @@
 # 📚 Git Learning & Reference Guide
 
+Hi All - I am Vipin Garg, author of this repo intended for Git Learning & Reference Guide.
+
 This repository serves as a comprehensive, self-authored learning resource for Git, created to build a strong foundation and a troubleshooting mindset. It is part of my personal portfolio, showcasing my commitment to learning, organization, and documentation.
 
 ## 📖 What's Inside
@@ -18,19 +20,22 @@ High-level overview notes covering key Git concepts. These are designed to be qu
     
 - **L004 - Interactive Rebasing & Squashing**: Advanced techniques for cleaning up commit history.
     
-
+Note: I have taken AI help to write/format the Lessons but these are all fact checked & tested by me in a lab environment.
 ### **Knowledge Base (KBs)**
 
 Detailed articles that explain the "why" behind each Git command and concept. These are meant for in-depth understanding and serve as a robust reference when you need to recall how something works.
 
+Note: I have taken AI help to modify/format the KBs but these are all fact checked & tested  by me in a lab environment.
 ### **Exercises**
 
 Hands-on exercises designed to challenge your understanding and build practical skills. Each exercise walks you through real-world scenarios, complete with example commands and expected output.
 
+All the exercises you see were performed in my lab environment.
 ## 💻 Command References
 
 For quick lookups, this repository also includes a dedicated section with concise reference guides for essential Git commands like `git add`, `git commit`, `git rebase`, and more.
 
+Note: I have taken AI help to modify/format the command references but these are all fact checked & tested by me in a lab environment.
 ## 🧑‍💻 Author
 
 This repository was authored and maintained by Vipin Garg.
