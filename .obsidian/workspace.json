@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
+                "file": "Git/Exercises/E002c - Rebase.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "L003 - Stashing, Pushing, Cherry-picking, Tagging"
+              "title": "E002c - Rebase"
             }
           }
         ]
@@ -182,6 +182,7 @@
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
     "Git/KBs/KB004 - Rebase.md",
+    "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/Exercises/E002c - Rebase.md",
     "Git/Exercises/E002b - Merging branch.md",
     "Git/Lessons/L002 - Branching & Conflict Resolution.md",
@@ -194,7 +195,6 @@
     "Git/Exercises/E002a - Create branch.md",
     "Git/Exercises/E005 - Undoing changes.md",
     "Git/Lessons/L004 - Interactive Rebasing & Squashing.md",
-    "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/Lessons/git-basics.md",
     "Git/Lessons/git-branch-merge-rebase.md",
     "Git/KBs/KB001 - Main or Master Branch.md",
