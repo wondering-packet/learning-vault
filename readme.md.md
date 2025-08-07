@@ -29,13 +29,13 @@ These are high-level topic summaries meant to introduce core concepts and link t
 
 These articles explain the *why* behind Git commands and behaviors. Think of this as your Git "second brain" — built for reference and deeper understanding.
 
-> **AI Note**: AI assisted me in structuring and editing some KBs, but every topic has been lab-tested and fact-checked by me.
+> **AI Note**: AI assisted me in generating most of the KBs, but every topic has been lab-tested and fact-checked by me.
 
 ### 🧠 **Exercises**
 
 Practical, real-world Git scenarios to sharpen your skills. These are 100% written and executed by me — no AI assistance. Each one is built to reinforce concepts in an applied context.
 
-> **Personal Note**: All exercises were crafted and performed by me in a lab enviro— they reflect my learning style and debugging habits. No AI.
+> **Personal Note**: All exercises were crafted and performed by me in a lab environment — they reflect my learning style and debugging habits.
 
 ### 💻 **Command References**
 
@@ -53,7 +53,5 @@ I'm a Senior Network Engineer expanding into automation, DevOps, and IaC. If thi
 
 - **🔗 LinkedIn**: [vipin-garg-ccnp](https://www.linkedin.com/in/vipin-garg-ccnp/)
 
----
-
 Thanks for stopping by.  
-Happy branching, rebasing, and learning!
+Happy committing!
