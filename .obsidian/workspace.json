@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Command References/git-commit-amend.md",
+                "file": "Git/Command References/git-commit.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git-commit-amend"
+              "title": "git-commit"
             }
           }
         ]
@@ -181,8 +181,18 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Exercises/E003a - Stashing.md",
     "Git/Command References/git-commit-amend.md",
+    "Git/Command References/git-rebase.md",
+    "Git/Command References/git-init.md",
+    "Git/Command References/git-reset-soft.md",
+    "Git/Command References/git-restore.md",
+    "Git/Command References/git-branch.md",
+    "Git/Command References/git-add.md",
+    "Git/Command References/git-clean.md",
+    "Git/Command References/git-checkout-b.md",
+    "Git/Command References/git-commit.md",
+    "Git/Command References/git-status.md",
+    "Git/Exercises/E003a - Stashing.md",
     "Git/Command References",
     "Git/Exercises/E003b - Cherry-picking.md",
     "Git/Exercises/E002b - Merging branch.md",
@@ -198,16 +208,6 @@
     "Git/KBs/KB010 - Squashing.md",
     "Git/KBs/KB003 - Merge fast-forward.md",
     "Git/Exercises/E002d - Conflict.md",
-    "Git/KBs/KB009 - Interactive Rebase.md",
-    "Git/KBs/KB006 - Conflict.md",
-    "Git/KBs/KB008 - Tags.md",
-    "Git/KBs/KB007 - Cherry-picking.md",
-    "Git/KBs/KB005 - Stashing.md",
-    "Git/KBs/KB001 - Main or Master Branch.md",
-    "Git/KBs/KB002 - Origin.md",
-    "KB - Tags.md",
-    "\"KB.md",
-    "KB.md",
     "Git/KBs",
     "Git/Exercises",
     "Git/Lessons",
