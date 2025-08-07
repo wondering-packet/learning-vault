@@ -25,8 +25,6 @@ git reset --<mode> <commit-hash>
 
 #### **Example**
 
-Bash
-
 ```
 # Moves HEAD back one commit, keeping all changes staged (--soft)
 git reset HEAD~1 --soft
