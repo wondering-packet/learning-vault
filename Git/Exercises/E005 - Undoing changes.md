@@ -103,7 +103,8 @@ HEAD is now at e61ee9e test/undo: demo v1  # head moved back. 5a01504 gone!
 cat demo.txt  
 line1  # notice "garbage" line is gone from the file.
 
-# let's add some temp data; note that this is a d
+# let's add some temp data.
+# note that this is a different file so it's not tracked yet.
 echo "temp data" > temp.log  
 git status  
 On branch test/undo  
@@ -113,10 +114,13 @@ temp.log  # untracked
   
 nothing added to commit but untracked files present (use "git add" to track) 
 
-git clean -fdn  
-Would remove temp.log  
-git clean -fd  
+# "git clean" is used to remove all untracked files.
+git clean -fdn  # used to confirm what will be removed!
+Would remove temp.log  # file name
+git clean -fd  # actually removing it
 Removing temp.log  
+
+# let's assume we accidently added a bad code
 echo "bad code" >> demo.txt  
 cat demo.txt  
 line1  
@@ -126,7 +130,7 @@ git commit -m "test/undo: v3"
 [test/undo a4a8caf] test/undo: v3  
 1 file changed, 1 insertion(+)  
 git log --oneline  
-a4a8caf (HEAD -> test/undo) test/undo: v3  
+a4a8caf (HEAD -> test/undo) test/undo: v3  # commit ID: a4a8caf
 e61ee9e test/undo: demo v1  
 16505b8 Revert "test/undo: commit v2"  
 45e73eb test/undo: commit v2  
@@ -134,6 +138,7 @@ b9aea0c test/undo: commit v1
 ee1a39f logout: added v1  
 458eafb main: readme.md  
 4097e98 new repo for IaC  
+# now we want to revert the last commit which had our bad code
 git revert a4a8caf  
 [test/undo 044360d] Revert "test/undo: v3" apologies: i accidentally added bad code in last commit! reverting with this commit.  
 1 file changed, 1 deletion(-)  
