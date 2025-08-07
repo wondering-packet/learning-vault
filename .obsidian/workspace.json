@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/E002a - Create branch.md",
-                "mode": "source",
+                "file": "Git/Command References/git reset.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E002a - Create branch"
+              "title": "git reset"
             }
           }
         ]
@@ -179,8 +179,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "376cc142841ebfcd",
+  "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Command References/git restore.md",
+    "Git/Exercises/E002a - Create branch.md",
     "Git/Command References/sedODK5ue",
     "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
     "Git/Command References/git status.md",
@@ -189,7 +191,6 @@
     "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/Lessons/L002 - Branching & Conflict Resolution.md",
     "Git/Command References/git reset.md",
-    "Git/Command References/git restore.md",
     "Git/Command References/git rebase.md",
     "Git/Command References/git init.md",
     "Git/Command References/git commit --amend.md",
@@ -200,7 +201,6 @@
     "Git/Command References",
     "Git/Exercises/E003b - Cherry-picking.md",
     "Git/Exercises/E002b - Merging branch.md",
-    "Git/Exercises/E002a - Create branch.md",
     "Git/Exercises/E002c - Rebase.md",
     "Git/KBs/KB004 - Rebase.md",
     "Git/Lessons/L001 - Git Foundation.md",
