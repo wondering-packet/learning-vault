@@ -66,7 +66,15 @@ git log --oneline                 # Compact log
 git log --oneline --graph --all   # Visual graph of all branches
 ```
 
-#### 4. Optio
+### 4. Push
+
+> [!tip]
+>  Please checkout this exercise for pre-req: [E001 - Create a new repo & connect it to a remote branch](../Exercix)
+ 
+ ```bash
+ git push
+```
+
 ---
 
 This foundation is key to mastering everything else in Git — from branching to rebasing to team workflows.
