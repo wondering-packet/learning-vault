@@ -1,0 +1,1 @@
+Hi All - I am Vipin Garg, author of the Git training repo.
