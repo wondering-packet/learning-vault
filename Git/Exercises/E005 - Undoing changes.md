@@ -17,19 +17,15 @@ git commit -m "test/undo: demo v1"
 [test/undo e61ee9e] test/undo: demo v1  
 1 file changed, 1 insertion(+)  
 create mode 100644 demo.txt  
-# making a change
+# making a change; no staging.
 echo "line2" >> demo.txt  
 # restoring the file to the state it was in last commit.
+# basically discarding changes.
 # this will effectively remove "line2" from demo.txt file.
 git restore demo.txt  
-# adding "line2" again
-echo "line2" >> demo.txt  
 cat demo.txt  
-line1  
-line2  
-git restore demo.txt  
-cat demo.txt  
-line1  
+line1  # "line2" gone.
+# making another change; staging.
 echo "line3" >> demo.txt  
 git add demo.txt  
 cat demo.txt  
@@ -39,8 +35,8 @@ git status
 On branch test/undo  
 Changes to be committed:  
 (use "git restore --staged <file>..." to unstage)  
-modified:   demo.txt  
-  
+modified:   demo.txt  # notice it's listed under changes which means staged
+# Unstaging a file; changes are retained.
 git restore --staged demo.txt  
 git status  
 On branch test/undo  
