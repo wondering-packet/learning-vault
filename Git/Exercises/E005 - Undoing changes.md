@@ -10,8 +10,7 @@ main
 * test/undo  
 # creating a new file
 echo "line1" > demo.txt  
-# staged it
-git add demo.txt  
+git add demo.txt  # staged
 # commiting; note that now this file is tracked by git.
 git commit -m "test/undo: demo v1"  
 [test/undo e61ee9e] test/undo: demo v1  
@@ -47,13 +46,22 @@ Changes not staged for commit:
 modified:   demo.txt  # notice it's showing up under "not staged".
   
 no changes added to commit (use "git add" and/or "git commit -a")  
+
+# NOTE: you can break down above 2 tasks into:
+	# 1. are changes not staged? YES - do git restore <file_name>
+	# 2. are changes staged? YES - do git restore --staged <file_name>
+	# 3. you want to undo changes that have been staged already?
+		# do 2 then 1.
+
+# let's make a bad commit with bad code
 echo "bad line" >> demo.txt  
-git add demo.txt  
-git commit -m "test/undo: bad commit v1"  
+git add demo.txt  # staged
+git commit -m "test/undo: bad commit v1"  # commited
 [test/undo a2e33f8] test/undo: bad commit v1  
 1 file changed, 2 insertions(+)  
+# let's check history
 git log --oneline  
-a2e33f8 (HEAD -> test/undo) test/undo: bad commit v1  
+a2e33f8 (HEAD -> test/undo) test/undo: bad commit v1  # here is our commit
 e61ee9e test/undo: demo v1  
 16505b8 Revert "test/undo: commit v2"  
 45e73eb test/undo: commit v2  
@@ -61,6 +69,7 @@ b9aea0c test/undo: commit v1
 ee1a39f logout: added v1  
 458eafb main: readme.md  
 4097e98 new repo for IaC  
+# let's do a soft reset which means undo commit, keep the file in staging & workin 
 git reset --soft HEAD~1  
 git log --oneline  
 e61ee9e (HEAD -> test/undo) test/undo: demo v1  
