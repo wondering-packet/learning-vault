@@ -1,14 +1,14 @@
-### `git checkout -b`
+### `git switch -c`
 
 - **Command:**  
-  `git checkout -b <branch>`
+  `git switch -c <branch>`
 
 - **Purpose:**  
   Creates and switches to a new branch.
 
 - **Syntax:**  
   ```bash
-  git checkout -b new-branch
+  git switch -c new-branch
   ```
 
 - **Key Flags:**  
@@ -16,7 +16,7 @@
 
 - **Example:**  
   ```bash
-  git checkout -b feature-x
+  git switch -c feature-x
   ```
 
 - **Related Commands:**  
