@@ -11,13 +11,13 @@ git branch
 feature/login  
 * main  
 # switching to a branch.
-git checkout feature/login  # OR git switch feature/login
+git checkout feature/login
 Switched to branch 'feature/login'  # validation message.
 git branch  
 * feature/login  # * confirms we are not on feature/login branch.
 main
 # here is you can combine creating + switcing in one command.
-git checkout -b feature/logout  # OR git switch -b feature/logout
+git checkout -b feature/logout
 Switched to a new branch 'feature/logout'  
 git branch  
 feature/login  

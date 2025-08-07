@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "checkout",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -179,7 +180,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8aac1c45dda22459",
+  "active": "9b19963759ee2f87",
   "lastOpenFiles": [
     "Git/Exercises/E002c - Rebase.md",
     "Git/Lessons/L002 - Branching & Conflict Resolution.md",
