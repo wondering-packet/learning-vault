@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "readme.md",
+                "file": "Git/readme.md",
                 "mode": "source",
                 "source": false
               },
@@ -179,10 +179,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fff1c450c59da762",
+  "active": "376cc142841ebfcd",
   "lastOpenFiles": [
-    "Git/Lessons/L005 - Undoing changes.md",
     "readme.md",
+    "Git/readme.md",
+    "Git/Lessons/L005 - Undoing changes.md",
     "Test/Temp.md",
     "Git/Exercises/E002a - Create branch.md",
     "Git/Lessons/L001 - Git Foundation.md",
@@ -206,7 +207,6 @@
     "Git/Command References/git clean.md",
     "Git/Command References/git commit.md",
     "Git/Command References/git commit --amend.md",
-    "Git/Command References/git branch.md",
     "Git/Command References/sedODK5ue",
     "Git/Command References",
     "Git/KBs",
