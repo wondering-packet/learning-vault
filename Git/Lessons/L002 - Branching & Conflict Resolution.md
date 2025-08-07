@@ -1,93 +1,130 @@
-#### **Branches**
+# Branching, Merging, Rebasing & Conflict Resolution in Git
+
+These are core Git concepts used to manage parallel development, maintain clean commit histories, and collaborate with others.
+
+---
+
+## 🌿 Branches
 
 - A branch is just a **pointer** to a commit.
 - `main` (or `master`) is the default branch.
-	- KB: [KB001 - Main or Master Branch](../KBs/KB001%20-%20Main%20or%20Master%20Branch.md).
 - Feature branches allow isolated development.
-#### **Merging**
+
+📚 KB: [KB001 - Main or Master Branch](../KBs/KB001%20-%20Main%20or%20Master%20Branch.md)
+
+---
+
+## 🔀 Merging
 
 - Combines histories of two branches.
-- **Fast-forward merge** → when main hasn’t moved since branch creation.
-	- Exercise: [E002b - Merging branch](../Exercises/E002b%20-%20Merging%20branch.md) Section 1.
-	- KB: [KB003 - Merge fast-forward](../KBs/KB003%20-%20Merge%20fast-forward.md).
-- **Merge commit** → when histories diverge.
-	- Exercise: [E002b - Merging branch](../Exercises/E002b%20-%20Merging%20branch.md) Section 2.
-#### **Rebasing**
+
+### Types:
+- **Fast-forward merge** → when `main` hasn’t changed since branch was created.
+  - 📚 KB: [KB003 - Merge fast-forward](../KBs/KB003%20-%20Merge%20fast-forward.md)  
+  - 🧪 Exercise: [E002b - Merging branch](../Exercises/E002b%20-%20Merging%20branch.md) (Section 1)
+
+- **Merge commit** → when branches have diverged.
+  - 🧪 Exercise: [E002b - Merging branch](../Exercises/E002b%20-%20Merging%20branch.md) (Section 2)
+
+---
+
+## 📚 Rebasing
 
 - Moves your branch commits **on top of** another branch.
 - Keeps history linear → no merge commits.
-- Good for keeping a clean main history.
-- KB: [KB004 - Rebase](../KBs/KB004%20-%20Rebase.md).
-- Exercise: [E002c - Rebase](../Exercises/E002c%20-%20Rebase.md).
-#### **Conflicts**
+- Use with caution in shared branches.
 
-- Occur when Git can’t decide which changes to keep.
-- **Conflict markers**:
+📚 KB: [KB004 - Rebase](../KBs/KB004%20-%20Rebase.md)  
+🧪 Exercise: [E002c - Rebase](../Exercises/E002c%20-%20Rebase.md)
 
-	```plaintext
-	<<<<<<< HEAD      # current branch’s code
-	=======           # separator
-    >>>>>>> 		branch    # other branch’s code
-	```
+---
 
-	 You must **manually edit**, then:
+## ⚔️ Conflicts
 
-	```bash
-	git add <filename>
-	git rebase --continue
-	# or
-	git merge --continue
-	```
-- KB: [KB006 - Conflict](../KBs/KB006%20-%20Conflict.md).
-- Exercise: [E002d - Conflict](../Exercises/E002d%20-%20Conflict.md).
-#### **Commands**
-1. Create & Switch Branch
-```bash
-git branch <branch_name>          # Create branch
-git switch <branch_name>        # Switch to branch
-git switch -c <branch_name>     # Create + switch in one step
-git branch                        # lists all branches; * remarks where you are
+- Occur when Git can’t auto-resolve changes between branches.
+- Files will contain conflict markers:
+```plaintext
+<<<<<<< HEAD            # your current branch’s code
+=======                # separator
+>>>>>>> branch_name     # the other branch’s code
 ```
-2. Merge
+
+### Steps to resolve:
+```bash
+# 1. Edit file to resolve the conflict
+nano <file>
+
+# 2. Stage the resolved file
+git add <file>
+
+# 3. Continue the merge or rebase
+git merge --continue   # for merges
+git rebase --continue  # for rebases
+```
+
+📚 KB: [KB006 - Conflict](../KBs/KB006%20-%20Conflict.md)  
+🧪 Exercise: [E002d - Conflict](../Exercises/E002d%20-%20Conflict.md)
+
+---
+
+## 🛠️ Commands Summary
+
+### 1. Create & Switch Branch
+```bash
+git branch <branch_name>           # Create branch
+git switch <branch_name>           # Switch to branch
+git switch -c <branch_name>        # Create + switch
+git branch                         # List all branches (* marks current)
+```
+
+### 2. Merge
 ```bash
 git switch main
-git merge <branch_name>           # Merge into current branch
+git merge <branch_name>            # Merge into current branch
 ```
-3. Rebase
+
+### 3. Rebase
 ```bash
 git switch <feature_branch>
-git rebase main                   # Replay commits from feature branch on top of main
+git rebase main                    # Replay commits onto main
 ```
-4. Resolve Merge Conflicts
-- If a conflict occurs the file will have below conflict markers inside:
-```
+
+### 4. Resolve Merge Conflicts
+```plaintext
 <<<<<<< HEAD
 changes from current branch
 =======
 changes from merging branch
 >>>>>>> branch_name_or_commit_id
 ```
-   - Steps to resolve:
+
 ```bash
-# Step1, edit file, remove markers, keep correct code
+# Step1: Edit file to fix conflict
 nano <file>
-# Step2, stage the file
-git add <file>     
-# Step3, continue rebase after resolving
-git rebase --continue             
-```
-5.  Pushing the new branch
-```bash
-# pushes the local branch to a new branch.
-# if the branch doesn't exist then create one.
-git push origin -u <branch_name> 
+
+# Step2: Stage the file
+git add <file>
+
+# Step3: Continue
+git rebase --continue
+# or
+git merge --continue
 ```
 
->    `-u` sets upstream so `git push` works without specifying branch.
-
-6. Delete Branch
+### 5. Push New Branch
 ```bash
-git branch -d <branch_name>       # Delete local branch (safe)
-git branch -D <branch_name>       # Force delete local branch
-git push origin --delete <branch> # Delete remote branch
+git push origin -u <branch_name>   # Push and set upstream
 ```
+
+> `-u` sets the upstream so future pushes don’t need the branch name.
+
+### 6. Delete Branch
+```bash
+git branch -d <branch_name>        # Delete local branch (safe)
+git branch -D <branch_name>        # Force delete local branch
+git push origin --delete <branch>  # Delete remote branch
+```
+
+---
+
+Git branches, merging, and rebasing are how you build collaboration and maintain clarity. Mastering conflict resolution is key to working smoothly in teams.
