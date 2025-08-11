@@ -66,7 +66,7 @@ git rebase --continue
 ```bash
 git push --force-with-lease
 ```
-- Exercise: 
+- Exercises: 
 	- [E005a - PR](../Exercises/E005a%20-%20PR.md).
 	- [E005b - Pull](../Exercises/E005b%20-%20Pull.md).
 
