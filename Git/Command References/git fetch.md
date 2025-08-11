@@ -21,9 +21,7 @@ git fetch --all
 
 ### **Example**
 
-Bash
-
-```
+```bash
 # Fetches all branches and tags from the remote named 'origin'
 git fetch origin
 

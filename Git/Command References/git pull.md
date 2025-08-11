@@ -21,9 +21,7 @@ git pull --rebase
 
 ### **Example**
 
-Bash
-
-```
+```bash
 # Pulls changes from the 'main' branch of the 'origin' remote,
 # and merges them into your current local branch.
 git pull origin main

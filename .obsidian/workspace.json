@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Lessons/L005 - Remote Workflows & Pull Requests.md",
+                "file": "Git/Command References/git switch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "L005 - Remote Workflows & Pull Requests"
+              "title": "git switch"
             }
           }
         ]
@@ -181,8 +181,13 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/KBs/KB011 - PR.md",
+    "Git/Command References/git fetch.md",
+    "Git/Command References/git init.md",
+    "Git/Command References/git pull.md",
+    "Git/Command References/git reset.md",
+    "Git/Command References/git rebase.md",
     "Git/Lessons/L005 - Remote Workflows & Pull Requests.md",
+    "Git/KBs/KB011 - PR.md",
     "Git/Exercises/E005b - Pull.md",
     "Git/Exercises/E005a - PR.md",
     "Git/KBs/KB012 - Fetch.md",
@@ -194,9 +199,6 @@
     "Git/Lessons/L010 - Undoing changes.md",
     "Git/Exercises/E002a - Create branch.md",
     "Git/Exercises/E004 - Squashing with Interactive Rebase.md",
-    "Git/Command References/git fetch.md",
-    "Git/Command References/git pull.md",
-    "Git/Command References/git rebase.md",
     "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/Lessons/L0011 - Pull.md",
     "Git/Command References/git switch.md",
@@ -205,8 +207,6 @@
     "Git/readme.md",
     "readme.md",
     "Git/Exercises/E002c - Rebase.md",
-    "Git/KBs/KB004 - Rebase.md",
-    "Git/Exercises/E002b - Merging branch.md",
     "Git/Command References/sedODK5ue",
     "Git/Command References",
     "Git/KBs",
