@@ -44,7 +44,7 @@ git push -u origin feature/new-feature
   1. **Merge Commit** – preserves history, adds a merge commit.
   2. **Squash & Merge** – combines all branch commits into one.
   3. **Rebase & Merge** – applies branch commits on top of base branch (linear history).
-- KB: [KB0011 ]
+- KB: [KB0013 - Pull](../KBs/KB013%20-%20Pull.md).
 
 ---
 
@@ -66,8 +66,11 @@ git rebase --continue
 ```bash
 git push --force-with-lease
 ```
+- Exercise: 
+	- [E005a - PR](../Exercises/E005a%20-%20PR.md).
+	- [E005b - Pull](../Exercises/E005b%20-%20Pull.md).
 
-*more on this in the bottom note*
+> *more on this in the bottom note*
 
 ---
 
