@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Lessons/L005 - Undoing changes.md",
+                "file": "Git/Exercises/E002a - Create branch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "L005 - Undoing changes"
+              "title": "E002a - Create branch"
             }
           }
         ]
@@ -181,9 +181,9 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Lessons/L005 - Undoing changes.md",
     "Git/readme.md",
     "readme.md",
-    "Git/Lessons/L005 - Undoing changes.md",
     "Git/Exercises/E002c - Rebase.md",
     "Git/KBs/KB004 - Rebase.md",
     "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
