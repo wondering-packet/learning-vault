@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/E005 - PR.md",
+                "file": "Git/Lessons/L002 - Branching & Conflict Resolution.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E005 - PR"
+              "title": "L002 - Branching & Conflict Resolution"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Exercises/E010 - Undoing changes.md",
+    "Git/Exercises/E002a - Create branch.md",
     "Git/Exercises/E005 - PR.md",
+    "Git/Exercises/E010 - Undoing changes.md",
     "Git/KBs/KB011 - PR.md",
     "Git/Lessons/L005 - Remote Workflows & Pull Requests.md",
     "Git/Exercises/E004 - Squashing with Interactive Rebase.md",
@@ -200,7 +201,6 @@
     "Git/Command References/git switch.md",
     "Git/Lessons/L005 - Remote Workflows & Pull Requestsa.md",
     "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
-    "Git/Exercises/E002a - Create branch.md",
     "Git/readme.md",
     "readme.md",
     "Git/Exercises/E002c - Rebase.md",
