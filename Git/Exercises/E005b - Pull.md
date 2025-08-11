@@ -37,7 +37,7 @@ origin/main: someone else makes a change v2
 	1. added this line: `origin/main: someone else makes a change v4`
 3. Commit in github.
 
-#### **3. Let's pull latest changes (best practice)**
+#### **3. Let's fetch latest changes (best practice)**
 
 ```bash
 akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git pull  
@@ -73,10 +73,20 @@ main: someone else makes a change
 origin/main: someone else makes a change v1  
 origin/main: someone else makes a change v2  
 origin/main: someone else makes a change v3  
+```
+
+#### **4. Let's make a local change to reflect a real-world scenario (different people working in their local branches)**
+
+```bash
 akashi@Seijuro-PC:.../Git/local-repos/iac-git$ echo "main: local change v1" >> hello.txt  
 akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -am "main: local change v1"  
 [main dc9f319] main: local change v1  
 1 file changed, 1 insertion(+)  
+```
+
+#### **5. Let's fetch latest changes again (again it's practice to fetch new changes before you prepare to push your changes)**
+
+```bash
 akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git pull  
 remote: Enumerating objects: 3, done.  
 remote: Counting objects: 100% (3/3), done.  
