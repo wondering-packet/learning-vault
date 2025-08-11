@@ -49,7 +49,7 @@ git push -u origin feature/new-feature
 
 ## 5. Rebasing Before PR
 - Keeps history clean by moving your commits on top of the latest main branch **before pushing**.
-- Read about "git fetch .." in [KB012 - Fetch](../KBs/KB012%20-%20Fetch).
+- Read about "git fetch .." in [KB012 - Fetch](../KBs/KB012%20-%20Fetch.md).
 ```bash
 git fetch origin
 git switch feature/new-feature
@@ -72,7 +72,7 @@ git push --force-with-lease
 
 ## 6. Resolving Conflicts from Remote
 - Happens when your local branch and the remote branch have both changed.
-- Pull with rebase to avoid merge commits, read more about "git pull --rebase" in [KB013 - Pull](../KBs/KB013%20-%20Pull):
+- Pull with rebase to avoid merge commits, read more about "git pull --rebase" in [KB013 - Pull](../KBs/KB013%20-%20Pull.md):
 ```bash
 git pull --rebase
 ```
