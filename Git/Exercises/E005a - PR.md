@@ -108,7 +108,9 @@ git log --oneline --graph --all
 git rebase origin/main  
 Successfully rebased and updated refs/heads/test/pr-7.  
 # look at the commit history now - linear & pretty just like you (>ᴗ•)!
-	# you can look at the non-linear & ugly history in E005b - Pull without rebase"
+# in case, you decide to not rebase here - you can still rebase during the PR 
+# approval workflow in github; github gives you an option to "rebase & merge" 
+# but ideally you should still rebase locally.
 git log --oneline --graph --all  
 * 3adbaa9 (HEAD -> test/pr-7) pr-7: change v3  
 * e82eb11 pr-7: change v2  
