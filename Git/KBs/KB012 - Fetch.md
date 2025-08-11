@@ -28,7 +28,3 @@ git fetch origin main
 # This will show a log of all commits in origin/main that are not yet in your local main branch.
 git log main..origin/main
 ```
-
----
-
-The image shows how `git fetch` only updates the remote tracking branch, whereas `git pull` updates your local branch as well.

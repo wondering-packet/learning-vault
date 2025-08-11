@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/KBs/KB012 - Git Fetch.md",
+                "file": "Git/Lessons/L005 - Remote Workflows & Pull Requests.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "KB012 - Git Fetch"
+              "title": "L005 - Remote Workflows & Pull Requests"
             }
           }
         ]
@@ -181,9 +181,9 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/KBs/KB013 - Git Pull.md",
-    "Git/KBs/KB012 - Git Fetch.md",
+    "Git/KBs/KB012 - Fetch.md",
     "Git/Lessons/L005 - Remote Workflows & Pull Requests.md",
+    "Git/KBs/KB013 - Pull.md",
     "Git/Lessons/L004 - Interactive Rebasing & Squashing.md",
     "Git/Lessons/L010 - Undoing changes.md",
     "Git/Lessons/L002 - Branching & Conflict Resolution.md",
