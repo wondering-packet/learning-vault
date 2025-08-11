@@ -44,9 +44,9 @@ These are core Git concepts used to manage parallel development, maintain clean 
 - Occur when Git can’t auto-resolve changes between branches.
 - Files will contain conflict markers:
 ```plaintext
-<<<<<<< HEAD            # your current branch’s code
-=======                # separator
->>>>>>> branch_name     # the other branch’s code
+<<<<<<< HEAD                         # your current branch’s code
+=======                              # separator
+>>>>>>> branch_name_or_commit_id     # the other branch’s code
 ```
 
 ### Steps to resolve:
