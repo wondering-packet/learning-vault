@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/KBs/KB002 - Origin.md",
+                "file": "Git/Lessons/L005 - Remote Workflows & Pull Requests.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "KB002 - Origin"
+              "title": "L005 - Remote Workflows & Pull Requests"
             }
           }
         ]
@@ -181,6 +181,10 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Exercises/E005b - Pull.md",
+    "Git/Exercises/E010 - Undoing changes.md",
+    "Git/KBs/KB001 - Main or Master Branch.md",
+    "Git/KBs/KB002 - Origin.md",
     "Git/KBs/KB003 - Merge fast-forward.md",
     "Git/KBs/KB004 - Rebase.md",
     "Git/KBs/KB005 - Stashing.md",
@@ -203,10 +207,6 @@
     "Git/Command References/git reset.md",
     "Git/Command References/git rebase.md",
     "Git/KBs/KB011 - PR.md",
-    "Git/Exercises/E005b - Pull.md",
-    "Git/Exercises/E005a - PR.md",
-    "Git/KBs/KB012 - Fetch.md",
-    "Git/KBs/KB013 - Pull.md",
     "Git/Command References/sedODK5ue",
     "Git/Command References",
     "Git/KBs",

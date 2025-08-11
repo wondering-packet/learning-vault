@@ -110,7 +110,7 @@ git rebase origin/main                  # Rebase on latest main branch
 - If working solo, you don’t need PRs—just push directly to `main` (but still rebase if working with a remote).
 ---
 
-> [!info]
+> [!Note]
 > ## Local vs Remote (GitHub) Rebase/Squash
 > 
 > When you are working with PRs, you should ideally always rebase/squash locally before you push to the remote (e.g. Github), here is what each does:
