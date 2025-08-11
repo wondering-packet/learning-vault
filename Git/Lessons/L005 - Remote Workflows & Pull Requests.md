@@ -1,6 +1,6 @@
 # Lesson 5 – Remote Workflows & Pull Requests
 
-## 1. Cloning Repositories (covered previously)
+## 1. Cloning Repositories (*covered previously*)
 - To work on an existing project, you first clone it from a remote.
 ```bash
 git clone <repo_url>
@@ -9,7 +9,7 @@ git clone <repo_url>
 
 ---
 
-## 2. Pushing Changes (covered previously)
+## 2. Pushing Changes (*covered previously*)
 - Push commits from your local branch to the remote.
 ```bash
 git push origin <branch>
@@ -21,7 +21,7 @@ git push -u origin <branch>
 
 ---
 
-## 3. Creating Branches for Features/Fixes (covered previously)
+## 3. Creating Branches for Features/Fixes (*covered previously*)
 - Work on a separate branch before pushing:
 ```bash
 git switch -c feature/new-feature
@@ -44,6 +44,7 @@ git push -u origin feature/new-feature
   1. **Merge Commit** – preserves history, adds a merge commit.
   2. **Squash & Merge** – combines all branch commits into one.
   3. **Rebase & Merge** – applies branch commits on top of base branch (linear history).
+- KB: [KB0011 ]
 
 ---
 
