@@ -105,28 +105,29 @@ git rebase origin/main                  # Rebase on latest main branch
 - If working solo, you don’t need PRs—just push directly to `main` (but still rebase if working with a remote).
 ---
 
-## Local vs Remote (GitHub) Rebase/Squash
-
-When you are working with PRs, you should ideally always rebase/squash locally before you push to the remote (e.g. Github), here is what each does:
-
-### **Local Rebase or Squash**
-- You rewrite commit history **before** pushing changes to the remote repository.
-- Benefits:
-  - You have full control over the process (interactive rebase, squash selectively, reorder commits).
-  - You can test the changes locally and ensure everything works before updating the remote branch.
-  - Keeps the remote clean from extra commits like "fix typo" or "WIP".
-- Downsides:
-  - You need to force-push (`git push --force`) if rewriting history on a branch that has already been pushed.
-  - If others are working on the same branch, force-pushing can cause conflicts and headaches.
-
-### **Remote (GitHub) Rebase or Squash via Pull Request**
-- You push all your commits to the remote **as-is**, and during the PR merge, you choose:
-  - **Rebase and merge** → applies your commits one-by-one on top of the target branch, creating a linear history.
-  - **Squash and merge** → combines all commits from the PR into a single commit.
-- Benefits:
-  - No need for local force-pushes.
-  - The final main branch history is clean, even if your feature branch had messy commits.
-  - Good for team collaboration where others might pull your branch before merge.
-- Downsides:
-  - You lose fine-grained control over the commit structure unless you rebase/squash locally first.
-  - Commit hashes will change at merge time, which can be confusing if you need to reference them later.
+> [!info]
+> ## Local vs Remote (GitHub) Rebase/Squash
+> 
+> When you are working with PRs, you should ideally always rebase/squash locally before you push to the remote (e.g. Github), here is what each does:
+> 
+> ### **Local Rebase or Squash**
+> - You rewrite commit history **before** pushing changes to the remote repository.
+> - Benefits:
+>   - You have full control over the process (interactive rebase, squash selectively, reorder commits).
+>   - You can test the changes locally and ensure everything works before updating the remote branch.
+>   - Keeps the remote clean from extra commits like "fix typo" or "WIP".
+> - Downsides:
+>   - You need to force-push (`git push --force`) if rewriting history on a branch that has already been pushed.
+>   - If others are working on the same branch, force-pushing can cause conflicts and headaches.
+> 
+> ### **Remote (GitHub) Rebase or Squash via Pull Request**
+> - You push all your commits to the remote **as-is**, and during the PR merge, you choose:
+>   - **Rebase and merge** → applies your commits one-by-one on top of the target branch, creating a linear history.
+>   - **Squash and merge** → combines all commits from the PR into a single commit.
+> - Benefits:
+>   - No need for local force-pushes.
+>   - The final main branch history is clean, even if your feature branch had messy commits.
+>   - Good for team collaboration where others might pull your branch before merge.
+> - Downsides:
+>   - You lose fine-grained control over the commit structure unless you rebase/squash locally first.
+>   - Commit hashes will change at merge time, which can be confusing if you need to reference them later.
