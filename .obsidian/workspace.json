@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Lessons/L005 - Remote Workflows & Pull Requests.md",
+                "file": "Git/KBs/KB012 - Git Pull.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "L005 - Remote Workflows & Pull Requests"
+              "title": "KB012 - Git Pull"
             }
           }
         ]
@@ -181,9 +181,12 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Lessons/L0011 - Pull.md",
+    "Git/KBs/KB012 - Git Pull.md",
+    "Git/Command References/git switch.md",
+    "Git/Lessons/L005 - Remote Workflows & Pull Requests.md",
     "Git/Lessons/L010 - Undoing changes.md",
     "Git/KBs/KB011 - PR.md",
-    "Git/Lessons/L005 - Remote Workflows & Pull Requests.md",
     "Git/Lessons/L004 - Interactive Rebasing & Squashing.md",
     "Git/Lessons/L005 - Remote Workflows & Pull Requestsa.md",
     "Git/Lessons/L001 - Git Foundation.md",
@@ -204,9 +207,6 @@
     "Git/Lessons/git-stash-push-cherry-tag.md",
     "Git/KBs/KB008 - Tags.md",
     "Git/Lessons/git-interactive-rebase(1).md",
-    "Git/Exercises/E004 - Squashing with Interactive Rebase.md",
-    "Git/Command References/git switch.md",
-    "Git/Command References/git status.md",
     "Git/Command References/sedODK5ue",
     "Git/Command References",
     "Git/KBs",
