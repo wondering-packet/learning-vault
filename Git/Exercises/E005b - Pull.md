@@ -42,6 +42,7 @@ origin/main: someone else makes a change v2
 
 ```bash
 # shows 1 file changed, 1 insertion because someone else also worked on the same file.
+# it's a simple fast-forward merge because we haven't made any local changes yet.
 git pull  
 Updating 2f370d2..52f59f3  
 Fast-forward  
@@ -118,11 +119,12 @@ git log --oneline --graph --all
 * 2f370d2 origin/main: remote change v1
 ```
 
-#### 6. Let's pull with a rebase this time
+#### **6. Let's pull with a rebase this time**
 
 ```bash
 # let's do a pull with rebase. this will replay my changes on top of remote changes.
-# notice we have a conflict: this means my 
+# notice we have a conflict: this means my changes are causing 
+# conflict with someone else's changes. 
 git pull --rebase  
 Auto-merging hello.txt  
 CONFLICT (content): Merge conflict in hello.txt  
@@ -132,15 +134,20 @@ hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
 hint: You can instead skip this commit: run "git rebase --skip".  
 hint: To abort and get back to the state before "git rebase", run "git rebase --abort".  
 Could not apply dc9f319... main: local change v1  
+# fixing the conflict
 nano hello.txt  
+# continuing with rebase.
 git add .  
 git rebase --continue  
 [detached HEAD 204de9f] main: fixed a rebase & merge conlict with remote main  
 1 file changed, 1 insertion(+)  
 Successfully rebased and updated refs/heads/main.  
+# notice how we now have a linear history which is easily readable.
+# b59a4f1 is the commit from the remote change.
+# 204de9f is the new commit replayed from my commit dc9f319 (for my change).
 git log --oneline --graph --all  
 * 204de9f (HEAD -> main) main: fixed a rebase & merge conlict with remote main  
-* b59a4f1 (origin/main) origin/main: remote change v4  
+* b59a4f1 (origin/main) origin/main: remote change v4
 * 52f59f3 origin/main: remote change v3  
 * 2f370d2 origin/main: remote change v1
 ```
