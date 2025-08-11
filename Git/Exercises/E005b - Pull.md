@@ -4,3 +4,4 @@
 In this exercise I am going to focus on `git pull` vs `git pull --rebase`.
 
 #### **1. `git pull`**
+
