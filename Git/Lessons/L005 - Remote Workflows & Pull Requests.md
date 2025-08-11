@@ -44,7 +44,7 @@ git push -u origin feature/new-feature
   1. **Merge Commit** – preserves history, adds a merge commit.
   2. **Squash & Merge** – combines all branch commits into one.
   3. **Rebase & Merge** – applies branch commits on top of base branch (linear history).
-- KB: [KB0013 - Pull](../KBs/KB013%20-%20Pull.md).
+- KB: [KB0011 - PR](../KBs/KB011%20-%20PR.md).
 
 ---
 
