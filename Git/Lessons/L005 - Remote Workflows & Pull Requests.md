@@ -72,7 +72,7 @@ git push --force-with-lease
 
 ## 6. Resolving Conflicts from Remote
 - Happens when your local branch and the remote branch have both changed.
-- Pull with rebase to avoid merge commits, read more about "git pull --rebase":
+- Pull with rebase to avoid merge commits, read more about "git pull --rebase" in [KB013 - Pull](../KBs/KB013%20-%20Pull):
 ```bash
 git pull --rebase
 ```
