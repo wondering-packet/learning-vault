@@ -9,6 +9,7 @@
 #### **1. Restoring a branch to a previous state**
 
 1. Create a new branch & add some features:
+
 ```bash
 git switch -c test/undo-4  
 Switched to a new branch 'test/undo-4'  
@@ -31,11 +32,15 @@ undo4: feature 1
 undo4: feature 2  
 undo4: feature 3  
 ```
-2. Push - this is the first push to remote. I forgot to do this!
+
+2. Push - this is the first push to remote. I forgot to do this, sorry!
+
 ```bash
 git push origin -u test/undo-4
 ```
+
 2. (optional) work on some other branch to finish up some urgent task:
+
 ```bash
 git switch main  
 Switched to branch 'main'  
@@ -46,13 +51,15 @@ git commit -am "main: some work after undo4 feature 3"
 [main 95568a8] main: some work after undo4 feature 3  
 1 file changed, 1 insertion(+)  
 ```
+
 3. Go back to feature branch to add some more features:
+
 ```bash
 git switch test/undo-4  
 Switched to branch 'test/undo-4'  
 # adding 2 more features this week, one of which contains a buggy code.
 # i've just added (no bugs/contains a bug) for easier understanding,
-# in real-world you will have to do troubleshooting to identify the bugs.
+# in real-world you will have to troubleshoot to identify the bugs.
 echo "undo4: feature 4 (no bugs)" >> undo4  
 git commit -am "undo4: feature 4"  
 [test/undo-4 fc8b001] undo4: feature 4  
@@ -68,7 +75,7 @@ b0ba17d undo4: feature 3
 5083711 undo4: feature 2  
 585eb96 undo4: added feature 1
 ..truncated output..
-# all features 
+# all features as of this week:
 cat undo4  
 undo4: feature 1  
 undo4: feature 2  
@@ -76,14 +83,20 @@ undo4: feature 3
 undo4: feature 4 (no bugs)  
 undo4: feature 5 (contains a bug)  
 ```
-4. Push - which i again forgot to do! (sigh..)
 
-> Note that, this push contains a commits with buggy code.
+4. Push - which i again forgot to do (sigh..!).
+
+```bash
+git push
+```
+
+> Note that, this push contains commits with buggy code.
 
 5. Users testing these new features complain recent changes (made in this week) broke some core functionality so you immediately decide to restore to the state of last week. A few things to note:
-	1. This is an emergency situation - highest priority is to restore the functionality this is why we are not doing much troubleshooting. Also, we already know of a working state.
+	1. This is an emergency situation - highest priority is to restore the functionality this is why we are not doing much troubleshooting. Also, we already know of a working state so it's much faster & easier to recover.
 	2. Why we are not using `git revert`? We absolutely can & it should actually be the preferred way, I am just doing  `git reset --hard` to demonstrate it's usage in this scenario.
-	3. We will still be investigating the root cause in later (next scenario).
+	3. We will still be investigating the root cause later (next scenario).
+
 ```bash
 git reset --hard b0ba17d  
 HEAD is now at b0ba17d undo4: feature 3  
@@ -96,15 +109,19 @@ b0ba17d (HEAD -> test/undo-4) undo4: feature 3
 5083711 undo4: feature 2  
 585eb96 undo4: added feature 1
 ```
+
 6. Push - a normal push will not work because of divergent history b/w local & remote (note that our remote still has all this week's commit)
+
 ```bash
 git push --force-with-lease
 ```
+
 6. Users confirm issue is no longer occurring.
 
 #### **2. Inspecting a Commit, Branching Off & Restoring a Specific Commit**
 
 1. Let's look identify the commits that might have caused problems for users:
+
 ```bash
 
 ```
