@@ -123,22 +123,23 @@ git push --force-with-lease
 1. Let's look identify the commits that might have caused problems for users:
 
 ```bash
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git reflog  
+git reflog  
 b0ba17d (HEAD -> test/undo-4, origin/test/undo-4) HEAD@{0}: reset: moving to b0ba17d  
-2e245db HEAD@{1}: commit: undo4: feature 5  
-fc8b001 HEAD@{2}: commit: undo4: feature 4  
+2e245db HEAD@{1}: commit: undo4: feature 5  # commit 5 (this week) - investigate
+fc8b001 HEAD@{2}: commit: undo4: feature 4  # commit 4 (this week)- investigate
 b0ba17d (HEAD -> test/undo-4, origin/test/undo-4) HEAD@{3}: checkout: moving from main to test/undo-4  
 95568a8 (main) HEAD@{4}: commit: main: some work after undo4 feature 3  
 f621b44 HEAD@{5}: checkout: moving from test/undo-4 to main  
-b0ba17d (HEAD -> test/undo-4, origin/test/undo-4) HEAD@{6}: commit: undo4: feature 3  
-5083711 HEAD@{7}: commit: undo4: feature 2  
-585eb96 HEAD@{8}: commit: undo4: added feature 1
+b0ba17d (HEAD -> test/undo-4, origin/test/undo-4) HEAD@{6}: commit: undo4: feature 3  # commit 3 (previous week)
+5083711 HEAD@{7}: commit: undo4: feature 2  # commit 2 (previous week)
+585eb96 HEAD@{8}: commit: undo4: added feature 1  # commit 1 (previous week)
 ```
 
 2. Let's look investigate both commits:
 
 ```bash
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git checkout fc8b001  
+# investigating commit 4:
+git checkout fc8b001  
 Note: switching to 'fc8b001'.  
   
 You are in 'detached HEAD' state. You can look around, make experimental  
@@ -156,43 +157,48 @@ git switch -
   
 Turn off this advice by setting config variable advice.detachedHead to false  
   
-HEAD is now at fc8b001 undo4: feature 4  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ cat undo4  
+HEAD is now at fc8b001 undo4: feature 4 
+# at this point you will be carrying out your investigation, testing, review etc.
+# i am again just using a simple test here to show that this commit isn't buggy.
+cat undo4  
 undo4: feature 1  
 undo4: feature 2  
 undo4: feature 3  
-undo4: feature 4 (no bugs)  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git checkout 2e245db  
+undo4: feature 4 (no bugs)  # no bugs
+# investigating commit 5:
+git checkout 2e245db  
 Previous HEAD position was fc8b001 undo4: feature 4  
 HEAD is now at 2e245db undo4: feature 5  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ cat undo4  
+cat undo4  
 undo4: feature 1  
 undo4: feature 2  
 undo4: feature 3  
 undo4: feature 4 (no bugs)  
-undo4: feature 5 (contains a bug)  
+undo4: feature 5 (contains a bug)  # found a bug
 ```
 
 3. Let's fix the bug & create a new branch:
 
 ```bash
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ nano undo4  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ cat undo4  
+# fixing the bug
+nano undo4  
+# validate
+cat undo4  
 undo4: feature 1  
 undo4: feature 2  
 undo4: feature 3  
 undo4: feature 4 (no bugs)  
-undo4: feature 5 (bug fixed)  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git switch -c test/undo-4-bugfix  
+undo4: feature 5 (bug fixed)  # bug 
+git switch -c test/undo-4-bugfix  
 Switched to a new branch 'test/undo-4-bugfix'  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ cat undo4  
+cat undo4  
 undo4: feature 1  
 undo4: feature 2  
 undo4: feature 3  
 undo4: feature 4 (no bugs)  
 undo4: feature 5 (bug fixed)  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git add .  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -m "undo-4-bugfix: fixed the bug in feature 5"  
+git add .  
+git commit -m "undo-4-bugfix: fixed the bug in feature 5"  
 [test/undo-4-bugfix 3ef07a6] undo-4-bugfix: fixed the bug in feature 5  
 1 file changed, 1 insertion(+), 1 deletion(-)
 ```
@@ -200,14 +206,53 @@ akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -m "undo-4-bugfix: fix
 4. Let's cherry pick the non-buggy & fixed commits back into the feature branch:
 
 ```bash
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git cherry-pick fc8b001  
+git cherry-pick fc8b001  
 [test/undo-4 a95e420] undo4: feature 4  
 Date: Tue Aug 12 20:01:45 2025 +0530  
 1 file changed, 1 insertion(+)
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ cat undo4  
+cat undo4  
 undo4: feature 1  
 undo4: feature 2  
 undo4: feature 3  
 undo4: feature 4 (no bugs)
+git cherry-pick 3ef07a6  
+Auto-merging undo4  
+CONFLICT (content): Merge conflict in undo4  
+error: could not apply 3ef07a6... undo-4-bugfix: fixed the bug in feature 5  
+hint: After resolving the conflicts, mark them with  
+hint: "git add/rm <pathspec>", then run  
+hint: "git cherry-pick --continue".  
+hint: You can instead skip this commit with "git cherry-pick --skip".  
+hint: To abort and get back to the state before "git cherry-pick",  
+hint: run "git cherry-pick --abort".  
+```
 
+5. Fix conflicts & Push:
+
+```bash
+cat undo4  
+undo4: feature 1  
+undo4: feature 2  
+undo4: feature 3  
+undo4: feature 4 (no bugs)  
+<<<<<<< HEAD  
+=======  
+undo4: feature 5 (bug fixed)  
+>>>>>>> 3ef07a6 (undo-4-bugfix: fixed the bug in feature 5)  
+nano undo4  
+git commit -am "undo4: new features added with bugfix v1"  
+[test/undo-4 2bb7d3c] undo4: new features added with bugfix v1  
+Date: Tue Aug 12 20:50:40 2025 +0530  
+1 file changed, 1 insertion(+)  
+git push  
+Enumerating objects: 8, done.  
+Counting objects: 100% (8/8), done.  
+Delta compression using up to 4 threads  
+Compressing objects: 100% (6/6), done.  
+Writing objects: 100% (6/6), 585 bytes | 195.00 KiB/s, done.  
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0  
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.  
+To https://github.com/wondering-packet/iac-git.git  
+b0ba17d..2bb7d3c  test/undo-4 -> test/undo-4  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$
 ```
