@@ -115,7 +115,7 @@ b0ba17d (HEAD -> test/undo-4) undo4: feature 3
 585eb96 undo4: added feature 1
 ```
 
-> [!important]
+> [!warning]
 > Again, if you need to roll back a shared branch in real world, you should do a revert instead because `git revert`:
 > 1. Preserves commit history.
 > 2. Doesn't cause any divergence b/w local & remote (if commits are already pushed).
@@ -127,7 +127,7 @@ b0ba17d (HEAD -> test/undo-4) undo4: feature 3
 >git revert fc8b001 2e245db
 > ```
 > 
-> checkout the exercise on `git revert` [E006a - Undoing changes](E006a%20-%20Undoing%20changes.md).
+> checkout the  task #6 in exercise  [E006a - Undoing changes](E006a%20-%20Undoing%20changes.md) for `git revert` example.
 
 4. Push - a normal push will not work because of divergent history b/w local & remote (note that our remote still has all this week's commit)
 
