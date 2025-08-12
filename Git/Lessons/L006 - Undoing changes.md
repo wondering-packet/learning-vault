@@ -5,6 +5,7 @@ Git operates across three layers:
 2. **Staging Area (Index)** – what’s ready to commit
 3. **Commit History** – saved snapshots
 
+Do the exercise
 ---
 
 ## 🔧 1. Discarding Changes in the Working Directory
