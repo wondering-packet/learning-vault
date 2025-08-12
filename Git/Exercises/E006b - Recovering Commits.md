@@ -96,7 +96,7 @@ git push
 
 	A few things to note:
 	
-	1. This is an emergency situation - highest priority is to restore the functionality this is why we are not doing much troubleshooting. Also, we already know of a working state so it's much faster & easier to recover.
+	1. This is an emergency situation - highest priority is to restore the functionality which is why we are not doing much troubleshooting. Also, we already know of a working state so it's much faster & easier to recover.
 	2. Why we are not using `git revert`? We absolutely can & it should actually be the **preferred way**, I am just doing  `git reset --hard` to demonstrate it's usage in this scenario.
 	3. We will still be investigating the root cause later (next scenario).
 
@@ -114,12 +114,12 @@ b0ba17d (HEAD -> test/undo-4) undo4: feature 3
 ```
 
 > [!important]
-> Again, if you need to roll back in real world, you should ALWAYS do a revert instead which:
+> Again, if you need to roll back in real world, you should ALWAYS do a revert instead because `git revert`:
 > 1. Preserves commit history.
 > 2. Doesn't cause any divergence b/w local & remote (if commits are already pushed).
 > 3. Safer for shared commits.
 > 
-> In this scnario, you will do:
+> In this scenario, you will do:
 >
 >```bash
 >git revert fc8b001 2e245db
