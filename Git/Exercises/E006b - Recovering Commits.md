@@ -7,50 +7,76 @@
 
 #### **1. Restoring a branch to a previous state**
 
+1. Create a new branch & add some features:
 ```bash
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git switch -c test/undo-4  
+git switch -c test/undo-4  
 Switched to a new branch 'test/undo-4'  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ echo "undo4: feature 1" > undo4  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git add .  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -m "undo4: added feature 1"  
+echo "undo4: feature 1" > undo4  
+git add .  
+git commit -m "undo4: added feature 1"  
 [test/undo-4 585eb96] undo4: added feature 1  
 1 file changed, 1 insertion(+), 3 deletions(-)  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ echo "undo4: feature 2" >> undo4  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -am "undo4: feature 2"  
+echo "undo4: feature 2" >> undo4  
+git commit -am "undo4: feature 2"  
 [test/undo-4 5083711] undo4: feature 2  
 1 file changed, 1 insertion(+)  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ echo "undo4: feature 3" >> undo4  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -am "undo4: feature 3"  
+echo "undo4: feature 3" >> undo4  
+git commit -am "undo4: feature 3"  
 [test/undo-4 b0ba17d] undo4: feature 3  
 1 file changed, 1 insertion(+)  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ cat undo4  
+cat undo4  
 undo4: feature 1  
 undo4: feature 2  
 undo4: feature 3  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git switch main  
+```
+2. (optional) work on some other branch to finish up some urgent task:
+```bash
+git switch main  
 Switched to branch 'main'  
 Your branch is ahead of 'origin/main' by 4 commits.  
 (use "git push" to publish your local commits)  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ echo "main: some other work on main branch" >> hello.txt  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -am "main: some work after undo4 feature 3"  
+echo "main: some other work on main branch" >> hello.txt  
+git commit -am "main: some work after undo4 feature 3"  
 [main 95568a8] main: some work after undo4 feature 3  
 1 file changed, 1 insertion(+)  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git switch test/undo-4  
+```
+3. Go back to feature branch to add some more features:
+```bash
+git switch test/undo-4  
 Switched to branch 'test/undo-4'  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ echo "undo4: feature 4 (no bugs)" >> undo4  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -am "undo4: feature 4"  
+echo "undo4: feature 4 (no bugs)" >> undo4  
+git commit -am "undo4: feature 4"  
 [test/undo-4 fc8b001] undo4: feature 4  
 1 file changed, 1 insertion(+)  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ echo "undo4: feature 5 (contains a bug)" >> undo4  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -am "undo4: feature 5"  
+echo "undo4: feature 5 (contains a bug)" >> undo4  
+git commit -am "undo4: feature 5"  
 [test/undo-4 2e245db] undo4: feature 5  
 1 file changed, 1 insertion(+)  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git log --oneline  
+git log --oneline  
 2e245db (HEAD -> test/undo-4) undo4: feature 5  
 fc8b001 undo4: feature 4  
 b0ba17d undo4: feature 3  
 5083711 undo4: feature 2  
 585eb96 undo4: added feature 1
 ..truncated output..
-
+cat undo4  
+undo4: feature 1  
+undo4: feature 2  
+undo4: feature 3  
+undo4: feature 4 (no bugs)  
+undo4: feature 5 (contains a bug)  
+```
+4. push - which i forgot to do :)
+5. Users compla
+```
+git reset --hard b0ba17d  
+HEAD is now at b0ba17d undo4: feature 3  
+cat undo4  
+undo4: feature 1  
+undo4: feature 2  
+undo4: feature 3  
+git log --oneline  
+b0ba17d (HEAD -> test/undo-4) undo4: feature 3  
+5083711 undo4: feature 2  
+585eb96 undo4: added feature 1
 ```
