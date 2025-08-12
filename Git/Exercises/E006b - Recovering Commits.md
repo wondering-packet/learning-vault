@@ -195,12 +195,14 @@ undo4: feature 5 (contains a bug)  # found a bug
 3. Let's fix the bug & create a new branch:
 
 ```bash
-# branching off so we have a real branch where we can create a new commit to cherry pick.
+# branching off so we have a real branch where we can implement a fix &
+# create a new commit to cherry pick in our feature branch (test/undo-4)
 # NOTE that: you can directly implement a fix in the detached commit & then
-# cherry pick it in the feature branch but it's highly recommened that you always # create a new branch because a new branch gives your commit/work a permanant
+# cherry pick it in the feature branch but it's highly recommened that you always
+# create a new branch because a new branch gives your commit/work a permanant
 # place instead of it being in a detached state (where you can easily loose 
 # track of it).
-git switch -c test/undo-4-bugfix  
+git switch -c test/undo-4-bugfix  # a temprory branch for investigation & fix.
 Switched to a new branch 'test/undo-4-bugfix' 
 # fixing the bug
 nano undo4  
