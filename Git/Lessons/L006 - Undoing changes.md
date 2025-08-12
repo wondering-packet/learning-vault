@@ -5,7 +5,9 @@ Git operates across three layers:
 2. **Staging Area (Index)** – what’s ready to commit
 3. **Commit History** – saved snapshots
 
-Do the exercise
+> [!NOTE]
+> Find the exercise for this lesson here: [E006 - Undoing changes](../Exercises/E006%20-%20Undoing%20changes.md). 
+
 ---
 
 ## 🔧 1. Discarding Changes in the Working Directory
@@ -19,7 +21,7 @@ git checkout -- <file>
 
 ### Discard ALL uncommitted changes:
 ```bash
-git restore . # this is for the changes that have not been staged.
+git restore .          # this is for the changes that have not been staged.
 git restore --staged . # this for the changes that have been staged.
 ```
 
