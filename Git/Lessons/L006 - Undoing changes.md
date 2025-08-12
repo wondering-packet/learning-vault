@@ -99,7 +99,7 @@ git reflog
 git checkout <commit-hash>
 ```
 
-## **7. Safety Net for Advanced Ops**
+## 🦺 7. Safety Net for Advanced Ops
 
 - Before **hard reset**, always:
 
@@ -117,13 +117,15 @@ git branch backup-before-rebase
 
 ## 🧠 TL;DR – Undo Cheat Sheet
 
-| **Action**                    | **Command**                        |
-|------------------------------|------------------------------------|
-| Discard file change          | `git restore <file>`               |
-| Unstage file                 | `git restore --staged <file>`      |
-| Undo last commit, keep all   | `git reset --soft HEAD~1`          |
-| Undo last commit, keep files | `git reset --mixed HEAD~1`         |
-| Undo & wipe all              | `git reset --hard HEAD~1`          |
-| Revert safely with new commit| `git revert <commit>`              |
-| Clean untracked junk         | `git clean -fd`                    |
-| Find lost commits            | `git reflog`                       |
+| **Action**                    | **Command**                     |
+| ----------------------------- | ------------------------------- |
+| Discard file change           | `git restore <file>`            |
+| Unstage file                  | `git restore --staged <file>`   |
+| Undo last commit, keep all    | `git reset --soft HEAD~1`       |
+| Undo last commit, keep files  | `git reset --mixed HEAD~1`      |
+| Undo & wipe all               | `git reset --hard HEAD~1`       |
+| Revert safely with new commit | `git revert <commit>`           |
+| Clean untracked junk          | `git clean -fd`                 |
+| Find lost commits             | `git reflog`                    |
+| Backup before reset           | git branch backup-before-reset  |
+| Backup before rebase          | git branch backup-before-rebase |
