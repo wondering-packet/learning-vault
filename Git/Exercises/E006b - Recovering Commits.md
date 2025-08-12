@@ -1,2 +1,3 @@
 We will be breaking this down into 3 scenarios:
-1. You made some commits (good ones) then you made some bad commits accidentally - Now you want to restore your work to how it was when good commits were made.
+1. You made some commits (good ones that implemented some new features) then you made some more commits (which accidentally broke new features) - Now you want to restore your work to how it was when the new features were working.
+2. After you've recovered using above, you want to find out more about what changes in those new commits caused the new features to break So you decide to checkout one of the commit to explore the changes in detail. 
