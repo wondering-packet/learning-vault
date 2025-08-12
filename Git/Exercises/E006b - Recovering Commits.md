@@ -98,7 +98,7 @@ git push
 	3. We will still be investigating the root cause later (next scenario).
 
 ```bash
-git reset --hard b0ba17d  
+git reset --hard b0ba17d  # b0ba17d is the last commit from previous week
 HEAD is now at b0ba17d undo4: feature 3  
 cat undo4  
 undo4: feature 1  

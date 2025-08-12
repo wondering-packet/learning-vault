@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/E006b - Recovering Commits.md",
+                "file": "Git/Exercises/E005a - PR.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E006b - Recovering Commits"
+              "title": "E005a - PR"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"git fetch\"",
+                "query": "\"-am\"",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -181,11 +182,11 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Command References/git revert.md",
+    "Git/Exercises/E005b - Pull.md",
     "Git/Exercises/E006b - Recovering Commits.md",
+    "Git/Command References/git revert.md",
     "Git/Lessons/L006 - Undoing changes.md",
     "Git/Exercises/E006a - Undoing changes.md",
-    "Git/Exercises/E005b - Pull.md",
     "Git/Lessons/L005 - Remote Workflows & Pull Requests.md",
     "Git/Lessons/L001 - Git Foundation.md",
     "Git/KBs/KB005 - Stashing.md",

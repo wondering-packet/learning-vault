@@ -14,7 +14,7 @@ git commit -m "pr-7: change v1"
 1 file changed, 1 insertion(+)  
 create mode 100644 pr-7  
 echo "pr-7: change v2" >> pr-7  
-git commit -am "pr-7: change v2"  # -am stages all files & commits
+git commit -am "pr-7: change v2"  # -am stages all files & commits; only works if for files that are already tracke
 [test/pr-7 082bd8c] pr-7: change v2  
 1 file changed, 1 insertion(+)  
 echo "pr-7: change v3" >> pr-7  
