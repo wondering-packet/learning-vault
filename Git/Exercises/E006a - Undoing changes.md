@@ -185,7 +185,7 @@ ee1a39f logout: added v1
 
 #### **7. Accidentally Reset Too Far** (insert screaming emoji LoL)
 
-> [!example]
+> [!tip]
 > You can find an advanced demonstration in [E006b - Recovering Commits](E006b%20-%20Recovering%20Commits.md).
 
 ```bash
