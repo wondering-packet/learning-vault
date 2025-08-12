@@ -181,11 +181,11 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Exercises/E006d - Hooks.md",
+    "Git/Exercises/E006a - Undoing changes.md",
     "Git/Lessons/L006 - Advanced workflows.md",
+    "Git/Exercises/E006d - Hooks.md",
     "Git/Exercises/E006c - Backup.md",
     "Git/Exercises/E006b - Recovering Commits.md",
-    "Git/Exercises/E006a - Undoing changes.md",
     "Git/Command References/git reset.md",
     "Git/Lessons/L005 - Remote Workflows & Pull Requests.md",
     "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
