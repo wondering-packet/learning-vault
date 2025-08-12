@@ -30,6 +30,10 @@ undo4: feature 1
 undo4: feature 2  
 undo4: feature 3  
 ```
+2. Push - this is the first push to remote. I forgot to do this!
+```bash
+git push origin -u test/undo-4
+```
 2. (optional) work on some other branch to finish up some urgent task:
 ```bash
 git switch main  
@@ -67,9 +71,12 @@ undo4: feature 3
 undo4: feature 4 (no bugs)  
 undo4: feature 5 (contains a bug)  
 ```
-4. Push - which i forgot to do :)
+4. Push - which i again forgot to do! (sigh..)
+
 > Note that, this push contains a commits with buggy code.
-5. Users testing these new features complain recent changes (made in this week) broke some core functionality so you decide to restore to the state of last week to immediately bring back the working functionality (of course we will still be investigating the root cause in next scenario).
+
+5. Users testing these new features complain recent changes (made in this week) broke some core functionality so you decide to restore to the state of last week. Note that:
+	1. to immediately bring back the working functionality (of course we will still be investigating the root cause in next scenario).
 ```bash
 git reset --hard b0ba17d  
 HEAD is now at b0ba17d undo4: feature 3  
