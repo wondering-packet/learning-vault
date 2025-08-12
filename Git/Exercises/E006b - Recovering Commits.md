@@ -58,7 +58,7 @@ git commit -am "main: some work after undo4 feature 3"
 git switch test/undo-4  
 Switched to branch 'test/undo-4'  
 # adding 2 more features this week, one of which contains a buggy code.
-# i've just added (no bugs/contains a bug) for easier understanding,
+# i've just added (no bugs/contains a bug) lines for easier understanding,
 # in real-world you will have to troubleshoot to identify the bugs.
 echo "undo4: feature 4 (no bugs)" >> undo4  
 git commit -am "undo4: feature 4"  
@@ -173,8 +173,8 @@ git switch -
 Turn off this advice by setting config variable advice.detachedHead to false  
   
 HEAD is now at fc8b001 undo4: feature 4 
-# at this point you will be carrying out your investigation, testing, review etc.
-# i am again just using a simple test here to show that this commit isn't buggy.
+# at this point you will be carrying out your investigation - do testing & review etc.
+# here i am just using a simple text line to show that this commit isn't buggy.
 cat undo4  
 undo4: feature 1  
 undo4: feature 2  
