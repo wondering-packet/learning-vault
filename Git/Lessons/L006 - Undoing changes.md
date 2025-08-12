@@ -110,7 +110,7 @@ git branch backup-before-reset
 - Before **rebase**, always:
 
 ```bash
-git branch bac
+git branch backup-before-rebase
 ```
 
 ---
