@@ -180,6 +180,12 @@ undo4: feature 5 (contains a bug)  # found a bug
 3. Let's fix the bug & create a new branch:
 
 ```bash
+# branching off so we have a real branch where we can create a new commit to cherry pick.
+# NOTE that: you can directly implement a fix in the detached commit & then cherry pick it in the feature branch but it's highly recommened that you always # create a new branch because a new branch gives your commit/work a permanant
+# place instead of it being in a detached state (where you can easily loose 
+# track of it).
+git switch -c test/undo-4-bugfix  
+Switched to a new branch 'test/undo-4-bugfix' 
 # fixing the bug
 nano undo4  
 # validate
@@ -188,21 +194,10 @@ undo4: feature 1
 undo4: feature 2  
 undo4: feature 3  
 undo4: feature 4 (no bugs)  
-undo4: feature 5 (bug fixed)  # bugfix implemented
-# branching off so we have a real branch where we can create a new commit to cherry pick.
-# note that: you can directly cherry pick the above fixed commit without creating a new branch but it's highly recommened that you always create a new branch because a new branch gives your commit/work a permanant place instead of it being in a detached state (where you can easily loose track of it). another thing i could have done better was to implement the fix afte
-git switch -c test/undo-4-bugfix  
-Switched to a new branch 'test/undo-4-bugfix'  
-cat undo4  
-undo4: feature 1  
-undo4: feature 2  
-undo4: feature 3  
-undo4: feature 4 (no bugs)  
-undo4: feature 5 (bug fixed)  
+undo4: feature 5 (bug fixed)  # bugfix implemented 
 git add .  
 git commit -m "undo-4-bugfix: fixed the bug in feature 5"  
 [test/undo-4-bugfix 3ef07a6] undo-4-bugfix: fixed the bug in feature 5  
-1 file changed, 1 insertion(+), 1 deletion(-)
 ```
 
 4. Let's cherry pick the non-buggy & fixed commits back into the feature branch:
