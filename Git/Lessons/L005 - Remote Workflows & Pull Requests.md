@@ -1,4 +1,4 @@
-# Lesson 5 – Remote Workflows & Pull Requests
+# Remote Workflows & Pull Requests
 
 ## 1. Cloning Repositories (*covered previously*)
 - To work on an existing project, you first clone it from a remote.

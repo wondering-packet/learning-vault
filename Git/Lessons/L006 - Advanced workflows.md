@@ -29,8 +29,6 @@ git restore --staged . # this for the changes that have been staged.
 
 > "." means all.
 
----
-
 ## 🧼 2. Unstaging Files
 
 ### Unstage a file (remove from staging area):
@@ -39,8 +37,6 @@ git restore --staged <file>
 # or legacy:
 git reset <file>
 ```
-
----
 
 ## 🗑️ 3. Removing Untracked Files
 
@@ -54,31 +50,27 @@ git clean -fd
 git clean -fdn
 ```
 
----
-
 ## ⏪ 4. Undoing Commits
 
-### a) Fix last commit (message or files):
+#### a) Fix last commit (message or files):
 ```bash
 git commit --amend
 ```
 
-### b) Undo last commit, keep changes staged:
+#### b) Undo last commit, keep changes staged:
 ```bash
 git reset --soft HEAD~1
 ```
 
-### c) Undo last commit, keep changes in working directory:
+#### c) Undo last commit, keep changes in working directory:
 ```bash
 git reset --mixed HEAD~1
 ```
 
-### d) Undo last commit, discard everything:
+#### d) Undo last commit, discard everything:
 ```bash
 git reset --hard HEAD~1
 ```
-
----
 
 ## 🧨 5. Reverting Commits Safely
 
@@ -86,8 +78,6 @@ git reset --hard HEAD~1
 ```bash
 git revert <commit-hash>
 ```
-
----
 
 ## 🧙‍♂️ 6. Recovering Lost Commits
 
@@ -135,7 +125,8 @@ git checkout <commit-hash>
 git switch -c new-lost-feature
 ```
 
-## 🦺 7. Safety Net for Advanced Ops
+---
+#  Safety Net for Advanced Ops
 
 - Before **hard reset**, always:
 
@@ -148,6 +139,17 @@ git branch backup-before-reset
 ```bash
 git branch backup-before-rebase
 ```
+
+---
+# Git Hooks (Intro)
+
+- Scripts that run at specific Git events (pre-commit, pre-push, etc.).
+
+```bash
+.git/hooks/pre-commit
+```
+
+- Example: Auto-run `lint` before commits.
 
 ---
 
