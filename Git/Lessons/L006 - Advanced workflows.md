@@ -133,6 +133,9 @@ git switch -c new-lost-feature
 ---
 #  Safety Net for Advanced Ops
 
+> [!NOTE]
+> Find the exercise at [E006c - Backup](../Exercises/E006c%20-%20Backup.md).
+
 - Before **hard reset**, always:
 
 ```bash

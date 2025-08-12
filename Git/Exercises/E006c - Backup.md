@@ -31,8 +31,9 @@ undo4: feature 2
 undo4: feature 3  
 undo4: feature 4 (no bugs)  
 undo4: feature 5 (contains a bug) - fixed now  
-undo4: feature 6  # this is from new work
-undo4: feature 7  
+undo4: feature 6  # this is from new work; commit: a3a3736.
+undo4: feature 7  # this is from new work; commit: 9757fe9.
+# removing new work:
 git reset --hard HEAD~2  
 HEAD is now at 94f2194 undo4-temp: fixed the bug  
 cat undo4  
@@ -42,6 +43,7 @@ undo4: feature 3
 undo4: feature 4 (no bugs)  
 undo4: feature 5 (contains a bug) - fixed now  
 git log --oneline  
+# commits a3a3736 & 9757fe9 are gone.
 94f2194 (HEAD -> test/undo4-test) undo4-temp: fixed the bug  
 fa0dd3c undo4: feature 5  
 a95e420 undo4: feature 4  
@@ -51,7 +53,7 @@ b0ba17d undo4: feature 3
 ..truncated output..
 ```
 
-#### 3. Restore
+#### **3. Restore**
 
 ```bash
 # turns out the issue happened because of something else.
@@ -64,10 +66,11 @@ undo4: feature 2
 undo4: feature 3  
 undo4: feature 4 (no bugs)  
 undo4: feature 5 (contains a bug) - fixed now  
-undo4: feature 6  
-undo4: feature 7  
+undo4: feature 6  # new work restored!
+undo4: feature 7  # new work restored!
  
 git log --oneline  
+# notice the commits from new work are back cleanly.
 9757fe9 (HEAD -> test/undo-4, undo4-backup-before-reset) undo4: feature 7  
 a3a3736 undo4: feature 6  
 94f2194 (test/undo4-test) undo4-temp: fixed the bug  
