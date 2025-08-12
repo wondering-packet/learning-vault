@@ -1,2 +1,2 @@
-We will be breaking this down into 2 scenarios:
-1. 
+We will be breaking this down into 3 scenarios:
+1. You made some commits (good ones) then you made some bad commits accidentally - Now you want to restore your work to how it was when good commits were made.
