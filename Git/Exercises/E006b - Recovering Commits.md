@@ -75,8 +75,10 @@ undo4: feature 5 (contains a bug)
 
 > Note that, this push contains a commits with buggy code.
 
-5. Users testing these new features complain recent changes (made in this week) broke some core functionality so you decide to restore to the state of last week. Note that:
-	1. to immediately bring back the working functionality (of course we will still be investigating the root cause in next scenario).
+5. Users testing these new features complain recent changes (made in this week) broke some core functionality so you immediately decide to restore to the state of last week. The reason we are going for an immediate recovery without much troubleshooting is :
+	1. This is an emergency situation - highest priority is to restore the functionality.
+	2. Why we are not using `git revert`? We absolutely can, I am just doing  
+	3. to immediately bring back the working functionality (of course we will still be investigating the root cause in next scenario).
 ```bash
 git reset --hard b0ba17d  
 HEAD is now at b0ba17d undo4: feature 3  
