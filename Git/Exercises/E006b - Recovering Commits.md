@@ -116,7 +116,7 @@ b0ba17d (HEAD -> test/undo-4) undo4: feature 3
 ```
 
 > [!important]
-> Again, if you need to roll back in real world (shared branches), you should ALWAYS do a revert instead because `git revert`:
+> Again, if you need to roll back a shared branch in real world, you should do a revert instead because `git revert`:
 > 1. Preserves commit history.
 > 2. Doesn't cause any divergence b/w local & remote (if commits are already pushed).
 > 3. Safer for shared commits.
