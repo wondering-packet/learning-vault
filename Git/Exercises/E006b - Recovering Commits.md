@@ -1,4 +1,3 @@
-
 ##### **We will be breaking this down into two scenarios:**
 
 1. **Restoring a branch to a previous state:** you made some commits (good ones that implemented some new features) then you made some more commits (which accidentally broke new features) - Now you want to restore your work to how it was when the new features were working.
@@ -14,11 +13,12 @@
 git switch -c test/undo-4  
 Switched to a new branch 'test/undo-4'  
 echo "undo4: feature 1" > undo4  
-git add .  
+git add .  # tracking the file
 git commit -m "undo4: added feature 1"  
 [test/undo-4 585eb96] undo4: added feature 1  
 1 file changed, 1 insertion(+), 3 deletions(-)  
 echo "undo4: feature 2" >> undo4  
+# -am stages all files & commits; only works if files are already tracked!
 git commit -am "undo4: feature 2"  
 [test/undo-4 5083711] undo4: feature 2  
 1 file changed, 1 insertion(+)  

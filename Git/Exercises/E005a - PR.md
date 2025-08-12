@@ -8,13 +8,14 @@
 git switch -c test/pr-7  
 Switched to a new branch 'test/pr-7'  
 echo "pr-7: change v1" > pr-7  
-git add .  
+git add .  # tracking the file.
 git commit -m "pr-7: change v1"  
 [test/pr-7 fab8f58] pr-7: change v1  
 1 file changed, 1 insertion(+)  
 create mode 100644 pr-7  
 echo "pr-7: change v2" >> pr-7  
-git commit -am "pr-7: change v2"  # -am stages all files & commits; only works if for files that are already tracke
+# -am stages all files & commits; only works if files are already tracked!
+git commit -am "pr-7: change v2"  
 [test/pr-7 082bd8c] pr-7: change v2  
 1 file changed, 1 insertion(+)  
 echo "pr-7: change v3" >> pr-7  

@@ -185,6 +185,9 @@ ee1a39f logout: added v1
 
 #### **7. Accidentally Reset Too Far** (insert screaming emoji LoL)
 
+> [!example]
+> You can find an advanced demonstration in [E006b - Recovering Commits](E006b%20-%20Recovering%20Commits.md).
+
 ```bash
 # let's remove last 4 commits; hard means gone from staging & working directory.
 git reset --hard HEAD~4  
