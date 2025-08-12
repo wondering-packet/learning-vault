@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/E006a - Undoing changes.md",
+                "file": "Git/Exercises/E006b - Recovering Commits.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E006a - Undoing changes"
+              "title": "E006b - Recovering Commits"
             }
           }
         ]
@@ -181,12 +181,12 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Lessons/L006 - Undoing changes.md",
     "Git/Exercises/E006b - Recovering Commits.md",
     "Git/Exercises/E006a - Undoing changes.md",
     "Git/Exercises/E005b - Pull.md",
     "Git/Exercises/E005a - PR.md",
     "Git/Command References/git revert.md",
-    "Git/Lessons/L006 - Undoing changes.md",
     "Git/Lessons/L005 - Remote Workflows & Pull Requests.md",
     "Git/Lessons/L001 - Git Foundation.md",
     "Git/KBs/KB005 - Stashing.md",

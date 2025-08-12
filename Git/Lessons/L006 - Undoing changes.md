@@ -6,7 +6,9 @@ Git operates across three layers:
 3. **Commit History** – saved snapshots
 
 > [!NOTE]
-> Find the exercise for this lesson here: [E006a - Undoing changes](E006a%20-%20Undoing%20changes.md). 
+> Find the exercises for this lesson here: 
+> 1. [E006a - Undoing changes](E006a%20-%20Undoing%20changes.md) - Covers tasks #1 - 6 below.
+> 2. [E006b - Recovering Commits](../Exercises/E006b%20-%20Recovering%20Commits.md) - Covers task #6 in depth.
 
 ---
 
