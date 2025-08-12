@@ -134,3 +134,80 @@ b0ba17d (HEAD -> test/undo-4, origin/test/undo-4) HEAD@{6}: commit: undo4: featu
 5083711 HEAD@{7}: commit: undo4: feature 2  
 585eb96 HEAD@{8}: commit: undo4: added feature 1
 ```
+
+2. Let's look investigate both commits:
+
+```bash
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git checkout fc8b001  
+Note: switching to 'fc8b001'.  
+  
+You are in 'detached HEAD' state. You can look around, make experimental  
+changes and commit them, and you can discard any commits you make in this  
+state without impacting any branches by switching back to a branch.  
+  
+If you want to create a new branch to retain commits you create, you may  
+do so (now or later) by using -c with the switch command. Example:  
+  
+git switch -c <new-branch-name>  
+  
+Or undo this operation with:  
+  
+git switch -  
+  
+Turn off this advice by setting config variable advice.detachedHead to false  
+  
+HEAD is now at fc8b001 undo4: feature 4  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ cat undo4  
+undo4: feature 1  
+undo4: feature 2  
+undo4: feature 3  
+undo4: feature 4 (no bugs)  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git checkout 2e245db  
+Previous HEAD position was fc8b001 undo4: feature 4  
+HEAD is now at 2e245db undo4: feature 5  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ cat undo4  
+undo4: feature 1  
+undo4: feature 2  
+undo4: feature 3  
+undo4: feature 4 (no bugs)  
+undo4: feature 5 (contains a bug)  
+```
+
+3. Let's fix the bug & create a new branch:
+
+```bash
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ nano undo4  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ cat undo4  
+undo4: feature 1  
+undo4: feature 2  
+undo4: feature 3  
+undo4: feature 4 (no bugs)  
+undo4: feature 5 (bug fixed)  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git switch -c test/undo-4-bugfix  
+Switched to a new branch 'test/undo-4-bugfix'  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ cat undo4  
+undo4: feature 1  
+undo4: feature 2  
+undo4: feature 3  
+undo4: feature 4 (no bugs)  
+undo4: feature 5 (bug fixed)  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git add .  
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git commit -m "undo-4-bugfix: fixed the bug in feature 5"  
+[test/undo-4-bugfix 3ef07a6] undo-4-bugfix: fixed the bug in feature 5  
+1 file changed, 1 insertion(+), 1 deletion(-)
+```
+
+4. Let's cherry pick the non-buggy & fixed commits back into the feature branch:
+
+```bash
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git cherry-pick fc8b001  
+[test/undo-4 a95e420] undo4: feature 4  
+Date: Tue Aug 12 20:01:45 2025 +0530  
+1 file changed, 1 insertion(+)
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ cat undo4  
+undo4: feature 1  
+undo4: feature 2  
+undo4: feature 3  
+undo4: feature 4 (no bugs)
+
+```
