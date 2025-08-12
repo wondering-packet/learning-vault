@@ -198,11 +198,13 @@ undo4: feature 5 (bug fixed)  # bugfix implemented
 git add .  
 git commit -m "undo-4-bugfix: fixed the bug in feature 5"  
 [test/undo-4-bugfix 3ef07a6] undo-4-bugfix: fixed the bug in feature 5  
+# note the commit hash 3ef07a6.
 ```
 
 4. Let's cherry pick the non-buggy & fixed commits back into the feature branch:
 
 ```bash
+# cherry-picking the non-buggy commit 4.
 git cherry-pick fc8b001  
 [test/undo-4 a95e420] undo4: feature 4  
 Date: Tue Aug 12 20:01:45 2025 +0530  
@@ -212,6 +214,7 @@ undo4: feature 1
 undo4: feature 2  
 undo4: feature 3  
 undo4: feature 4 (no bugs)
+# cherry-picking the fixed commit 5; fixed commit's hash: 3ef07a6.
 git cherry-pick 3ef07a6  
 Auto-merging undo4  
 CONFLICT (content): Merge conflict in undo4  
@@ -224,9 +227,10 @@ hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".  
 ```
 
-5. Fix conflicts & Push:
+5. Fix conflicts:
 
 ```bash
+# conflicts was expected because of new line in our file
 cat undo4  
 undo4: feature 1  
 undo4: feature 2  
@@ -236,20 +240,11 @@ undo4: feature 4 (no bugs)
 =======  
 undo4: feature 5 (bug fixed)  
 >>>>>>> 3ef07a6 (undo-4-bugfix: fixed the bug in feature 5)  
+# fixing conflict
 nano undo4  
-git commit -am "undo4: new features added with bugfix v1"  
-[test/undo-4 2bb7d3c] undo4: new features added with bugfix v1  
-Date: Tue Aug 12 20:50:40 2025 +0530  
-1 file changed, 1 insertion(+)  
-git push  
-Enumerating objects: 8, done.  
-Counting objects: 100% (8/8), done.  
-Delta compression using up to 4 threads  
-Compressing objects: 100% (6/6), done.  
-Writing objects: 100% (6/6), 585 bytes | 195.00 KiB/s, done.  
-Total 6 (delta 3), reused 0 (delta 0), pack-reused 0  
-remote: Resolving deltas: 100% (3/3), completed with 1 local object.  
-To https://github.com/wondering-packet/iac-git.git  
-b0ba17d..2bb7d3c  test/undo-4 -> test/undo-4  
-akashi@Seijuro-PC:.../Git/local-repos/iac-git$
+# restaging
+git add . 
+# continue cherry-picking process
+git cherry-pick --continue
+..truncated output..
 ```
