@@ -94,7 +94,7 @@ git push
 
 5. Users testing these new features complain recent changes (made in this week) broke some core functionality so you immediately decide to restore to the state of last week. A few things to note:
 	1. This is an emergency situation - highest priority is to restore the functionality this is why we are not doing much troubleshooting. Also, we already know of a working state so it's much faster & easier to recover.
-	2. Why we are not using `git revert`? We absolutely can & it should actually be the preferred way, I am just doing  `git reset --hard` to demonstrate it's usage in this scenario.
+	2. Why we are not using `git revert`? We absolutely can & it should actually be the **preferred way**, I am just doing  `git reset --hard` to demonstrate it's usage in this scenario.
 	3. We will still be investigating the root cause later (next scenario).
 
 ```bash
@@ -110,7 +110,11 @@ b0ba17d (HEAD -> test/undo-4) undo4: feature 3
 585eb96 undo4: added feature 1
 ```
 
-6. Push - a normal push will not work because of divergent history b/w local & remote (note that our remote still has all this week's commit)
+Again, if you needed to roll back in real world, you will ALWAYS do a revert instead which:
+1. Preserves commit history.
+2. Doesn't cause any divergence b/w .
+
+3. Push - a normal push will not work because of divergent history b/w local & remote (note that our remote still has all this week's commit)
 
 ```bash
 git push --force-with-lease
