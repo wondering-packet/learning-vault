@@ -99,6 +99,19 @@ git reflog
 git checkout <commit-hash>
 ```
 
+## **7. Safety Net for Advanced Ops**
+
+- Before **hard reset**, always:
+
+```bash
+git branch backup-before-reset
+```
+
+- Before **rebase**, always:
+
+```bash
+git branch bac
+```
 
 ---
 
