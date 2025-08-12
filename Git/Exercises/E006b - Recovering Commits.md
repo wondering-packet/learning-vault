@@ -126,6 +126,8 @@ b0ba17d (HEAD -> test/undo-4) undo4: feature 3
 >```bash
 >git revert fc8b001 2e245db
 > ```
+> 
+> checkout the exercise on `git revert` [E006a - Undoing changes](E006a%20-%20Undoing%20changes.md).
 
 4. Push - a normal push will not work because of divergent history b/w local & remote (note that our remote still has all this week's commit)
 
