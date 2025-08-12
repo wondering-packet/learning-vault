@@ -248,7 +248,7 @@ hint: run "git cherry-pick --abort".
 5. Fix conflicts:
 
 ```bash
-# conflicts was expected because of new line in our file
+# conflict was expected because of new line in our file
 cat undo4  
 undo4: feature 1  
 undo4: feature 2  
