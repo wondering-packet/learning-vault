@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Lessons/L005 - Remote Workflows & Pull Requests.md",
+                "file": "Git/Lessons/L006 - Advanced workflows.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "L005 - Remote Workflows & Pull Requests"
+              "title": "L006 - Advanced workflows"
             }
           }
         ]
@@ -181,8 +181,8 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Lessons/L006 - Advanced workflows.md",
     "Git/Lessons/L005 - Remote Workflows & Pull Requests.md",
+    "Git/Lessons/L006 - Advanced workflows.md",
     "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/Lessons/L004 - Interactive Rebasing & Squashing.md",
     "Git/Exercises/E006b - Recovering Commits.md",

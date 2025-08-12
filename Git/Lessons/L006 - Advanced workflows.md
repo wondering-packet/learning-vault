@@ -29,6 +29,7 @@ git restore --staged . # this for the changes that have been staged.
 
 > "." means all.
 
+---
 ## 🧼 2. Unstaging Files
 
 ### Unstage a file (remove from staging area):
@@ -38,6 +39,7 @@ git restore --staged <file>
 git reset <file>
 ```
 
+---
 ## 🗑️ 3. Removing Untracked Files
 
 ### Clean untracked files and directories:
@@ -50,6 +52,7 @@ git clean -fd
 git clean -fdn
 ```
 
+---
 ## ⏪ 4. Undoing Commits
 
 #### a) Fix last commit (message or files):
@@ -72,6 +75,7 @@ git reset --mixed HEAD~1
 git reset --hard HEAD~1
 ```
 
+---
 ## 🧨 5. Reverting Commits Safely
 
 ### Reverse a commit with a new one:
@@ -79,6 +83,7 @@ git reset --hard HEAD~1
 git revert <commit-hash>
 ```
 
+---
 ## 🧙‍♂️ 6. Recovering Lost Commits
 
 ### View commit history including lost ones:
