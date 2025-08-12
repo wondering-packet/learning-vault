@@ -111,6 +111,7 @@ ee1a39f logout: added v1
 4097e98 new repo for IaC  
 # let's do a hard reset
 	# which means undo commit, unstage the file & remove it from working directory
+	# HEAD~n = undo last n commits.
 git reset --hard HEAD~1  
 HEAD is now at e61ee9e test/undo: demo v1  # head moved back. 5a01504 gone!
 cat demo.txt  
