@@ -151,6 +151,9 @@ git branch backup-before-rebase  # creats a new branch which is our backup copy
 ---
 # Git Hooks (Intro)
 
+> [!NOTE]
+> Find the exercise at [E006d - Hooks](../Exercises/E006d%20-%20Hooks.md).
+
 - Scripts that run at specific Git events (pre-commit, pre-push, etc.).
 
 ```bash

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/E006d - Hooks.md",
+                "file": "Git/Lessons/L006 - Advanced workflows.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E006d - Hooks"
+              "title": "L006 - Advanced workflows"
             }
           }
         ]
@@ -181,8 +181,8 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Lessons/L006 - Advanced workflows.md",
     "Git/Exercises/E006d - Hooks.md",
+    "Git/Lessons/L006 - Advanced workflows.md",
     "Git/Exercises/E006c - Backup.md",
     "Git/Exercises/E006b - Recovering Commits.md",
     "Git/Exercises/E006a - Undoing changes.md",
