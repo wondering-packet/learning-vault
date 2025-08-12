@@ -6,3 +6,7 @@
 > We are skipping the PR process in this scenarios but in real-world there will of course be a proper review & approval before the fixed is implemented.
 
 #### **1. Restoring a branch to a previous state**
+
+```bash
+
+```
