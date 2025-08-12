@@ -1,5 +1,5 @@
 
-##### **We will be breaking this down into two real world scenarios:**
+##### **We will be breaking this down into two scenarios:**
 
 1. **Restoring a branch to a previous state:** you made some commits (good ones that implemented some new features) then you made some more commits (which accidentally broke new features) - Now you want to restore your work to how it was when the new features were working.
 2. **Inspecting a Commit, Branching Off & Restoring a Specific Commit:** after a while later, you are asked to find out more about what changes in those new commits caused the new features to break So you decide to checkout one of the commits to explore the changes in detail. While you are exploring you realize there is a bug in this commit - you decide to fix the bug & replay this commit back to the branch. 
@@ -75,10 +75,10 @@ undo4: feature 5 (contains a bug)
 
 > Note that, this push contains a commits with buggy code.
 
-5. Users testing these new features complain recent changes (made in this week) broke some core functionality so you immediately decide to restore to the state of last week. The reason we are going for an immediate recovery without much troubleshooting is :
-	1. This is an emergency situation - highest priority is to restore the functionality.
-	2. Why we are not using `git revert`? We absolutely can, I am just doing  
-	3. to immediately bring back the working functionality (of course we will still be investigating the root cause in next scenario).
+5. Users testing these new features complain recent changes (made in this week) broke some core functionality so you immediately decide to restore to the state of last week. A few things to note:
+	1. This is an emergency situation - highest priority is to restore the functionality this is why we are not doing much troubleshooting. Also, we already know of a working state.
+	2. Why we are not using `git revert`? We absolutely can & it should actually be the preferred way, I am just doing  `git reset --hard` to demonstrate it's usage in this scenario.
+	3. We will still be investigating the root cause in later (next scenario).
 ```bash
 git reset --hard b0ba17d  
 HEAD is now at b0ba17d undo4: feature 3  
@@ -91,5 +91,8 @@ b0ba17d (HEAD -> test/undo-4) undo4: feature 3
 5083711 undo4: feature 2  
 585eb96 undo4: added feature 1
 ```
-6. Push - 
-7. Users confirm issue is no longer occuring.
+6. Push - a normal push will not work because of divergent history b/w local & remote (note that our remote still has all this week's commit)
+```bash
+git push --force-with-lease
+```
+6. Users confirm issue is no longer occurring.
