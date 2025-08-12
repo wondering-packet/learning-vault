@@ -97,7 +97,7 @@ git push
 	A few things to note:
 	
 	1. This is an emergency situation - highest priority is to restore the functionality which is why we are not doing much troubleshooting. Also, we already know of a working state so it's much faster & easier to recover.
-	2. Why we are not using `git revert`? We absolutely can & it should actually be the **preferred way**, I am just doing  `git reset --hard` to demonstrate it's usage in this scenario.
+	2. Why we are not using `git revert`? We absolutely can & it should actually be the **preferred way** on shared branches, I am just doing  `git reset --hard` to demonstrate it's usage in this scenario. Exception: non shared/private branche
 	3. We will still be investigating the root cause later (next scenario).
 
 ```bash
