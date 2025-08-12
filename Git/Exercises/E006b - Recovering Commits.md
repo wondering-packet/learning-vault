@@ -1,7 +1,7 @@
 #### **We will be breaking this down into two scenarios:**
 
-1. **Restoring a branch to a previous state:** you made some commits (good ones that implemented some new features) previous week then you made some more commits (which accidentally broke new features) this week - Now you want to restore your work to the previous week state where a
-2. **Inspecting a Commit, Branching Off & Restoring a Specific Commit:** after a while, you are asked to find out more about what changes in those new commits caused the new features to break So you decide to checkout one of the commits to explore the changes in detail. While you are exploring you realize there is a bug in this commit - you decide to fix the bug & replay this commit back to the branch. 
+1. **Restoring a branch to a previous state:** you made some commits previous week (good ones that implemented some new features), then you made some more commits this week (which accidentally broke a core functionality) - Now you want to restore your work to the previous week state where you know for sure that the core functionality was intact & working.
+2. **Inspecting a Commit, Branching Off & Restoring a Specific Commit:** after a while, you are asked to investigate this week's changes for RCA (root cause analysis) So you decide to checkout all commits from the week to explore the changes in detail. While you are exploring you realize there is a bug in one of the commits - you decide to fix the bug & replay the new fixed commit back to the branch. 
 
 > We are skipping the PR process in these scenarios but in real-world there will of course be a proper review & approval before the fixed is implemented.
 
@@ -196,7 +196,8 @@ undo4: feature 5 (contains a bug)  # found a bug
 
 ```bash
 # branching off so we have a real branch where we can create a new commit to cherry pick.
-# NOTE that: you can directly implement a fix in the detached commit & then cherry pick it in the feature branch but it's highly recommened that you always # create a new branch because a new branch gives your commit/work a permanant
+# NOTE that: you can directly implement a fix in the detached commit & then
+# cherry pick it in the feature branch but it's highly recommened that you always # create a new branch because a new branch gives your commit/work a permanant
 # place instead of it being in a detached state (where you can easily loose 
 # track of it).
 git switch -c test/undo-4-bugfix  
