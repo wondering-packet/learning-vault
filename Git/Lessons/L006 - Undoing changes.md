@@ -95,8 +95,13 @@ git reflog
 ```
 
 ### Restore from reflog:
+
+1. Checking out
 ```bash
 git checkout <commit-hash>
+# from here you can now create a new branch off this detached commit & then
+# work on the new branch like you would normally on a normal branch
+# (merge, stashing, rebase etc.)
 ```
 
 ## 🦺 7. Safety Net for Advanced Ops
