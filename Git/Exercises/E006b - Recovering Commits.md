@@ -135,7 +135,7 @@ git push --force-with-lease
 
 #### **2. Inspecting a Commit, Branching Off & Restoring a Specific Commit**
 
-1. Let's look identify the commits that might have caused problems for users:
+1. Let's identify the commits that might have caused problems for users:
 
 ```bash
 git reflog  
@@ -150,7 +150,7 @@ b0ba17d (HEAD -> test/undo-4, origin/test/undo-4) HEAD@{6}: commit: undo4: featu
 585eb96 HEAD@{8}: commit: undo4: added feature 1  # commit 1 (previous week)
 ```
 
-2. Let's look investigate both commits:
+2. Let's investigate both commits:
 
 ```bash
 # investigating commit 4:
