@@ -67,9 +67,10 @@ undo4: feature 3
 undo4: feature 4 (no bugs)  
 undo4: feature 5 (contains a bug)  
 ```
-4. push - which i forgot to do :)
-5. Users testing these new features complain recent changes (made in this week) broke some core functionality so you decide to restore to the state before this week (of course we will still be investigating the root cause in next scenario)
-```
+4. Push - which i forgot to do :)
+> Note that, this push contains a commits with buggy code.
+5. Users testing these new features complain recent changes (made in this week) broke some core functionality so you decide to restore to the state of last week to immediately bring back the working functionality (of course we will still be investigating the root cause in next scenario).
+```bash
 git reset --hard b0ba17d  
 HEAD is now at b0ba17d undo4: feature 3  
 cat undo4  
@@ -81,3 +82,5 @@ b0ba17d (HEAD -> test/undo-4) undo4: feature 3
 5083711 undo4: feature 2  
 585eb96 undo4: added feature 1
 ```
+6. Push - 
+7. Users confirm issue is no longer occuring.
