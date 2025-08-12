@@ -6,7 +6,7 @@ Git operates across three layers:
 3. **Commit History** – saved snapshots
 
 > [!NOTE]
-> Find the exercise for this lesson here: [E006 - Undoing changes](../Exercises/E006%20-%20Undoing%20changes.md). 
+> Find the exercise for this lesson here: [E006a - Undoing changes](E006a%20-%20Undoing%20changes.md). 
 
 ---
 
@@ -92,16 +92,25 @@ git revert <commit-hash>
 ### View commit history including lost ones:
 ```bash
 git reflog
+# here you will have to find the hash for the lost commit.
 ```
 
 ### Restore from reflog:
 
-1. Checking out
+1. Checking out & then branching off the detached commit:
+
 ```bash
 git checkout <commit-hash>
 # from here you can now create a new branch off this detached commit & then
 # work on the new branch like you would normally on a normal branch
-# (merge, stashing, rebase etc.)
+# (merge, stash, rebase etc.)
+```
+
+2. Cherry picking:
+
+```bash
+git cherry-pick <commit-has>
+# this will replay the commit into a new commit.
 ```
 
 ## 🦺 7. Safety Net for Advanced Ops
