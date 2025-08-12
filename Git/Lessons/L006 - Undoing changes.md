@@ -90,27 +90,53 @@ git revert <commit-hash>
 ## 🧙‍♂️ 6. Recovering Lost Commits
 
 ### View commit history including lost ones:
+
 ```bash
 git reflog
-# here you will have to find the hash for the lost commit.
+# This is a logbook of every place HEAD has been.
+# Find the hash for the lost commit you want to restore.
 ```
 
-### Restore from reflog:
+### Recovery:
 
-1. Checking out & then branching off the detached commit:
+There are a few ways to recover commits depending on your goal.
 
-```bash
+#### **1. Restoring a Branch to a Previous State**
+
+This method is best when you want to fully undo a mistake and return your entire branch to how it was before. It's especially useful for reversing a `git reset --hard`.
+
+Bash
+
+```
+# First, find the commit you want to restore from the reflog.
+# Then, use `git reset --hard` to forcefully move your branch back to that commit.
+git reset --hard <commit-hash-from-reflog>
+```
+
+#### **2. Restoring a Specific Commit to Your Current Branch**
+
+This is the method you found with `git cherry-pick`. It's perfect for when you want to apply the changes from a lost commit, but you don't want to revert your entire branch's history.
+
+Bash
+
+```
+git cherry-pick <commit-hash-from-reflog>
+# This will replay the commit's changes and create a new commit on your current branch.
+# It's great for bringing a specific fix or feature back.
+```
+
+#### **3. Inspecting a Commit & Branching Off**
+
+This method is for when you want to explore the history from a lost commit without affecting your current branch at all. You can look at the code, and if you like it, you can create a new branch from there.
+
+Bash
+
+```
+# This will put you into a "detached HEAD" state at the chosen commit.
 git checkout <commit-hash>
-# from here you can now create a new branch off this detached commit & then
-# work on the new branch like you would normally on a normal branch
-# (merge, stash, rebase etc.)
-```
 
-2. Cherry picking:
-
-```bash
-git cherry-pick <commit-has>
-# this will replay the commit into a new commit.
+# If you decide you want to keep the work, create a new branch from this point.
+git switch -c new-lost-feature
 ```
 
 ## 🦺 7. Safety Net for Advanced Ops

@@ -181,7 +181,8 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Exercises/E006b - Restoring Commits.md",
+    "Git/Exercises/E006b - Recovering Commits.md",
+    "Git/Exercises/E005b - Pull.md",
     "Git/Exercises/E006a - Undoing changes.md",
     "Git/Lessons/L006 - Undoing changes.md",
     "Git/Lessons/L005 - Remote Workflows & Pull Requests.md",
@@ -192,7 +193,6 @@
     "Git/KBs/KB003 - Merge fast-forward.md",
     "Git/KBs/KB002 - Origin.md",
     "Git/KBs/KB001 - Main or Master Branch.md",
-    "Git/Exercises/E005b - Pull.md",
     "Git/KBs/KB007 - Cherry-picking.md",
     "Git/KBs/KB008 - Tags.md",
     "Git/KBs/KB009 - Interactive Rebase.md",
