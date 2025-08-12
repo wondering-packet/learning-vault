@@ -24,7 +24,8 @@ git commit -am "undo4: feature 2"
 echo "undo4: feature 3" >> undo4  
 git commit -am "undo4: feature 3"  
 [test/undo-4 b0ba17d] undo4: feature 3  
-1 file changed, 1 insertion(+)  
+1 file changed, 1 insertion(+) 
+# we've added 3 features (this is previous week)
 cat undo4  
 undo4: feature 1  
 undo4: feature 2  
@@ -49,11 +50,14 @@ git commit -am "main: some work after undo4 feature 3"
 ```bash
 git switch test/undo-4  
 Switched to branch 'test/undo-4'  
+# adding 2 more features this week, one of which contains a buggy code.
+# i've just added (no bugs/contains a bug) for easier understanding,
+# in real-world you will have to do troubleshooting to identify the bugs.
 echo "undo4: feature 4 (no bugs)" >> undo4  
 git commit -am "undo4: feature 4"  
 [test/undo-4 fc8b001] undo4: feature 4  
 1 file changed, 1 insertion(+)  
-echo "undo4: feature 5 (contains a bug)" >> undo4  
+echo "undo4: feature 5 (contains a bug)" >> undo4  # buggy feature
 git commit -am "undo4: feature 5"  
 [test/undo-4 2e245db] undo4: feature 5  
 1 file changed, 1 insertion(+)  
@@ -64,6 +68,7 @@ b0ba17d undo4: feature 3
 5083711 undo4: feature 2  
 585eb96 undo4: added feature 1
 ..truncated output..
+# all features 
 cat undo4  
 undo4: feature 1  
 undo4: feature 2  
@@ -96,3 +101,10 @@ b0ba17d (HEAD -> test/undo-4) undo4: feature 3
 git push --force-with-lease
 ```
 6. Users confirm issue is no longer occurring.
+
+#### **2. Inspecting a Commit, Branching Off & Restoring a Specific Commit**
+
+1. Let's look identify the commits that might have caused problems for users:
+```bash
+
+```
