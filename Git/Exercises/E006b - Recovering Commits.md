@@ -123,5 +123,14 @@ git push --force-with-lease
 1. Let's look identify the commits that might have caused problems for users:
 
 ```bash
-
+akashi@Seijuro-PC:.../Git/local-repos/iac-git$ git reflog  
+b0ba17d (HEAD -> test/undo-4, origin/test/undo-4) HEAD@{0}: reset: moving to b0ba17d  
+2e245db HEAD@{1}: commit: undo4: feature 5  
+fc8b001 HEAD@{2}: commit: undo4: feature 4  
+b0ba17d (HEAD -> test/undo-4, origin/test/undo-4) HEAD@{3}: checkout: moving from main to test/undo-4  
+95568a8 (main) HEAD@{4}: commit: main: some work after undo4 feature 3  
+f621b44 HEAD@{5}: checkout: moving from test/undo-4 to main  
+b0ba17d (HEAD -> test/undo-4, origin/test/undo-4) HEAD@{6}: commit: undo4: feature 3  
+5083711 HEAD@{7}: commit: undo4: feature 2  
+585eb96 HEAD@{8}: commit: undo4: added feature 1
 ```
