@@ -110,11 +110,19 @@ b0ba17d (HEAD -> test/undo-4) undo4: feature 3
 585eb96 undo4: added feature 1
 ```
 
-Again, if you needed to roll back in real world, you will ALWAYS do a revert instead which:
-1. Preserves commit history.
-2. Doesn't cause any divergence b/w .
+> [!important]
+> Again, if you need to roll back in real world, you should ALWAYS do a revert instead which:
+> 1. Preserves commit history.
+> 2. Doesn't cause any divergence b/w local & remote (if commits are already pushed).
+> 3. Safer for shared commits.
+> 
+> In this scnario, you will do:
+>
+>```bash
+>git revert fc8b001 2e245db
+> ```
 
-3. Push - a normal push will not work because of divergent history b/w local & remote (note that our remote still has all this week's commit)
+4. Push - a normal push will not work because of divergent history b/w local & remote (note that our remote still has all this week's commit)
 
 ```bash
 git push --force-with-lease
