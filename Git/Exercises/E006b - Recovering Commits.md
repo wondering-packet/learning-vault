@@ -188,7 +188,8 @@ undo4: feature 1
 undo4: feature 2  
 undo4: feature 3  
 undo4: feature 4 (no bugs)  
-undo4: feature 5 (bug fixed)  # bug 
+undo4: feature 5 (bug fixed)  # bugfix implemented
+# branching off so we have a real branch where we can create new commit
 git switch -c test/undo-4-bugfix  
 Switched to a new branch 'test/undo-4-bugfix'  
 cat undo4  
