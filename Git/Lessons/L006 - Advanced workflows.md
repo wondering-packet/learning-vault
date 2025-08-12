@@ -136,13 +136,13 @@ git switch -c new-lost-feature
 - Before **hard reset**, always:
 
 ```bash
-git branch backup-before-reset
+git branch backup-before-reset  # creats a new branch which is our backup copy
 ```
 
 - Before **rebase**, always:
 
 ```bash
-git branch backup-before-rebase
+git branch backup-before-rebase  # creats a new branch which is our backup copy
 ```
 
 ---
