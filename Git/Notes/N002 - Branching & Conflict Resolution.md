@@ -34,7 +34,7 @@ These are core Git concepts used to manage parallel development, maintain clean 
 - Keeps history linear → no merge commits.
 - Use with caution in shared branches.
 
-📚 KB: [KB004 - Rebase](../KBs/KB004%20-%20Rebase.md)  
+📚 KB: [KB004 - Rebase](KB004%20-%20Rebase.md)  
 🧪 Exercise: [E002c - Rebase](../Exercises/E002c%20-%20Rebase.md)
 
 ---
