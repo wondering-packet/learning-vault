@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Lessons/L006 - Advanced workflows.md",
+                "file": "Git/Notes/L006 - Advanced workflows.md",
                 "mode": "source",
                 "source": false
               },
@@ -181,19 +181,20 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Notes/N005 - Remote Workflows & Pull Requests.md",
+    "Git/Notes/N004 - Interactive Rebasing & Squashing.md",
+    "Git/Notes/N003 - Stashing, Pushing, Cherry-picking, Tagging.md",
+    "Git/Notes/N002 - Branching & Conflict Resolution.md",
+    "Git/Notes/N001 - Git Foundation.md",
+    "Git/Notes/L006 - Advanced workflows.md",
     "Git/Exercises/E006a - Undoing changes.md",
-    "Git/Lessons/L006 - Advanced workflows.md",
     "Git/Exercises/E006d - Hooks.md",
     "Git/Exercises/E006c - Backup.md",
     "Git/Exercises/E006b - Recovering Commits.md",
     "Git/Command References/git reset.md",
-    "Git/Lessons/L005 - Remote Workflows & Pull Requests.md",
-    "Git/Lessons/L003 - Stashing, Pushing, Cherry-picking, Tagging.md",
-    "Git/Lessons/L004 - Interactive Rebasing & Squashing.md",
     "Git/Exercises/E005b - Pull.md",
     "Git/Command References/git revert.md",
     "Git/Exercises/E005a - PR.md",
-    "Git/Lessons/L001 - Git Foundation.md",
     "Git/KBs/KB005 - Stashing.md",
     "Git/KBs/KB006 - Conflict.md",
     "Git/KBs/KB004 - Rebase.md",
@@ -206,12 +207,11 @@
     "Git/KBs/KB010 - Squashing.md",
     "Git/Exercises/E003b - Cherry-picking.md",
     "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
-    "Git/Exercises/E002a - Create branch.md",
     "Git/Command References/sedODK5ue",
     "Git/Command References",
     "Git/KBs",
     "Git/Exercises",
-    "Git/Lessons",
+    "Git/Notes",
     "Test",
     "Git"
   ]
