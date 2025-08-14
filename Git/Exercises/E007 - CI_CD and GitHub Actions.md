@@ -34,11 +34,11 @@ python3 --version
 ```
 ├── hooks  # install folder for local hooks
 │   └── pre-commit  # will be copying this using the install_hook.sh script
-├── pyproject.toml  # 
-├── README.md  
-├── requirements.txt  
-├── scripts  
-│   ├── format.sh  
+├── pyproject.toml  # Tooling config (Black, isort, pytest/coverage)
+├── README.md  # instructions
+├── requirements.txt  # project dependencies
+├── scripts  # install folder for bash scripts
+│   ├── tools.sh  # allow you to manually run the formatter & other tools
 │   └── install_hook.sh  
 ├── src  
 │   ├── apps  
