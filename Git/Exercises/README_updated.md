@@ -32,25 +32,21 @@ python3 --version
 
 ```
 ├── .github/
-│   └── workflows/           # GitHub Actions CI configuration
-├── hooks/                   # Install folder for local Git hooks
-│   └── pre-commit           # Hook file, copied via install_hook.sh
-├── pyproject.toml           # Tooling config (Black, isort, pytest/coverage)
-├── README.md                # Lab instructions
-├── requirements.txt         # Project dependencies
-├── scripts/                 # Bash scripts
-│   ├── tools.sh              # Run formatter & tools manually
-│   └── install_hook.sh       # Installs pre-commit hook into .git/hooks
-├── src/                     # Python package source
-│   ├── apps/                 # Application code
-│   │   └── calculator_private.py  # App logic for the lab
-│   └── apps.egg-info/        # Auto-generated package metadata (ignore)
-│       ├── dependency_links.txt  
-│       ├── PKG-INFO  
-│       ├── SOURCES.txt  
-│       └── top_level.txt  
-└── tests/                   # Unit tests (pytest auto-discovers here)
-    └── test_calculate.py     # Tests for calculator app
+│   └── workflows/
+│       └── ci.yml             # GitHub Actions CI/CD workflow
+├── hooks/
+│   └── pre-commit             # Pre-commit hook script
+├── pyproject.toml                 # Configuration for Black, isort, and pytest
+├── README.md                  # Project README
+├── requirements.txt           # Project dependencies
+├── scripts/
+│   ├── tools.sh               # Script to manually run formatting tools
+│   └── install_hook.sh        # Script to install the pre-commit hook
+├── src/
+│   └── apps/
+│       └── calculator_private.py  # Application source code
+└── tests/
+    └── test_calculate.py      # Unit tests for the application
 ```
 
 **Key choices**:
