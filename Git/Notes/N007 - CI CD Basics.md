@@ -49,7 +49,7 @@ You can implement quality gates using Hooks (e.g. pre-commit hook - this run on 
 
 ---
 
-## **3. Git Hooks**
+## **4. Git Hooks**
 
 Git itself has a built-in **hooks** system:
 
@@ -125,7 +125,7 @@ Git itself has a built-in **hooks** system:
   ```
 
 ---
-## **4. GitHub Actions (Cloud CI/CD)**
+## **5. GitHub Actions (Cloud CI/CD)**
 
 GitHub Actions lets you create `.yml` workflows that run **in GitHub’s cloud** whenever events happen in your repo.
 
@@ -158,7 +158,7 @@ jobs:
 💡 **Note:** You store this file in `.github/workflows/` directory.
 
 ---
-## **5. Workflow in Real Life**
+## **6. Workflow in Real Life**
 
 1. You **commit & push** → Pre-commit hook checks your code.
 2. Push passes → GitHub Actions runs tests.
@@ -167,7 +167,7 @@ jobs:
 
 ---
 
-## **6. Why This Matters**
+## **7. Why This Matters**
 
 - Stops bugs **before** they hit production.
 - Automates boring tasks (tests, builds, deploys).
