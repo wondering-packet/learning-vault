@@ -111,6 +111,14 @@ pip install -e .
 ```bash
 # this script copies our hooks/pre-commit file to .git/hooks/pre-commit location.
 bash scripts/install_hook.sh
+
+# IMPORTANT:
+# remove the pre-commit file from hooks/ folder
+# note that this file has already been copied to .git/hooks.
+# if you don't remove this file then your commits later will fail since 
+# this file contains the keyword "TODO" - this keyword is used in the lab 
+# to stop commits.
+rm hooks/pre-commit
 ```
 
 6) **Run formatters (checks only)**:
