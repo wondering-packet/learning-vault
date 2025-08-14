@@ -39,17 +39,17 @@ python3 --version
 ├── requirements.txt  # project dependencies
 ├── scripts  # install folder for bash scripts
 │   ├── tools.sh  # allow you to manually run the formatter & other tools
-│   └── install_hook.sh  
-├── src  
-│   ├── apps  
-│   │   └── calculator_private.py  
-│   └── apps.egg-info  
+│   └── install_hook.sh  # installs the pre-commit hook
+├── src  # python package
+│   ├── apps  # app folder
+│   │   └── calculator_private.py  # app we will be using in this lab
+│   └── apps.egg-info  # package files, ignore them
 │       ├── dependency_links.txt  
 │       ├── PKG-INFO  
 │       ├── SOURCES.txt  
 │       └── top_level.txt  
-└── tests  
-    └── test_calculate.py
+└── tests  # this folder is required for pytest
+    └── test_calculate.py # this is a unit test for our calculator app
 ```
 
 **Key choices**:
