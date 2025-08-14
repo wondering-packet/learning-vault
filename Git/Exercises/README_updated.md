@@ -72,7 +72,9 @@ cd ci-cd-lab-files
 2) **Create & activate** a virtual environment:
 
 ```bash
-# always use virtual environment for personal/test projects so we don't mess
+# always use virtual environment for personal/test projects
+# so we don't mess with the system's python!
+
 # macOS/Linux
 python3 -m venv .venv
 source .venv/bin/activate
@@ -107,13 +109,14 @@ pip install -e .
 5) **Install local pre-commit hook**:
 
 ```bash
+# this script copies our hooks/pre-commit file to .git/hooks/pre-commit location.
 bash scripts/install_hook.sh
 ```
 
 6) **Run formatters (checks only)**:
 
 ```bash
-isort --check-only .
+isort --check-only .  # "." means all files (recursive)
 black --check .
 ```
 
@@ -133,7 +136,7 @@ flake8 .
 8) **Run tests with coverage** (threshold enforced via `pyproject.toml`):
 
 ```bash
-pytest -q
+pytest -q  # -q suppresses noise from the output
 ```
 
 This will fail the run if coverage is below the configured threshold (default **80%**). It also produces a `coverage.xml` report. The 80% config is in our tooling config file:
