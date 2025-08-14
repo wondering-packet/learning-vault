@@ -2,7 +2,7 @@
 
 Repo: https://github.com/wondering-packet/ci-cd-lab.git.
 
-This repo is a **minimal, battle-tested CI pipeline** for a Python project using:
+Above repo is a **minimal, battle-tested CI pipeline** for a Python project using:
 - **Black** (formatting)
 - **isort** (imports)
 - **Flake8** (linting)

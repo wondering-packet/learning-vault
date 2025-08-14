@@ -64,7 +64,7 @@ Git has a built-in hooks system.
 
 ## **5. Pre-commit Hooks & Example Tools**
 
-### **Formatters**
+### **a) Formatters**
 
 #### **Black** (Python Code Formatter)
 - Opinionated formatter – no debates, no arguments.
@@ -94,7 +94,7 @@ isort . --profile black
 isort --check-only .
 ```
 
-### **Linting**
+### **b) Linting**
 
 #### **flake8** (Python Linter)
 - Checks Python code for PEP8 compliance and common issues.
@@ -103,7 +103,7 @@ isort --check-only .
 flake8 .
 ```
 
-### **Coverage**
+### **c) Coverage**
 - Measures how much of your code is executed by tests.
 - Example commands:
 ```bash
@@ -114,6 +114,53 @@ pytest --cov=apps --cov-report=term-missing
 pytest --cov=apps --cov-fail-under=80
 ```
 **Note:** 80% is a common threshold, but coverage ≠ quality. High coverage with weak tests is still risky.
+
+
+### **d) Pytest**
+
+Pytest automatically **discovers and runs your test functions**, telling you instantly if they pass or fail. This helps you catch bugs early and ensures your code remains rock-solid and reliable every time you make a change.
+
+#### **Example**
+
+Let's say you have a simple function in a file named `my_functions.py`:
+
+Python
+
+```python
+# my_functions.py
+def add(x, y):
+    return x + y
+```
+
+You would create a separate test file (Pytest looks for files starting with `test_`) to check it:
+
+```python
+# test_my_functions.py
+from my_functions import add
+
+def test_add_positive_numbers():
+    assert add(2, 3) == 5
+
+def test_add_negative_numbers():
+    assert add(-1, -1) == -2
+```
+
+Now, from your terminal, you just run the `pytest` command.
+
+```bash
+$ pytest
+```
+
+**Output:**
+
+```
+============================= test session starts ==============================
+collected 2 items
+
+test_my_functions.py ..                                                  [100%]
+
+============================== 2 passed in 0.01s ===============================
+```
 
 ---
 
