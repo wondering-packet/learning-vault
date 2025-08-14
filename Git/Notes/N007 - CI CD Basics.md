@@ -45,7 +45,7 @@ Common quality gates:
 - **Automated tests** – verify functionality.
 - **Coverage thresholds** – ensure enough of your code is tested.
 
-You can implement quality gates using Hooks (e.g. pre-commit hook - this run on local machine) & CI workflow (Github Actions - this runs on remote server).
+You can implement quality gates using Hooks (e.g. pre-commit hook - this run on local machine) & CI workflow (e.g since we are using Github, we can use Github Actions - this runs on remote server).
 
 ---
 
@@ -62,9 +62,8 @@ Git itself has a built-in **hooks** system:
     
     - Example: `pre-receive` → blocks incoming pushes if they fail validation.
 
-
----
-## **4. Pre-commit Hooks
+### **Let's look at pre-commit hooks & example tools:**
+#### Pre-commit Hooks
 
 - Purpose: Catch issues **before** code is committed to Git.
 - For example, we can create a `.git/hooks/pre-commit` script that:
@@ -72,9 +71,9 @@ Git itself has a built-in **hooks** system:
   2. Runs `black` and `isort` to auto-format code.
   3. Runs `flake8` for linting.
 
-### **Example tools we can use in pre-commit hooks:**
+#### **Example tools we can use in pre-commit hooks:**
 
-#### **Formatters**
+##### **Formatters**
 
 - **Black**:
 	- An **uncompromising Python code formatter**. Its job is to take your messy, inconsistently spaced code and reformat it to a single, beautiful standard. The key thing about Black is that it's **opinionated**. That means there are almost no configuration options. You don't argue with Black; you just let it do its thing. 
@@ -103,7 +102,7 @@ Git itself has a built-in **hooks** system:
 	    isort . --profile black 
 	    ```
 
-#### **Linting**
+##### **Linting**
 
 - **flake8**:
 	- Checks Python code for PEP8 compliance and common issues.
@@ -113,7 +112,7 @@ Git itself has a built-in **hooks** system:
 		flake8 .  # run on all python files in the current directory resursively.
 		```
 
-#### **Coverage**
+##### **Coverage**
 
 - **Coverage** measures how much of your code is executed by tests.
 - Command:
@@ -126,7 +125,7 @@ Git itself has a built-in **hooks** system:
   ```
 
 ---
-## **5.  GitHub Actions (Cloud CI/CD)**
+## **4. GitHub Actions (Cloud CI/CD)**
 
 GitHub Actions lets you create `.yml` workflows that run **in GitHub’s cloud** whenever events happen in your repo.
 
@@ -159,7 +158,7 @@ jobs:
 💡 **Note:** You store this file in `.github/workflows/` directory.
 
 ---
-## **6. Workflow in Real Life**
+## **5. Workflow in Real Life**
 
 1. You **commit & push** → Pre-commit hook checks your code.
 2. Push passes → GitHub Actions runs tests.
@@ -168,21 +167,8 @@ jobs:
 
 ---
 
-## **7. Why This Matters**
+## **6. Why This Matters**
 
 - Stops bugs **before** they hit production.
 - Automates boring tasks (tests, builds, deploys).
 - Builds trust in the `main` branch — always stable, always deployable.
-
-## Lesson Takeaways
-- **Automate everything** – the earlier an error is caught, the cheaper it is to fix.
-- Formatters → Linting → Tests → Coverage = solid quality pipeline.
-- CI/CD ensures constant feedback, stable code, and faster delivery.
-
----
-
-## Quiz Result
-- Score: **7/10** ✅  
-- Q7 & Q9 need re-attempt (cheated last time 😏).
-
----

@@ -87,6 +87,5 @@ git push -u origin <branch>        # Push & set upstream
 | Push branch        | `git push origin <branch>`                |
 | Push & track       | `git push -u origin <branch>`             |
 
----
-
 These tools give you serious firepower to manage clean commits, share polished features, and prepare clean releases.
+

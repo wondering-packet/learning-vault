@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Notes/N007 - CI CD Quality Gates.md",
+                "file": "Git/Notes/N003 - Stashing, Pushing, Cherry-picking, Tagging.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "N007 - CI CD Quality Gates"
+              "title": "N003 - Stashing, Pushing, Cherry-picking, Tagging"
             }
           }
         ]
@@ -181,18 +181,18 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Notes/N004 - Interactive Rebasing & Squashing.md",
+    "Git/Notes/N002 - Branching & Conflict Resolution.md",
+    "Git/Notes/N003 - Stashing, Pushing, Cherry-picking, Tagging.md",
+    "Git/Notes/N001 - Git Foundation.md",
+    "Git/Notes/N005 - Remote Workflows & Pull Requests.md",
     "Git/Notes/N006 - Advanced workflows.md",
-    "Git/Notes/N007 - CI CD Quality Gates.md",
+    "Git/Notes/N007 - CI CD Basics.md",
     "Git/Notes/ci_workflow_notes.md",
     "Git/readme.md",
     "Git/Exercises/E007a - Automated linting.md",
     "Git/Exercises/E007b - Automated formatters.md",
     "Git/Exercises/E007 - Quality Gates",
-    "Git/Notes/N005 - Remote Workflows & Pull Requests.md",
-    "Git/Notes/N004 - Interactive Rebasing & Squashing.md",
-    "Git/Notes/N003 - Stashing, Pushing, Cherry-picking, Tagging.md",
-    "Git/Notes/N002 - Branching & Conflict Resolution.md",
-    "Git/Notes/N001 - Git Foundation.md",
     "Git/KBs/KB004 - Rebase.md",
     "Git/Exercises/E002c - Rebase.md",
     "Git/Exercises/E002b - Merging branch.md",
