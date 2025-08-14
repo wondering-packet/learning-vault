@@ -36,7 +36,7 @@ python3 --version
 │       └── ci.yml             # GitHub Actions CI/CD workflow
 ├── hooks/
 │   └── pre-commit             # Pre-commit hook script
-├── pyproject.toml                 # Configuration for Black, isort, and pytest
+├── pyproject.toml             # Configuration for Black, isort, and pytest
 ├── README.md                  # Project README
 ├── requirements.txt           # Project dependencies
 ├── scripts/
