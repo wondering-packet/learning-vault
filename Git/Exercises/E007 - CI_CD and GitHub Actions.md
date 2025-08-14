@@ -32,18 +32,30 @@ python3 --version
 ## 2) Project Structure
 
 ```
-.
-├─ .github/
-│  └─ workflows/
-│     └─ ci.yml                 # GitHub Actions workflow (CI)
-├─ src/
-│  └─ apps/
-│     └─ calculator_private.py  # our main script
-├─ tests/
-│  └─ test_calculate.py         # Unit tests (pytest)
-├─ pyproject.toml               # Tooling config (Black, isort, pytest/coverage)
-├─ requirements.txt             # Dev dependencies
-└─ .gitignore
+├── coverage.xml  
+├── .git  
+│   └── hooks  
+│       └── pre-commit  
+├── .github  
+│   └── workflows  
+│       └── ci.yml  
+├── hooks  
+│   └── pre-commit  
+├── pyproject.toml  
+├── requirements.txt  
+├── scripts  
+│   ├── format.sh  
+│   └── install_hook.sh  
+├── src  
+│   ├── apps  
+│   │   └── calculator_private.py  
+│   └── apps.egg-info  
+│       ├── dependency_links.txt  
+│       ├── PKG-INFO  
+│       ├── SOURCES.txt  
+│       └── top_level.txt  
+└── tests  
+    └── test_calculate.py
 ```
 
 **Key choices**:
