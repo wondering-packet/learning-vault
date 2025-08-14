@@ -113,7 +113,7 @@ pip install -e .
 bash scripts/install_hook.sh
 
 # IMPORTANT:
-# remove the pre-commit file from hooks/ folder
+# remove the pre-commit file from hooks/ folder.
 # note that this file has already been copied to .git/hooks.
 # if you don't remove this file then your commits later will fail since 
 # this file contains the keyword "TODO" - this keyword is used in the lab 
@@ -121,7 +121,15 @@ bash scripts/install_hook.sh
 rm hooks/pre-commit
 ```
 
-6) **Run formatters (checks only)**:
+6) **Add python virtual environment folder to `.gitignore` file:**
+
+```bash
+echo ".venv/" > .gitignore
+# IMPORTANT:
+# the reason we are ignoring the venv folder is because our venv contains lots of python files which are not part 
+```
+
+7) **Run formatters (checks only)**:
 
 ```bash
 isort --check-only .  # "." means all files (recursive)
@@ -135,13 +143,13 @@ isort .
 black .
 ```
 
-7) **Run linter**:
+8) **Run linter**:
 
 ```bash
 flake8 .
 ```
 
-8) **Run tests with coverage** (threshold enforced via `pyproject.toml`):
+9) **Run tests with coverage** (threshold enforced via `pyproject.toml`):
 
 ```bash
 pytest -q  # -q suppresses noise from the output
@@ -183,6 +191,7 @@ git push -u origin main
 ## 5) Configuration Reference
 
 ### `pyproject.toml` (important parts)
+
 ```toml
 [tool.black]
 line-length = 88
@@ -196,17 +205,9 @@ line_length = 88
 [tool.pytest.ini_options]
 addopts = "--cov=src --cov-report=term-missing --cov-report=xml --cov-fail-under=80"
 ```
+
 - Adjust **coverage threshold** by changing the number in `--cov-fail-under=80`.
 - Coverage includes the `src/` tree because we use `--cov=src`.
-
-### `requirements.txt`
-```
-flake8==7.1.0
-pytest==8.2.0
-black==23.9.1
-isort==5.12.0
-pytest-cov==5.0.0
-```
 
 ---
 
