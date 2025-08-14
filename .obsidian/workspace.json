@@ -183,6 +183,7 @@
   "lastOpenFiles": [
     "Git/Notes/ci_workflow_notes.md",
     "Git/Notes/N007 - CI CD Quality Gates.md",
+    "Git/readme.md",
     "Git/Exercises/E007a - Automated linting.md",
     "Git/Exercises/E007b - Automated formatters.md",
     "Git/Exercises/E007 - Quality Gates",
@@ -207,7 +208,6 @@
     "Git/Exercises/E005a - PR.md",
     "Git/KBs/KB005 - Stashing.md",
     "Git/KBs/KB006 - Conflict.md",
-    "Git/KBs/KB003 - Merge fast-forward.md",
     "Git/Command References/sedODK5ue",
     "Git/Command References",
     "Git/KBs",
