@@ -63,13 +63,16 @@ python3 --version
 ## 3) Local Setup (Step-by-Step)
 
 1) **Clone** the repo:
+
 ```bash
 git clone https://github.com/wondering-packet/ci-cd-lab-files.git
 cd ci-cd-lab-files
 ```
 
 2) **Create & activate** a virtual environment:
+
 ```bash
+# always use virtual environment for personal/test projects so we don't mess
 # macOS/Linux
 python3 -m venv .venv
 source .venv/bin/activate
@@ -80,41 +83,65 @@ python -m venv .venv
 ```
 
 3) **Install dependencies**:
+
 ```bash
+# requirements file lets us define dependent packages &
+# the exact versions required for our lab.
+cat requirements.txt  
+flake8==7.1.0  
+pytest==8.2.0  
+black==23.9.1  
+isort==5.12.0  
+pytest-cov==5.0.0
+# installs the packages
 pip install -r requirements.txt
 ```
 
+
 4) **Install the package in editable mode** (required for `src/` layout imports in tests):
+
 ```bash
 pip install -e .
 ```
 
 5) **Install local pre-commit hook**:
+
 ```bash
 bash scripts/install_hook.sh
 ```
 
 6) **Run formatters (checks only)**:
+
 ```bash
 isort --check-only .
 black --check .
 ```
+
 > If these fail, auto-fix with:
+
 ```bash
 isort .
 black .
 ```
 
 7) **Run linter**:
+
 ```bash
 flake8 .
 ```
 
 8) **Run tests with coverage** (threshold enforced via `pyproject.toml`):
+
 ```bash
 pytest -q
 ```
-This will fail the run if coverage is below the configured threshold (default **80%**). It also produces a `coverage.xml` report. The 80% config is in our tooling config file.
+
+This will fail the run if coverage is below the configured threshold (default **80%**). It also produces a `coverage.xml` report. The 80% config is in our tooling config file:
+
+```plaintext
+[tool.pytest.ini_options]  
+addopts = "--cov=src --cov-report=term-missing --cov-report=xml --cov-fail-under=80"
+```
 
 ---
 
