@@ -115,6 +115,7 @@ bash scripts/install_hook.sh
 # IMPORTANT:
 # remove the pre-commit file from hooks/ folder.
 # note that this file has already been copied to .git/hooks.
+
 # if you don't remove this file then your commits later will fail since 
 # this file contains the keyword "TODO" - this keyword is used in the lab 
 # to stop commits.
@@ -126,7 +127,12 @@ rm hooks/pre-commit
 ```bash
 echo ".venv/" > .gitignore
 # IMPORTANT:
-# the reason we are ignoring the venv folder is because our venv contains lots of python files which are not part 
+# the reason we are ignoring the venv folder is because our venv contains 
+# lots of python files (used by python interpreter) which are not part of 
+# our actual lab so we don't want to lint/format them.
+
+# if you don't do this, then you will likely run into issues because 
+# i noticed a lot of venv files fail flake8 checks.
 ```
 
 7) **Run formatters (checks only)**:
@@ -175,9 +181,10 @@ The workflow file at `.github/workflows/ci.yml` is already set up to:
 
 ### How to enable CI in your repo
 
-1) Push this repository to GitHub (or copy these files into your own repo):
+1) Create a repo in your account, name it `ci-cd-lab` (or whatever you like). Copy the repo URL.
+2) Push this repository to GitHub (or copy these files into your own repo):
 ```bash
-git remote add origin git@github.com:<you>/<repo>.git
+git remote add origin <repo_url>
 git branch -M main
 git push -u origin main
 ```
