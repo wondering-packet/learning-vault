@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Notes/N007 - CI CD Quality Gates.md",
+                "file": "Git/Notes/ci_workflow_notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "N007 - CI CD Quality Gates"
+              "title": "ci_workflow_notes"
             }
           }
         ]
@@ -181,8 +181,8 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Notes/ci_workflow_notes.md",
     "Git/Notes/N007 - CI CD Quality Gates.md",
+    "Git/Notes/ci_workflow_notes.md",
     "Git/readme.md",
     "Git/Exercises/E007a - Automated linting.md",
     "Git/Exercises/E007b - Automated formatters.md",
