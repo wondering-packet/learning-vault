@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/E007 - CI_CD and Quality Gates/README.md",
+                "file": "Git/Notes/N007 - CI_CD and Quality Gates.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "N007 - CI_CD and Quality Gates"
             }
           }
         ]
@@ -181,8 +181,10 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Exercises/E007 - CI_CD and GitHub Actions.md",
+    "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
+    "Git/Exercises/E002a - Create branch.md",
     "Git/Exercises/E002b - Merging branch.md",
-    "Git/Exercises/E007 - CI_CD and Quality Gates/README.md",
     "Git/Exercises/E002d - Conflict.md",
     "Git/Exercises/E007 - CI_CD and Quality Gates/calculator_private.py",
     "Git/Exercises/E007 - CI_CD and Quality Gates/test_calculate.py",
@@ -208,8 +210,6 @@
     "Git/Exercises/E007b - Automated formatters.md",
     "Git/KBs/KB004 - Rebase.md",
     "Git/Exercises/E002c - Rebase.md",
-    "Git/Exercises/E002a - Create branch.md",
-    "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
     "Git/Exercises/E006a - Undoing changes.md",
     "Git/Exercises/E006d - Hooks.md",
     "Git/Exercises/E006c - Backup.md",

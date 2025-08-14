@@ -1,5 +1,7 @@
 # CI/CD Lab – Python + GitHub Actions (Tested Setup)
 
+Repo: https://github.com/wondering-packet/ci-cd-lab.git.
+
 This repo is a **minimal, battle-tested CI pipeline** for a Python project using:
 - **Black** (formatting)
 - **isort** (imports)
