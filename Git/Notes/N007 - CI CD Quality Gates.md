@@ -41,25 +41,28 @@ Common quality gates:
 ---
 
 ### 2. Formatters
-- **Black**: Opinionated Python code formatter.Black is an **uncompromising Python code formatter**. Its job is to take your messy, inconsistently spaced code and reformat it to a single, beautiful standard. The key thing about Black is that it's **opinionated**. That means there are almost no configuration options. You don't argue with Black; you just let it do its thing.
+- **Black**:
+	- An **uncompromising Python code formatter**. Its job is to take your messy, inconsistently spaced code and reformat it to a single, beautiful standard. The key thing about Black is that it's **opinionated**. That means there are almost no configuration options. You don't argue with Black; you just let it do its thing. 
+	- Its goal is to eliminate debates about code style entirely. By running Black, you get a clean, consistent format across your entire project, no matter who wrote the code.
+	- Usage:
+	    ```bash
+		black .  # run on all python files in the current directory resursively.
+		black . --quiet
+	    ```
 
-Its goal is to eliminate debates about code style entirely. By running Black, you get a clean, consistent format across your entire project, no matter who wrote the code.
-  - Example:
-    ```bash
-    black .
-    ```
-- **isort**: Automatically sorts and groups imports.
-  - Example:
-    ```bash
-    isort .
-    ```
-- Benefit: Developers don’t waste time debating style.
+- **isort**:
+	- isort is a tool that **sorts your imports**. It automatically organizes all your import statements at the top of your Python files.
+	- Example:
+	    ```bash
+	    isort .
+	    ```
 
 ---
 
 ### 3. Linting
-- **flake8**: Checks Python code for PEP8 compliance and common issues.
-- Run after formatters to catch logic/style issues that formatters don’t fix.
+- **flake8**:
+	- Checks Python code for PEP8 compliance and common issues.
+	- Run after formatters to catch logic/style issues that formatters don’t fix.
 
 ---
 
