@@ -137,7 +137,7 @@ black .
 7) **Run linter**:
 
 ```bash
-flake8 .
+flake8 --exclude .venv/
 ```
 
 8) **Run tests with coverage** (threshold enforced via `pyproject.toml`):
