@@ -32,16 +32,10 @@ python3 --version
 ## 2) Project Structure
 
 ```
-├── coverage.xml  
-├── .git  
-│   └── hooks  
-│       └── pre-commit  
-├── .github  
-│   └── workflows  
-│       └── ci.yml  
-├── hooks  
-│   └── pre-commit  
-├── pyproject.toml  
+├── hooks  # install folder for local hooks
+│   └── pre-commit  # will be copying this using the install_hook.sh script
+├── pyproject.toml  # 
+├── README.md  
 ├── requirements.txt  
 ├── scripts  
 │   ├── format.sh  
