@@ -21,6 +21,7 @@ Follow this guide to **replicate the exact setup** locally and in GitHub.
 - (Optional) A code editor with Python support (VS Code, PyCharm, etc.)
 
 > Tip: On Linux/macOS, confirm versions:
+
 ```bash
 git --version
 python3 --version
@@ -34,15 +35,14 @@ python3 --version
 .
 ├─ .github/
 │  └─ workflows/
-│     └─ ci.yml              # GitHub Actions workflow (CI)
+│     └─ ci.yml                 # GitHub Actions workflow (CI)
 ├─ src/
 │  └─ apps/
-│     ├─ calculator_private.py
-│     └─ multiply.py
+│     └─ calculator_private.py  # our main script
 ├─ tests/
-│  └─ test_calculate.py      # Unit tests (pytest)
-├─ pyproject.toml            # Tooling config (Black, isort, pytest/coverage)
-├─ requirements.txt          # Dev dependencies
+│  └─ test_calculate.py         # Unit tests (pytest)
+├─ pyproject.toml               # Tooling config (Black, isort, pytest/coverage)
+├─ requirements.txt             # Dev dependencies
 └─ .gitignore
 ```
 
