@@ -47,7 +47,7 @@ Git itself has a built-in **hooks** system:
 
 
 ---
-### **4. GitHub Actions (Cloud CI/CD)**
+## **4. GitHub Actions (Cloud CI/CD)**
 
 GitHub Actions lets you create `.yml` workflows that run **in GitHub’s cloud** whenever events happen in your repo.
 
@@ -81,30 +81,73 @@ jobs:
 
 ---
 
-### **5. Pre-commit Hook Example**
+## **5.  Pre-commit Hooks
 
-Local hook to block commits if there are lint errors:
+- Purpose: Catch issues **before** code is committed to Git.
+- For example, we can create a `.git/hooks/pre-commit` script that:
+  1. Blocks commits if staged changes contain `TODO`.
+  2. Runs `black` and `isort` to auto-format code.
+  3. Runs `flake8` for linting.
 
-```bash
-# .git/hooks/pre-commit
-#!/bin/bash
-echo "Running linter..."
-flake8 .
-if [ $? -ne 0 ]; then
-  echo "❌ Lint failed, commit aborted."
-  exit 1
-fi
-```
+Example tools we can use in pre-commit hooks:
 
-To enable:
-
-```bash
-chmod +x .git/hooks/pre-commit
-```
+	### **1.  Formatters**
+	- **Black**:
+		- An **uncompromising Python code formatter**. Its job is to take your messy, inconsistently spaced code and reformat it to a single, beautiful standard. The key thing about Black is that it's **opinionated**. That means there are almost no configuration options. You don't argue with Black; you just let it do its thing. 
+		- Its goal is to eliminate debates about code style entirely. By running Black, you get a clean, consistent format across your entire project, no matter who wrote the code.
+		- Usage:
+		    ```bash
+		    # run on all python files in the current directory resursively.
+			black .  
+			# same as above but silent execution (no output).
+			# note: good for use in pre-commit hook.
+			black . --quiet  
+			# checks only. no auto formatting like above two.
+			# note: good for use in CI workflow.
+			black --check  
+		    ```
+	
+	- **isort**:
+		- isort is a tool that **sorts your imports**. It automatically organizes all your import statements at the top of your Python files.
+		- Usage:
+		    ```bash
+		    # run on all python files in the current directory resursively.
+		    # note: good for use in pre-commit hook.
+		    isort . 
+		    # be compatiable with Black's formatting.
+		    # note: good for use in CI workflow.
+		    isort . --profile black 
+		    ```
+	
+	
 
 ---
 
-### **6. Workflow in Real Life**
+### **2. Linting**
+- **flake8**:
+	- Checks Python code for PEP8 compliance and common issues.
+	- Run after formatters to catch logic/style issues that formatters don’t fix.
+	- Usage:
+		```bash
+		flake8 .  # run on all python files in the current directory resursively.
+		```
+
+---
+
+### **3. Coverage**
+- **Coverage** measures how much of your code is executed by tests.
+- Command:
+  ```bash
+  pytest --cov=apps --cov-report=term-missing
+  ```
+- Fail pipeline if coverage < threshold:
+  ```bash
+  pytest --cov=apps --cov-fail-under=80
+  ```
+
+---
+
+## **6. Workflow in Real Life**
 
 1. You **commit & push** → Pre-commit hook checks your code.
 2. Push passes → GitHub Actions runs tests.
@@ -115,9 +158,9 @@ chmod +x .git/hooks/pre-commit
 
 ## **7. Why This Matters**
 
-1. Stops bugs **before** they hit production.
-2. Automates boring tasks (tests, builds, deploys).
-3. Builds trust in the `main` branch — always stable, always deployable.
+- Stops bugs **before** they hit production.
+- Automates boring tasks (tests, builds, deploys).
+- Builds trust in the `main` branch — always stable, always deployable.
 
 ---
 ## What are Quality Gates?
@@ -125,10 +168,10 @@ Quality gates are **checkpoints** in the CI/CD pipeline that code must pass befo
 Think of them as **filters** to prevent bad code from entering the main branch.
 
 Common quality gates:
-1. **Code formatting checks** – enforce consistent style.
-2. **Linting** – detect syntax errors, unused variables, and style violations.
-3. **Automated tests** – verify functionality.
-4. **Coverage thresholds** – ensure enough of your code is tested.
+- **Code formatting checks** – enforce consistent style.
+- **Linting** – detect syntax errors, unused variables, and style violations.
+- **Automated tests** – verify functionality.
+- **Coverage thresholds** – ensure enough of your code is tested.
 
 ---
 
