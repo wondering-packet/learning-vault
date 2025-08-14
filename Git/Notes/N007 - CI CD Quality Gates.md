@@ -33,16 +33,17 @@ Common quality gates:
 
 ### 1. Pre-commit Hooks
 - Purpose: Catch issues **before** code is committed to Git.
-- We created a `.git/hooks/pre-commit` script that:
+- For example, we can create a `.git/hooks/pre-commit` script that:
   1. Blocks commits if staged changes contain `TODO`.
   2. Runs `black` and `isort` to auto-format code.
   3. Runs `flake8` for linting.
-- Changed order to: **Formatters first, then linting**.
 
 ---
 
 ### 2. Formatters
-- **Black**: Opinionated Python code formatter.
+- **Black**: Opinionated Python code formatter.Black is an **uncompromising Python code formatter**. Its job is to take your messy, inconsistently spaced code and reformat it to a single, beautiful standard. The key thing about Black is that it's **opinionated**. That means there are almost no configuration options. You don't argue with Black; you just let it do its thing.
+
+Its goal is to eliminate debates about code style entirely. By running Black, you get a clean, consistent format across your entire project, no matter who wrote the code.
   - Example:
     ```bash
     black .
