@@ -121,20 +121,4 @@ git push origin <branch> --force
 
 ---
 
-## 🧠 TL;DR – Rebase Cheat Sheet
-
-| **Action**              | **Command / Keyword**               |
-|-------------------------|-------------------------------------|
-| Start rebase            | `git rebase -i HEAD~n`              |
-| Keep commit             | `pick`                              |
-| Change message          | `reword`                            |
-| Edit content            | `edit`                              |
-| Combine commits         | `squash`, `fixup`                   |
-| Delete commit           | `drop`                              |
-| Continue rebase         | `git rebase --continue`             |
-| Abort rebase            | `git rebase --abort`                |
-| Force push (after rebase)| `git push origin <branch> --force` |
-
----
-
 Interactive rebase is your best tool for making your Git history polished and professional — just be careful not to rewrite public/shared history!

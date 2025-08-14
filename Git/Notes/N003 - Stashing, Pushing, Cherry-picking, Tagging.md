@@ -71,21 +71,4 @@ git push -u origin <branch>        # Push & set upstream
 
 ---
 
-## 🧠 TL;DR – Command Cheat Sheet
-
-| **Action**         | **Command**                              |
-|--------------------|-------------------------------------------|
-| Stash changes      | `git stash`                               |
-| Reapply + delete   | `git stash pop`                           |
-| Reapply + keep     | `git stash apply`                         |
-| View stash list    | `git stash list`                          |
-| Cherry-pick commit | `git cherry-pick <commit_id>`             |
-| Create tag         | `git tag v1.0` (lightweight)              |
-| Annotated tag      | `git tag -a v1.0 -m "Version 1.0"`        |
-| Push tag           | `git push origin v1.0`                    |
-| Push all tags      | `git push origin --tags`                  |
-| Push branch        | `git push origin <branch>`                |
-| Push & track       | `git push -u origin <branch>`             |
-
 These tools give you serious firepower to manage clean commits, share polished features, and prepare clean releases.
-

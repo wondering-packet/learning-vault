@@ -108,6 +108,7 @@ git rebase origin/main                  # Rebase on latest main branch
 - Always rebase before PR to keep history clean.
 - Use `--force-with-lease` instead of `--force` to avoid overwriting others’ work.
 - If working solo, you don’t need PRs—just push directly to `main` (but still rebase if working with a remote).
+
 ---
 
 > [!Note]
