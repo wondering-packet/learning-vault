@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Notes/N007 - CI_CD and Quality Gates.md",
+                "file": "Git/Exercises/E007 - CI_CD and Quality Gates/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "N007 - CI_CD and Quality Gates"
+              "title": "README"
             }
           }
         ]
@@ -181,8 +181,19 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Notes/N006 - Advanced workflows.md",
     "Git/Notes/N007 - CI_CD and Quality Gates.md",
+    "Git/Exercises/E007 - CI_CD and Quality Gates/requirements.txt",
+    "Git/Exercises/E007 - CI_CD and Quality Gates/README.md",
+    "Git/Exercises/E007 - CI_CD and Quality Gates/pyproject.toml",
+    "Git/Exercises/E007 - CI_CD and Quality Gates/coverage.xml",
+    "Git/Exercises/E007 - CI_CD and Quality Gates/tests/__pycache__/test_calculate.cpython-312-pytest-8.2.0.pyc",
+    "Git/Exercises/E007 - CI_CD and Quality Gates/tests/__pycache__/test_add.cpython-312-pytest-8.2.0.pyc",
+    "Git/Exercises/E007 - CI_CD and Quality Gates/tests/__pycache__",
+    "Git/Exercises/E007 - CI_CD and Quality Gates/tests/test_calculate.py",
+    "Git/Exercises/E007 - CI_CD and Quality Gates/tests",
+    "Git/Exercises/E007 - CI_CD and Quality Gates/src/apps/__pycache__/calculator_private.cpython-312.pyc",
+    "Git/Exercises/E007 - CI_CD and Quality Gates/src/apps/__pycache__/add.cpython-312.pyc",
+    "Git/Notes/N006 - Advanced workflows.md",
     "Git/Notes/N007 - CI CD Basics.md",
     "Git/Notes/N001 - Git Foundation.md",
     "Git/Notes/ci_workflow_notes.md",
@@ -193,7 +204,6 @@
     "Git/readme.md",
     "Git/Exercises/E007a - Automated linting.md",
     "Git/Exercises/E007b - Automated formatters.md",
-    "Git/Exercises/E007 - Quality Gates",
     "Git/KBs/KB004 - Rebase.md",
     "Git/Exercises/E002c - Rebase.md",
     "Git/Exercises/E002b - Merging branch.md",
@@ -205,15 +215,6 @@
     "Git/Exercises/E006b - Recovering Commits.md",
     "Git/Command References/git reset.md",
     "Git/Exercises/E005b - Pull.md",
-    "Git/Command References/git revert.md",
-    "Git/Exercises/E005a - PR.md",
-    "Git/KBs/KB005 - Stashing.md",
-    "Git/Command References/sedODK5ue",
-    "Git/Command References",
-    "Git/KBs",
-    "Git/Exercises",
-    "Git/Notes",
-    "Test",
-    "Git"
+    "Git/Command References/git revert.md"
   ]
 }
