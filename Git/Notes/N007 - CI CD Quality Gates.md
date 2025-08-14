@@ -16,6 +16,7 @@
 Think of CI/CD like having a robotic pit crew. Every time you bring your car (code) into the pit (push), they **check it**, **fix issues**, and **send it out** without you lifting a wrench.
 
 **Why it matters**:  
+
 CI/CD creates a feedback loop that ensures:
 - Problems are caught early (in minutes, not days).
 - Code is always in a deployable state.
@@ -32,8 +33,10 @@ Git acts as the **trigger** for automation.
 
 
 ---
-## What are Quality Gates?
+## **3. What are Quality Gates?**
+
 Quality gates are **checkpoints** in the CI/CD pipeline that code must pass before being merged or deployed.  
+
 Think of them as **filters** to prevent bad code from entering the main branch.
 
 Common quality gates:
@@ -41,6 +44,8 @@ Common quality gates:
 - **Linting** – detect syntax errors, unused variables, and style violations.
 - **Automated tests** – verify functionality.
 - **Coverage thresholds** – ensure enough of your code is tested.
+
+You can implement quality gates using Hooks (e.g. pre-commit hook - this run on local machine) & CI workflow (Github Actions - this runs on remote server).
 
 ---
 
@@ -59,41 +64,7 @@ Git itself has a built-in **hooks** system:
 
 
 ---
-## **4. GitHub Actions (Cloud CI/CD)**
-
-GitHub Actions lets you create `.yml` workflows that run **in GitHub’s cloud** whenever events happen in your repo.
-
-**Example Workflow:** Runs tests every time you push to `main`.
-
-```yaml
-name: Run Tests
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-    - name: Install dependencies
-      run: pip install -r requirements.txt
-    - name: Run tests
-      run: pytest
-```
-
-💡 **Note:** You store this file in `.github/workflows/` directory.
-
----
-
-## **5.  Pre-commit Hooks
+## **4. Pre-commit Hooks
 
 - Purpose: Catch issues **before** code is committed to Git.
 - For example, we can create a `.git/hooks/pre-commit` script that:
@@ -155,7 +126,39 @@ jobs:
   ```
 
 ---
+## **5.  GitHub Actions (Cloud CI/CD)**
 
+GitHub Actions lets you create `.yml` workflows that run **in GitHub’s cloud** whenever events happen in your repo.
+
+**Example Workflow:** Runs tests every time you push to `main`.
+
+```yaml
+name: Run Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+    - name: Run tests
+      run: pytest
+```
+
+💡 **Note:** You store this file in `.github/workflows/` directory.
+
+---
 ## **6. Workflow in Real Life**
 
 1. You **commit & push** → Pre-commit hook checks your code.
