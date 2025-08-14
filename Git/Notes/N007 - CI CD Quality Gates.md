@@ -47,14 +47,16 @@ Common quality gates:
 	- Usage:
 	    ```bash
 		black .  # run on all python files in the current directory resursively.
-		black . --quiet
+		black . --quiet  # same as above but silent execution (no output).
+		black --check  # checks only & reports. no auto formatting like above two.
 	    ```
 
 - **isort**:
 	- isort is a tool that **sorts your imports**. It automatically organizes all your import statements at the top of your Python files.
-	- Example:
+	- Usage:
 	    ```bash
-	    isort .
+	    isort .  # run on all python files in the current directory resursively.
+	    isort . --profile black # be compatiable with Black's formatting.
 	    ```
 
 ---
@@ -63,6 +65,10 @@ Common quality gates:
 - **flake8**:
 	- Checks Python code for PEP8 compliance and common issues.
 	- Run after formatters to catch logic/style issues that formatters don’t fix.
+	- Usage:
+		```bash
+		flake8 .  # run on all python files in the current directory resursively.
+		```
 
 ---
 
