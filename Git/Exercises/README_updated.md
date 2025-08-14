@@ -86,11 +86,13 @@ python -m venv .venv
 # requirements file lets us define dependent packages &
 # the exact versions required for our lab.
 cat requirements.txt  
-flake8==7.1.0  
-pytest==8.2.0  
-black==23.9.1  
-isort==5.12.0  
-pytest-cov==5.0.0
+# you should see these:
+# flake8==7.1.0  
+# pytest==8.2.0  
+# black==23.9.1  
+# isort==5.12.0  
+# pytest-cov==5.0.0
+
 # installs the packages
 pip install -r requirements.txt
 ```
@@ -118,20 +120,7 @@ bash scripts/install_hook.sh
 rm hooks/pre-commit
 ```
 
-6) **Add python virtual environment folder to `.gitignore` file:**
-
-```bash
-echo ".venv/" > .gitignore
-# IMPORTANT:
-# the reason we are ignoring the venv folder is because our venv contains 
-# lots of python files (used by python interpreter) which are not part of 
-# our actual lab so we don't want to lint/format them.
-
-# if you don't do this, then you will likely run into issues because 
-# i noticed a lot of venv files fail flake8 checks.
-```
-
-7) **Run formatters (checks only)**:
+6) **Run formatters (checks only)**:
 
 ```bash
 isort --check-only .  # "." means all files (recursive)
@@ -145,13 +134,13 @@ isort .
 black .
 ```
 
-8) **Run linter**:
+7) **Run linter**:
 
 ```bash
 flake8 .
 ```
 
-9) **Run tests with coverage** (threshold enforced via `pyproject.toml`):
+8) **Run tests with coverage** (threshold enforced via `pyproject.toml`):
 
 ```bash
 pytest -q  # -q suppresses noise from the output
