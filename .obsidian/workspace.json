@@ -181,11 +181,11 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Notes/N007 - CI CD Basics.md",
+    "Git/Notes/N006 - Advanced workflows.md",
     "Git/Notes/N007 - CI_CD and Quality Gates.md",
+    "Git/Notes/N007 - CI CD Basics.md",
     "Git/Notes/N001 - Git Foundation.md",
     "Git/Notes/ci_workflow_notes.md",
-    "Git/Notes/N006 - Advanced workflows.md",
     "Git/Notes/N005 - Remote Workflows & Pull Requests.md",
     "Git/Notes/N004 - Interactive Rebasing & Squashing.md",
     "Git/Notes/N003 - Stashing, Pushing, Cherry-picking, Tagging.md",

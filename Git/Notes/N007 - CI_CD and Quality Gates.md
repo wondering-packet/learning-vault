@@ -1,4 +1,4 @@
-# **Lesson 7 - CI/CD & Quality Gates in Git**
+# **CI/CD & Quality Gates in Git**
 
 ## **1. What is CI/CD?**
 
