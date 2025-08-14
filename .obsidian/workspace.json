@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/E007 - CI_CD and GitHub Actions.md",
+                "file": "Git/Exercises/README_updated.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E007 - CI_CD and GitHub Actions"
+              "title": "README_updated"
             }
           }
         ]
@@ -181,8 +181,9 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
-    "Git/Notes/N007 - CI_CD and Quality Gates.md",
     "Git/Exercises/E007 - CI_CD and GitHub Actions.md",
+    "Git/Exercises/README_updated.md",
+    "Git/Notes/N007 - CI_CD and Quality Gates.md",
     "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
     "Git/Exercises/E002a - Create branch.md",
     "Git/Exercises/E002b - Merging branch.md",
@@ -215,7 +216,6 @@
     "Git/Exercises/E006c - Backup.md",
     "Git/Exercises/E006b - Recovering Commits.md",
     "Git/Command References/git reset.md",
-    "Git/Exercises/E005b - Pull.md",
-    "Git/Command References/git revert.md"
+    "Git/Exercises/E005b - Pull.md"
   ]
 }
