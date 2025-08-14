@@ -46,17 +46,26 @@ Common quality gates:
 	- Its goal is to eliminate debates about code style entirely. By running Black, you get a clean, consistent format across your entire project, no matter who wrote the code.
 	- Usage:
 	    ```bash
-		black .  # run on all python files in the current directory resursively.
-		black . --quiet  # same as above but silent execution (no output).
-		black --check  # checks only & reports. no auto formatting like above two.
+	    # run on all python files in the current directory resursively.
+		black .  
+		# same as above but silent execution (no output).
+		# note: good for use in pre-commit hook.
+		black . --quiet  
+		# checks only. no auto formatting like above two.
+		# note: good for use in CI workflow.
+		black --check  
 	    ```
 
 - **isort**:
 	- isort is a tool that **sorts your imports**. It automatically organizes all your import statements at the top of your Python files.
 	- Usage:
 	    ```bash
-	    isort .  # run on all python files in the current directory resursively.
-	    isort . --profile black # be compatiable with Black's formatting.
+	    # run on all python files in the current directory resursively.
+	    # note: good for use in pre-commit hook.
+	    isort . 
+	    # be compatiable with Black's formatting.
+	    # note: good for use in CI workflow.
+	    isort . --profile black 
 	    ```
 
 ---
