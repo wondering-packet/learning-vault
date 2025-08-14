@@ -1,4 +1,4 @@
-# **Lesson 7 – CI/CD & Quality Gates in Git**
+# **Lesson 7 - CI/CD & Quality Gates in Git**
 
 ## **1. What is CI/CD?**
 
@@ -122,42 +122,43 @@ pytest --cov=apps --cov-fail-under=80
 GitHub Actions lets you create `.yml` workflows in `.github/workflows/` that run whenever events happen in your repo.
 
 ### **Example: Full Quality Gate Workflow**
-```yaml
-name: Quality Gates
 
+name: Quality Gates  # Workflow name as it will appear in GitHub Actions tab
+
+```yaml
 on:
   push:
-    branches: [ main ]
+    branches: [ main ]       # Trigger when code is pushed to main
   pull_request:
-    branches: [ main ]
+    branches: [ main ]       # Trigger when PR targets main
 
 jobs:
-  quality-checks:
-    runs-on: ubuntu-latest
+  quality-checks:            # Job name (can be anything)
+    runs-on: ubuntu-latest    # Runs on GitHub's latest Ubuntu environment
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v3  # Step 1: Pull repo code into the runner
 
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.10'
+        python-version: '3.10'  # Python version for all steps below
 
     - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
-        pip install black isort flake8 pytest pytest-cov
+      run: |                     # '|' means multi-line shell command
+        pip install -r requirements.txt   # Install project dependencies
+        pip install black isort flake8 pytest pytest-cov  # Install quality gate tools
 
     - name: Check formatting with Black
-      run: black --check .
+      run: black --check .       # Fail if code not formatted per Black standards
 
     - name: Check imports with isort
-      run: isort . --check --profile black
+      run: isort . --check --profile black  # Fail if imports not sorted, use Black style
 
     - name: Lint with flake8
-      run: flake8 .
+      run: flake8 .              # Fail if PEP8 or linting issues are found
 
     - name: Run tests with coverage
-      run: pytest --cov=apps --cov-fail-under=80
+      run: pytest --cov=apps --cov-fail-under=80  # Run tests, fail if <80% coverage
 ```
 
 ---
