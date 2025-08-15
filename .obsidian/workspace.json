@@ -181,11 +181,11 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Notes/N007 - CI_CD and Quality Gate.md",
+    "Git/Exercises/README_updated.md",
     "Git/Exercises/E002a - Create branch.md",
     "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
-    "Git/Exercises/README_updated.md",
     "Git/Exercises/E007 - CI_CD and GitHub Actions.md",
-    "Git/Notes/N007 - CI_CD and Quality Gates.md",
     "Git/Exercises/E002b - Merging branch.md",
     "Git/Exercises/E002d - Conflict.md",
     "Git/Exercises/E007 - CI_CD and Quality Gates/calculator_private.py",
