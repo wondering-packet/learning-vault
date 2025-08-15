@@ -200,9 +200,34 @@ Stage & Commit:
 ```bash
 git add .
 git commit -m "initial commit"
-# DON'T PUSH!
 ```
 
+Expected output:
+
+```
+ Running pre-commit checks...  
+ isort (auto-fix imports on staged .py files)...  
+ black (auto-fix formatting on staged .py files)...  
+狀 Re-staging formatted files...  
+ Running flake8 on staged files...  
+✅ Pre-commit checks passed.  
+[main (root-commit) 8d50873] initial commit  
+10 files changed, 496 insertions(+)  
+create mode 100644 .github/workflows/ci.yml  
+create mode 100644 .github/workflows/release.yml  
+create mode 100644 .gitignore  
+create mode 100644 README.md  
+create mode 100644 pyproject.toml  
+create mode 100644 requirements.txt  
+create mode 100644 scripts/install_hook.sh  
+create mode 100644 scripts/tools.sh  
+create mode 100644 src/apps/calculator_private.py  
+create mode 100644 tests/test_calculate.py
+```
+
+
+> [!NOTE] Don't Push Yet
+> 
 
 ## 5) GitHub Actions (CI)
 
