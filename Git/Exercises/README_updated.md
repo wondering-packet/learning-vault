@@ -62,11 +62,13 @@ python3 --version
 
 ```bash
 # step1: download
-# git clone or you can simply grab it from this github through your browser.
+# git clone OR you can simply grab it from this github using your browser.
 wget git clone https://github.com/wondering-packet/ci-cd-lab-files.git
-# step2: unzipping
-unzip 
-cd ci-cd-lab-files
+# step2: cd & unzip
+cd ci-cd-lab-files/
+unzip ci-cd-lab.zip
+# step3: cd into the lab foler
+cd ci-cd-lab/
 ```
 
 2) **Create & activate** a virtual environment:
@@ -75,13 +77,8 @@ cd ci-cd-lab-files
 # always use virtual environment for personal/test projects
 # so we don't mess with the system's python!
 
-# macOS/Linux
 python3 -m venv .venv
 source .venv/bin/activate
-
-# Windows (PowerShell)
-python -m venv .venv
-.venv\Scripts\Activate.ps1
 ```
 
 3) **Install dependencies**:
@@ -107,6 +104,8 @@ pip install -r requirements.txt
 ```bash
 pip install -e .
 ```
+
+This will use our tooling config file & create a "app.egg-info" directory inside src/ directory.
 
 5) **Install local pre-commit hook**:
 
