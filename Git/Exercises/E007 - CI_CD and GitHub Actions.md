@@ -280,27 +280,31 @@ A: Ensure the file path is exactly `.github/workflows/ci.yml` on the default bra
 
 ## 7) Extending the Lab (Example)
 
-1) **Add a new function** in `src/apps/calculator_private.py`:
+### 1. Add another test:
 
-```python
-def power(a, b):
-    return a ** b
-```
 
-2) **Test it** in `tests/test_calculate.py`:
+3) **Add a new function** in `src/apps/calculator_private.py`:
 
-```python
-from apps.calculator_private import power
+	```python
+	def power(a, b):
+	    return a ** b
+	```
 
-def test_power():
-    assert power(2, 3) == 8
-```
+4) **Test it** in `tests/test_calculate.py`:
 
-3) **Run the suite**:
+	```python
+	from apps.calculator_private import power
+	
+	def test_power():
+	    assert power(2, 3) == 8
+	```
 
-```bash
-pytest -q
-```
+5) **Run the suite**:
+	
+	```bash
+	pytest -q
+	```
+
 
 CI will pick it up on push/PR.
 
