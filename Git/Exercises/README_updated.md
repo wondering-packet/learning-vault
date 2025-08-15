@@ -232,6 +232,8 @@ addopts = "--cov=src --cov-report=term-missing --cov-report=xml --cov-fail-under
 - Adjust **coverage threshold** by changing the number in `--cov-fail-under=80`.
 - Coverage includes the `src/` tree because we use `--cov=src`.
 
+`.github/workflows/ci.yml`
+
 ---
 
 ## 6) Common Commands
