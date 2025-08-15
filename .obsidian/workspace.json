@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 433.5
+    "width": 516.5
   },
   "right": {
     "id": "ea642f63cc3d6c70",
@@ -179,7 +179,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5d3e5ffa7be5f0d8",
+  "active": "fff1c450c59da762",
   "lastOpenFiles": [
     "Git/Notes/N005 - Remote Workflows & PR.md",
     "Git/readme.md",

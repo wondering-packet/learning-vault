@@ -30,13 +30,31 @@ These are high-level topic summaries meant to introduce core concepts and link t
 
 ### 📘 **Knowledge Base (KBs)**
 
-These articles explain the *why* behind Git commands and behaviors. Think of this as your Git "second brain" — built for reference and deeper understanding.
+These articles explain the _why_ behind Git commands and behaviors. Think of this as your Git "second brain" — built for reference and deeper understanding.
+
+I've integrated these articles as a personal knowledge base to capture and explain key Git concepts. Each entry is a quick reference on topics like **Merge fast-forward**, **Rebase**, and **Conflict** resolution. This library helps to quickly recall the details and nuances of complex Git operations.
 
 > **AI Note**: AI assisted me in generating most of the KBs, but every topic has been lab-tested and fact-checked by me.
 
 ### 🧠 **Exercises**
 
 Practical, real-world Git scenarios to sharpen your skills. Except for the lab exercise for CI/CD pipeline (exercise 007), all other exercises are 100% written and executed by me — no AI assistance. Each one is built to reinforce concepts in an applied context.
+
+- **E001** – Create a new repository & connect it to a remote branch  
+- **E002a** – Create branch  
+- **E002b** – Merging branch  
+- **E002c** – Rebase  
+- **E002d** – Conflict  
+- **E003a** – Stashing  
+- **E003b** – Cherry-picking  
+- **E004** – Squashing with Interactive Rebase  
+- **E005a** – Pull Request (PR)  
+- **E005b** – Pull  
+- **E006a** – Undoing changes  
+- **E006b** – Recovering commits  
+- **E006c** – Backup  
+- **E006d** – Hooks  
+- **E007** – CI/CD
 
 > **Personal Note**: All exercises were crafted and performed by me in a lab environment — they reflect my learning style and debugging habits.
 
