@@ -226,8 +226,9 @@ create mode 100644 tests/test_calculate.py
 ```
 
 
-> [!NOTE] Don't Push Yet
+> [!NOTE]
 > 
+> **Don't Push Yet**. We will push in next section.
 
 ## 5) GitHub Actions (CI)
 
