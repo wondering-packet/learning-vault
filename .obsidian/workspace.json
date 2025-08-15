@@ -179,13 +179,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fff1c450c59da762",
+  "active": "5d3e5ffa7be5f0d8",
   "lastOpenFiles": [
-    "Git/Notes/N005 - Remote Workflows & PR.md",
+    "Git/Exercises/E007 - CICD.md",
     "Git/readme.md",
+    "Git/Notes/N005 - Remote Workflows & PR.md",
     "Git/Notes/N004 - Interactive Rebasing & Squashing.md",
     "Git/Notes/N006 - Advanced recovery.md",
-    "Git/Exercises/E007 - CICD.md",
     "Git/Notes/N007 - CICD and Quality Gate.md",
     "Assets/git-e007-github-actions.png",
     "Pasted image 20250816005750.png",

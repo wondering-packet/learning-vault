@@ -72,7 +72,8 @@ This repository is maintained by **Vipin Garg**.
 
 I'm a Senior Network Engineer expanding into automation, DevOps, and IaC. If this content helps you — or you'd like to connect — feel free to reach out:
 
-- **🔗 LinkedIn**: [vipin-garg-ccnp](https://www.linkedin.com/in/vipin-garg-ccnp/)
+- **🔗 LinkedIn**: [vipin-garg-ccnp](https://www.linkedin.com/in/vipin-garg-ccnp/).
+- 📧 **Email:** packetwondering@gmail.com.
 
 Thanks for stopping by.  
 Happy committing!
