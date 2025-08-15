@@ -189,7 +189,8 @@ addopts = "--cov=src --cov-report=term-missing --cov-report=xml --cov-fail-under
 
 ## 4) Pre-commit hook
 
-1) Stage & Commit:
+1) Pre-commit hook file explained here: [[#^4ec4ca]]
+2) Stage & Commit:
 
 ```bash
 git add .
@@ -428,6 +429,8 @@ jobs:
 ```
 
 ### c) `.git/hooks/pre-commit`
+
+^4ec4ca
 
 ```bash
 #!/usr/bin/env bash  
