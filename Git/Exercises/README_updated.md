@@ -185,14 +185,9 @@ addopts = "--cov=src --cov-report=term-missing --cov-report=xml --cov-fail-under
 
 ---
 
-## 4) GitHub Actions (CI) – What’s Included
+## 4) GitHub Actions (CI)
 
-The workflow file at `.github/workflows/ci.yml` is already set up to:
-- Trigger on **push** and **pull requests** to `main`.
-- Use **Python 3.10**.
-- Install dependencies and the package (`pip install -e .`).
-- Run **isort/black (checks only)**, **flake8**, and **pytest** (with coverage gate).
-- Upload `coverage.xml` as a build **artifact**.
+Github Actions looks for workflow files under `.github/workflows` directory so we will be adding our CI workflow `ci.yml` file under this directory. 
 
 ### How to enable CI in your repo
 
