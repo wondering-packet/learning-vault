@@ -232,7 +232,54 @@ addopts = "--cov=src --cov-report=term-missing --cov-report=xml --cov-fail-under
 - Adjust **coverage threshold** by changing the number in `--cov-fail-under=80`.
 - Coverage includes the `src/` tree because we use `--cov=src`.
 
-`.github/workflows/ci.yml`
+### `.github/workflows/ci.yml` 
+
+```yaml
+name: CI  
+  
+on:  
+push:  
+branches: [ "main" ]  
+pull_request:  
+branches: [ "main" ]  
+  
+jobs:  
+quality-gates:  
+runs-on: ubuntu-latest  
+steps:  
+- name: Check out code  
+uses: actions/checkout@v4  
+  
+- name: Set up Python  
+uses: actions/setup-python@v5  
+with:  
+python-version: '3.10'  
+  
+- name: Install dependencies  
+run: |  
+python -m pip install --upgrade pip  
+pip install -r requirements.txt  
+pip install -e .  
+  
+- name: Check formatters and lint  
+run: |  
+# The configs for these are in pyproject.toml  
+black --check .  
+isort --check-only .  
+flake8 .  
+  
+- name: Run tests with coverage  
+run: |  
+# Pytest will automatically use the configs from pyproject.toml  
+pytest  
+  
+- name: Upload coverage report  
+uses: actions/upload-artifact@v4  
+with:  
+name: coverage-xml  
+path: coverage.xml
+```
+
 
 ---
 
