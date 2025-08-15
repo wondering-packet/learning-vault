@@ -292,16 +292,35 @@ A: Ensure the file path is exactly `.github/workflows/ci.yml` on the default bra
 2) **Test it** in `tests/test_calculate.py`:
 
 	```python
-	from apps.calculator_private import power
-	
-	def test_power():
-	    assert power(2, 3) == 8
+	# power added now
+	from apps.calculator_private import add, divide, multiply, subtract, power  
+	  
+	  
+	def test_add():  
+	assert add(3, 7) == 10  
+	assert add(-1, 1) == 0  
+	assert add(0, 0) == 0  
+	assert divide(10, 5) == 2  
+	assert multiply(3, 6) == 18  
+	assert subtract(10, 5) == 5  
+	assert power(2, 3) == 8  # calling power() function
 	```
 
 3) **Run the suite**:
 	
 	```bash
 	pytest -q
+	.                                                                     [100%]
+	---------- coverage: platform linux, python 3.12.3-final-0 -----------  
+	Name                             Stmts   Miss  Cover   Missing  
+	--------------------------------------------------------------  
+	src/apps/calculator_private.py      14      0   100%  
+	--------------------------------------------------------------  
+	TOTAL                               14      0   100%  
+	Coverage XML written to file coverage.xml  
+	  
+	Required test coverage of 80% reached. Total coverage: 100.00%  
+	1 passed in 0.18s
 	```
 
 ### 2. Cause coverage failure:
