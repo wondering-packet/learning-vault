@@ -1,5 +1,5 @@
 
-> [!AI Note]
+> [!Note]
 > I had AI help me with preparing this lab but i have double-checked & lab tested everything so there shouldn't be any bugs. ✌️
 
 # CI/CD Lab – Python + GitHub Actions (Tested Setup)
