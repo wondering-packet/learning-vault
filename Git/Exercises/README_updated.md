@@ -235,49 +235,81 @@ addopts = "--cov=src --cov-report=term-missing --cov-report=xml --cov-fail-under
 ### `.github/workflows/ci.yml` 
 
 ```yaml
-name: CI  
-  
-on:  
-push:  
-branches: [ "main" ]  
-pull_request:  
-branches: [ "main" ]  
-  
-jobs:  
-quality-gates:  
-runs-on: ubuntu-latest  
-steps:  
-- name: Check out code  
-uses: actions/checkout@v4  
-  
-- name: Set up Python  
-uses: actions/setup-python@v5  
-with:  
-python-version: '3.10'  
-  
-- name: Install dependencies  
-run: |  
-python -m pip install --upgrade pip  
-pip install -r requirements.txt  
-pip install -e .  
-  
-- name: Check formatters and lint  
-run: |  
-# The configs for these are in pyproject.toml  
-black --check .  
-isort --check-only .  
-flake8 .  
-  
-- name: Run tests with coverage  
-run: |  
-# Pytest will automatically use the configs from pyproject.toml  
-pytest  
-  
-- name: Upload coverage report  
-uses: actions/upload-artifact@v4  
-with:  
-name: coverage-xml  
-path: coverage.xml
+# ============================
+# GitHub Actions Workflow: CI
+# ============================
+# Purpose:
+# This workflow runs automatically on pushes or pull requests to "main".
+# It checks code formatting (Black, isort), lints (flake8), runs tests (pytest),
+# and uploads the coverage report.
+# ============================
+
+name: CI
+
+# ----------------------------
+# When should this workflow run?
+# ----------------------------
+on:
+  push:
+    branches: [ "main" ]        # Trigger when pushing directly to main
+  pull_request:
+    branches: [ "main" ]        # Trigger when a PR targets main
+
+jobs:
+  quality-gates:
+    runs-on: ubuntu-latest      # GitHub-hosted runner (Ubuntu Linux)
+
+    steps:
+      # ----------------------------
+      # Step 1: Check out the code
+      # ----------------------------
+      - name: Check out code
+        uses: actions/checkout@v4  # Pulls the repo content into the runner
+
+      # ----------------------------
+      # Step 2: Set up Python
+      # ----------------------------
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'  # The Python version for this job
+
+      # ----------------------------
+      # Step 3: Install dependencies
+      # ----------------------------
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip  # Upgrade pip itself
+          pip install -r requirements.txt      # Install tool/test dependencies
+          pip install -e .                # Install the project in editable mode
+
+      # ----------------------------
+      # Step 4: Check formatting & lint
+      # ----------------------------
+      - name: Check formatters and lint
+        run: |
+          # Black & isort configs are in pyproject.toml
+          black --check .           # Verify code style with Black
+          isort --check-only .      # Verify import order matches Black profile
+          flake8 .                  # Run linting (style & error checks)
+
+      # ----------------------------
+      # Step 5: Run tests with coverage
+      # ----------------------------
+      - name: Run tests with coverage
+        run: |
+          # pytest & coverage configs are in pyproject.toml
+          pytest                    # Run the test suite
+
+      # ----------------------------
+      # Step 6: Upload coverage report
+      # ----------------------------
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-xml        # Artifact name in GitHub
+          path: coverage.xml        # Path to the coverage report file
+
 ```
 
 
