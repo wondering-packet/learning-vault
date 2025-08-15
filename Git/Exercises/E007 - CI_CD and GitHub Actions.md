@@ -68,7 +68,7 @@ python3 --version
 ```bash
 # step1: download
 # git clone OR you can simply grab it from this github using your browser.
-wget git clone https://github.com/wondering-packet/ci-cd-lab-files.git
+git clone https://github.com/wondering-packet/ci-cd-lab-files.git
 # step2: cd & unzip
 cd ci-cd-lab-files/
 unzip ci-cd-lab.zip
@@ -79,8 +79,8 @@ cd ci-cd-lab/
 2) **Create & activate** a virtual environment:
 
 ```bash
-# always use virtual environment for personal/test projects
-# so we don't mess with the system's python!
+# using virtual environment for this lab project so we don't mess with 
+# the system's python!
 
 python3 -m venv .venv
 source .venv/bin/activate
