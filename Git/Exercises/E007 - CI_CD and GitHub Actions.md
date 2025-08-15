@@ -282,15 +282,14 @@ A: Ensure the file path is exactly `.github/workflows/ci.yml` on the default bra
 
 ### 1. Add another test:
 
-
-3) **Add a new function** in `src/apps/calculator_private.py`:
+1) **Add a new function** in `src/apps/calculator_private.py`:
 
 	```python
 	def power(a, b):
 	    return a ** b
 	```
 
-4) **Test it** in `tests/test_calculate.py`:
+2) **Test it** in `tests/test_calculate.py`:
 
 	```python
 	from apps.calculator_private import power
@@ -299,14 +298,47 @@ A: Ensure the file path is exactly `.github/workflows/ci.yml` on the default bra
 	    assert power(2, 3) == 8
 	```
 
-5) **Run the suite**:
+3) **Run the suite**:
 	
 	```bash
 	pytest -q
 	```
 
+### 2. Cause coverage failure:
 
-CI will pick it up on push/PR.
+1) Remove a few functions from the `tests/test_calculate.py`:
+
+```python
+# i have removed a few functions, now the test file looks like this:
+from apps.calculator_private import add, divide  
+  
+  
+def test_add():  
+assert add(3, 7) == 10  
+assert add(-1, 1) == 0  
+assert add(0, 0) == 0  
+assert divide(10, 5) == 2
+```
+
+2) Run the suite:
+
+```bash
+pytest -q  
+.                                                                         [100%]
+  
+---------- coverage: platform linux, python 3.12.3-final-0 -----------  
+Name                             Stmts   Miss  Cover   Missing  
+--------------------------------------------------------------  
+src/apps/calculator_private.py      12      4    67%   7-8, 12-13  
+--------------------------------------------------------------  
+TOTAL                               12      4    67%  
+Coverage XML written to file coverage.xml  
+  
+FAIL Required test coverage of 80% not reached. Total coverage: 66.67%  
+1 passed in 0.18s
+```
+
+CI will pick up these new changes on push/PR.
 
 ---
 
