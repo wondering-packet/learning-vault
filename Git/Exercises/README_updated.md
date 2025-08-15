@@ -61,9 +61,10 @@ python3 --version
 1) **Download & Unzip** the lab files:
 
 ```bash
-# download using wget or you can simply grab it from your browser.
-wget https://github.com/wondering-packet/ci-cd-lab-files/blob/main/ci-cd-lab-files.zip
-# unzipping
+# step1: download
+# git clone or you can simply grab it from this github through your browser.
+wget git clone https://github.com/wondering-packet/ci-cd-lab-files.git
+# step2: unzipping
 unzip 
 cd ci-cd-lab-files
 ```
