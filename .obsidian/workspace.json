@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Notes/N007 - CICD and Quality Gate.md",
+                "file": "Git/Exercises/E007 - CICD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "N007 - CICD and Quality Gate"
+              "title": "E007 - CICD"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "lesson",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -181,8 +181,10 @@
   },
   "active": "5d3e5ffa7be5f0d8",
   "lastOpenFiles": [
-    "Git/Exercises/E007 - CICD.md",
+    "Git/readme.md",
+    "Git/Notes/N006 - Advanced workflows.md",
     "Git/Notes/N007 - CICD and Quality Gate.md",
+    "Git/Exercises/E007 - CICD.md",
     "Assets/git-e007-github-actions.png",
     "Pasted image 20250816005750.png",
     "Pasted image 20250816005136.png",
@@ -202,7 +204,6 @@
     "Git/Exercises/E007 - CI_CD and Quality Gates/coverage.xml",
     "Git/Exercises/E007 - CI_CD and Quality Gates/tests/__pycache__/test_calculate.cpython-312-pytest-8.2.0.pyc",
     "Git/Exercises/E007 - CI_CD and Quality Gates/tests/__pycache__/test_add.cpython-312-pytest-8.2.0.pyc",
-    "Git/Notes/N006 - Advanced workflows.md",
     "Git/Notes/N007 - CI CD Basics.md",
     "Git/Notes/N001 - Git Foundation.md",
     "Git/Notes/ci_workflow_notes.md",
@@ -210,7 +211,6 @@
     "Git/Notes/N004 - Interactive Rebasing & Squashing.md",
     "Git/Notes/N003 - Stashing, Pushing, Cherry-picking, Tagging.md",
     "Git/Notes/N002 - Branching & Conflict Resolution.md",
-    "Git/readme.md",
     "Git/Exercises/E007a - Automated linting.md",
     "Git/Exercises/E007b - Automated formatters.md",
     "Git/KBs/KB004 - Rebase.md",

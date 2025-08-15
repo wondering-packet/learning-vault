@@ -19,6 +19,10 @@ CI/CD creates a feedback loop that ensures:
 - Code is always in a deployable state.
 - Developers spend more time delivering features, less time fixing integration issues.
 
+> [!tip]
+> 
+> Find the exercise for these notes here: [E007 - CICD](../Exercises/E007%20-%20CICD.md).
+
 ---
 
 ## **2. Where Git Fits into CI/CD**
