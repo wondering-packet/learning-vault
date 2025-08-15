@@ -19,8 +19,10 @@ Follow this guide to **replicate the exact setup** locally and in GitHub.
 - **Python 3.10+** installed
 - A **GitHub account** and a repo (or fork this one)
 - (Optional) A code editor with Python support (VS Code, PyCharm, etc.)
+- This lab setup assumes you are running some linux flavour (I built this on ubuntu). It should however work on other platforms as well jut be 
 
 > Tip: On Linux/macOS, confirm versions:
+
 ```bash
 git --version
 python3 --version
@@ -58,10 +60,10 @@ python3 --version
 
 ## 3) Local Setup (Step-by-Step)
 
-1) **Clone** the repo:
+1) **Download & Unzip** the lab files:
 
 ```bash
-git clone https://github.com/wondering-packet/ci-cd-lab-files.git
+unzip
 cd ci-cd-lab-files
 ```
 
