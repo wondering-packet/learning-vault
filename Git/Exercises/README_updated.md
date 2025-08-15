@@ -197,9 +197,11 @@ The workflow file at `.github/workflows/ci.yml` is already set up to:
 ### How to enable CI in your repo
 
 1) Make sure `.github/workflows/ci.yml` file is present.
-2) Push to remote:
+2) Stage, commit & push to remote:
 
 ```bash
+git add .
+git commit -m "initial commit"
 git push -u origin main
 ```
 
