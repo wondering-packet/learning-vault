@@ -306,7 +306,7 @@ A: Ensure the file path is exactly `.github/workflows/ci.yml` on the default bra
 	assert power(2, 3) == 8  # calling power() function
 	```
 
-3) **Run the suite**:
+3) **Run coverage test**:
 	
 	```bash
 	pytest -q
@@ -325,7 +325,7 @@ A: Ensure the file path is exactly `.github/workflows/ci.yml` on the default bra
 
 ### 2. Cause coverage failure:
 
-1) Remove a few functions from the `tests/test_calculate.py`:
+1) **Remove a few functions from the `tests/test_calculate.py`:**
 
 ```python
 # i have removed a few functions, now the test file looks like this:
@@ -339,7 +339,7 @@ assert add(0, 0) == 0
 assert divide(10, 5) == 2
 ```
 
-2) Run the suite:
+2) **Run the coverage test:**
 
 ```bash
 pytest -q  
@@ -358,6 +358,40 @@ FAIL Required test coverage of 80% not reached. Total coverage: 66.67%
 ```
 
 CI will pick up these new changes on push/PR.
+
+### 3) Cause style failure:
+
+1) Modify app `src/apps/calculator_private.py`:
+
+```python
+def power(a, b):  
+return a ** b  
+def add(a, b):   # i removed the 2 whitelines before the function definition 
+result = a + b   # this fails pep8 compliance.
+return result  
+  
+  
+def subtract(a, b):  
+result = a - b  
+return result  
+  
+  
+def multiply(a, b):  
+result = a * b  
+return result  
+  
+  
+def divide(a, b):  
+result = a / b  
+return result
+```
+
+2) Run flake8 manually:
+
+```bash
+flake8 --exclude .venv/  
+./src/apps/calculator_private.py:3:1: E302 expected 2 blank lines, found 0
+```
 
 ---
 
