@@ -18,7 +18,7 @@ Follow this guide to **replicate the exact setup** locally and in GitHub.
 - A **GitHub account** and a repo (or fork this one)
 - (Optional) A code editor with Python support (VS Code, PyCharm, etc.)
 - This lab setup assumes you are running some Linux flavor (I built this on Ubuntu).
-- This lab assumes you have gone through the notes in [N007 - CI_CD and Quality Gate](../Notes/N007%20-%20CI_CD%20and%20Quality%20Gate).
+- This lab assumes you have gone through the notes in [N007 - CI_CD and Quality Gate](../Notes/N007%20-%20CI_CD%20and%20Quality%20Gate.md).
 
 > Confirm versions:
 
