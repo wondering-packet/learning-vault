@@ -62,7 +62,7 @@ Practical, real-world Git scenarios to sharpen your skills. Except for the lab e
 
 Quick reference notes for essential Git commands like `git add`, `git commit`, `git rebase`, `git switch`, and more.
 
-> **AI Note**: These were formatted with some help from ChatGPT, but verified entirely through hands-on testing.
+> **AI Note**: These were created with the help of AI but verified entirely through hands-on testing.
 
 ---
 
