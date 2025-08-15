@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "782f6dfc76b02092",
+        "id": "336bd062b56bac4e",
         "type": "tabs",
         "children": [
           {
-            "id": "8aac1c45dda22459",
+            "id": "5d3e5ffa7be5f0d8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Git/Exercises/E007 - CI_CD and GitHub Actions.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -179,10 +179,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8aac1c45dda22459",
+  "active": "5d3e5ffa7be5f0d8",
   "lastOpenFiles": [
-    "Assets/git-e007-github-actions.png",
     "Git/Exercises/E007 - CI_CD and GitHub Actions.md",
+    "Assets/git-e007-github-actions.png",
     "Pasted image 20250816005750.png",
     "Pasted image 20250816005136.png",
     "Assets",
