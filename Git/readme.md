@@ -12,7 +12,7 @@ It’s also part of my personal **Infrastructure as Code (IaC)** learning portfo
 
 This guide is designed to help you learn Git progressively — from first principles to advanced topics — through structured lessons, hands-on exercises, and reference notes.
 
-The repo is divided into four sections:
+The resource is divided into four sections:
 
 ## 📝 Notes
 
