@@ -107,11 +107,25 @@ pip install -e .
 
 > This will use our `pyproject.toml` config file & create a "app.egg-info" directory inside src/ directory.
 
-5) Prepare repo:
+5) Prepare Git:
 
 ```bash
+# step1: initialize git in this folder
 git init
-
+# step2: set main as the default branch
+git branch -m main
+# step3: configure your username & email 
+git config user.name wondering-packet # "Your Name"
+git config user.email "packetwondering@gmail.com" # "your.email@example.com"
+git config user.name # validate
+# output: wondering-packet
+git config user.email # validate
+# output: packetwondering@gmail.com
+# step4: connect to remote repo; replace with your repo url
+git remote add origin https://github.com/wondering-packet/iac-git.git
+git remote -v # validate
+origin  https://github.com/wondering-packet/iac-git.git (fetch)  
+origin  https://github.com/wondering-packet/iac-git.git (push)
 ```
 
 6) **Install local pre-commit hook**:
