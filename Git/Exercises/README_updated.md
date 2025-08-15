@@ -142,7 +142,7 @@ bash scripts/install_hook.sh
 
 # IMPORTANT:
 # remove the pre-commit file from hooks/ folder.
-# note that the install script has already copied to .git/hooks.
+# note that the install script has already copied this file to .git/hooks.
 
 # if you don't remove this file then your commits later will fail since 
 # this file contains the keyword "TODO" - this keyword is used in the lab 
@@ -196,11 +196,10 @@ The workflow file at `.github/workflows/ci.yml` is already set up to:
 
 ### How to enable CI in your repo
 
-1) Create a repo in your account, name it `ci-cd-lab` (or whatever you like). Copy the repo URL.
-2) Push this repository to GitHub (or copy these files into your own repo):
+1) Make sure `.github/workflows/ci.yml` file is present.
+2) Push to remote:
+
 ```bash
-git remote add origin <repo_url>
-git branch -M main
 git push -u origin main
 ```
 

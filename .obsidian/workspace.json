@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Git/Exercises/README_updated.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -179,7 +179,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "376cc142841ebfcd",
+  "active": "8aac1c45dda22459",
   "lastOpenFiles": [
     "Git/Exercises/E002a - Create branch.md",
     "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
