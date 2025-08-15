@@ -223,7 +223,7 @@ git push -u origin main
 2) In GitHub:
 	1) go to **Actions** tab. The workflow should appear automatically and run on the next push/PR to `main`.
 	2) Open the workflow that was executed for your commit. If you followed exact steps it should be "initial commit".
-	3) You can see our tasks/tests performed by the workflow in the highlighted square section. [Image](../../Assets)
+	3) You can see our tasks/tests performed by the workflow in this image (highlighted square section): [workflow-screenshot](../../Assets/git-e007-github-actions.png).
 
 3) To **download coverage** from a run: open the workflow run → **Artifacts** → download `coverage-xml`.
 
