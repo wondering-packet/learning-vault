@@ -181,6 +181,7 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Pasted image 20250816005136.png",
     "Git/Exercises/E006d - Hooks.md",
     "Git/Exercises/E007 - CI_CD and GitHub Actions.md",
     "Git/Exercises/E007 - CI_CD and GitHub Actions.md",
@@ -215,7 +216,6 @@
     "Git/Exercises/E002c - Rebase.md",
     "Git/Exercises/E006a - Undoing changes.md",
     "Git/Exercises/E006c - Backup.md",
-    "Git/Exercises/E006b - Recovering Commits.md",
-    "Git/Command References/git reset.md"
+    "Git/Exercises/E006b - Recovering Commits.md"
   ]
 }
