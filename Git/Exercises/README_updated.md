@@ -189,8 +189,9 @@ addopts = "--cov=src --cov-report=term-missing --cov-report=xml --cov-fail-under
 
 ## 4) Pre-commit hook
 
-1) Pre-commit hook file is explained under Configuration Reference/
-2) Stage & Commit:
+Pre-commit hook is explained in detail in *`.git/hooks/pre-commit`* under *Configuration Reference* section at the end. Refer to it before continuing if unfamiliar.
+
+1) Stage & Commit:
 
 ```bash
 git add .
@@ -203,6 +204,7 @@ git commit -m "initial commit"
 
 Github Actions looks for workflow files under `.github/workflows` directory so we will be adding our CI workflow `ci.yml` file under this directory. 
 
+`ci.yml` is explained in detail in *`.github/workflows/ci.yml` * under *Configuration Reference* section at the end. Refer to it before continuing if unfamiliar.
 ### How to enable CI in your repo
 
 1) Make sure `.github/workflows/ci.yml` file is present.
