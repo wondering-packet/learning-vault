@@ -1,8 +1,6 @@
 # CI/CD Lab – Python + GitHub Actions (Tested Setup)
 
-Repo: `https://github.com/wondering-packet/ci-cd-lab-files.git`.
-
-Above repo is a **minimal, battle-tested CI pipeline** for a Python project using:
+This lab provides a minimal, battle-tested CI pipeline for a Python project using:
 - **Black** (formatting)
 - **isort** (imports)
 - **Flake8** (linting)
@@ -19,9 +17,9 @@ Follow this guide to **replicate the exact setup** locally and in GitHub.
 - **Python 3.10+** installed
 - A **GitHub account** and a repo (or fork this one)
 - (Optional) A code editor with Python support (VS Code, PyCharm, etc.)
-- This lab setup assumes you are running some linux flavour (I built this on ubuntu). It should however work on other platforms as well jut be 
+- This lab setup assumes you are running some Linux flavor (I built this on Ubuntu).
 
-> Tip: On Linux/macOS, confirm versions:
+> Confirm versions:
 
 ```bash
 git --version
@@ -63,6 +61,8 @@ python3 --version
 1) **Download & Unzip** the lab files:
 
 ```bash
+# download
+wget 
 unzip
 cd ci-cd-lab-files
 ```
