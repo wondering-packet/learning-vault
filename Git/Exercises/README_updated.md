@@ -114,18 +114,18 @@ pip install -e .
 git init
 # step2: set main as the default branch
 git branch -m main
-# step3: configure your username & email 
+# step3: configure your username & email; replace them with yours. 
 git config user.name wondering-packet # "Your Name"
 git config user.email "packetwondering@gmail.com" # "your.email@example.com"
 git config user.name # validate
 # output: wondering-packet
 git config user.email # validate
 # output: packetwondering@gmail.com
-# step4: connect to remote repo; replace with your repo url
-git remote add origin https://github.com/wondering-packet/iac-git.git
+# step4: connect to remote repo
+git remote add origin <repo_url>
 git remote -v # validate
-origin  https://github.com/wondering-packet/iac-git.git (fetch)  
-origin  https://github.com/wondering-packet/iac-git.git (push)
+origin  <repo_url> (fetch)  
+origin  <repo_url> (push)
 ```
 
 6) **Install local pre-commit hook**:
