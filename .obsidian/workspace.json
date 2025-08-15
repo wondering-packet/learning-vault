@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/E007 - CICD.md",
+                "file": "Git/readme.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E007 - CICD"
+              "title": "readme"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.5
+    "width": 433.5
   },
   "right": {
     "id": "ea642f63cc3d6c70",
@@ -181,8 +181,8 @@
   },
   "active": "5d3e5ffa7be5f0d8",
   "lastOpenFiles": [
-    "Git/readme.md",
     "Git/Exercises/E007 - CICD.md",
+    "Git/readme.md",
     "Git/Notes/N007 - CICD and Quality Gate.md",
     "Git/Notes/N006 - Advanced workflows.md",
     "Assets/git-e007-github-actions.png",

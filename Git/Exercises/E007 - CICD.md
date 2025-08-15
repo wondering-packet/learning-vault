@@ -1,6 +1,6 @@
 
 > [!NOTE] AI Note
-> I have used AI to help me with the bash scripts (for pre-commit) since bash is not my strongest suit but i have double-checked & lab tested the scripts so there shouldn't be any bugs.
+> I had AI help me with preparing this lab but i have double-checked & lab tested everything so there shouldn't be any bugs. ✌️
 
 # CI/CD Lab – Python + GitHub Actions (Tested Setup)
 

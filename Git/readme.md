@@ -14,7 +14,7 @@ This guide is designed to help you learn Git progressively — from first princi
 
 The repo is divided into four sections:
 
-### 🧪 **Lessons**
+### 🧪 **Notes**
 
 These are high-level topic summaries meant to introduce core concepts and link to deeper resources. 
 
