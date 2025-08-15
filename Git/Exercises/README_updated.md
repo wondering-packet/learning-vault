@@ -105,9 +105,16 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-This will use our tooling config file & create a "app.egg-info" directory inside src/ directory.
+> This will use our `pyproject.toml` config file & create a "app.egg-info" directory inside src/ directory.
 
-5) **Install local pre-commit hook**:
+5) Prepare repo:
+
+```bash
+git init
+
+```
+
+6) **Install local pre-commit hook**:
 
 ```bash
 # this script copies our hooks/pre-commit file to .git/hooks/pre-commit location.
