@@ -1,3 +1,8 @@
+
+
+> [!NOTE] AI Note
+> I have used AI to help me with the bash scripts (for pre-commit) since bash is not my strong suite but i have thoroughly fact checked & lab tested the scripts so there shouldn't be any bugs/issues.
+
 # CI/CD Lab – Python + GitHub Actions (Tested Setup)
 
 This lab provides a minimal, lab-tested CI pipeline for a Python project using:
