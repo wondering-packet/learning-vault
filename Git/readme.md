@@ -14,16 +14,19 @@ This guide is designed to help you learn Git progressively — from first princi
 
 The repo is divided into four sections:
 
-### 🧪 **Notes**
+## 📝 Notes
 
-These are high-level topic summaries meant to introduce core concepts and link to deeper resources. 
+These are high-level topic summaries meant to introduce core concepts and link to deeper resources.
 
-- **L001 - Git Foundation**: What Git is, how it works, the basic command flow.
-- **L002 - Branching & Conflict Resolution**: Core branching operations and merge conflict handling.
-- **L003 - Stashing, Pushing, Cherry-picking, Tagging**: Intermediate topics for improving workflow.
-- **L004 - Interactive Rebasing & Squashing**: Advanced history-cleanup techniques.
+- **L001 – Git Foundation**: What Git is, how it works, repository structure, and the basic command flow (`init → add → commit → push`).
+- **L002 – Branching & Conflict Resolution**: Core branching operations (`branch`, `checkout`, `switch`), merge strategies, and hands-on conflict handling.
+- **L003 – Stashing, Pushing, Cherry-picking, Tagging**: Workflow improvements with `stash` for temporary changes, pushing to remotes, selectively applying commits, and marking important points with tags.
+- **L004 – Interactive Rebasing & Squashing**: Advanced history-editing techniques to reorder, squash, or drop commits for a cleaner project history.
+- **L005 – Remote Workflows & PR**: Working with remotes, tracking branches, syncing (`fetch`, `pull`, `push`), and managing upstream/downstream relationships.
+- **L006 – Advanced Recovery (reflog, reset, revert)**: Disaster-recovery commands to undo or roll back changes, recover lost commits, and repair broken branches.
+- **L007 – CI/CD Quality Gates (pre-commit, formatting, coverage)**: Enforcing code quality with Git hooks, formatters (`black`, `isort`), linters (`flake8`), and automated coverage thresholds in CI pipelines.
 
-> **AI Note**: These lessons were written and formatted with the help of ChatGPT, but I’ve personally tested and validated each concept in my lab environment.
+> **AI Note:** These lessons were written and formatted with the help of ChatGPT, but I’ve personally tested and validated each concept in my lab environment, including real-world CI/CD integrations and automated quality enforcement.
 
 ### 📘 **Knowledge Base (KBs)**
 
