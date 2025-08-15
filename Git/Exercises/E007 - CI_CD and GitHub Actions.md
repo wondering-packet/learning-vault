@@ -123,9 +123,9 @@ git branch -m main
 git config user.name wondering-packet # "Your Name"
 git config user.email "packetwondering@gmail.com" # "your.email@example.com"
 git config user.name # validate
-# output: wondering-packet
+# output: your name
 git config user.email # validate
-# output: packetwondering@gmail.com
+# output: your email
 # step4: connect to remote repo
 git remote add origin <repo_url>
 git remote -v # validate
@@ -137,7 +137,7 @@ origin  <repo_url> (push)
 >
 > Do not stage & push yet!
 > 
-> Reason is: we still have the hooks/pre-commit file which we need to install & remove first. If you stage this file (tracked) then it will cause future commits to fail because the file contains a keyword which we are using to block commits.
+> Reason is: we still have the `hooks/pre-commit` file which we need to install & then remove.  If you stage this file (tracked) then it will cause future commits to fail because the file contains a keyword which we are using to block commits.
 
 6) **Install local pre-commit hook**:
 
@@ -195,7 +195,7 @@ addopts = "--cov=src --cov-report=term-missing --cov-report=xml --cov-fail-under
 > [!important]
 > Pre-commit hook is explained in detail in *`.git/hooks/pre-commit`* under *Configuration Reference* section at the end. Refer to it before continuing if unfamiliar.
 
-1) Stage & Commit:
+Stage & Commit:
 
 ```bash
 git add .
