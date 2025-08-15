@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/README_updated.md",
+                "file": "Git/Exercises/E007 - CI_CD and GitHub Actions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README_updated"
+              "title": "E007 - CI_CD and GitHub Actions"
             }
           }
         ]
@@ -181,12 +181,13 @@
   },
   "active": "8aac1c45dda22459",
   "lastOpenFiles": [
+    "Git/Exercises/E006d - Hooks.md",
+    "Git/Exercises/E007 - CI_CD and GitHub Actions.md",
+    "Git/Exercises/E007 - CI_CD and GitHub Actions.md",
     "(.md",
-    "Git/Exercises/README_updated.md",
     "Git/Notes/N007 - CI_CD and Quality Gate.md",
     "Git/Exercises/E002a - Create branch.md",
     "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
-    "Git/Exercises/E007 - CI_CD and GitHub Actions.md",
     "Git/Exercises/E002b - Merging branch.md",
     "Git/Exercises/E002d - Conflict.md",
     "Git/Exercises/E007 - CI_CD and Quality Gates/calculator_private.py",
@@ -213,7 +214,6 @@
     "Git/KBs/KB004 - Rebase.md",
     "Git/Exercises/E002c - Rebase.md",
     "Git/Exercises/E006a - Undoing changes.md",
-    "Git/Exercises/E006d - Hooks.md",
     "Git/Exercises/E006c - Backup.md",
     "Git/Exercises/E006b - Recovering Commits.md",
     "Git/Command References/git reset.md"

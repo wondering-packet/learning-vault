@@ -1,8 +1,6 @@
 # CI/CD Lab – Python + GitHub Actions (Tested Setup)
 
-Repo: `https://github.com/wondering-packet/ci-cd-lab.git`.
-
-Above repo is a **minimal, battle-tested CI pipeline** for a Python project using:
+This lab provides a minimal, lab-tested CI pipeline for a Python project using:
 - **Black** (formatting)
 - **isort** (imports)
 - **Flake8** (linting)
@@ -19,8 +17,10 @@ Follow this guide to **replicate the exact setup** locally and in GitHub.
 - **Python 3.10+** installed
 - A **GitHub account** and a repo (or fork this one)
 - (Optional) A code editor with Python support (VS Code, PyCharm, etc.)
+- This lab setup assumes you are running some Linux flavor (I built this on Ubuntu).
+- This lab assumes you have gone through the notes in [N007 - CI_CD and Quality Gate](../Notes/N007%20-%20CI_CD%20and%20Quality%20Gate.md).
 
-> Tip: On Linux/macOS, confirm versions:
+> Confirm versions:
 
 ```bash
 git --version
@@ -32,27 +32,26 @@ python3 --version
 ## 2) Project Structure
 
 ```
-├── hooks  # install folder for local hooks
-│   └── pre-commit  # will be copying this using the install_hook.sh script
-├── pyproject.toml  # Tooling config (Black, isort, pytest/coverage)
-├── README.md  # instructions
-├── requirements.txt  # project dependencies
-├── scripts  # install folder for bash scripts
-│   ├── tools.sh  # allow you to manually run the formatter & other tools
-│   └── install_hook.sh  # installs the pre-commit hook
-├── src  # python package
-│   ├── apps  # app folder
-│   │   └── calculator_private.py  # app we will be using in this lab
-│   └── apps.egg-info  # package files, ignore them
-│       ├── dependency_links.txt  
-│       ├── PKG-INFO  
-│       ├── SOURCES.txt  
-│       └── top_level.txt  
-└── tests  # this folder is required for pytest
-    └── test_calculate.py # this is a unit test for our calculator app
+├── .github/
+│   └── workflows/
+│       └── ci.yml             # GitHub Actions CI/CD workflow
+├── hooks/
+│   └── pre-commit             # Pre-commit hook script
+├── pyproject.toml             # Configuration for Black, isort, and pytest
+├── README.md                  # Project README
+├── requirements.txt           # Project dependencies
+├── scripts/
+│   ├── tools.sh               # Script to manually run formatting tools
+│   └── install_hook.sh        # Script to install the pre-commit hook
+├── src/
+│   └── apps/
+│       └── calculator_private.py  # Application source code
+└── tests/
+    └── test_calculate.py      # Unit tests for the application. Used by pytest.
 ```
 
 **Key choices**:
+
 - **Src layout**: code lives under `src/`, package root is configured via `pyproject.toml`.
 - **Coverage gate**: enforced via pytest `addopts` in `pyproject.toml` (80% by default).
 - **CI**: workflow in `.github/workflows/ci.yml` runs on push/PR to `main`.
@@ -61,72 +60,160 @@ python3 --version
 
 ## 3) Local Setup (Step-by-Step)
 
-1) **Clone** the repo:
+1) **Download & Unzip** the lab files:
+
 ```bash
-git clone <your-repo-url>.git
-cd <your-repo-name>
+# step1: download
+# git clone OR you can simply grab it from this github using your browser.
+wget git clone https://github.com/wondering-packet/ci-cd-lab-files.git
+# step2: cd & unzip
+cd ci-cd-lab-files/
+unzip ci-cd-lab.zip
+# step3: cd into the lab foler
+cd ci-cd-lab/
 ```
 
 2) **Create & activate** a virtual environment:
+
 ```bash
-# macOS/Linux
+# always use virtual environment for personal/test projects
+# so we don't mess with the system's python!
+
 python3 -m venv .venv
 source .venv/bin/activate
-
-# Windows (PowerShell)
-python -m venv .venv
-.venv\Scripts\Activate.ps1
 ```
 
 3) **Install dependencies**:
+
 ```bash
+# requirements file lets us define dependent packages &
+# the exact versions required for our lab.
+cat requirements.txt  
+# you should see these:
+# flake8==7.1.0  
+# pytest==8.2.0  
+# black==23.9.1  
+# isort==5.12.0  
+# pytest-cov==5.0.0
+
+# installs the packages
 pip install -r requirements.txt
 ```
 
+
 4) **Install the package in editable mode** (required for `src/` layout imports in tests):
+
 ```bash
 pip install -e .
 ```
 
-5) **Run formatters (checks only)**:
+> This will use our `pyproject.toml` config file & create a "app.egg-info" directory inside src/ directory.
+
+5) Prepare Git:
+
 ```bash
-isort --check-only .
+# step1: initialize git in this folder
+git init
+# step2: set main as the default branch
+git branch -m main
+# step3: configure your username & email; replace them with yours. 
+git config user.name wondering-packet # "Your Name"
+git config user.email "packetwondering@gmail.com" # "your.email@example.com"
+git config user.name # validate
+# output: wondering-packet
+git config user.email # validate
+# output: packetwondering@gmail.com
+# step4: connect to remote repo
+git remote add origin <repo_url>
+git remote -v # validate
+origin  <repo_url> (fetch)  
+origin  <repo_url> (push)
+```
+
+> [!warning]
+>
+> Do not stage & push yet!
+> 
+> Reason is: we still have the hooks/pre-commit file which we need to install & remove first. If you stage this file (tracked) then it will cause future commits to fail because the file contains a keyword which we are using to block commits.
+
+6) **Install local pre-commit hook**:
+
+```bash
+# this script copies our hooks/pre-commit file to .git/hooks/pre-commit location.
+bash scripts/install_hook.sh
+
+# IMPORTANT:
+# remove the pre-commit file from hooks/ folder.
+# note that the install script has already copied this file to .git/hooks.
+
+# if you don't remove this file then your commits later will fail since 
+# this file contains the keyword "TODO" - this keyword is used in the lab 
+# to stop commits.
+rm hooks/pre-commit
+```
+
+6) **(Optional) Manually run formatters for quick validation**:
+
+```bash
+isort --check-only .  # "." means all files (recursive)
 black --check .
 ```
-> If these fail, auto-fix with:
+
+> If these fail, then you can auto-fix with:
+
 ```bash
 isort .
 black .
 ```
 
-6) **Run linter**:
+7) **Run linter**:
+
 ```bash
-flake8 .
+flake8 --exclude .venv/
 ```
 
-7) **Run tests with coverage** (threshold enforced via `pyproject.toml`):
+8) **Run tests with coverage** (threshold enforced via `pyproject.toml`):
+
 ```bash
-pytest -q
+pytest -q  # -q suppresses noise from the output
 ```
-This will fail the run if coverage is below the configured threshold (default **80%**). It also produces a `coverage.xml` report.
+
+This will fail the run if coverage is below the configured threshold (default **80%**). It also produces a `coverage.xml` report. The 80% config is in our tooling config file:
+
+```plaintext
+[tool.pytest.ini_options]  
+addopts = "--cov=src --cov-report=term-missing --cov-report=xml --cov-fail-under=80"
+```
 
 ---
 
-## 4) GitHub Actions (CI) – What’s Included
+## 4) Pre-commit hook
 
-The workflow file at `.github/workflows/ci.yml` is already set up to:
-- Trigger on **push** and **pull requests** to `main`.
-- Use **Python 3.10**.
-- Install dependencies and the package (`pip install -e .`).
-- Run **isort/black (checks only)**, **flake8**, and **pytest** (with coverage gate).
-- Upload `coverage.xml` as a build **artifact**.
+> [!important]
+> Pre-commit hook is explained in detail in *`.git/hooks/pre-commit`* under *Configuration Reference* section at the end. Refer to it before continuing if unfamiliar.
+
+1) Stage & Commit:
+
+```bash
+git add .
+git commit -m "initial commit"
+# DON'T PUSH!
+```
+
+
+## 5) GitHub Actions (CI)
+
+Github Actions looks for workflow files under `.github/workflows` directory so we will be adding our CI workflow `ci.yml` file under this directory. 
+
+> [!important]
+> `ci.yml` is explained in detail in *`.github/workflows/ci.yml` * under *Configuration Reference* section at the end. Refer to it before continuing if unfamiliar.
 
 ### How to enable CI in your repo
 
-1) Push this repository to GitHub (or copy these files into your own repo):
+1) Make sure `.github/workflows/ci.yml` file is present.
+2) Push to remote:
+
 ```bash
-git remote add origin git@github.com:<you>/<repo>.git
-git branch -M main
 git push -u origin main
 ```
 
@@ -136,63 +223,19 @@ git push -u origin main
 
 ---
 
-## 5) Configuration Reference
-
-### `pyproject.toml` (important parts)
-```toml
-[tool.black]
-line-length = 88
-target-version = ['py310']
-skip-string-normalization = true
-
-[tool.isort]
-profile = "black"
-line_length = 88
-
-[tool.pytest.ini_options]
-addopts = "--cov=src --cov-report=term-missing --cov-report=xml --cov-fail-under=80"
-```
-- Adjust **coverage threshold** by changing the number in `--cov-fail-under=80`.
-- Coverage includes the `src/` tree because we use `--cov=src`.
-
-### `requirements.txt`
-```
-flake8==7.1.0
-pytest==8.2.0
-black==23.9.1
-isort==5.12.0
-pytest-cov==5.0.0
-```
-
----
-
-## 6) Common Commands
-
-```bash
-# Auto-fix formatting/imports
-black .
-isort .
-
-# Lint
-flake8 .
-
-# Run tests (quiet) with coverage thresholds (configured in pyproject)
-pytest -q
-```
-
----
-
-## 7) Troubleshooting
+## 6) Troubleshooting
 
 **Q: `ModuleNotFoundError: No module named 'apps'`**  
 A: Make sure you ran `pip install -e .` so the `src/` package is discoverable.
 
 **Q: CI fails on formatting**  
-A: Run locally:
+A: Run locally (this auto fixes any formatting issues):
+
 ```bash
 isort .
 black .
 ```
+
 Commit, push again.
 
 **Q: CI fails on coverage (below 80%)**  
@@ -203,15 +246,17 @@ A: Ensure the file path is exactly `.github/workflows/ci.yml` on the default bra
 
 ---
 
-## 8) Extending the Lab (Example)
+## 7) Extending the Lab (Example)
 
 1) **Add a new function** in `src/apps/calculator_private.py`:
+
 ```python
 def power(a, b):
     return a ** b
 ```
 
 2) **Test it** in `tests/test_calculate.py`:
+
 ```python
 from apps.calculator_private import power
 
@@ -220,6 +265,7 @@ def test_power():
 ```
 
 3) **Run the suite**:
+
 ```bash
 pytest -q
 ```
@@ -228,12 +274,200 @@ CI will pick it up on push/PR.
 
 ---
 
-## 9) Why this setup works
+## 8) Configuration Reference
 
-- **Fast feedback**: Format/lint/test on every push/PR.
-- **Consistent style**: Black + isort keep diffs clean and reviews faster.
-- **Quality gate**: Coverage threshold prevents untested code from slipping into `main`.
-- **Portable**: Single `pyproject.toml` drives local + CI behavior.
+### a) `pyproject.toml` (important parts)
+
+```toml
+# --------------------------------------------------------------------
+# pyproject.toml
+#
+# Purpose:
+# Centralized configuration for Python packaging, tools, and testing.
+# - Defines how the project is built and packaged
+# - Holds formatting/linting configs for Black & isort
+# - Holds pytest & coverage settings
+# --------------------------------------------------------------------
+
+[build-system]
+# Build requirements for the package
+requires = ["setuptools>=68"]             # Use setuptools 68+ for packaging
+build-backend = "setuptools.build_meta"   # Default backend for setuptools builds
+
+[project]
+# Package metadata
+name = "apps"                             # Package name (installable via pip)
+version = "0.1.0"                         # Package version
+requires-python = ">=3.10"                # Minimum Python version
+description = "CI/CD lab with tests and flake8"   # Short project description
+readme = "README.md"                       # README file for package description
+
+[tool.setuptools]
+# Specify source directory for packages
+package-dir = {"" = "src"}                 # All Python packages are inside src/
+
+[tool.setuptools.packages.find]
+# Auto-discover packages from the src directory
+where = ["src"]
+
+[tool.black]
+# Black formatter configuration
+line-length = 88                           # Max line length
+target-version = ['py310']                 # Target Python version 3.10
+skip-string-normalization = true           # Preserve original string quotes
+
+[tool.isort]
+# isort import sorter configuration
+profile = "black"                          # Match Black’s import style
+line_length = 88                           # Same line length as Black
+
+[tool.pytest.ini_options]
+# pytest configuration
+addopts = """
+--cov=src                              # Measure coverage for 'src' directory
+--cov-report=term-missing              # Show missing lines in terminal
+--cov-report=xml                       # Generate XML report (for CI uploads)
+--cov-fail-under=80                     # Fail if coverage < 80%
+"""
+
+```
+
+### b) `.github/workflows/ci.yml` 
+
+```yaml
+# ============================
+# GitHub Actions Workflow: CI
+# ============================
+# Purpose:
+# This workflow runs automatically on pushes or pull requests to "main".
+# It checks code formatting (Black, isort), lints (flake8), runs tests (pytest),
+# and uploads the coverage report.
+# ============================
+
+name: CI
+
+# ----------------------------
+# When should this workflow run?
+# ----------------------------
+on:
+  push:
+    branches: [ "main" ]        # Trigger when pushing directly to main
+  pull_request:
+    branches: [ "main" ]        # Trigger when a PR targets main
+
+jobs:
+  quality-gates:
+    runs-on: ubuntu-latest      # GitHub-hosted runner (Ubuntu Linux)
+
+    steps:
+      # ----------------------------
+      # Step 1: Check out the code
+      # ----------------------------
+      - name: Check out code
+        uses: actions/checkout@v4  # Pulls the repo content into the runner
+
+      # ----------------------------
+      # Step 2: Set up Python
+      # ----------------------------
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'  # The Python version for this job
+
+      # ----------------------------
+      # Step 3: Install dependencies
+      # ----------------------------
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip  # Upgrade pip itself
+          pip install -r requirements.txt      # Install tool/test dependencies
+          pip install -e .                # Install the project in editable mode
+
+      # ----------------------------
+      # Step 4: Check formatting & lint
+      # ----------------------------
+      - name: Check formatters and lint
+        run: |
+          # Black & isort configs are in pyproject.toml
+          black --check .           # Verify code style with Black
+          isort --check-only .      # Verify import order matches Black profile
+          flake8 .                  # Run linting (style & error checks)
+
+      # ----------------------------
+      # Step 5: Run tests with coverage
+      # ----------------------------
+      - name: Run tests with coverage
+        run: |
+          # pytest & coverage configs are in pyproject.toml
+          pytest                    # Run the test suite
+
+      # ----------------------------
+      # Step 6: Upload coverage report
+      # ----------------------------
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-xml        # Artifact name in GitHub
+          path: coverage.xml        # Path to the coverage report file
+
+```
+
+### c) `.git/hooks/pre-commit`
+
+```bash
+#!/usr/bin/env bash  
+# Pre-commit hook:  
+# - Blocks "TODO" in staged changes  
+# - Auto-fixes imports (isort) & formatting (black) for STAGED .py files only  
+# - Re-stages formatted files  
+# - Lints only STAGED .py files with flake8  
+set -euo pipefail  
+IFS=$'\n\t'  
+  
+echo " Running pre-commit checks..."  
+  
+# 1) Prefer running inside your local virtualenv if present  
+if [[ -f ".venv/bin/activate" ]]; then  
+# shellcheck source=/dev/null  
+source ".venv/bin/activate"  
+fi  
+  
+# 2) Block TODOs in staged diff  
+if git diff --cached | grep -qi "TODO"; then  
+echo "❌ Commit blocked: staged changes contain 'TODO'"  
+exit 1  
+fi  
+  
+# 3) Collect staged Python files (Added, Copied, Modified), null-delimited for safety  
+mapfile -d '' -t STAGED_PY_FILES < <(  
+git diff --cached --name-only -z --diff-filter=ACM | grep -z -E '\.py$' || true  
+)  
+  
+if (( ${#STAGED_PY_FILES[@]} > 0 )); then  
+echo " isort (auto-fix imports on staged .py files)..."  
+printf '%s\0' "${STAGED_PY_FILES[@]}" | xargs -0 -r isort --quiet --  
+  
+echo " black (auto-fix formatting on staged .py files)..."  
+printf '%s\0' "${STAGED_PY_FILES[@]}" | xargs -0 -r black --quiet --  
+  
+echo "狀 Re-staging formatted files..."  
+git add -- "${STAGED_PY_FILES[@]}"  
+  
+# 4) Lint ONLY the staged files  
+if command -v flake8 >/dev/null 2>&1; then  
+echo " Running flake8 on staged files..."  
+# Extra belt-and-suspenders: exclude .venv even if someone passes a dir later  
+printf '%s\0' "${STAGED_PY_FILES[@]}" | xargs -0 -r flake8 --exclude=.venv --  
+else  
+echo "ℹ flake8 not found; skipping Python lint step."  
+fi  
+else  
+echo "⏭  No staged Python files — skipping isort/black/flake8."  
+fi  
+  
+echo "✅ Pre-commit checks passed."  
+exit 0
+```
 
 ---
 
