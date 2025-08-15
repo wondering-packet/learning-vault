@@ -46,10 +46,11 @@ python3 --version
 │   └── apps/
 │       └── calculator_private.py  # Application source code
 └── tests/
-    └── test_calculate.py      # Unit tests for the application
+    └── test_calculate.py      # Unit tests for the application. Used by pytest.
 ```
 
 **Key choices**:
+
 - **Src layout**: code lives under `src/`, package root is configured via `pyproject.toml`.
 - **Coverage gate**: enforced via pytest `addopts` in `pyproject.toml` (80% by default).
 - **CI**: workflow in `.github/workflows/ci.yml` runs on push/PR to `main`.
@@ -150,7 +151,7 @@ bash scripts/install_hook.sh
 rm hooks/pre-commit
 ```
 
-6) **(Optional) Manually run formatters (checks only) for validation**:
+6) **(Optional) Manually run formatters for quick validation**:
 
 ```bash
 isort --check-only .  # "." means all files (recursive)
@@ -185,6 +186,17 @@ addopts = "--cov=src --cov-report=term-missing --cov-report=xml --cov-fail-under
 
 ---
 
+## 4) Let's commit & understand pre-commit hook
+
+1) Stage & Commit:
+
+```bash
+git add .
+git commit -m "initial commit"
+# DON'T PUSH!
+```
+
+
 ## 4) GitHub Actions (CI)
 
 Github Actions looks for workflow files under `.github/workflows` directory so we will be adding our CI workflow `ci.yml` file under this directory. 
@@ -192,11 +204,9 @@ Github Actions looks for workflow files under `.github/workflows` directory so w
 ### How to enable CI in your repo
 
 1) Make sure `.github/workflows/ci.yml` file is present.
-2) Stage, commit & push to remote:
+2) Push to remote:
 
 ```bash
-git add .
-git commit -m "initial commit"
 git push -u origin main
 ```
 
