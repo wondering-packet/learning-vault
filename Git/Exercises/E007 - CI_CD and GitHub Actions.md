@@ -390,6 +390,7 @@ return result
 
 ```bash
 flake8 --exclude .venv/  
+# output clearly states the failed file, line number & reason.
 ./src/apps/calculator_private.py:3:1: E302 expected 2 blank lines, found 0
 ```
 
