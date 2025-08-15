@@ -26,7 +26,7 @@ These are high-level topic summaries meant to introduce core concepts and link t
 - **L006 – Advanced Recovery (reflog, reset, revert)**: Disaster-recovery commands to undo or roll back changes, recover lost commits, and repair broken branches.
 - **L007 – CI/CD Quality Gates (pre-commit, formatting, coverage)**: Enforcing code quality with Git hooks, formatters (`black`, `isort`), linters (`flake8`), and automated coverage thresholds in CI pipelines.
 
-> **AI Note:** These lessons were written and formatted with the help of ChatGPT, but I’ve personally tested and validated each concept in my lab environment, including real-world CI/CD integrations and automated quality enforcement.
+> **AI Note:** AI assisted me in creating & formatting these notes, but every topic has been lab-tested and fact-checked by me.
 
 ### 📘 **Knowledge Base (KBs)**
 
@@ -36,7 +36,7 @@ These articles explain the *why* behind Git commands and behaviors. Think of thi
 
 ### 🧠 **Exercises**
 
-Practical, real-world Git scenarios to sharpen your skills. These are 100% written and executed by me — no AI assistance. Each one is built to reinforce concepts in an applied context.
+Practical, real-world Git scenarios to sharpen your skills. Except for the lab exercise for CI/CD pipeline (exercise 007), all other exercises are 100% written and executed by me — no AI assistance. Each one is built to reinforce concepts in an applied context.
 
 > **Personal Note**: All exercises were crafted and performed by me in a lab environment — they reflect my learning style and debugging habits.
 
