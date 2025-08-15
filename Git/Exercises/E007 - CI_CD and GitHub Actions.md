@@ -1,6 +1,7 @@
 # CI/CD Lab – Python + GitHub Actions (Tested Setup)
 
 This lab provides a minimal, lab-tested CI pipeline for a Python project using:
+
 - **Black** (formatting)
 - **isort** (imports)
 - **Flake8** (linting)
@@ -13,10 +14,10 @@ Follow this guide to **replicate the exact setup** locally and in GitHub.
 
 ## 1) Prerequisites
 
-- **Git** installed
-- **Python 3.10+** installed
-- A **GitHub account** and a repo (or fork this one)
-- (Optional) A code editor with Python support (VS Code, PyCharm, etc.)
+- **Git** installed.
+- **Python 3.10+** installed.
+- A **GitHub account** and a empty repo.
+- (Optional) A code editor with Python support (VS Code, PyCharm, etc.).
 - This lab setup assumes you are running some Linux flavor (I built this on Ubuntu).
 - This lab assumes you have gone through the notes in [N007 - CI_CD and Quality Gate](../Notes/N007%20-%20CI_CD%20and%20Quality%20Gate.md).
 
@@ -56,6 +57,8 @@ python3 --version
 - **Coverage gate**: enforced via pytest `addopts` in `pyproject.toml` (80% by default).
 - **CI**: workflow in `.github/workflows/ci.yml` runs on push/PR to `main`.
 
+> [!important]
+> `pyproject.toml` file is explained in detail in *`pyproject.toml`* under *Configuration Reference* section at the end. Refer to it before continuing if unfamiliar.
 ---
 
 ## 3) Local Setup (Step-by-Step)
@@ -87,7 +90,7 @@ source .venv/bin/activate
 
 ```bash
 # requirements file lets us define dependent packages &
-# the exact versions required for our lab.
+# the exact versions required for a python project.
 cat requirements.txt  
 # you should see these:
 # flake8==7.1.0  
