@@ -136,26 +136,11 @@ origin  <repo_url> (fetch)
 origin  <repo_url> (push)
 ```
 
-> [!warning]
->
-> Do not stage & push yet!
-> 
-> Reason is: we still have the `hooks/pre-commit` file which we need to install & then remove.  If you stage this file (tracked) then it will cause future commits to fail because the file contains a keyword which we are using to block commits.
-
 6) **Install local pre-commit hook**:
 
 ```bash
 # this script copies our hooks/pre-commit file to .git/hooks/pre-commit location.
 bash scripts/install_hook.sh
-
-# IMPORTANT:
-# remove the pre-commit file from hooks/ folder.
-# note that the install script has already copied this file to .git/hooks.
-
-# if you don't remove this file then your commits later will fail since 
-# this file contains the keyword "TODO" - this keyword is used in the lab 
-# to stop commits.
-rm hooks/pre-commit
 ```
 
 6) **(Optional) Manually run formatters for quick validation**:
