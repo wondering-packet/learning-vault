@@ -213,7 +213,6 @@ create mode 100644 src/apps/calculator_private.py
 create mode 100644 tests/test_calculate.py
 ```
 
-
 > [!NOTE]
 > 
 > **Don't Push Yet**. We will push in next section.
