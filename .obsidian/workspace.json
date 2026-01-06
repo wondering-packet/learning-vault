@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Notes/N007 - CICD and Quality Gate.md",
+                "file": "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "N007 - CICD and Quality Gate"
+              "title": "E001 - Create a new repository & connect it to a remote branch"
             }
           }
         ]
@@ -182,14 +182,15 @@
   },
   "active": "5d3e5ffa7be5f0d8",
   "lastOpenFiles": [
+    "Git/Exercises/E007 - CICD.md",
+    "Git/Notes/N007 - CICD and Quality Gate.md",
+    "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
     "Git/Notes/N005 - Remote Workflows & PR.md",
     "Progress/temp.md",
     "Git/KBs/KB013 - Pull.md",
     "Git/KBs/KB012 - Fetch.md",
-    "Git/Notes/N007 - CICD and Quality Gate.md",
     "Progress/CI workflow when merging.md",
     "Git/Notes/N002 - Branching & Conflict Resolution.md",
-    "Git/Exercises/E007 - CICD.md",
     "Progress",
     "Git/readme.md",
     "Git/Notes/N004 - Interactive Rebasing & Squashing.md",
@@ -201,7 +202,6 @@
     "Git/Exercises/E006d - Hooks.md",
     "(.md",
     "Git/Exercises/E002a - Create branch.md",
-    "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
     "Git/Exercises/E002b - Merging branch.md",
     "Git/Exercises/E002d - Conflict.md",
     "Git/Exercises/E007 - CI_CD and Quality Gates/calculator_private.py",
