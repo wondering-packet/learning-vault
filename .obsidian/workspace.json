@@ -182,6 +182,10 @@
   },
   "active": "5d3e5ffa7be5f0d8",
   "lastOpenFiles": [
+    "Git/Exercises/E005a - PR.md",
+    "Git/Notes/N004 - Interactive Rebasing & Squashing.md",
+    "Git/Notes/N003 - Stashing, Pushing, Cherry-picking, Tagging.md",
+    "Git/Exercises/E002c - Rebase.md",
     "Git/Exercises/E002b - Merging branch.md",
     "Git/Exercises/E002a - Create branch.md",
     "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
@@ -190,7 +194,6 @@
     "Git/Notes/N001 - Git Foundation.md",
     "Git/Exercises/E004 - Squashing with Interactive Rebase.md",
     "Git/Exercises/E002d - Conflict.md",
-    "Git/Exercises/E002c - Rebase.md",
     "Git/Command References/git clean.md",
     "Git/Command References/git add.md",
     "Git/Exercises/E007 - CICD.md",
@@ -202,7 +205,6 @@
     "Progress/CI workflow when merging.md",
     "Progress",
     "Git/readme.md",
-    "Git/Notes/N004 - Interactive Rebasing & Squashing.md",
     "Git/Notes/N006 - Advanced recovery.md",
     "Assets/git-e007-github-actions.png",
     "Pasted image 20250816005750.png",
@@ -218,8 +220,6 @@
     "Git/Exercises/E007 - CI_CD and Quality Gates/pyproject.toml",
     "Git/Exercises/E007 - CI_CD and Quality Gates/coverage.xml",
     "Git/Exercises/E007 - CI_CD and Quality Gates/tests/__pycache__/test_calculate.cpython-312-pytest-8.2.0.pyc",
-    "Git/Notes/N007 - CI CD Basics.md",
-    "Git/Notes/ci_workflow_notes.md",
-    "Git/Notes/N003 - Stashing, Pushing, Cherry-picking, Tagging.md"
+    "Git/Notes/N007 - CI CD Basics.md"
   ]
 }
