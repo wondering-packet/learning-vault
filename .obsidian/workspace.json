@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/E002a - Create branch.md",
+                "file": "Git/Notes/N002 - Branching & Conflict Resolution.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E002a - Create branch"
+              "title": "N002 - Branching & Conflict Resolution"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "lesson",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -180,8 +181,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5d3e5ffa7be5f0d8",
+  "active": "9b19963759ee2f87",
   "lastOpenFiles": [
+    "Git/Notes/N001 - Git Foundation.md",
+    "Git/Exercises/E004 - Squashing with Interactive Rebase.md",
+    "Git/Exercises/E002d - Conflict.md",
+    "Git/Exercises/E002c - Rebase.md",
+    "Git/Exercises/E002b - Merging branch.md",
+    "Git/Command References/git clean.md",
+    "Git/Exercises/E002a - Create branch.md",
     "Git/Exercises/E001 - Create a new repository & connect it to a remote branch.md",
     "Git/Command References/git add.md",
     "Git/Exercises/E007 - CICD.md",
@@ -202,9 +210,6 @@
     "Assets",
     "Git/Exercises/E006d - Hooks.md",
     "(.md",
-    "Git/Exercises/E002a - Create branch.md",
-    "Git/Exercises/E002b - Merging branch.md",
-    "Git/Exercises/E002d - Conflict.md",
     "Git/Exercises/E007 - CI_CD and Quality Gates/calculator_private.py",
     "Git/Exercises/E007 - CI_CD and Quality Gates/test_calculate.py",
     "Git/Exercises/E007 - CI_CD and Quality Gates/Hook_pre-commit",
@@ -214,12 +219,8 @@
     "Git/Exercises/E007 - CI_CD and Quality Gates/coverage.xml",
     "Git/Exercises/E007 - CI_CD and Quality Gates/tests/__pycache__/test_calculate.cpython-312-pytest-8.2.0.pyc",
     "Git/Notes/N007 - CI CD Basics.md",
-    "Git/Notes/N001 - Git Foundation.md",
     "Git/Notes/ci_workflow_notes.md",
     "Git/Notes/N003 - Stashing, Pushing, Cherry-picking, Tagging.md",
-    "Git/Exercises/E007a - Automated linting.md",
-    "Git/Exercises/E007b - Automated formatters.md",
-    "Git/KBs/KB004 - Rebase.md",
-    "Git/Exercises/E002c - Rebase.md"
+    "Git/Exercises/E007a - Automated linting.md"
   ]
 }
