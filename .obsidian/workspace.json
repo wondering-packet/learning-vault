@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Exercises/E002c - Rebase.md",
+                "file": "Git/Exercises/E002a - Create branch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E002c - Rebase"
+              "title": "E002a - Create branch"
             }
           }
         ]
@@ -182,8 +182,8 @@
   },
   "active": "5d3e5ffa7be5f0d8",
   "lastOpenFiles": [
-    "Git/KBs/KB004 - Rebase.md",
     "Git/Exercises/E002c - Rebase.md",
+    "Git/KBs/KB004 - Rebase.md",
     "Git/Exercises/E005a - PR.md",
     "Git/Notes/N004 - Interactive Rebasing & Squashing.md",
     "Git/Notes/N003 - Stashing, Pushing, Cherry-picking, Tagging.md",
